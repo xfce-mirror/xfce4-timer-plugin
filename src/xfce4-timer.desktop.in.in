@@ -1,0 +1,8 @@
+[Xfce Panel]
+Type=X-XFCE-PanelPlugin
+Encoding=UTF-8
+_Name=Xfce4 Timer
+_Comment=Timer plugin for Xfce 4.4 panel
+Icon=gtk-paste
+X-XFCE-Exec=@EXTERNAL_PLUGIN_PATH@/xfce4-timer
+X-XFCE-Unique=true

@@ -1,0 +1,9 @@
+16/11/2005 Kemal Ilgar Eroglu
+	* Release version 0.4
+	* This one requires 4.4
+	* Pbar size problems fixed, new panel API permits good size adjustment
+	* Pbar orientation is adjusted automatically
+07/09/2005 Kemal Ilgar Eroglu
+	* Release 0.1. 
+        * pbar size is stil an issue.
+
