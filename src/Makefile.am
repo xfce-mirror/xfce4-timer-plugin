@@ -13,7 +13,7 @@ plugin_PROGRAMS = xfce4-timer
 #	libxfce4_timer.la
 
 xfce4_timer_SOURCES =						\
-	xfcetimer.c
+	xfcetimer.c xfcetimer.h
 
 xfce4_timer_LDFLAGS =						\
 	@LIBXFCE4PANEL_LIBS@ \
