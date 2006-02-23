@@ -1,0 +1,9 @@
+2006-02-23  Daichi Kawahata <daichi@xfce.org>
+
+	* ja.po: Added Japanese translations.
+	* POTFILES.in: Updated.
+
+2005-12-01  Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
+
+	* ChangeLog, Makefile.in.in, POTFILES.in: Initial import.
+
