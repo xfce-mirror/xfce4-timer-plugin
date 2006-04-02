@@ -70,12 +70,12 @@ static gboolean timeout_function (gpointer data){
      remaining=pd->timeout_period_in_sec-elapsed_sec;
 
      if(remaining>=3600)
-       g_snprintf(tiptext,31,"%dh %dm %ds left",remaining/3600, (remaining%3600)/60, 
+       g_snprintf(tiptext,31,_("%dh %dm %ds left"),remaining/3600, (remaining%3600)/60, 
 			remaining%60);
      else if (remaining>=60)
-       g_snprintf(tiptext,31,"%dm %ds left",remaining/60, remaining%60);
+       g_snprintf(tiptext,31,_("%dm %ds left"),remaining/60, remaining%60);
      else
-       g_snprintf(tiptext,31,"%ds left",remaining);
+       g_snprintf(tiptext,31,_("%ds left"),remaining);
 
      gtk_progress_bar_set_fraction	(GTK_PROGRESS_BAR(pd->pbar),
 					((gdouble)elapsed_sec)/pd->  						timeout_period_in_sec);  
@@ -99,7 +99,7 @@ static gboolean timeout_function (gpointer data){
                                   	GTK_DIALOG_MODAL,
                                   	GTK_MESSAGE_WARNING,
                                   	GTK_BUTTONS_CLOSE,
-                                  	"Beeep! :) \nTime is up!");
+                                  	_("Beeep! :) \nTime is up!"));
     gtk_dialog_run (GTK_DIALOG (dialog));
     gtk_widget_destroy (dialog);
   }
@@ -353,9 +353,9 @@ void make_menu(plugin_data *pd){
 
   /* Start/stop menu item */
   if(pd->timer_on)
-    menuitem=gtk_menu_item_new_with_label("Stop timer");
+    menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
   else
-    menuitem=gtk_menu_item_new_with_label("Start timer");
+    menuitem=gtk_menu_item_new_with_label(_("Start timer"));
 
   gtk_menu_shell_append	(GTK_MENU_SHELL(pd->menu),menuitem);
   g_signal_connect	(G_OBJECT(menuitem),"button_press_event",
@@ -400,11 +400,11 @@ static void ok_add(GtkButton *button, gpointer data){
 
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
     if(t1>0)
-       g_snprintf(timeinfo,15,"%dh %dm %ds",t1,t2,t3);
+       g_snprintf(timeinfo,15,_("%dh %dm %ds"),t1,t2,t3);
     else if(t2>0)
-       g_snprintf(timeinfo,15,"%dm %ds",t2,t3);
+       g_snprintf(timeinfo,15,_("%dm %ds"),t2,t3);
     else
-       g_snprintf(timeinfo,15,"%ds",t3);
+       g_snprintf(timeinfo,15,_("%ds"),t3);
 
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
   }
@@ -414,7 +414,7 @@ static void ok_add(GtkButton *button, gpointer data){
     t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
     t=t1*60+t2;
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-    g_snprintf(timeinfo,9,"At %02d:%02d",t1,t2);
+    g_snprintf(timeinfo,9,_("At %02d:%02d"),t1,t2);
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
 
   }
@@ -474,11 +474,11 @@ static void ok_edit(GtkButton *button, gpointer data){
         t=t1*3600+t2*60+t3;
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
        if(t1>0)
-          g_snprintf(timeinfo,15,"%dh %dm %ds",t1,t2,t3);
+          g_snprintf(timeinfo,15,_("%dh %dm %ds"),t1,t2,t3);
        else if(t2>0)
-          g_snprintf(timeinfo,15,"%dm %ds",t2,t3);
+          g_snprintf(timeinfo,15,_("%dm %ds"),t2,t3);
        else
-          g_snprintf(timeinfo,15,"%ds",t3);
+          g_snprintf(timeinfo,15,_("%ds"),t3);
 
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
       }
@@ -488,7 +488,7 @@ static void ok_edit(GtkButton *button, gpointer data){
         t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
         t=t1*60+t2;
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-        g_snprintf(timeinfo,9,"At %02d:%02d",t1,t2);
+        g_snprintf(timeinfo,9,_("At %02d:%02d"),t1,t2);
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
 
       }
@@ -537,7 +537,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   hbox=gtk_hbox_new(TRUE,0);
   gtk_box_pack_start(GTK_BOX(vbox),hbox,FALSE,FALSE,0);  
 
-  label = (GtkLabel *)gtk_label_new ("Name");
+  label = (GtkLabel *)gtk_label_new (_("Name"));
   name = (GtkEntry *) gtk_entry_new_with_max_length(1023);
   adata->name=name;
 
@@ -545,9 +545,9 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(name),TRUE,TRUE,0);  
 
   /**********/
-  rb1=(GtkRadioButton *)gtk_radio_button_new_with_label(NULL,"Enter the countdown time");
+  rb1=(GtkRadioButton *)gtk_radio_button_new_with_label(NULL,_("Enter the countdown time"));
   rb2=(GtkRadioButton *)gtk_radio_button_new_with_label(gtk_radio_button_get_group
-					(rb1),"Enter the time of alarm (24h format)");
+					(rb1),_("Enter the time of alarm (24h format)"));
   adata->rb1=rb1;
 
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(rb1),TRUE,TRUE,0);
@@ -591,7 +591,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   /****************/
 
-  label = (GtkLabel *)gtk_label_new ("\nThe command to run");
+  label = (GtkLabel *)gtk_label_new (_("\nThe command to run"));
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(label),TRUE,TRUE,0);
   command = (GtkEntry *)gtk_entry_new_with_max_length(1023);
   adata->command=command;
@@ -617,7 +617,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   /* If this is the add window, we're done */
   if(GTK_WIDGET(buttonn)==pd->buttonadd) {
-    gtk_window_set_title(window,"Add new alarm");
+    gtk_window_set_title(window,_("Add new alarm"));
     gtk_widget_show_all(GTK_WIDGET(window));
     return;
   }
@@ -655,7 +655,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
      
   }
 
-  gtk_window_set_title(window,"Edit alarm");
+  gtk_window_set_title(window,_("Edit alarm"));
   gtk_widget_show_all(GTK_WIDGET(window));
 
 }
@@ -727,6 +727,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
   gtk_widget_hide(pd->eventbox);
 
+  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   /* Always true except at initialization */
   if(pd->box){
@@ -1063,7 +1064,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
   gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
     
-  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
+  header = xfce_create_header (NULL, _(_("Xfce4 Timer Options")));
   gtk_widget_set_size_request (GTK_BIN (header)->child, 200, 32);
   gtk_container_set_border_width (GTK_CONTAINER (header), 6);
   gtk_widget_show (header);
@@ -1094,16 +1095,16 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   
   renderer = gtk_cell_renderer_text_new ();
 
-  column = gtk_tree_view_column_new_with_attributes ("Timer\nname", renderer,
+  column = gtk_tree_view_column_new_with_attributes (_("Timer\nname"), renderer,
 							"text", 1, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
 
-  column = gtk_tree_view_column_new_with_attributes ("Countdown period /\nAlarm time", 
+  column = gtk_tree_view_column_new_with_attributes (_("Countdown period /\nAlarm time"), 
 							renderer, "text", 2, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
-  column = gtk_tree_view_column_new_with_attributes ("Alarm command", renderer, 
+  column = gtk_tree_view_column_new_with_attributes (_("Alarm command"), renderer, 
 							"text", 3, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
@@ -1146,7 +1147,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
   gtk_box_pack_start(GTK_BOX(vbox),gtk_hseparator_new(),TRUE,TRUE,20);
 
-  button=gtk_check_button_new_with_label("Don't display the warning window\nif an alarm command is set");
+  button=gtk_check_button_new_with_label(_("Don't display the warning window\nif an alarm command is set"));
   gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),pd->nowin_if_alarm);
   g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_nowin_if_alarm),pd);
   gtk_box_pack_start(GTK_BOX(vbox),button,TRUE,TRUE,0);

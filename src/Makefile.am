@@ -25,7 +25,7 @@ xfce4_timer_CFLAGS =						\
 	@LIBXFCEGUI4_CFLAGS@ \
 	@LIBXFCE4UTIL_CFLAGS@ \
 	@LIBXFCE4PANEL_CFLAGS@ \
-	-DLOCALEDIR=\"$(localedir)\"
+	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"
 
 # deprecated?	
 #libxfce4_timer_la_LIBADD = 						\
