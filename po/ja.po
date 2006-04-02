@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-03 01:00+0900\n"
+"POT-Creation-Date: 2006-04-03 01:12+0900\n"
 "PO-Revision-Date: 2006-02-23 21:45+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -76,6 +76,24 @@ msgstr ""
 
 #: ../src/xfcetimer.c:550
 msgid "Enter the time of alarm (24h format)"
+msgstr ""
+
+#: ../src/xfcetimer.c:561
+msgid "h  "
+msgstr ""
+
+#: ../src/xfcetimer.c:566
+msgid "m  "
+msgstr ""
+
+#: ../src/xfcetimer.c:571
+msgid "s  "
+msgstr ""
+
+#: ../src/xfcetimer.c:574
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 
 #. **************

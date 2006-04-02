@@ -558,20 +558,20 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   timeh = (GtkSpinButton *)gtk_spin_button_new_with_range(0,23,1);
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(timeh),FALSE,FALSE,2);  
   adata->timeh=timeh;
-  label = (GtkLabel *)gtk_label_new ("h  ");
+  label = (GtkLabel *)gtk_label_new (_("h  "));
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(label),FALSE,FALSE,2);
   timem = (GtkSpinButton *)gtk_spin_button_new_with_range(0,59,1);
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(timem),FALSE,FALSE,2);  
   adata->timem=timem;
-  label = (GtkLabel *)gtk_label_new ("m  ");
+  label = (GtkLabel *)gtk_label_new (_("m  "));
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(label),FALSE,FALSE,2);
   times = (GtkSpinButton *)gtk_spin_button_new_with_range(0,59,1);
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(times),FALSE,FALSE,2);  
   adata->times=times;
-  label = (GtkLabel *)gtk_label_new ("s  ");
+  label = (GtkLabel *)gtk_label_new (_("s  "));
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(label),FALSE,FALSE,2);
 
-  label = (GtkLabel *)gtk_label_new ("\nor\n");
+  label = (GtkLabel *)gtk_label_new (_("\nor\n"));
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(label),TRUE,TRUE,0);
 
 
