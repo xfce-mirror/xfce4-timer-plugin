@@ -1,8 +1,23 @@
+2006-04-03  Daichi Kawahata <daichi@xfce.org>
+
+	* ja.po: Updated Japanese translations.
+
+2006-04-02  Daichi Kawahata <daichi@xfce.org>
+
+	* ja.po: Updated Japanese translations.
+	* hu.po, ja.po, xfce4-timer.pot: Added translatable strings.
+	* hu.po, ja.po, xfce4-timer.pot: Updated.
+
+2006-02-23  Szervac Attila <sas@321.hu>
+
+	* hu.po: hu updates.
+
 2006-02-23  Daichi Kawahata <daichi@xfce.org>
 
 	* xfce4-timer.pot: Added.
 	* ja.po: Added Japanese translations.
 	* POTFILES.in: Updated.
+	* Makefile.in.in: Removed as well.
 
 2005-12-01  Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
 

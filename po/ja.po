@@ -1,3 +1,5 @@
+# $Id$
+#
 # Japanese translations for xfce4-timer package.
 # Copyright (C) 2005 Kemal Ilgar Eroglu.
 # This file is distributed under the same license as
@@ -9,7 +11,7 @@ msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-03 01:12+0900\n"
-"PO-Revision-Date: 2006-04-03 01:14+0900\n"
+"PO-Revision-Date: 2006-04-03 20:05+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -35,11 +37,11 @@ msgstr "残り%d秒"
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
+msgstr "時間です！"
 
 #: ../src/xfcetimer.c:356
 msgid "Stop timer"
-msgstr "タイマーを止める"
+msgstr "xfce4-timer"
 
 #: ../src/xfcetimer.c:358
 msgid "Start timer"
@@ -63,7 +65,7 @@ msgstr "%d秒"
 #: ../src/xfcetimer.c:417 ../src/xfcetimer.c:491
 #, c-format
 msgid "At %02d:%02d"
-msgstr ""
+msgstr "%02d:%02d"
 
 #: ../src/xfcetimer.c:540
 msgid "Name"
@@ -72,11 +74,11 @@ msgstr "名前"
 #. ********
 #: ../src/xfcetimer.c:548
 msgid "Enter the countdown time"
-msgstr ""
+msgstr "秒読みする時間を入力してください"
 
 #: ../src/xfcetimer.c:550
 msgid "Enter the time of alarm (24h format)"
-msgstr ""
+msgstr "アラームが鳴る時刻を入力してください (24時間制)"
 
 #: ../src/xfcetimer.c:561
 msgid "h  "
@@ -94,7 +96,9 @@ msgstr "秒 "
 msgid ""
 "\n"
 "or\n"
-msgstr "\nまたは\n"
+msgstr ""
+"\n"
+"または\n"
 
 #. **************
 #: ../src/xfcetimer.c:594
@@ -132,6 +136,8 @@ msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
+"秒読み時間 /\n"
+"アラームの時刻"
 
 #: ../src/xfcetimer.c:1107
 msgid "Alarm command"
