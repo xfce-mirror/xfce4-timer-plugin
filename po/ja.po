@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-03 01:12+0900\n"
-"PO-Revision-Date: 2006-04-03 20:05+0900\n"
+"PO-Revision-Date: 2006-04-04 22:16+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr "秒読みする時間を入力してください"
 
 #: ../src/xfcetimer.c:550
 msgid "Enter the time of alarm (24h format)"
-msgstr "アラームが鳴る時刻を入力してください (24時間制)"
+msgstr "アラームが鳴る時間を入力してください (24時間制)"
 
 #: ../src/xfcetimer.c:561
 msgid "h  "
@@ -115,7 +115,7 @@ msgstr "新規アラームを追加"
 
 #: ../src/xfcetimer.c:658
 msgid "Edit alarm"
-msgstr "アラーム編集"
+msgstr "アラームの編集"
 
 #: ../src/xfcetimer.c:1055
 msgid "Properties"
@@ -137,7 +137,7 @@ msgid ""
 "Alarm time"
 msgstr ""
 "秒読み時間 /\n"
-"アラームの時刻"
+"アラーム時間"
 
 #: ../src/xfcetimer.c:1107
 msgid "Alarm command"
