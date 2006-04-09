@@ -1,0 +1,160 @@
+# Russian translation of xfce4-timer-plugin.
+# Copyright (C) 2005 Kemal Ilgar Eroglu.
+# This file is distributed under the same license as
+#   the xfce4-timer package.
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-timer 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-03 01:12+0900\n"
+"PO-Revision-Date: 2006-04-09 17:18+0600\n"
+"Last-Translator: Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/xfcetimer.c:73
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "осталось %dч %dм %dс "
+
+#: ../src/xfcetimer.c:76
+#, c-format
+msgid "%dm %ds left"
+msgstr "осталось %dм %dс"
+
+#: ../src/xfcetimer.c:78
+#, c-format
+msgid "%ds left"
+msgstr "осталось %dс"
+
+#: ../src/xfcetimer.c:102
+msgid ""
+"Beeep! :) \n"
+"Time is up!"
+msgstr ""
+"Всеее! :) \n"
+"Время вышло!"
+
+#: ../src/xfcetimer.c:356
+msgid "Stop timer"
+msgstr "Остановить таймер"
+
+#: ../src/xfcetimer.c:358
+msgid "Start timer"
+msgstr "Запустить таймер"
+
+#: ../src/xfcetimer.c:403 ../src/xfcetimer.c:477
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%dч %dм %dс"
+
+#: ../src/xfcetimer.c:405 ../src/xfcetimer.c:479
+#, c-format
+msgid "%dm %ds"
+msgstr "%dч %dс"
+
+#: ../src/xfcetimer.c:407 ../src/xfcetimer.c:481
+#, c-format
+msgid "%ds"
+msgstr "%dс"
+
+#: ../src/xfcetimer.c:417 ../src/xfcetimer.c:491
+#, c-format
+msgid "At %02d:%02d"
+msgstr "В %02d:%02d"
+
+#: ../src/xfcetimer.c:540
+msgid "Name"
+msgstr "Название"
+
+#. ********
+#: ../src/xfcetimer.c:548
+msgid "Enter the countdown time"
+msgstr "Обратный отсчет"
+
+#: ../src/xfcetimer.c:550
+msgid "Enter the time of alarm (24h format)"
+msgstr "Время срабатывания сигнала"
+
+#: ../src/xfcetimer.c:561
+msgid "h  "
+msgstr "ч  "
+
+#: ../src/xfcetimer.c:566
+msgid "m  "
+msgstr "м  "
+
+#: ../src/xfcetimer.c:571
+msgid "s  "
+msgstr "с  "
+
+#: ../src/xfcetimer.c:574
+msgid ""
+"\n"
+"or\n"
+msgstr ""
+"\n"
+"или\n"
+
+#. **************
+#: ../src/xfcetimer.c:594
+msgid ""
+"\n"
+"The command to run"
+msgstr ""
+"\n"
+"Выполнить команду"
+
+#: ../src/xfcetimer.c:620
+msgid "Add new alarm"
+msgstr "Добавить новый сигнал"
+
+#: ../src/xfcetimer.c:658
+msgid "Edit alarm"
+msgstr "Редактировать сигнал"
+
+#: ../src/xfcetimer.c:1055
+msgid "Properties"
+msgstr "Параметры"
+
+#: ../src/xfcetimer.c:1067
+msgid "Xfce4 Timer Options"
+msgstr "Настройки таймера Xfce4"
+
+#: ../src/xfcetimer.c:1098
+msgid ""
+"Timer\n"
+"name"
+msgstr "Название"
+
+#: ../src/xfcetimer.c:1103
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr ""
+"Обратный отсчет /\n"
+"Время срабатывания"
+
+#: ../src/xfcetimer.c:1107
+msgid "Alarm command"
+msgstr "Команда"
+
+#: ../src/xfcetimer.c:1150
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
+msgstr ""
+"Не показывать уведомление\n"
+"если задана команда"
+
+#: ../src/xfce4-timer.desktop.in.in.h:1
+msgid "Timer plugin for Xfce 4.4 panel"
+msgstr "Позволяет создавать таймеры обратного отсчета"
+
+#: ../src/xfce4-timer.desktop.in.in.h:2
+msgid "Xfce4 Timer"
+msgstr "Таймер Xfce4"
