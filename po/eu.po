@@ -1,0 +1,162 @@
+# Basque translations for xfce4-timer package.
+# Copyright (C) 2005 Kemal Ilgar Eroglu.
+# This file is distributed under the same license as
+#   the xfce4-timer package.
+# Piarres Beobide <pi@beobide.net>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-timer 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-03 01:12+0900\n"
+"PO-Revision-Date: 2006-04-10 11:58+0100\n"
+"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
+"Language-Team: Librezale <Librezale@librezale.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/xfcetimer.c:73
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "%do %dm %ds falta dira"
+
+#: ../src/xfcetimer.c:76
+#, c-format
+msgid "%dm %ds left"
+msgstr "%dm %ds falta dira"
+
+#: ../src/xfcetimer.c:78
+#, c-format
+msgid "%ds left"
+msgstr "%ds falta dira"
+
+#: ../src/xfcetimer.c:102
+msgid ""
+"Beeep! :) \n"
+"Time is up!"
+msgstr ""
+"Beep! :) \n"
+"Ordua pasa da!"
+
+#: ../src/xfcetimer.c:356
+msgid "Stop timer"
+msgstr "Amaiera ordua"
+
+#: ../src/xfcetimer.c:358
+msgid "Start timer"
+msgstr "Abiarazte ordua"
+
+#: ../src/xfcetimer.c:403 ../src/xfcetimer.c:477
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%do %dm %ds"
+
+#: ../src/xfcetimer.c:405 ../src/xfcetimer.c:479
+#, c-format
+msgid "%dm %ds"
+msgstr "%dm %ds"
+
+#: ../src/xfcetimer.c:407 ../src/xfcetimer.c:481
+#, c-format
+msgid "%ds"
+msgstr "%ds"
+
+#: ../src/xfcetimer.c:417 ../src/xfcetimer.c:491
+#, c-format
+msgid "At %02d:%02d"
+msgstr "%02d:%02d-etan"
+
+#: ../src/xfcetimer.c:540
+msgid "Name"
+msgstr "Izena"
+
+#. ********
+#: ../src/xfcetimer.c:548
+msgid "Enter the countdown time"
+msgstr "atzekoz aurrera kontatze denbora idatzi"
+
+#: ../src/xfcetimer.c:550
+msgid "Enter the time of alarm (24h format)"
+msgstr "Alarmaren ordua idatzi (24h formatua)"
+
+#: ../src/xfcetimer.c:561
+msgid "h  "
+msgstr "o "
+
+#: ../src/xfcetimer.c:566
+msgid "m  "
+msgstr "m "
+
+#: ../src/xfcetimer.c:571
+msgid "s  "
+msgstr "s "
+
+#: ../src/xfcetimer.c:574
+msgid ""
+"\n"
+"or\n"
+msgstr ""
+"\n"
+"edo\n"
+
+#. **************
+#: ../src/xfcetimer.c:594
+msgid ""
+"\n"
+"The command to run"
+msgstr ""
+"\n"
+"abiarazteko komandoa"
+
+#: ../src/xfcetimer.c:620
+msgid "Add new alarm"
+msgstr "Alarma Berri bat gehitu"
+
+#: ../src/xfcetimer.c:658
+msgid "Edit alarm"
+msgstr "Alarma Editatu"
+
+#: ../src/xfcetimer.c:1055
+msgid "Properties"
+msgstr "Propietateak"
+
+#: ../src/xfcetimer.c:1067
+msgid "Xfce4 Timer Options"
+msgstr "Xfce4 Kronometro Aukerak"
+
+#: ../src/xfcetimer.c:1098
+msgid ""
+"Timer\n"
+"name"
+msgstr ""
+"Kronometroa\n"
+"izena"
+
+#: ../src/xfcetimer.c:1103
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr ""
+"Kontatze aldia /\n"
+"Alarma ordua"
+
+#: ../src/xfcetimer.c:1107
+msgid "Alarm command"
+msgstr "Alarma komandoa"
+
+#: ../src/xfcetimer.c:1150
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
+msgstr ""
+"Abisu leihoa ez bistarazi\n"
+"alarma komando bat ezarririk badago"
+
+#: ../src/xfce4-timer.desktop.in.in.h:1
+msgid "Timer plugin for Xfce 4.4 panel"
+msgstr "Xfce 4.4 panelarentzat kronometro plugin-a"
+
+#: ../src/xfce4-timer.desktop.in.in.h:2
+msgid "Xfce4 Timer"
+msgstr "Xfce4 kronometroa"
