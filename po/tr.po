@@ -1,7 +1,7 @@
-# French translation of xfce4-timer-plugin.
+# Turkish translation of xfce4-timer-plugin.
 # Copyright (C) 2006 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
 # This file is distributed under the same license as the xfce4-timer-plugin package.
-# S. Roy <sroy@j2n.net>, 2006.
+# Kemal Ilgar Eroglu, 2006.
 #
 msgid ""
 msgstr ""
