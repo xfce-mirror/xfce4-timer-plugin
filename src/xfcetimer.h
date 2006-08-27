@@ -28,17 +28,27 @@ typedef struct {
 		*pbar, 					/* Progress bar */
 		*tree, 					/* Treeview */
 		*buttonadd,*buttonedit,*buttonremove,	/* options window buttons */
-		*menu;
+		*spin_repeat, *spin_interval,		/* spinbuttons for alarm repeat */
+		*menu,
+		*repeat_alarm_box;			/* Box holding the repeat 
+							   alarm settings */
 		
   XfcePanelPlugin *base;				/* The plugin widget */
   GtkListStore *list;					/* The alarms list */
   gint 		count,					/* Nubmer of alarms */
-		selected,timeout_period_in_sec;		/* Active countdown period */
-  guint 	timeout;				/* The timeout ID */
+		selected,
+		timeout_period_in_sec,			/* Active countdown period */
+		repetitions,				/* Number of alarm repeats */
+		rem_repetitions,			/* Remaining repeats */
+		repeat_interval;			/* Time interval between
+							   repeats (in secs) */
+  guint 	timeout,repeat_timeout;			/* The timeout IDs */
   gboolean 	timer_on,				/* TRUE if countdown 
 							   is in progress */
-		nowin_if_alarm;				/* Show warning window when
+		nowin_if_alarm,				/* Show warning window when
 							   alarm command is set */
+		repeat_alarm,				/* Repeat alarm */
+		alarm_repeating;			/* True while alarm repeats */
   GtkTooltips 	*tip;					/* Tooltip for panel */
   GArray 	*menuarray;				/* Array of popup 
 							   menuitems (alarms). These 
@@ -46,6 +56,7 @@ typedef struct {
 							   of the selected menuitem. */
   gchar 	*timeout_command;			/* Command when countdown ends */
   GTimer 	*timer;					/* Keeps time elapsed */
+
 } plugin_data;
 
 typedef struct {

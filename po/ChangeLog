@@ -1,3 +1,8 @@
+2006-04-23  Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
+
+	* eu.po: Added the file check to configure.in .
+	* tr.po: Added Turkish translations.
+
 2006-04-23  Daichi Kawahata <daichi@xfce.org>
 
 	* eu.po: Added Basque translations by Piarres Beobide

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-03 01:12+0900\n"
+"POT-Creation-Date: 2006-08-27 04:57-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,129 +16,145 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/xfcetimer.c:73
+#: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr ""
 
-#: ../src/xfcetimer.c:76
+#: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
 msgstr ""
 
-#: ../src/xfcetimer.c:78
+#: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
 msgstr ""
 
-#: ../src/xfcetimer.c:102
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
 
-#: ../src/xfcetimer.c:356
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr ""
 
-#: ../src/xfcetimer.c:358
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr ""
 
-#: ../src/xfcetimer.c:403 ../src/xfcetimer.c:477
+#: ../src/xfcetimer.c:436
+msgid "Stop the alarm"
+msgstr ""
+
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr ""
 
-#: ../src/xfcetimer.c:405 ../src/xfcetimer.c:479
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr ""
 
-#: ../src/xfcetimer.c:407 ../src/xfcetimer.c:481
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr ""
 
-#: ../src/xfcetimer.c:417 ../src/xfcetimer.c:491
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr ""
 
-#: ../src/xfcetimer.c:540
+#: ../src/xfcetimer.c:619
 msgid "Name"
 msgstr ""
 
 #. ********
-#: ../src/xfcetimer.c:548
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr ""
 
-#: ../src/xfcetimer.c:550
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr ""
 
-#: ../src/xfcetimer.c:561
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr ""
 
-#: ../src/xfcetimer.c:566
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr ""
 
-#: ../src/xfcetimer.c:571
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr ""
 
-#: ../src/xfcetimer.c:574
+#: ../src/xfcetimer.c:653
 msgid ""
 "\n"
 "or\n"
 msgstr ""
 
 #. **************
-#: ../src/xfcetimer.c:594
+#: ../src/xfcetimer.c:673
 msgid ""
 "\n"
 "The command to run"
 msgstr ""
 
-#: ../src/xfcetimer.c:620
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr ""
 
-#: ../src/xfcetimer.c:658
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr ""
 
-#: ../src/xfcetimer.c:1055
+#: ../src/xfcetimer.c:1162
 msgid "Properties"
 msgstr ""
 
-#: ../src/xfcetimer.c:1067
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr ""
 
-#: ../src/xfcetimer.c:1098
+#: ../src/xfcetimer.c:1205
 msgid ""
 "Timer\n"
 "name"
 msgstr ""
 
-#: ../src/xfcetimer.c:1103
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
 
-#: ../src/xfcetimer.c:1107
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr ""
 
-#: ../src/xfcetimer.c:1150
+#: ../src/xfcetimer.c:1257
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
+msgstr ""
+
+#: ../src/xfcetimer.c:1264
+msgid "Repeat the alarm command:"
+msgstr ""
+
+#: ../src/xfcetimer.c:1271
+msgid "Number of repetitions"
+msgstr ""
+
+#: ../src/xfcetimer.c:1277
+msgid "  Time interval (sec.)"
 msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
