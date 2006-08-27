@@ -1,3 +1,7 @@
+2006-08-27  Jean-François Wauthy <pollux@xfce.org>
+
+	* cs.po: Add Czech translations
+
 2006-04-23  Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
 
 	* eu.po: Added the file check to configure.in .
