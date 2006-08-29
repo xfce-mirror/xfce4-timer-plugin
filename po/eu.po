@@ -48,9 +48,8 @@ msgid "Start timer"
 msgstr "Abiarazte ordua"
 
 #: ../src/xfcetimer.c:436
-#, fuzzy
 msgid "Stop the alarm"
-msgstr "Amaiera ordua"
+msgstr "Alarma gelditu"
 
 #: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
@@ -159,17 +158,16 @@ msgstr ""
 "alarma komando bat ezarririk badago"
 
 #: ../src/xfcetimer.c:1264
-#, fuzzy
 msgid "Repeat the alarm command:"
-msgstr "Alarma komandoa"
+msgstr "Alarma komandoa errepikatu:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr ""
+msgstr "Errepikapen kopurua"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  Denbora tartea (seg.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
