@@ -87,7 +87,7 @@ msgstr "Podaj czas alarmu (24h format)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
-msgstr "h "
+msgstr "g "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
@@ -165,11 +165,11 @@ msgstr "Polecenie alarmu"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr ""
+msgstr "Liczba powtórzeń"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  Interwał (sek.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
