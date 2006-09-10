@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-27 04:57-0700\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2006-09-03 09:51+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
@@ -47,26 +47,22 @@ msgstr "Időzítő indítása"
 msgid "Stop the alarm"
 msgstr "Figyelmeztetés leállítása"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dó %dp %dmp"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dp %dmp"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%dmp"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d-kor"
@@ -176,4 +172,3 @@ msgstr "Időzítő az Xfce 4.4 panelhez"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Xfce4 Időzítő"
-
