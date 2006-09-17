@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-08-27 10:40+0100\n"
+"PO-Revision-Date: 2006-09-17 09:51+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -48,26 +48,29 @@ msgid "Start timer"
 msgstr "Zapnout měřič času"
 
 #: ../src/xfcetimer.c:436
-#, fuzzy
 msgid "Stop the alarm"
-msgstr "Vypnout měřič času"
+msgstr "Zastavit měřič času"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482
+#: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484
+#: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "V %02d:%02d"
@@ -157,17 +160,16 @@ msgid ""
 msgstr "Nezobrazovat okno s varováním pokud je příkaz výstrahy nastaven"
 
 #: ../src/xfcetimer.c:1264
-#, fuzzy
 msgid "Repeat the alarm command:"
-msgstr "Příkaz výstrahy"
+msgstr "Opakovat příkaz výstrahy"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr ""
+msgstr "Počet opakování"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  Časový interval (s)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
@@ -176,3 +178,4 @@ msgstr "Zásuvný modul měření času pro panel Xfce 4.4"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Měřič času Xfce4"
+
