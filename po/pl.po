@@ -48,9 +48,8 @@ msgid "Start timer"
 msgstr "Uruchom stoper"
 
 #: ../src/xfcetimer.c:436
-#, fuzzy
 msgid "Stop the alarm"
-msgstr "Zatrzymaj stoper"
+msgstr "Zatrzymaj alarm"
 
 #: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
@@ -159,9 +158,8 @@ msgstr ""
 "gdy polecenie alarmu jest wykonywane"
 
 #: ../src/xfcetimer.c:1264
-#, fuzzy
 msgid "Repeat the alarm command:"
-msgstr "Polecenie alarmu"
+msgstr "Powtarzaj komendę alarmu:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
