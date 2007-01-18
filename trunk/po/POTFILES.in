@@ -1,0 +1,6 @@
+# List of source files containing translatable strings.
+
+src/xfcetimer.c
+
+# files added by intltool-prepare.
+src/xfce4-timer.desktop.in.in

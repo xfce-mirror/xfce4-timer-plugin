@@ -1,0 +1,18 @@
+16/01/2007 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
+	* Version 0.5.1, final for XFCE 4.4.0
+	* Some more translations (added already)
+
+27/08/2006 Kemal Ilgar Eroglu
+	* Version 0.5
+	* Added option to repeat alarm
+	* Tiny bugfixes and code cleanup
+	* Added Turkish and Basque translations
+16/11/2005 Kemal Ilgar Eroglu
+	* Release version 0.4
+	* This one requires 4.4
+	* Pbar size problems fixed, new panel API permits good size adjustment
+	* Pbar orientation is adjusted automatically
+07/09/2005 Kemal Ilgar Eroglu
+	* Release 0.1. 
+        * pbar size is stil an issue.
+
