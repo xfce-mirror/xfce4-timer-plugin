@@ -4,7 +4,7 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 dnl version info
-m4_define([xfce4_timer_version], [0.5])
+m4_define([xfce4_timer_version], [0.5.1])
 
 dnl init autoconf
 AC_INIT([xfce4-timer], [xfce4_timer_version], [kieroglu@math.washington.edu])
