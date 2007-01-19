@@ -3,7 +3,20 @@
 ## If you don't want it to overwrite it,
 ## 	Please disable it in the Anjuta project configuration
 
-SUBDIRS = src po
+SUBDIRS = \
+	src \
+	po
+
+AUTOMAKE_OPTIONS = \
+	1.8 \
+	dist-bzip2
+	
+distclean-local:
+	rm -rf *.cache *~
+
+rpm: dist
+	rpmbuild -ta $(PACKAGE)-$(VERSION).tar.gz
+	@rm -f $(PACKAGE)-$(VERSION).tar.gz
 
 EXTRA_DIST = \
 	intltool-extract.in \

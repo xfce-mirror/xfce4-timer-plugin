@@ -1,3 +1,7 @@
+19/01/2007 Nick Schermer <nick@xfce.org>
+	* Add LINGUAS support for translators.
+	* Fix the plugin name in the configure file.
+
 16/01/2007 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
 	* Version 0.5.1, final for XFCE 4.4.0
 	* Some more translations (added already)
