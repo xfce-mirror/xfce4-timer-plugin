@@ -1171,7 +1171,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
   gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
     
-  header = xfce_create_header (NULL, _(_("Xfce4 Timer Options")));
+  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
   gtk_widget_set_size_request (GTK_BIN (header)->child, 200, 32);
   gtk_container_set_border_width (GTK_CONTAINER (header), 6);
   gtk_widget_show (header);
