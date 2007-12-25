@@ -54,7 +54,10 @@ typedef struct {
 							   menuitems (alarms). These 
 							   are used to find the index
 							   of the selected menuitem. */
-  gchar 	*timeout_command;			/* Command when countdown ends */
+  gchar 	*timeout_command,			/* Command when countdown ends */
+  			*configfile;			/* Full address of the permanent
+  									config file -- this is not the
+  									plugin rc file. */
   GTimer 	*timer;					/* Keeps time elapsed */
 
 } plugin_data;

@@ -35,9 +35,7 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/xfce_iconbutton.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
-
-//#include <panel/xfce.h>
-//#include <panel/plugins.h>
+#include <libxfcegui4/dialogs.h>
 
 #include "xfcetimer.h"
 
@@ -862,81 +860,85 @@ static void load_settings(plugin_data *pd)
   gboolean is_cd;
   GtkTreeIter iter;
   XfceRc *rc;
-  char *file;
-  
-  if ((file = xfce_panel_plugin_lookup_rc_file (pd->base)) != NULL)
-  {
-      rc = xfce_rc_simple_open (file, TRUE);
-      g_free (file);
 
-      if (rc != NULL)
-      {
+  //if ((file=xfce_panel_plugin_lookup_rc_file (pd->base)) != NULL) {
 
 
-	  groupnum=0;
-	  g_sprintf(groupname,"G0");
+	  if (g_file_test(pd->configfile,G_FILE_TEST_EXISTS)) {  
+	  	
+		  rc = xfce_rc_simple_open (pd->configfile, TRUE);
+
+		  
+		  if (rc != NULL)
+		  {
 
 
-	  while(xfce_rc_has_group(rc,groupname)){
+		  groupnum=0;
+		  g_sprintf(groupname,"G0");
 
-             xfce_rc_set_group(rc,groupname);
 
-	     /*g_fprintf(stderr,"\nLoading item %d\n",groupnum);*/
-	     gtk_list_store_append(pd->list,&iter);
+		  while(xfce_rc_has_group(rc,groupname)){
 
-	     timerstring=(gchar *)xfce_rc_read_entry(rc,"timername","No name");
-	     gtk_list_store_set(pd->list,&iter,0,groupnum,1,timerstring,-1);
-	     /* g_free(timerstring); */ /* Entries read are not freed ! */
+				 xfce_rc_set_group(rc,groupname);
 
-	     timerstring=(gchar *)xfce_rc_read_entry(rc,"timercommand","");
-	     gtk_list_store_set(pd->list,&iter,3,timerstring,-1);
-	     /*g_fprintf(stderr,"\nLoaded timer command ==> %s... with length %d", 
-						timerstring,strlen(timerstring));*/
-	     /*g_free(timerstring);*/
+			 /*g_fprintf(stderr,"\nLoading item %d\n",groupnum);*/
+			 gtk_list_store_append(pd->list,&iter);
 
-	     timerstring=(gchar *)xfce_rc_read_entry(rc,"timerinfo","");
-	     gtk_list_store_set(pd->list,&iter,2,timerstring,-1);
+			 timerstring=(gchar *)xfce_rc_read_entry(rc,"timername","No name");
+			 gtk_list_store_set(pd->list,&iter,0,groupnum,1,timerstring,-1);
+			 /* g_free(timerstring); */ /* Entries read are not freed ! */
 
-	     /*g_free(timerstring);*/
+			 timerstring=(gchar *)xfce_rc_read_entry(rc,"timercommand","");
+			 gtk_list_store_set(pd->list,&iter,3,timerstring,-1);
+			 /*g_fprintf(stderr,"\nLoaded timer command ==> %s... with length %d", 
+							timerstring,strlen(timerstring));*/
+			 /*g_free(timerstring);*/
 
-	     is_cd=xfce_rc_read_bool_entry(rc,"is_countdown",TRUE);
-	     time=xfce_rc_read_int_entry(rc,"time",0);
+			 timerstring=(gchar *)xfce_rc_read_entry(rc,"timerinfo","");
+			 gtk_list_store_set(pd->list,&iter,2,timerstring,-1);
 
-	     gtk_list_store_set(pd->list,&iter,4,is_cd,5,time,-1);
+			 /*g_free(timerstring);*/
 
-	     groupnum++;
-	     g_snprintf(groupname,5,"G%d",groupnum);
-   
-	  } /* end of while loop */
+			 is_cd=xfce_rc_read_bool_entry(rc,"is_countdown",TRUE);
+			 time=xfce_rc_read_int_entry(rc,"time",0);
 
-	  pd->count=groupnum;
-  
+			 gtk_list_store_set(pd->list,&iter,4,is_cd,5,time,-1);
 
-	  /* Read other options */
-	  if(xfce_rc_has_group(rc,"others")){
-	    xfce_rc_set_group(rc,"others");
-	    pd->nowin_if_alarm= xfce_rc_read_bool_entry
-		    (rc,"nowin_if_alarm",FALSE);
-	    pd->repeat_alarm= xfce_rc_read_bool_entry
-		    (rc,"repeat_alarm",FALSE);
-	    pd->repetitions= xfce_rc_read_int_entry
-		    (rc,"repetitions",1);
-	    pd->repeat_interval= xfce_rc_read_int_entry
-		    (rc,"repeat_interval",10);
-	    	    
-	  }	        
+			 groupnum++;
+			 g_snprintf(groupname,5,"G%d",groupnum);
+	   
+		  } /* end of while loop */
 
-	  add_pbar(pd->base,pd);  
+		  pd->count=groupnum;
+	  
 
-         xfce_rc_close(rc);
-      }
+		  /* Read other options */
+		  if(xfce_rc_has_group(rc,"others")){
+			xfce_rc_set_group(rc,"others");
+			pd->nowin_if_alarm= xfce_rc_read_bool_entry
+				(rc,"nowin_if_alarm",FALSE);
+			pd->repeat_alarm= xfce_rc_read_bool_entry
+				(rc,"repeat_alarm",FALSE);
+			pd->repetitions= xfce_rc_read_int_entry
+				(rc,"repetitions",1);
+			pd->repeat_interval= xfce_rc_read_int_entry
+				(rc,"repeat_interval",10);
+					
+		  }	        
+
+		  add_pbar(pd->base,pd);  
+
+			 xfce_rc_close(rc);
+		  }
+		  
+//	 }
   }   
   
 }
 
 
 /**
- * Saves the list to a keyfile
+ * Saves the list to a keyfile, backup a permanent copy
 **/ 
 static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
 
@@ -952,17 +954,24 @@ static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
   gint row_count;
   gsize size;
 
-  GIOChannel *io;
+  FILE *conffile;
   
   XfceRc *rc;
-  char *file;
+  gchar *file, *contents=NULL;
   
   if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
     return;
 
+  // We do this to start a fresh config file, otherwise if the old config file is longer,
+  // the tail will not get truncated. See
+  // http://bugzilla.xfce.org/show_bug.cgi?id=2647
+  // for a related bug report.
+  conffile = fopen(file,"w");
+  if (conffile)
+    fclose(conffile);
+    
   rc = xfce_rc_simple_open (file, FALSE);
-  g_free (file);
-
+  
   if (!rc)
     return;
 
@@ -1015,7 +1024,16 @@ static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
 
   xfce_rc_close(rc);
 
+  conffile = fopen (pd->configfile,"w");
+  /* We backup a permanent copy, which we'll use to load settings */
+  if (conffile && g_file_get_contents(file,&contents,NULL,NULL)){
+  	fputs(contents,conffile);
+  	fclose(conffile);
+  }
 
+  g_free(file);
+  if(contents)
+    g_free(contents);
 
 }
 
@@ -1059,6 +1077,9 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
   if(pd->timeout_command)
     g_free(pd->timeout_command);
+    
+  if(pd->configfile)
+  	g_free(pd->configfile);
 
   gtk_object_destroy(GTK_OBJECT(pd->tip));
 
@@ -1307,6 +1328,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
   GtkWidget *base,*menu,*socket,*menuitem,*box,*pbar2;
   GtkTooltips *tooltip;
   char command[1024]; 
+  gchar *filename,*pathname;
 
 
 
@@ -1347,11 +1369,18 @@ create_plugin_control (XfcePanelPlugin *plugin)
   pd->repeat_interval=10;
   pd->alarm_repeating=FALSE;
   pd->repeat_timeout=0;
- 
+
   gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(plugin), "", NULL);
   gtk_tooltips_disable(pd->tip);
+ 
   
   g_object_ref(pd->list);
+
+  filename = xfce_panel_plugin_save_location (pd->base,TRUE);
+  pathname = g_path_get_dirname (filename);
+  pd->configfile = g_strconcat (pathname,"/XfceTimer.rc",NULL);
+  g_free(filename);
+  g_free(pathname);
 
   load_settings(pd);
 

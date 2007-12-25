@@ -1,3 +1,9 @@
+25/12/2007 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
+	* Version 0.6.
+	* Fix http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=456316 .
+	* Use XfceTimer.rc file to permanently remember settings.
+	* Add a workaround for settings not saving correctly, see XFCE bug #2647. 
+
 19/01/2007 Nick Schermer <nick@xfce.org>
 	* Add LINGUAS support for translators.
 	* Fix the plugin name in the configure file.
