@@ -2,14 +2,15 @@
 # Copyright (C) xfce4-timer-plugin COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce4-timer-plugin package.
 # Vladimir Melo <vladimirmelo@foresightlinux.org>, 2007.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2007-07-04 16:06+0100\n"
-"Last-Translator: Vladimir Melo <vladimirmelo@foresightlinux.org>\n"
+"PO-Revision-Date: 2008-07-30 16:06+0100\n"
+"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,17 +19,17 @@ msgstr ""
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%dh %dm %ds restando"
+msgstr "restando %dh %dm %ds"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dm %ds restando"
+msgstr "restando %dm %ds"
 
 #: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
-msgstr "%ds restando"
+msgstr "restando %ds"
 
 #: ../src/xfcetimer.c:126
 msgid ""
@@ -137,8 +138,8 @@ msgid ""
 "Timer\n"
 "name"
 msgstr ""
-"Cronômetro\n"
-"nome"
+"Nome do\n"
+"Cronômetro"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
