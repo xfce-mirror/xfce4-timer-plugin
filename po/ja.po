@@ -5,14 +5,14 @@
 # This file is distributed under the same license as
 #   the xfce4-timer package.
 # Daichi Kawahata <daichi@xfce.org>, 2006.
-# Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2007.
+# Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2007-2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2008-04-09 20:31+0900\n"
+"PO-Revision-Date: 2008-10-10 03:36+0900\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,6 @@ msgid "Start timer"
 msgstr "タイマーを開始する"
 
 #: ../src/xfcetimer.c:436
-#, fuzzy
 msgid "Stop the alarm"
 msgstr "アラームを停止する"
 
