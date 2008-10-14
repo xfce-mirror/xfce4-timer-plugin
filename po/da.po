@@ -2,16 +2,21 @@
 # Copyright (C) 2007 THE xfce4-timer-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce4-timer-plugin package.
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007.
+# Per Kongstad <p_kongstad@op.pl>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer-plugin\n"
+"Project-Id-Version: xfce4-timer-plugin 0.6\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2008-05-17 15:16+0100\n"
-"Last-Translator: Jens Hyllegaard <jens.hyllegaard@gmail.com>\n"
+"PO-Revision-Date: 2008-10-14 15:19+0100\n"
+"Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -38,11 +43,11 @@ msgstr ""
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr "Stop tiden"
+msgstr "Stop timer"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr "Start tiden"
+msgstr "Start timer"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
@@ -52,7 +57,7 @@ msgstr "Stop alarmen"
 #: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%dt %dm %ds"
 
 #: ../src/xfcetimer.c:484
 #: ../src/xfcetimer.c:558
@@ -128,7 +133,7 @@ msgstr "Egenskaber"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4 timer-indstillinger"
+msgstr "Xfce4-timerindstillinger"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -144,7 +149,7 @@ msgid ""
 "Alarm time"
 msgstr ""
 "Nedtællingsperiode /\n"
-"alarmtid"
+"Alarmtid"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
@@ -172,9 +177,9 @@ msgstr "  Tidsinterval (sek.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Alarm-udvidelsesmodul for Xfce 4.4 panelet"
+msgstr "Timer-udvidelsesmodul til Xfce 4.4 panelet"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Alarm"
+msgstr "Xfce4-timer"
 
