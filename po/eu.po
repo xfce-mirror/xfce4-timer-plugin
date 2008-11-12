@@ -9,12 +9,15 @@ msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-04-10 11:58+0100\n"
+"PO-Revision-Date: 2008-11-09 15:43+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Librezale <Librezale@librezale.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.0\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -86,15 +89,15 @@ msgstr "Alarmaren ordua idatzi (24h formatua)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
-msgstr "o "
+msgstr "o  "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
-msgstr "m "
+msgstr "m  "
 
 #: ../src/xfcetimer.c:650
 msgid "s  "
-msgstr "s "
+msgstr "s  "
 
 #: ../src/xfcetimer.c:653
 msgid ""
