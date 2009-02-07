@@ -1,14 +1,14 @@
 # Swedish translation for xfce4-timer-plugin.
-# Copyright (C) 2008 Free Software Foundation, Inc.
+# Copyright (C) 2008, 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the xfce4-timer-plugin package.
-# Daniel Nylander <po@danielnylander.se>, 2008.
+# Daniel Nylander <po@danielnylander.se>, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-14 16:17+0100\n"
-"PO-Revision-Date: 2008-12-14 21:21+0100\n"
+"POT-Creation-Date: 2009-02-01 19:12+0100\n"
+"PO-Revision-Date: 2009-01-19 06:32+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -35,42 +35,40 @@ msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
+"Piiiiip! :) \n"
+"Det är dags nu!"
 
 #: ../src/xfcetimer.c:425
 msgid "Stop timer"
-msgstr ""
+msgstr "Stoppa tidtagare"
 
 #: ../src/xfcetimer.c:427
 msgid "Start timer"
-msgstr ""
+msgstr "Starta tidtagare"
 
 #: ../src/xfcetimer.c:437
 msgid "Stop the alarm"
-msgstr ""
+msgstr "Stoppa alarmet"
 
-#: ../src/xfcetimer.c:483
-#: ../src/xfcetimer.c:557
+#: ../src/xfcetimer.c:483 ../src/xfcetimer.c:557
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:485
-#: ../src/xfcetimer.c:559
+#: ../src/xfcetimer.c:485 ../src/xfcetimer.c:559
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:487
-#: ../src/xfcetimer.c:561
+#: ../src/xfcetimer.c:487 ../src/xfcetimer.c:561
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:497
-#: ../src/xfcetimer.c:571
+#: ../src/xfcetimer.c:497 ../src/xfcetimer.c:571
 #, c-format
 msgid "At %02d:%02d"
-msgstr ""
+msgstr "Klockan %02d.%02d"
 
 #: ../src/xfcetimer.c:648
 msgid "Name:"
@@ -79,11 +77,11 @@ msgstr "Namn:"
 #. ********
 #: ../src/xfcetimer.c:656
 msgid "Enter the countdown time"
-msgstr ""
+msgstr "Ange nedräkningstiden"
 
 #: ../src/xfcetimer.c:659
 msgid "Enter the time of alarm (24h format)"
-msgstr ""
+msgstr "Ange tid för alarmet (24-timmarsformat)"
 
 #: ../src/xfcetimer.c:671
 msgid "h  "
@@ -115,47 +113,48 @@ msgstr "Redigera alarm"
 
 #: ../src/xfcetimer.c:1226
 msgid "Xfce 4 Timer Plugin"
-msgstr ""
+msgstr "Xfce 4-tidtagare"
 
 #: ../src/xfcetimer.c:1238
 msgid "Xfce4 Timer Options"
-msgstr ""
+msgstr "Alternativ för Xfce4-tidtagare"
 
 #: ../src/xfcetimer.c:1270
 msgid "Timer name"
-msgstr ""
+msgstr "Tidtagarnamn"
 
 #: ../src/xfcetimer.c:1275
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
+"Nedräkningsperiod /\n"
+"Alarmtid"
 
 #: ../src/xfcetimer.c:1279
 msgid "Alarm command"
-msgstr ""
+msgstr "Alarmkommando"
 
 #: ../src/xfcetimer.c:1323
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "Visa inte en varning om ett alarmkommando är inställt"
 
 #: ../src/xfcetimer.c:1330
 msgid "Repeat the alarm command:"
-msgstr ""
+msgstr "Upprepa alarmkommandot:"
 
 #: ../src/xfcetimer.c:1337
 msgid "Number of repetitions"
-msgstr ""
+msgstr "Antal upprepningar"
 
 #: ../src/xfcetimer.c:1343
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  Tidsintervall (s)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr ""
+msgstr "Tidtagare för Xfce 4.4-panelen"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr ""
-
+msgstr "Xfce4-tidtagare"
