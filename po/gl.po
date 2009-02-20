@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2008-06-24 20:21+0100\n"
+"PO-Revision-Date: 2009-02-11 16:39+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -40,14 +40,16 @@ msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
+"Biiiiiip! :) \n"
+"Acabouse o tempo!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr ""
+msgstr "Deter o contador"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr ""
+msgstr "Iniciar o contador"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
@@ -84,7 +86,7 @@ msgstr "Nome"
 #. ********
 #: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
-msgstr ""
+msgstr "Introducir o tempo de conta"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
@@ -133,7 +135,7 @@ msgstr "Propiedades"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr ""
+msgstr "Opcións de Xfce4 Timer"
 
 # Contador
 #: ../src/xfcetimer.c:1205
@@ -150,7 +152,7 @@ msgstr ""
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
-msgstr ""
+msgstr "Comando de alarma"
 
 #: ../src/xfcetimer.c:1257
 msgid ""
@@ -160,7 +162,7 @@ msgstr ""
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr ""
+msgstr "Repetir o comando de alarma:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
@@ -168,13 +170,13 @@ msgstr "Número de repeticións"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  Intervalo de tempo (seg.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr ""
+msgstr "Engadido de contador para o panel de Xfce 4.4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr ""
+msgstr "Xfce4 Timer"
 
