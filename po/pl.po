@@ -1,43 +1,42 @@
 # Polish translations for xfce4-timer package.
 # Copyright (C) 2005 Kemal Ilgar Eroglu.
-# This file is distributed under the same license as
-#   the xfce4-timer package.
+# This file is distributed under the same license as the xfce4-timer package.
 # Piotr Maliński <admin@rk.edu.pl>, 2006.
+# Piotr Sokół <piotr.sokol@10g.pl>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer 0.3\n"
+"Project-Id-Version: xfce4-timer-plugin 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-04-08 13:21+0900\n"
-"Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2009-02-10 18:43+0100\n"
+"Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
+"Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2));\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%dh %dm %ds pozostało"
+msgstr "Pozostało %d g %d m %d s"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dm %ds pozostało"
+msgstr "Pozostało %d m %d s"
 
 #: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
-msgstr "%ds pozostało"
+msgstr "Pozostało %d s"
 
 #: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
-"Beeep! :) \n"
-"Czas się skończył!"
+msgstr "Czas upłynął!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
@@ -51,22 +50,26 @@ msgstr "Uruchom stoper"
 msgid "Stop the alarm"
 msgstr "Zatrzymaj alarm"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482
+#: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%d g %d m %d s"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484
+#: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
-msgstr "%dm %ds"
+msgstr "%d m %d s"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
-msgstr "%ds"
+msgstr "%d s"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "O %02d:%02d"
@@ -82,7 +85,7 @@ msgstr "Podaj czas odliczania"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr "Podaj czas alarmu (24h format)"
+msgstr "Czas alarmu"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
@@ -111,15 +114,15 @@ msgid ""
 "The command to run"
 msgstr ""
 "\n"
-"Polecenie do wykonania"
+"Polecenie:"
 
 #: ../src/xfcetimer.c:699
 msgid "Add new alarm"
-msgstr "Dodaj nowy alarm"
+msgstr "Dodawanie alarmu"
 
 #: ../src/xfcetimer.c:737
 msgid "Edit alarm"
-msgstr "Edytuj alarm"
+msgstr "Edycja alarmu"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
@@ -127,7 +130,7 @@ msgstr "Właściwości"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Opcje stopera Xfce4"
+msgstr "Stoper"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -147,27 +150,25 @@ msgstr ""
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
-msgstr "Polecenie alarmu"
+msgstr "Polecenie"
 
 #: ../src/xfcetimer.c:1257
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr ""
-"Nie wyświetlaj okna ostrzeżenia\n"
-"gdy polecenie alarmu jest wykonywane"
+msgstr "Ukrywanie okna ostrzeżenia gdy zostało ustawione polecenie alarmu"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr "Powtarzaj komendę alarmu:"
+msgstr "Powtarzanie polecenia alarmu:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr "Liczba powtórzeń"
+msgstr "Ilość powtórzeń: "
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  Interwał (sek.)"
+msgstr "  Interwał (sek.):"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
@@ -175,4 +176,5 @@ msgstr "Stoper dla Xfce 4.4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Stoper"
+msgstr "Stoper"
+
