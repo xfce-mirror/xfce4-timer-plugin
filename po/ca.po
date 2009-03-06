@@ -2,19 +2,19 @@
 # Copyright (C) 2005, 2006 Kemal Ilgar Eroglu.
 # This file is distributed under the same license as the xfce4-timer package.
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006.
-# 
-# 
+# Harald Servat <redcrash@gmail.com>, 2009.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-09-18 16:36+0200\n"
-"Last-Translator: Pau Ruŀlan Ferragut <paurullan@bulma.net>\n"
+"PO-Revision-Date: 2009-03-04 12:33+0100\n"
+"Last-Translator: Harald Servat <redcrash@gmail.com>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -37,7 +37,7 @@ msgid ""
 "Time is up!"
 msgstr ""
 "Biiiiiiip! :)\n"
-"S’ha acabat el temps!"
+"S'ha acabat el temps!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
@@ -49,24 +49,28 @@ msgstr "Engega temporitzador"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
-msgstr "Atura l’alarma"
+msgstr "Atura l'alarma"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482
+#: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484
+#: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "A les %02d:%02d"
@@ -78,11 +82,11 @@ msgstr "Nom"
 #. ********
 #: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
-msgstr "Introdueixi l’hora del compta enrera"
+msgstr "Introdueix l'hora del compta enrera"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr "Introdueixi l’ha de l’alarma (format de 24h)"
+msgstr "Introdueix l'ha de l'alarma (format de 24h)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
@@ -100,14 +104,18 @@ msgstr "s  "
 msgid ""
 "\n"
 "or\n"
-msgstr "\nó\n"
+msgstr ""
+"\n"
+"o\n"
 
 #. **************
 #: ../src/xfcetimer.c:673
 msgid ""
 "\n"
 "The command to run"
-msgstr "\nL’ordre a executar"
+msgstr ""
+"\n"
+"L'ordre a executar"
 
 #: ../src/xfcetimer.c:699
 msgid "Add new alarm"
@@ -115,7 +123,7 @@ msgstr "Afegeix una alarma nova"
 
 #: ../src/xfcetimer.c:737
 msgid "Edit alarm"
-msgstr "Edita l’alarma"
+msgstr "Edita l'alarma"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
@@ -138,24 +146,24 @@ msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
-"Temps de compta enrera /\n"
-"Hora de l’alarma"
+"Temps de compta enrere /\n"
+"Hora de l'alarma"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
-msgstr "Ordre de l’alarma"
+msgstr "Ordre de l'alarma"
 
 #: ../src/xfcetimer.c:1257
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
 msgstr ""
-"No mostris la finestra d’avís\n"
-"si hi ha programada una ordre per l’alarma"
+"No mostris la finestra d'avís\n"
+"si hi ha programada una ordre per l'alarma"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr "Repeteix l’ordre de l’alarma:"
+msgstr "Repeteix l'ordre de l'alarma:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
