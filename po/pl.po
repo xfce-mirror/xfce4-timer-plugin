@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-timer-plugin 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2009-02-10 18:43+0100\n"
+"PO-Revision-Date: 2009-03-24 11:05+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "Pozostało %d g %d m %d s"
+msgstr "Pozostało %d godz %d min %d s"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr "Pozostało %d m %d s"
+msgstr "Pozostało %d min %d s"
 
 #: ../src/xfcetimer.c:105
 #, c-format
@@ -54,13 +54,13 @@ msgstr "Zatrzymaj alarm"
 #: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%d g %d m %d s"
+msgstr "%d godz %d min %d s"
 
 #: ../src/xfcetimer.c:484
 #: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
-msgstr "%d m %d s"
+msgstr "%d min %d s"
 
 #: ../src/xfcetimer.c:486
 #: ../src/xfcetimer.c:560
@@ -72,28 +72,28 @@ msgstr "%d s"
 #: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
-msgstr "O %02d:%02d"
+msgstr "%02d:%02d"
 
 #: ../src/xfcetimer.c:619
 msgid "Name"
-msgstr "Nazwa"
+msgstr "Nazwa:"
 
 #. ********
 #: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
-msgstr "Podaj czas odliczania"
+msgstr "Czas odliczania"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr "Czas alarmu"
+msgstr "Godzina alarmu (format 24-godzinny)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
-msgstr "g "
+msgstr "godz. "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
-msgstr "m "
+msgstr "min "
 
 #: ../src/xfcetimer.c:650
 msgid "s  "
@@ -103,9 +103,7 @@ msgstr "s "
 msgid ""
 "\n"
 "or\n"
-msgstr ""
-"\n"
-"lub\n"
+msgstr "\n"
 
 #. **************
 #: ../src/xfcetimer.c:673
@@ -126,7 +124,7 @@ msgstr "Edycja alarmu"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
-msgstr "Właściwości"
+msgstr "Stoper"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
@@ -136,17 +134,13 @@ msgstr "Stoper"
 msgid ""
 "Timer\n"
 "name"
-msgstr ""
-"Stoper\n"
-"nazwa"
+msgstr "Nazwa"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Czas odliczania /\n"
-"Czas alarmu"
+msgstr "Czas odliczania / godzina alarmu"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
@@ -156,11 +150,11 @@ msgstr "Polecenie"
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr "Ukrywanie okna ostrzeżenia gdy zostało ustawione polecenie alarmu"
+msgstr "Brak ostrzeżenia jeśli wprowadzono polecenie alarmu"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr "Powtarzanie polecenia alarmu:"
+msgstr "Powtarzanie polecenia alarmu"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
@@ -168,7 +162,7 @@ msgstr "Ilość powtórzeń: "
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  Interwał (sek.):"
+msgstr "  Interwał (s): "
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
