@@ -1,174 +1,164 @@
+# Hungarian translation of xfce4-timer-plugin
+# Copyright 2009. Free Software Foundation, Inc.
+# This file is distributed under the same license as the xfce4-timer-plugin package.
+#
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
+# SZERVÁC Attila <sas@321.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer 0.3\n"
+"Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-09-03 09:51+0100\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: hu\n"
+"POT-Creation-Date: 2009-07-24 18:32+0200\n"
+"PO-Revision-Date: 2009-07-25 01:53+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <gnome at gnome dot hu>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../src/xfcetimer.c:100
+#: ../src/xfcetimer.c:101
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%dó %dp %dmp van még"
+msgstr "%dó %dp %dmp van hátra"
 
-#: ../src/xfcetimer.c:103
+#: ../src/xfcetimer.c:104
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dp %dmp van még"
+msgstr "%dp %dmp van hátra"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:106
 #, c-format
 msgid "%ds left"
-msgstr "%dmp van még"
+msgstr "%dmp van hátra"
 
-#: ../src/xfcetimer.c:126
+#: ../src/xfcetimer.c:127
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
-"Hahó! :) \n"
-"Idő van!"
+"Csörrr! :)\n"
+"Letelt az idő!"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:425
 msgid "Stop timer"
 msgstr "Időzítő leállítása"
 
-#: ../src/xfcetimer.c:426
+#: ../src/xfcetimer.c:427
 msgid "Start timer"
 msgstr "Időzítő indítása"
 
-#: ../src/xfcetimer.c:436
+#: ../src/xfcetimer.c:437
 msgid "Stop the alarm"
 msgstr "Figyelmeztetés leállítása"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:483 ../src/xfcetimer.c:557
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dó %dp %dmp"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:485 ../src/xfcetimer.c:559
 #, c-format
 msgid "%dm %ds"
 msgstr "%dp %dmp"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:487 ../src/xfcetimer.c:561
 #, c-format
 msgid "%ds"
 msgstr "%dmp"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:497 ../src/xfcetimer.c:571
 #, c-format
 msgid "At %02d:%02d"
-msgstr "%02d:%02d-kor"
+msgstr "Ekkor: %02d.%02d"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
-msgstr "Név"
+#: ../src/xfcetimer.c:648
+msgid "Name:"
+msgstr "Név:"
 
 #. ********
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:656
 msgid "Enter the countdown time"
-msgstr "Állítsd be a visszaszámlálót"
+msgstr "Adja meg a visszaszámlálási időt"
 
-#: ../src/xfcetimer.c:629
+#: ../src/xfcetimer.c:659
 msgid "Enter the time of alarm (24h format)"
-msgstr "Add meg e jelzés idejét (24 órás formában)"
+msgstr "Adja meg a figyelmeztetés időpontját (24 órás formátumban)"
 
-#: ../src/xfcetimer.c:640
+#: ../src/xfcetimer.c:671
 msgid "h  "
-msgstr "ó"
+msgstr "ó  "
 
-#: ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:676
 msgid "m  "
-msgstr "p"
+msgstr "p  "
 
-#: ../src/xfcetimer.c:650
+#: ../src/xfcetimer.c:681
 msgid "s  "
-msgstr "mp"
+msgstr "mp  "
 
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
-msgstr ""
-"\n"
-"vagy\n"
+#: ../src/xfcetimer.c:684
+msgid "or"
+msgstr "vagy"
 
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
-msgstr ""
-"\n"
-"Futtatandó parancs"
-
-#: ../src/xfcetimer.c:699
-msgid "Add new alarm"
-msgstr "Új jelzés"
+#: ../src/xfcetimer.c:707
+msgid "Command to run:"
+msgstr "Futtatandó parancs:"
 
 #: ../src/xfcetimer.c:737
+msgid "Add new alarm"
+msgstr "Új figyelmeztetés hozzáadása"
+
+#: ../src/xfcetimer.c:776
 msgid "Edit alarm"
-msgstr "Jelzés szerkesztése"
+msgstr "Figyelmeztetés szerkesztése"
 
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr "Tulajdonságok"
+#: ../src/xfcetimer.c:1226
+msgid "Xfce 4 Timer Plugin"
+msgstr "Xfce 4 időzítő bővítmény"
 
-#: ../src/xfcetimer.c:1174
+#: ../src/xfcetimer.c:1238
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4 Időzítő opciók"
+msgstr "Xfce 4 időzítő beállításai"
 
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
-msgstr ""
-"Időzítő\n"
-"név"
+#: ../src/xfcetimer.c:1270
+msgid "Timer name"
+msgstr "Időzítő neve"
 
-#: ../src/xfcetimer.c:1210
+#: ../src/xfcetimer.c:1275
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
-"Visszaszámlálási idő /\n"
-"Jelzés időpontja"
+"Visszaszámlálási idő/\n"
+"Figyelmeztetés ideje"
 
-#: ../src/xfcetimer.c:1214
+#: ../src/xfcetimer.c:1279
 msgid "Alarm command"
 msgstr "Figyelmeztető parancs"
 
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
-msgstr ""
-"Ne mutasd a figyelmeztető ablakot\n"
-"ha a figyelmeztető parancs be van állítva"
+#: ../src/xfcetimer.c:1323
+msgid "Don't display a warning  if an alarm command is set"
+msgstr "Ne jelenjen meg figyelmeztetés, ha be van állítva parancs"
 
-#: ../src/xfcetimer.c:1264
+#: ../src/xfcetimer.c:1330
 msgid "Repeat the alarm command:"
-msgstr "Figyelmeztető parancs ismétlése:"
+msgstr "A figyelmeztető parancs ismétlése:"
 
-#: ../src/xfcetimer.c:1271
+#: ../src/xfcetimer.c:1337
 msgid "Number of repetitions"
 msgstr "Ismétlések száma"
 
-#: ../src/xfcetimer.c:1277
+#: ../src/xfcetimer.c:1343
 msgid "  Time interval (sec.)"
-msgstr "  Időköz (mp.)"
+msgstr "Időköz (mp)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Időzítő az Xfce 4.4 panelhez"
+msgstr "Időzítő bővítmény az Xfce 4.4 panelhez"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Időzítő"
+msgstr "Xfce 4 időzítő"
+
