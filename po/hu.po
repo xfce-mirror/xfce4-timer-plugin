@@ -125,18 +125,19 @@ msgstr "Figyelmeztetés szerkesztése"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
-msgstr ""
+msgstr "Tulajdonságok"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Xfce 4 időzítő beállításai"
 
 #: ../src/xfcetimer.c:1205
-#, fuzzy
 msgid ""
 "Timer\n"
 "name"
-msgstr "Időzítő neve"
+msgstr ""
+"Időzítő\n"
+"neve"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
@@ -151,11 +152,12 @@ msgid "Alarm command"
 msgstr "Figyelmeztető parancs"
 
 #: ../src/xfcetimer.c:1257
-#, fuzzy
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr "Ne jelenjen meg figyelmeztetés, ha be van állítva parancs"
+msgstr ""
+"Ne jelenjen meg figyelmeztetés,\n"
+"ha be van állítva figyelmeztető parancs"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
