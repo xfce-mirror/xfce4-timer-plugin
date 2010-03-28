@@ -3,12 +3,12 @@
 # Copyright (C) 2009 THE xfce4-timer-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce4-timer-plugin package.
 # Simon Schneider <simon@schneiderimtal.de>, 2009.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2010-03-28 11:18+0200\n"
 "PO-Revision-Date: 2009-03-13 14:03+0000\n"
 "Last-Translator: Simon Schneider <simon@schneiderimtal.de>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/xfcetimer.c:100
+#: ../src/xfcetimer.c:101
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "verbleibend: %d Stunden %d Minuten %d Sekunden"
 
-#: ../src/xfcetimer.c:103
+#: ../src/xfcetimer.c:104
 #, c-format
 msgid "%dm %ds left"
 msgstr "verbleibend: %d Minuten %d Sekunden"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:106
 #, c-format
 msgid "%ds left"
 msgstr "verbleibend: %d Sekunden"
 
-#: ../src/xfcetimer.c:126
+#: ../src/xfcetimer.c:127
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -40,105 +40,92 @@ msgstr ""
 "Bing! :) \n"
 "Die Zeit ist abgelaufen"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:425
 msgid "Stop timer"
 msgstr "Uhr stoppen"
 
-#: ../src/xfcetimer.c:426
+#: ../src/xfcetimer.c:427
 msgid "Start timer"
 msgstr "Uhr starten"
 
-#: ../src/xfcetimer.c:436
+#: ../src/xfcetimer.c:437
 msgid "Stop the alarm"
 msgstr "Alarm ausschalten"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:483 ../src/xfcetimer.c:557
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d Stunden %d Minuten %d Sekunden"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:485 ../src/xfcetimer.c:559
 #, c-format
 msgid "%dm %ds"
 msgstr "%d Minuten %d Sekunden"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:487 ../src/xfcetimer.c:561
 #, c-format
 msgid "%ds"
 msgstr "%d Sekunden"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:497 ../src/xfcetimer.c:571
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Bei %02d: %02d"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
-msgstr "Name"
+#: ../src/xfcetimer.c:648
+msgid "Name:"
+msgstr "Name:"
 
 #. ********
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:656
 msgid "Enter the countdown time"
 msgstr "Wartezeit eingeben"
 
-#: ../src/xfcetimer.c:629
+#: ../src/xfcetimer.c:659
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarmzeit eingeben: "
 
-#: ../src/xfcetimer.c:640
+#: ../src/xfcetimer.c:671
 msgid "h  "
 msgstr "Stunden  "
 
-#: ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:676
 msgid "m  "
 msgstr "Minuten  "
 
-#: ../src/xfcetimer.c:650
+#: ../src/xfcetimer.c:681
 msgid "s  "
 msgstr "Sekunden  "
 
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
-msgstr ""
-"\n"
-"oder\n"
+#: ../src/xfcetimer.c:684
+msgid "or"
+msgstr "oder"
 
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
-msgstr ""
-"\n"
-"auszuführender Befehl"
+#: ../src/xfcetimer.c:707
+msgid "Command to run:"
+msgstr "Auszuführender Befehl:"
 
-#: ../src/xfcetimer.c:699
+#: ../src/xfcetimer.c:737
 msgid "Add new alarm"
 msgstr "Neuen Alarm erstellen"
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:776
 msgid "Edit alarm"
 msgstr "Alarm bearbeiten"
 
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr "Eigenschaften"
+#: ../src/xfcetimer.c:1226
+msgid "Xfce 4 Timer Plugin"
+msgstr "Xfce-Eieruhr"
 
-#: ../src/xfcetimer.c:1174
+#: ../src/xfcetimer.c:1238
 msgid "Xfce4 Timer Options"
 msgstr "Einstellungen für die Xfce-Eieruhr"
 
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
-msgstr ""
-"Eieruhr\n"
-"Name"
+#: ../src/xfcetimer.c:1270
+msgid "Timer name"
+msgstr "Eieruhrbezeichner"
 
-#: ../src/xfcetimer.c:1210
+#: ../src/xfcetimer.c:1275
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -146,34 +133,35 @@ msgstr ""
 "Wartezeit /\n"
 "Alarmzeit"
 
-#: ../src/xfcetimer.c:1214
+#: ../src/xfcetimer.c:1279
 msgid "Alarm command"
 msgstr "Alarmbefehl"
 
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
+#: ../src/xfcetimer.c:1323
+msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
-"Meldungsfenster nicht anzeigen,\n"
+"Meldungsfenster nicht anzeigen, "
 "wenn ein Alarmbefehl angegeben ist"
 
-#: ../src/xfcetimer.c:1264
+#: ../src/xfcetimer.c:1330
 msgid "Repeat the alarm command:"
 msgstr "Alarmbefehl wiederholen:"
 
-#: ../src/xfcetimer.c:1271
+#: ../src/xfcetimer.c:1337
 msgid "Number of repetitions"
 msgstr "Anzahl der Wiederholungen: "
 
-#: ../src/xfcetimer.c:1277
+#: ../src/xfcetimer.c:1343
 msgid "  Time interval (sec.)"
 msgstr "Zeitabstand (Sek.): "
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Eieruhr für die Leiste"
+msgstr "Eieruhr für die Xfce-Leiste"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Xfce4-Eieruhr"
+
+#~ msgid "Properties"
+#~ msgstr "Eigenschaften"
