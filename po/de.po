@@ -164,11 +164,11 @@ msgstr "Alarmbefehl wiederholen:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr "Anzahl der Wiederholungen"
+msgstr "Anzahl der Wiederholungen: "
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "Zeitabstand (Sek.): "
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
