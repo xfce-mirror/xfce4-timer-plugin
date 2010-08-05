@@ -19,59 +19,60 @@ msgstr ""
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr ""
+msgstr "%d سائەت%d مىنۇت %dسېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr ""
+msgstr "%d مىنۇت %dسېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
-msgstr ""
+msgstr "%dسېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
+msgstr "تىرىڭ :) \n"
+"ۋاقىت توشتى"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr ""
+msgstr "timer توختات"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr ""
+msgstr "timer باشلا"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
-msgstr ""
+msgstr "قوڭغۇراقنى توختات"
 
 #: ../src/xfcetimer.c:482
 #: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
-msgstr ""
+msgstr "%dسائەت %dمىنۇت %dسېكۇنت"
 
 #: ../src/xfcetimer.c:484
 #: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
-msgstr ""
+msgstr "%dمىنۇت %dسېكۇنت"
 
 #: ../src/xfcetimer.c:486
 #: ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
-msgstr ""
+msgstr "%dسېكۇنت"
 
 #: ../src/xfcetimer.c:496
 #: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
-msgstr ""
+msgstr "%02d:%02d"
 
 #: ../src/xfcetimer.c:619
 msgid "Name"
@@ -80,23 +81,23 @@ msgstr "ئاتى"
 #. ********
 #: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
-msgstr ""
+msgstr "تەتۈر ساناش ۋاقتىنى كىرگۈزۈڭ"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr ""
+msgstr "قوڭغۇراق چېلىش ۋاقتىنى كىرگۈزۈڭ (24時間制)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
-msgstr ""
+msgstr "h  "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
-msgstr "مېتىر  "
+msgstr "m  "
 
 #: ../src/xfcetimer.c:650
 msgid "s  "
-msgstr ""
+msgstr "s  "
 
 #: ../src/xfcetimer.c:653
 msgid ""
@@ -110,15 +111,16 @@ msgstr "\n"
 msgid ""
 "\n"
 "The command to run"
-msgstr ""
+msgstr "\n"
+"ئىجرا بولىدىغان بۇيرۇق"
 
 #: ../src/xfcetimer.c:699
 msgid "Add new alarm"
-msgstr ""
+msgstr "يېڭى قوڭغۇراق قوش"
 
 #: ../src/xfcetimer.c:737
 msgid "Edit alarm"
-msgstr ""
+msgstr "قوڭغۇراق تەھرىرلە"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
@@ -126,47 +128,50 @@ msgstr "خاسلىق"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr ""
+msgstr "Xfce4 Timer تاللانمىسى"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
 "Timer\n"
 "name"
-msgstr ""
+msgstr "Timer\n"
+"ئاتى"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
+msgstr "تەتۈر ساناش ۋاقتى/\n"
+"قوڭغۇراق ۋاقتى"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
-msgstr ""
+msgstr "قوڭغۇراق بۇيرۇقى"
 
 #: ../src/xfcetimer.c:1257
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr ""
+msgstr "قوڭغۇراق بۇيرۇقى بېكىتىلسە\n"
+"ئاگاھلاندۇرۇش كۆزنىكى چىقمىسۇن"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr ""
+msgstr "قوڭغۇراق بۇيرۇقى تەكرارلانسۇن:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr ""
+msgstr "تەكرارلىنىش ۋاقتى"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr ""
+msgstr "  ۋاقىت ئىنتېرۋالى(سېكۇنت.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr ""
+msgstr "Xfce 4.4 نىڭ Timer قىستۇرمىسى"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr ""
+msgstr "Xfce4 Timer"
 
