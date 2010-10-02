@@ -39,8 +39,8 @@ msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
-"ビーー！ :) \n"
-"時間です！"
+"ビーー! :) \n"
+"時間です!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
