@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Nuno Miguel <nunis@netcabo.pt>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -40,36 +40,32 @@ msgstr ""
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr "Parar timer"
+msgstr "Parar temporizador"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr "Iniciar timer"
+msgstr "Iniciar temporizador"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "Parar o alarme"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Em %02d:%02d"
@@ -130,15 +126,15 @@ msgstr "Propriedades"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Opções Timer Xfce4"
+msgstr "Opções do temporizador Xfce4"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
 "Timer\n"
 "name"
 msgstr ""
-"Timer\n"
-"nome"
+"Nome\n"
+"do temporizador"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
@@ -146,11 +142,11 @@ msgid ""
 "Alarm time"
 msgstr ""
 "Período de contagem /\n"
-"Hora de alarme"
+"Hora do alarme"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
-msgstr "Comando de alarme"
+msgstr "Comando do alarme"
 
 #: ../src/xfcetimer.c:1257
 msgid ""
@@ -158,11 +154,11 @@ msgid ""
 "if an alarm command is set"
 msgstr ""
 "Não mostrar a janela de aviso\n"
-"se um comando de alarme está definido"
+"se um comando de alarme estiver definido"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
-msgstr "Repetir o comando de alarme:"
+msgstr "Repita o comando de alarme:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
@@ -170,13 +166,12 @@ msgstr "Número de repetições"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  Intervalo de tempo (sec.)"
+msgstr "Intervalo de tempo (sec.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Plugin Timer para painel Xfce 4.4"
+msgstr "\"Plug-in\" para painel Xfce 4.4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Xfce4 Timer"
-
