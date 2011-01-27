@@ -42,7 +42,7 @@
 
 #include "xfcetimer.h"
 
-static gboolean create_plugin_control (XfcePanelPlugin *plugin);
+static void create_plugin_control (XfcePanelPlugin *plugin);
 XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(create_plugin_control);
 
 void make_menu(plugin_data *pd);
@@ -1366,7 +1366,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
  *
  * Returns %TRUE on success, %FALSE on failure.
  **/
-static gboolean
+static void
 create_plugin_control (XfcePanelPlugin *plugin)
 {
 
@@ -1461,7 +1461,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
   xfce_panel_plugin_menu_show_configure (plugin);
   g_signal_connect (plugin, "configure-plugin",
                       G_CALLBACK (plugin_create_options), pd);
-  return(TRUE);
 }
 
 
