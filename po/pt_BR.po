@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2008-07-30 16:06+0100\n"
-"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
+"PO-Revision-Date: 2011-04-25 13:42-0300\n"
+"Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,33 +19,33 @@ msgstr ""
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "restando %dh %dm %ds"
+msgstr "Restando %dh %dmin %ds"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr "restando %dm %ds"
+msgstr "Restando %dmin %ds"
 
 #: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
-msgstr "restando %ds"
+msgstr "Restando %ds"
 
 #: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
-"Beeep! :) \n"
+"Biiip! :) \n"
 "Acabou o tempo!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr "Parar o cronômetro"
+msgstr "Parar o temporizador"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr "Iniciar o cronômetro"
+msgstr "Iniciar o temporizador"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
@@ -55,13 +55,13 @@ msgstr "Parar o alarme"
 #: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%dh %dmin %ds"
 
 #: ../src/xfcetimer.c:484
 #: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
-msgstr "%dm %ds"
+msgstr "%dmin %ds"
 
 #: ../src/xfcetimer.c:486
 #: ../src/xfcetimer.c:560
@@ -73,7 +73,7 @@ msgstr "%ds"
 #: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
-msgstr "Em %02d:%02d"
+msgstr "Às %02dh%02d"
 
 #: ../src/xfcetimer.c:619
 msgid "Name"
@@ -94,7 +94,7 @@ msgstr "h  "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
-msgstr "m  "
+msgstr "min  "
 
 #: ../src/xfcetimer.c:650
 msgid "s  "
@@ -131,7 +131,7 @@ msgstr "Propriedades"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Opções do Xfce4 Timer"
+msgstr "Opções do temporizador do Xfce4"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -139,7 +139,7 @@ msgid ""
 "name"
 msgstr ""
 "Nome do\n"
-"Cronômetro"
+"temporizador"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
@@ -171,13 +171,13 @@ msgstr "Número de repetições"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  Intervalo de tempo (seg.)"
+msgstr "  Intervalo de tempo (s)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Plug-in Timer para o painel do Xfce 4.4"
+msgstr "Plug-in temporizador para o painel do Xfce 4.4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Timer"
+msgstr "Temporizador do Xfce4"
 
