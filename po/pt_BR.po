@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the xfce4-timer-plugin package.
 # Vladimir Melo <vladimirmelo@foresightlinux.org>, 2007.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
+# Sérgio Cipolla <secipolla@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2011-04-25 13:42-0300\n"
+"PO-Revision-Date: 2011-04-25 14:03-0300\n"
 "Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +74,7 @@ msgstr "%ds"
 #: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
-msgstr "Às %02dh%02d"
+msgstr "às %02dh%02d"
 
 #: ../src/xfcetimer.c:619
 msgid "Name"
