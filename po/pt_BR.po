@@ -4,7 +4,7 @@
 # Vladimir Melo <vladimirmelo@foresightlinux.org>, 2007.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
 # Sérgio Cipolla <secipolla@gmail.com>, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
@@ -52,26 +52,22 @@ msgstr "Iniciar o temporizador"
 msgid "Stop the alarm"
 msgstr "Parar o alarme"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dmin %ds"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dmin %ds"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "às %02dh%02d"
@@ -132,7 +128,7 @@ msgstr "Propriedades"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Opções do temporizador do Xfce4"
+msgstr "Opções do temporizador do Xfce 4"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -168,17 +164,16 @@ msgstr "Repetir o comando de alarme:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr "Número de repetições"
+msgstr "Número de repetições "
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  Intervalo de tempo (s)"
+msgstr "  Intervalo de tempo (s) "
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Plug-in temporizador para o painel do Xfce 4.4"
+msgstr "Plugin temporizador para o painel do Xfce 4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Temporizador do Xfce4"
-
