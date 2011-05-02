@@ -159,7 +159,7 @@ msgstr "Команда повторения таймера:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr "Количество проверок"
+msgstr "Количество повторов"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
@@ -167,7 +167,7 @@ msgstr "Интервал (сек.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Позволяет создавать таймеры обратного отсчета"
+msgstr "Создание таймеров обратного отсчета"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
