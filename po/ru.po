@@ -139,9 +139,7 @@ msgstr ""
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Обратный отсчет /\n"
-"Время срабатывания"
+msgstr "Период срабатывания"
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
