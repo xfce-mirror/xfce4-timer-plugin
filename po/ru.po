@@ -35,9 +35,7 @@ msgstr "осталось %dс"
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
-"Бииип! :) \n"
-"Время вышло!"
+msgstr "Время вышло"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
@@ -59,7 +57,7 @@ msgstr "%dч %dм %dс"
 #: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
-msgstr "%dч %dс"
+msgstr "%dм %dс"
 
 #: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
