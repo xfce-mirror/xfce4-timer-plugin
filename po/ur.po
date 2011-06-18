@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2011-06-19 00:55+0300\n"
 "PO-Revision-Date: 2009-05-14 03:24+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
+"Language: ur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +35,11 @@ msgstr "%dm %ds باقی ہے"
 msgid "%ds left"
 msgstr "%ds باقی ہے"
 
-#: ../src/xfcetimer.c:126
+#: ../src/xfcetimer.c:108
+msgid " (Paused)"
+msgstr ""
+
+#: ../src/xfcetimer.c:129
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -42,109 +47,112 @@ msgstr ""
 "بیپ! :) \n"
 "وقت پورا ہوگیا!"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:413
+msgid "Resume timer"
+msgstr ""
+
+#: ../src/xfcetimer.c:419 ../src/xfcetimer.c:486
 msgid "Stop timer"
 msgstr "ٹائمر روکیں"
 
-#: ../src/xfcetimer.c:426
+#: ../src/xfcetimer.c:472
+#, fuzzy
+msgid "Pause timer"
+msgstr "ٹائمر شروع کریں"
+
+#: ../src/xfcetimer.c:488
 msgid "Start timer"
 msgstr "ٹائمر شروع کریں"
 
-#: ../src/xfcetimer.c:436
+#: ../src/xfcetimer.c:498
 msgid "Stop the alarm"
 msgstr "الارم بند کریں"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:544 ../src/xfcetimer.c:618
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:546 ../src/xfcetimer.c:620
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:548 ../src/xfcetimer.c:622
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:558 ../src/xfcetimer.c:632
 #, c-format
 msgid "At %02d:%02d"
 msgstr "پر %02d:%02d"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
+#: ../src/xfcetimer.c:709
+#, fuzzy
+msgid "Name:"
 msgstr "نام"
 
 #. ********
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:717
 msgid "Enter the countdown time"
 msgstr "تنزلی وقت لکھیں"
 
-#: ../src/xfcetimer.c:629
+#: ../src/xfcetimer.c:720
 msgid "Enter the time of alarm (24h format)"
 msgstr "الارم کا وقت لکھیں (24گ فارمیٹ)"
 
-#: ../src/xfcetimer.c:640
+#: ../src/xfcetimer.c:732
 msgid "h  "
 msgstr "گ"
 
-#: ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:737
 msgid "m  "
 msgstr "م"
 
-#: ../src/xfcetimer.c:650
+#: ../src/xfcetimer.c:742
 msgid "s  "
 msgstr "س"
 
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
+#: ../src/xfcetimer.c:745
+#, fuzzy
+msgid "or"
 msgstr ""
 "\n"
 "or\n"
 
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
+#: ../src/xfcetimer.c:768
+#, fuzzy
+msgid "Command to run:"
 msgstr ""
 "\n"
 "چلانے کے لیے کمانڈ"
 
-#: ../src/xfcetimer.c:699
+#: ../src/xfcetimer.c:798
 msgid "Add new alarm"
 msgstr "نیا الارم شامل کریں"
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:837
 msgid "Edit alarm"
 msgstr "الارم مدون کریں"
 
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr "خصوصیات"
+#: ../src/xfcetimer.c:1287
+#, fuzzy
+msgid "Xfce 4 Timer Plugin"
+msgstr "ایکسفس4 الارم اختیارات"
 
-#: ../src/xfcetimer.c:1174
+#: ../src/xfcetimer.c:1299
 msgid "Xfce4 Timer Options"
 msgstr "ایکسفس4 الارم اختیارات"
 
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
+#: ../src/xfcetimer.c:1331
+#, fuzzy
+msgid "Timer name"
 msgstr ""
 "ٹائمر\n"
 "نام"
 
-#: ../src/xfcetimer.c:1210
+#: ../src/xfcetimer.c:1336
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -152,27 +160,26 @@ msgstr ""
 "تنزلی مدت /\n"
 "الارم وقت"
 
-#: ../src/xfcetimer.c:1214
+#: ../src/xfcetimer.c:1340
 msgid "Alarm command"
 msgstr "الارم کمانڈ"
 
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
+#: ../src/xfcetimer.c:1384
+#, fuzzy
+msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "اگر الارم کمانڈ مرتب ہو یہ\n"
 "انتباہی ونڈو ظاہر مت کریں"
 
-#: ../src/xfcetimer.c:1264
+#: ../src/xfcetimer.c:1391
 msgid "Repeat the alarm command:"
 msgstr "الارم کمانڈ دہرائیں:"
 
-#: ../src/xfcetimer.c:1271
+#: ../src/xfcetimer.c:1398
 msgid "Number of repetitions"
 msgstr "تکرار کی تعداد"
 
-#: ../src/xfcetimer.c:1277
+#: ../src/xfcetimer.c:1404
 msgid "  Time interval (sec.)"
 msgstr "  وقت وقفہ (سیکنڈ)"
 
@@ -184,3 +191,5 @@ msgstr "ٹائمر پلگ ان برائے ایکسفس 4.4 پینل"
 msgid "Xfce4 Timer"
 msgstr "ایکسفس4 ٹائمر"
 
+#~ msgid "Properties"
+#~ msgstr "خصوصیات"

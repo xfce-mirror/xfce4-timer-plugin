@@ -7,31 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-31 15:10+0000\n"
+"POT-Creation-Date: 2011-06-19 00:55+0300\n"
 "PO-Revision-Date: 2008-07-14 13:28+0300\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/xfcetimer.c:98
+#: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "залишилось %dг %dх %dс"
 
-#: ../src/xfcetimer.c:101
+#: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
 msgstr "залишилось %dх %dс"
 
-#: ../src/xfcetimer.c:103
+#: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
 msgstr "залишилось %dс"
 
-#: ../src/xfcetimer.c:124
+#: ../src/xfcetimer.c:108
+msgid " (Paused)"
+msgstr ""
+
+#: ../src/xfcetimer.c:129
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -39,105 +44,112 @@ msgstr ""
 "Все-е-е! :) \n"
 "Час вийшов!"
 
-#: ../src/xfcetimer.c:422
+#: ../src/xfcetimer.c:413
+msgid "Resume timer"
+msgstr ""
+
+#: ../src/xfcetimer.c:419 ../src/xfcetimer.c:486
 msgid "Stop timer"
 msgstr "Зупинити таймер"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:472
+#, fuzzy
+msgid "Pause timer"
+msgstr "Запустити таймер"
+
+#: ../src/xfcetimer.c:488
 msgid "Start timer"
 msgstr "Запустити таймер"
 
-#: ../src/xfcetimer.c:434
+#: ../src/xfcetimer.c:498
 msgid "Stop the alarm"
 msgstr "Зупинити сигнал"
 
-#: ../src/xfcetimer.c:480 ../src/xfcetimer.c:554
+#: ../src/xfcetimer.c:544 ../src/xfcetimer.c:618
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dг %dх %dс"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:546 ../src/xfcetimer.c:620
 #, c-format
 msgid "%dm %ds"
 msgstr "%dх %dс"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:548 ../src/xfcetimer.c:622
 #, c-format
 msgid "%ds"
 msgstr "%dс"
 
-#: ../src/xfcetimer.c:494 ../src/xfcetimer.c:568
+#: ../src/xfcetimer.c:558 ../src/xfcetimer.c:632
 #, c-format
 msgid "At %02d:%02d"
 msgstr "В %02d:%02d"
 
-#: ../src/xfcetimer.c:617
-msgid "Name"
+#: ../src/xfcetimer.c:709
+#, fuzzy
+msgid "Name:"
 msgstr "Назва"
 
 #. ********
-#: ../src/xfcetimer.c:625
+#: ../src/xfcetimer.c:717
 msgid "Enter the countdown time"
 msgstr "Введіть час зворотного відліку"
 
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:720
 msgid "Enter the time of alarm (24h format)"
 msgstr "Введіть час спрацьовування сигналу (в форматі 24 годин)"
 
-#: ../src/xfcetimer.c:638
+#: ../src/xfcetimer.c:732
 msgid "h  "
 msgstr "г  "
 
-#: ../src/xfcetimer.c:643
+#: ../src/xfcetimer.c:737
 msgid "m  "
 msgstr "х  "
 
-#: ../src/xfcetimer.c:648
+#: ../src/xfcetimer.c:742
 msgid "s  "
 msgstr "с  "
 
-#: ../src/xfcetimer.c:651
-msgid ""
-"\n"
-"or\n"
+#: ../src/xfcetimer.c:745
+#, fuzzy
+msgid "or"
 msgstr ""
 "\n"
 "або\n"
 
-#. **************
-#: ../src/xfcetimer.c:671
-msgid ""
-"\n"
-"The command to run"
+#: ../src/xfcetimer.c:768
+#, fuzzy
+msgid "Command to run:"
 msgstr ""
 "\n"
 "Запустити команду"
 
-#: ../src/xfcetimer.c:697
+#: ../src/xfcetimer.c:798
 msgid "Add new alarm"
 msgstr "Додати новий сигнал"
 
-#: ../src/xfcetimer.c:735
+#: ../src/xfcetimer.c:837
 msgid "Edit alarm"
 msgstr "Редагувати сигнал"
 
-#: ../src/xfcetimer.c:1183
-msgid "Properties"
-msgstr "Властивості"
+#: ../src/xfcetimer.c:1287
+#, fuzzy
+msgid "Xfce 4 Timer Plugin"
+msgstr "Опції таймеру Xfce4"
 
-#: ../src/xfcetimer.c:1195
+#: ../src/xfcetimer.c:1299
 msgid "Xfce4 Timer Options"
 msgstr "Опції таймеру Xfce4"
 
-#: ../src/xfcetimer.c:1226
-msgid ""
-"Timer\n"
-"name"
+#: ../src/xfcetimer.c:1331
+#, fuzzy
+msgid "Timer name"
 msgstr ""
 "Таймер\n"
 "назва"
 
-#: ../src/xfcetimer.c:1231
+#: ../src/xfcetimer.c:1336
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -145,27 +157,26 @@ msgstr ""
 "Період зворотного відліку /\n"
 "Час сигналу"
 
-#: ../src/xfcetimer.c:1235
+#: ../src/xfcetimer.c:1340
 msgid "Alarm command"
 msgstr "Команда сигналу"
 
-#: ../src/xfcetimer.c:1278
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
+#: ../src/xfcetimer.c:1384
+#, fuzzy
+msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Не показувати вікно попереджень\n"
 "якщо призначено команду сигналу"
 
-#: ../src/xfcetimer.c:1285
+#: ../src/xfcetimer.c:1391
 msgid "Repeat the alarm command:"
 msgstr "Повторити команду сигналу:"
 
-#: ../src/xfcetimer.c:1292
+#: ../src/xfcetimer.c:1398
 msgid "Number of repetitions"
 msgstr "Кількість повторів"
 
-#: ../src/xfcetimer.c:1298
+#: ../src/xfcetimer.c:1404
 msgid "  Time interval (sec.)"
 msgstr "  Інтервал часу (сек.)"
 
@@ -176,3 +187,6 @@ msgstr "Плагін Таймер для панелі Xfce 4.4"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Таймер Xfce4"
+
+#~ msgid "Properties"
+#~ msgstr "Властивості"

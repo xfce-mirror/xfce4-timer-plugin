@@ -18,7 +18,7 @@
  */
 
 
-#define 	TIMEOUT_TIME 2000 			/* Countdown update period in 
+#define 	UPDATE_INTERVAL 2000 			/* Countdown update period in 
 							   milliseconds */
 
 typedef struct {
@@ -48,7 +48,9 @@ typedef struct {
 		nowin_if_alarm,				/* Show warning window when
 							   alarm command is set */
 		repeat_alarm,				/* Repeat alarm */
-		alarm_repeating;			/* True while alarm repeats */
+		alarm_repeating,			/* True while alarm repeats */
+		is_paused,					/* True if the countdown is paused */
+		is_countdown;				/* True if the alarm type is contdown */
   GtkTooltips 	*tip;					/* Tooltip for panel */
   GArray 	*menuarray;				/* Array of popup 
 							   menuitems (alarms). These 
