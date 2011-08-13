@@ -2,19 +2,19 @@
 # Copyright (C) 2006 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>.
 # This file is distributed under the same license as the xfce4-timer-plugin package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-19 00:55+0300\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2008-06-21 18:22+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -31,11 +31,7 @@ msgstr "%dm %dd tersisa"
 msgid "%ds left"
 msgstr "%dd tersisa"
 
-#: ../src/xfcetimer.c:108
-msgid " (Paused)"
-msgstr ""
-
-#: ../src/xfcetimer.c:129
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -43,112 +39,105 @@ msgstr ""
 "Biiip! :) \n"
 "Waktu habis!"
 
-#: ../src/xfcetimer.c:413
-msgid "Resume timer"
-msgstr ""
-
-#: ../src/xfcetimer.c:419 ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr "Stop pengukur waktu"
 
-#: ../src/xfcetimer.c:472
-#, fuzzy
-msgid "Pause timer"
-msgstr "Mulai pengukur waktu"
-
-#: ../src/xfcetimer.c:488
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr "Mulai pengukur waktu"
 
-#: ../src/xfcetimer.c:498
+#: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "Stop alarm"
 
-#: ../src/xfcetimer.c:544 ../src/xfcetimer.c:618
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dj %dm %dd"
 
-#: ../src/xfcetimer.c:546 ../src/xfcetimer.c:620
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %dd"
 
-#: ../src/xfcetimer.c:548 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%dd"
 
-#: ../src/xfcetimer.c:558 ../src/xfcetimer.c:632
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Pada %02d:%02d"
 
-#: ../src/xfcetimer.c:709
-#, fuzzy
-msgid "Name:"
+#: ../src/xfcetimer.c:619
+msgid "Name"
 msgstr "Nama"
 
 #. ********
-#: ../src/xfcetimer.c:717
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr "Masukkan waktu hitung mundur"
 
-#: ../src/xfcetimer.c:720
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr "Masukkan waktu alarm (format 24 jam)"
 
-#: ../src/xfcetimer.c:732
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr "j  "
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:742
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr "d  "
 
-#: ../src/xfcetimer.c:745
-#, fuzzy
-msgid "or"
+#: ../src/xfcetimer.c:653
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 "\n"
 "atau\n"
 
-#: ../src/xfcetimer.c:768
-#, fuzzy
-msgid "Command to run:"
+#. **************
+#: ../src/xfcetimer.c:673
+msgid ""
+"\n"
+"The command to run"
 msgstr ""
 "\n"
 "Perintah untuk dijalankan"
 
-#: ../src/xfcetimer.c:798
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr "Tambah alarm baru"
 
-#: ../src/xfcetimer.c:837
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr "Sunting alarm"
 
-#: ../src/xfcetimer.c:1287
-#, fuzzy
-msgid "Xfce 4 Timer Plugin"
-msgstr "Opsi Pengukur Waktu Xfce4"
+#: ../src/xfcetimer.c:1162
+msgid "Properties"
+msgstr "Properti"
 
-#: ../src/xfcetimer.c:1299
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Opsi Pengukur Waktu Xfce4"
 
-#: ../src/xfcetimer.c:1331
-#, fuzzy
-msgid "Timer name"
+#: ../src/xfcetimer.c:1205
+msgid ""
+"Timer\n"
+"name"
 msgstr ""
 "Pengukur Waktu\n"
 "nama"
 
-#: ../src/xfcetimer.c:1336
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -156,26 +145,27 @@ msgstr ""
 "Waktu hitung mundur /\n"
 "Waktu alarm"
 
-#: ../src/xfcetimer.c:1340
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr "Perintah alarm"
 
-#: ../src/xfcetimer.c:1384
-#, fuzzy
-msgid "Don't display a warning  if an alarm command is set"
+#: ../src/xfcetimer.c:1257
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
 msgstr ""
 "Jangan tampilkan jendela peringatan\n"
 "jika perintah alarm diatur"
 
-#: ../src/xfcetimer.c:1391
+#: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
 msgstr "Ulangi perintah alarm:"
 
-#: ../src/xfcetimer.c:1398
+#: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
 msgstr "Jumlah pengulangan"
 
-#: ../src/xfcetimer.c:1404
+#: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
 msgstr "  Interval waktu (det.)"
 
@@ -187,5 +177,8 @@ msgstr "Plugin pengukur waktu untuk panel Xfce 4.4"
 msgid "Xfce4 Timer"
 msgstr "Pengukur Waktu Xfce4"
 
-#~ msgid "Properties"
-#~ msgstr "Properti"
+#~ msgid "Pause timer"
+#~ msgstr "Mulai pengukur waktu"
+
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Opsi Pengukur Waktu Xfce4"
