@@ -71,7 +71,6 @@ msgid "At %02d:%02d"
 msgstr "В %02d:%02d"
 
 #: ../src/xfcetimer.c:619
-#, fuzzy
 msgid "Name"
 msgstr "Название"
 
@@ -97,7 +96,6 @@ msgid "s  "
 msgstr "с  "
 
 #: ../src/xfcetimer.c:653
-#, fuzzy
 msgid ""
 "\n"
 "or\n"
@@ -131,7 +129,6 @@ msgid "Xfce4 Timer Options"
 msgstr "Настройки таймера Xfce4"
 
 #: ../src/xfcetimer.c:1205
-#, fuzzy
 msgid ""
 "Timer\n"
 "name"
@@ -150,7 +147,6 @@ msgid "Alarm command"
 msgstr "Команда"
 
 #: ../src/xfcetimer.c:1257
-#, fuzzy
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
