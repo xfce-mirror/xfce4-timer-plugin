@@ -2,19 +2,19 @@
 # Copyright (C) 2008 THE xfce'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce package.
 # Hunt Xu <huntxu@live.cn>", 2008.
-# 
+# Chipong Luo <chipong_l@yahoo.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce 4-timer-plugin\n"
+"Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2008-12-06 16:53+0800\n"
-"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
-"Language-Team: Chinese (simplified)\n"
+"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -36,7 +36,7 @@ msgid ""
 "Beeep! :) \n"
 "Time is up!"
 msgstr ""
-"铃铃铃~~~\n"
+"嘟嘟嘟 :)\n"
 "时间到！"
 
 #: ../src/xfcetimer.c:424
@@ -82,19 +82,19 @@ msgstr "输入倒计时时间"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr "输入提示时间（24小时制）"
+msgstr "输入提示时间(24小时制)"
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
-msgstr "时"
+msgstr "时 "
 
 #: ../src/xfcetimer.c:645
 msgid "m  "
-msgstr "分"
+msgstr "分 "
 
 #: ../src/xfcetimer.c:650
 msgid "s  "
-msgstr "秒"
+msgstr "秒 "
 
 #: ../src/xfcetimer.c:653
 msgid ""
@@ -119,15 +119,15 @@ msgstr "添加新提示"
 
 #: ../src/xfcetimer.c:737
 msgid "Edit alarm"
-msgstr "修改提示"
+msgstr "编辑提示"
 
 #: ../src/xfcetimer.c:1162
 msgid "Properties"
-msgstr "首选项"
+msgstr "属性"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4 定时器选项"
+msgstr "Xfce 定时器选项"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -142,7 +142,7 @@ msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr ""
-"倒计时 /\n"
+"倒计时周期/\n"
 "提示时间"
 
 #: ../src/xfcetimer.c:1214
@@ -154,7 +154,7 @@ msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
 msgstr ""
-"如果已设置定时器命令\n"
+"如果已设置提示命令\n"
 "则不显示警告窗口"
 
 #: ../src/xfcetimer.c:1264
@@ -167,7 +167,7 @@ msgstr "重复次数"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
-msgstr "  时间间隔（秒）"
+msgstr "  时间间隔(秒)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
@@ -175,10 +175,4 @@ msgstr "Xfce 面板的定时器插件"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 定时器"
-
-#~ msgid "Pause timer"
-#~ msgstr "启动定时器"
-
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Xfce4 定时器选项"
+msgstr "Xfce 定时器"
