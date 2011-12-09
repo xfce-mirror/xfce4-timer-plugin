@@ -1,8 +1,10 @@
-# Chinese translations for xfce package.
-# Copyright (C) 2008 THE xfce'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-timer-plugin.
+# Simplified Chinese translations for
+# the xfce4-timer-plugin package.
+# This file is distributed under the same license as
+# the xfce4-timer-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2008.
 # Chipong Luo <chipong_l@yahoo.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
@@ -10,8 +12,8 @@ msgstr ""
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2008-12-06 16:53+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
-"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
-"Language: \n"
+"Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
