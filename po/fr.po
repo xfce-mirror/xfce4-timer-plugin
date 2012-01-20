@@ -132,7 +132,6 @@ msgid "Xfce4 Timer Options"
 msgstr "Options du chronomètre Xfce4"
 
 #: ../src/xfcetimer.c:1205
-#, fuzzy
 msgid ""
 "Timer\n"
 "name"
