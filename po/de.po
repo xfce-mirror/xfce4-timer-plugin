@@ -136,7 +136,9 @@ msgstr "Einstellungen für die Xfce-Eieruhr"
 msgid ""
 "Timer\n"
 "name"
-msgstr "Eieruhrbezeichner"
+msgstr ""
+"Name der\n"
+"Eieruhr"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
@@ -155,7 +157,9 @@ msgstr "Alarmbefehl"
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr "Meldungsfenster nicht anzeigen, wenn ein Alarmbefehl angegeben ist"
+msgstr ""
+"Meldungsfenster nicht anzeigen,\n"
+"wenn ein Alarmbefehl angegeben ist"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
