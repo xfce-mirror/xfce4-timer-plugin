@@ -703,8 +703,8 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   adata->pd=pd;
 
   gtk_window_set_modal(GTK_WINDOW(window),TRUE);
-  parent_window = gtk_widget_get_toplevel(GTK_WIDGET(buttonn));
-  if (gtk_widget_is_toplevel(parent_window))
+  parent_window = (GtkWindow *) gtk_widget_get_toplevel(GTK_WIDGET(buttonn));
+  if (gtk_widget_is_toplevel(GTK_WIDGET(parent_window)))
       gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(parent_window));
 
   vbox=gtk_vbox_new(FALSE, BORDER);
@@ -1011,11 +1011,8 @@ static void down_clicked(GtkButton *button, gpointer data){
 **/
 static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
-//#ifdef HAVE_XFCE48
   gtk_widget_hide(GTK_WIDGET(plugin));
-//#else
-//  gtk_widget_hide(GTK_WIDGET(pd->eventbox));
-//#endif
+
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   /* Always true except at initialization */
@@ -1285,12 +1282,6 @@ static void tree_selected (GtkTreeSelection *select, gpointer data){
 static void
 plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 {
-  /*plugin_data *pd;
-
-  g_return_if_fail(ctrl != NULL);
-  g_return_if_fail(ctrl-> data != NULL);
-
-  pd = (plugin_data*) ctrl->data;*/
 
   /* remove timeouts */
   if (pd->timeout!=0) g_source_remove(pd->timeout);
@@ -1319,11 +1310,6 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
   /* destroy the tooltips */
   /*gtk_object_destroy(GTK_OBJECT(pd->tip));*/
-
-  //if(G_IS_OBJECT(pd->list))
-  //  g_free(pd->list);
-  //else
-  //  g_fprintf(stderr,"\npd->list is non-object");
 
   /* free the plugin data structure */
   g_free(pd);

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he xfce4-timer package 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-19 00:55+0300\n"
+"POT-Creation-Date: 2012-02-06 23:51+0200\n"
 "PO-Revision-Date: 2007-11-16 21:23+0300\n"
 "Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
 "Language-Team: Latvian <rprieditis@inbox.lv>\n"
@@ -35,7 +35,7 @@ msgstr "%ds palicis"
 msgid " (Paused)"
 msgstr ""
 
-#: ../src/xfcetimer.c:129
+#: ../src/xfcetimer.c:131
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -43,112 +43,112 @@ msgstr ""
 "Pīīīīp! :) \n"
 "Laiks iztecējis!"
 
-#: ../src/xfcetimer.c:413
+#: ../src/xfcetimer.c:415
 msgid "Resume timer"
 msgstr ""
 
-#: ../src/xfcetimer.c:419 ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
 msgid "Stop timer"
 msgstr "Apturēt taimeri"
 
-#: ../src/xfcetimer.c:472
+#: ../src/xfcetimer.c:475
 #, fuzzy
 msgid "Pause timer"
 msgstr "Palaist taimeri"
 
-#: ../src/xfcetimer.c:488
+#: ../src/xfcetimer.c:491
 msgid "Start timer"
 msgstr "Palaist taimeri"
 
-#: ../src/xfcetimer.c:498
+#: ../src/xfcetimer.c:501
 msgid "Stop the alarm"
 msgstr "Apturēt trauksmi"
 
-#: ../src/xfcetimer.c:544 ../src/xfcetimer.c:618
+#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:546 ../src/xfcetimer.c:620
+#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:548 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:558 ../src/xfcetimer.c:632
+#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Pie %02d:%02d"
 
-#: ../src/xfcetimer.c:709
+#: ../src/xfcetimer.c:718
 #, fuzzy
 msgid "Name:"
 msgstr "Nosaukums"
 
 #. ********
-#: ../src/xfcetimer.c:717
+#: ../src/xfcetimer.c:726
 msgid "Enter the countdown time"
 msgstr "Ievadiet atskaites punkta laiku"
 
-#: ../src/xfcetimer.c:720
+#: ../src/xfcetimer.c:729
 msgid "Enter the time of alarm (24h format)"
 msgstr "Ievadiet trauksmes laiku (24st formāts)"
 
-#: ../src/xfcetimer.c:732
+#: ../src/xfcetimer.c:741
 msgid "h  "
 msgstr "st  "
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:746
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:742
+#: ../src/xfcetimer.c:751
 msgid "s  "
 msgstr "s  "
 
-#: ../src/xfcetimer.c:745
+#: ../src/xfcetimer.c:754
 #, fuzzy
 msgid "or"
 msgstr ""
 "\n"
 "vai\n"
 
-#: ../src/xfcetimer.c:768
+#: ../src/xfcetimer.c:777
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "Izpildāmā komanda"
 
-#: ../src/xfcetimer.c:798
+#: ../src/xfcetimer.c:807
 msgid "Add new alarm"
 msgstr "Pievienot jaunu trauksmi"
 
-#: ../src/xfcetimer.c:837
+#: ../src/xfcetimer.c:846
 msgid "Edit alarm"
 msgstr "Rediģēt trauksmi"
 
-#: ../src/xfcetimer.c:1287
+#: ../src/xfcetimer.c:1399
 #, fuzzy
 msgid "Xfce 4 Timer Plugin"
 msgstr "Xfce4 Taimera Uzstādījumi"
 
-#: ../src/xfcetimer.c:1299
+#: ../src/xfcetimer.c:1411
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 Taimera Uzstādījumi"
 
-#: ../src/xfcetimer.c:1331
+#: ../src/xfcetimer.c:1443
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "Taimera\n"
 "nosaukums"
 
-#: ../src/xfcetimer.c:1336
+#: ../src/xfcetimer.c:1448
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -156,26 +156,26 @@ msgstr ""
 "Atskaites periods /\n"
 "Trauksmes laiks"
 
-#: ../src/xfcetimer.c:1340
+#: ../src/xfcetimer.c:1452
 msgid "Alarm command"
 msgstr "Trauksmes komanda"
 
-#: ../src/xfcetimer.c:1384
+#: ../src/xfcetimer.c:1508
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Nerādit brīdinājuma logu,\n"
 "ja trauksmes komanda nav uzstādīta"
 
-#: ../src/xfcetimer.c:1391
+#: ../src/xfcetimer.c:1515
 msgid "Repeat the alarm command:"
 msgstr "Atkārtotas trauksmi komanda:"
 
-#: ../src/xfcetimer.c:1398
+#: ../src/xfcetimer.c:1522
 msgid "Number of repetitions"
 msgstr "Mēģinājumu skaits"
 
-#: ../src/xfcetimer.c:1404
+#: ../src/xfcetimer.c:1528
 msgid "  Time interval (sec.)"
 msgstr "  Laika intervāls (sek.)"
 

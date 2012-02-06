@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2012-02-06 23:51+0200\n"
 "PO-Revision-Date: 2008-11-04 23:34+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +30,11 @@ msgstr "%dm %ds të mbetura"
 msgid "%ds left"
 msgstr "%ds të mbetura"
 
-#: ../src/xfcetimer.c:126
+#: ../src/xfcetimer.c:108
+msgid " (Paused)"
+msgstr ""
+
+#: ../src/xfcetimer.c:131
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -37,109 +42,112 @@ msgstr ""
 "Xërrrrrrrr! :) \n"
 "Erdhi koha!"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:415
+msgid "Resume timer"
+msgstr ""
+
+#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
 msgid "Stop timer"
 msgstr "Ndal Kohësin"
 
-#: ../src/xfcetimer.c:426
+#: ../src/xfcetimer.c:475
+#, fuzzy
+msgid "Pause timer"
+msgstr "Nis kohësin"
+
+#: ../src/xfcetimer.c:491
 msgid "Start timer"
 msgstr "Nis kohësin"
 
-#: ../src/xfcetimer.c:436
+#: ../src/xfcetimer.c:501
 msgid "Stop the alarm"
 msgstr "Ndal alarmin"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%do %dm %ds"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Më %02d:%02d"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
+#: ../src/xfcetimer.c:718
+#, fuzzy
+msgid "Name:"
 msgstr "Emër"
 
 #. ********
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:726
 msgid "Enter the countdown time"
 msgstr "Jepni kohë skadimi"
 
-#: ../src/xfcetimer.c:629
+#: ../src/xfcetimer.c:729
 msgid "Enter the time of alarm (24h format)"
 msgstr "Jepni kohën e alarmit (në format 24orësh)"
 
-#: ../src/xfcetimer.c:640
+#: ../src/xfcetimer.c:741
 msgid "h  "
 msgstr "o "
 
-#: ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:746
 msgid "m  "
 msgstr "m "
 
-#: ../src/xfcetimer.c:650
+#: ../src/xfcetimer.c:751
 msgid "s  "
 msgstr "s "
 
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
+#: ../src/xfcetimer.c:754
+#, fuzzy
+msgid "or"
 msgstr ""
 "\n"
 "ose\n"
 
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
+#: ../src/xfcetimer.c:777
+#, fuzzy
+msgid "Command to run:"
 msgstr ""
 "\n"
 "Urdhri për xhirim"
 
-#: ../src/xfcetimer.c:699
+#: ../src/xfcetimer.c:807
 msgid "Add new alarm"
 msgstr "Shto alarm të ri"
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:846
 msgid "Edit alarm"
 msgstr "Përpunoni Alarm"
 
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr "Veti"
+#: ../src/xfcetimer.c:1399
+#, fuzzy
+msgid "Xfce 4 Timer Plugin"
+msgstr "Mundësi Kohësi Xfce4"
 
-#: ../src/xfcetimer.c:1174
+#: ../src/xfcetimer.c:1411
 msgid "Xfce4 Timer Options"
 msgstr "Mundësi Kohësi Xfce4"
 
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
+#: ../src/xfcetimer.c:1443
+#, fuzzy
+msgid "Timer name"
 msgstr ""
 "Kohës\n"
 "emër"
 
-#: ../src/xfcetimer.c:1210
+#: ../src/xfcetimer.c:1448
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -147,27 +155,26 @@ msgstr ""
 "Periudhë skadimi/\n"
 "Kohë alarmi"
 
-#: ../src/xfcetimer.c:1214
+#: ../src/xfcetimer.c:1452
 msgid "Alarm command"
 msgstr "Urdhër alarmi"
 
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
+#: ../src/xfcetimer.c:1508
+#, fuzzy
+msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Mos shfaq dritare sinjalizimi\n"
 "po qe caktuar urdhër alarmi"
 
-#: ../src/xfcetimer.c:1264
+#: ../src/xfcetimer.c:1515
 msgid "Repeat the alarm command:"
 msgstr "Përsërit urdhrin e alarmit:"
 
-#: ../src/xfcetimer.c:1271
+#: ../src/xfcetimer.c:1522
 msgid "Number of repetitions"
 msgstr "Numër përsëritjesh"
 
-#: ../src/xfcetimer.c:1277
+#: ../src/xfcetimer.c:1528
 msgid "  Time interval (sec.)"
 msgstr "  Interval kohe (sec.)"
 
@@ -179,3 +186,5 @@ msgstr "Shtojcë kohësi për panelin e Xfce 4.4"
 msgid "Xfce4 Timer"
 msgstr "Kohës Xfce4"
 
+#~ msgid "Properties"
+#~ msgstr "Veti"
