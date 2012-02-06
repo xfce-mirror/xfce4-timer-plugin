@@ -83,7 +83,7 @@ static gboolean update_function (gpointer data){
 
   plugin_data *pd=(plugin_data *)data;
   gint elapsed_sec,remaining;
-  gchar tiptext[64];
+  gchar *tiptext = NULL;
   GtkWidget *dialog;
 
   elapsed_sec=(gint)g_timer_elapsed(pd->timer,NULL);
@@ -97,20 +97,22 @@ static gboolean update_function (gpointer data){
      remaining=pd->timeout_period_in_sec-elapsed_sec;
 
      if(remaining>=3600)
-       g_snprintf(tiptext,31,_("%dh %dm %ds left"),remaining/3600, (remaining%3600)/60,
+       tiptext = g_strdup_printf(_("%dh %dm %ds left"),remaining/3600, (remaining%3600)/60,
             remaining%60);
      else if (remaining>=60)
-       g_snprintf(tiptext,31,_("%dm %ds left"),remaining/60, remaining%60);
+       tiptext = g_strdup_printf(_("%dm %ds left"),remaining/60, remaining%60);
      else
-       g_snprintf(tiptext,31,_("%ds left"),remaining);
+       tiptext = g_strdup_printf(_("%ds left"),remaining);
        
      if(pd->is_paused)
        g_strlcat(tiptext,_(" (Paused)"),64);
 
      gtk_progress_bar_set_fraction  (GTK_PROGRESS_BAR(pd->pbar),
-                    ((gdouble)elapsed_sec)/pd->timeout_period_in_sec);
+                    1.0-((gdouble)elapsed_sec)/pd->timeout_period_in_sec);
 
      gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),tiptext,NULL);
+
+     g_free(tiptext);
 
      return TRUE;
 
@@ -123,7 +125,7 @@ static gboolean update_function (gpointer data){
   if( (strlen(pd->timeout_command)==0) || !pd->nowin_if_alarm ) {
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
     dialog = gtk_message_dialog_new     (NULL,
-                                    GTK_DIALOG_DESTROY_WITH_PARENT,
+                                    GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL,
                                     GTK_MESSAGE_WARNING,
                                     GTK_BUTTONS_CLOSE,
                                     _("Beeep! :) \nTime is up!"));
@@ -394,7 +396,7 @@ void make_menu(plugin_data *pd){
   GSList *group=NULL;
   GtkWidget *menuitem;
   gchar *timername,*timerinfo;
-  gchar itemtext[256];
+  gchar *itemtext = NULL;
   gint row_count;
 
 
@@ -436,7 +438,7 @@ void make_menu(plugin_data *pd){
       /*g_fprintf(stderr,"\nMaking menuitem %d while selected is %d",row_count,pd->
                                 selected);*/
       gtk_tree_model_get(GTK_TREE_MODEL(pd->list),&iter,1,&timername,2,&timerinfo,-1);
-      g_snprintf(itemtext,255,"%s (%s)",timername,timerinfo);
+      itemtext = g_strdup_printf("%s (%s)",timername,timerinfo);
       menuitem=gtk_radio_menu_item_new_with_label(group,itemtext);
       gtk_widget_show(menuitem);
       g_free(timername);
@@ -454,6 +456,7 @@ void make_menu(plugin_data *pd){
       gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
 
       /*g_fprintf(stderr,"\nAdding menuitem with label : %s",itemtext);*/
+      g_free(itemtext);
 
       /* We add the address of menuitem to the array */
       g_array_append_val(pd->menuarray,menuitem);
@@ -516,7 +519,7 @@ static void ok_add(GtkButton *button, gpointer data){
   alarm_data *adata = (alarm_data *)data;
   GtkTreeIter iter;
   gint t1,t2,t3,t;
-  gchar timeinfo[16];
+  gchar *timeinfo = NULL;
 
   /* Add item to the list */
   gtk_list_store_append(adata->pd->list,&iter);
@@ -541,11 +544,11 @@ static void ok_add(GtkButton *button, gpointer data){
 
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
     if(t1>0)
-       g_snprintf(timeinfo,15,_("%dh %dm %ds"),t1,t2,t3);
+       timeinfo = g_strdup_printf(_("%dh %dm %ds"),t1,t2,t3);
     else if(t2>0)
-       g_snprintf(timeinfo,15,_("%dm %ds"),t2,t3);
+       timeinfo = g_strdup_printf(_("%dm %ds"),t2,t3);
     else
-       g_snprintf(timeinfo,15,_("%ds"),t3);
+       timeinfo = g_strdup_printf(_("%ds"),t3);
 
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
   }
@@ -555,7 +558,7 @@ static void ok_add(GtkButton *button, gpointer data){
     t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
     t=t1*60+t2;
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-    g_snprintf(timeinfo,9,_("At %02d:%02d"),t1,t2);
+    timeinfo = g_strdup_printf(_("At %02d:%02d"),t1,t2);
     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
 
   }
@@ -567,6 +570,7 @@ static void ok_add(GtkButton *button, gpointer data){
   gtk_widget_destroy(GTK_WIDGET(adata->window));
 
   g_free(adata);
+  g_free(timeinfo);
 }
 
 
@@ -593,7 +597,7 @@ static void ok_edit(GtkButton *button, gpointer data){
   alarm_data *adata = (alarm_data *)data;
   GtkTreeIter iter;
   gint t1,t2,t3,t;
-  gchar timeinfo[10];
+  gchar *timeinfo = NULL;
 
   GtkTreeSelection *select;
   GtkTreeModel *model;
@@ -614,12 +618,12 @@ static void ok_edit(GtkButton *button, gpointer data){
         t3=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->times));
         t=t1*3600+t2*60+t3;
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-       if(t1>0)
-          g_snprintf(timeinfo,15,_("%dh %dm %ds"),t1,t2,t3);
-       else if(t2>0)
-          g_snprintf(timeinfo,15,_("%dm %ds"),t2,t3);
-       else
-          g_snprintf(timeinfo,15,_("%ds"),t3);
+        if(t1>0)
+           timeinfo = g_strdup_printf(_("%dh %dm %ds"),t1,t2,t3);
+        else if(t2>0)
+           timeinfo = g_strdup_printf(_("%dm %ds"),t2,t3);
+        else
+           timeinfo = g_strdup_printf(_("%ds"),t3);
 
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
       }
@@ -629,7 +633,7 @@ static void ok_edit(GtkButton *button, gpointer data){
         t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
         t=t1*60+t2;
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-        g_snprintf(timeinfo,9,_("At %02d:%02d"),t1,t2);
+        timeinfo = g_strdup_printf(_("At %02d:%02d"),t1,t2);
         gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
 
       }
@@ -641,6 +645,7 @@ static void ok_edit(GtkButton *button, gpointer data){
   gtk_widget_destroy(GTK_WIDGET(adata->window));
 
   g_free(adata);
+  g_free(timeinfo);
 }
 
 /**
@@ -679,6 +684,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   plugin_data *pd = (plugin_data *)data;
 
+  GtkWindow *parent_window;
   GtkWindow *window;
   GtkLabel *label;
   GtkEntry *name,*command;
@@ -697,6 +703,9 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   adata->pd=pd;
 
   gtk_window_set_modal(GTK_WINDOW(window),TRUE);
+  parent_window = gtk_widget_get_toplevel(buttonn);
+  if (gtk_widget_is_toplevel(parent_window))
+      gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(parent_window));
 
   vbox=gtk_vbox_new(FALSE, BORDER);
   gtk_container_add(GTK_CONTAINER(window),vbox);
@@ -897,6 +906,104 @@ static void remove_clicked(GtkButton *button, gpointer data){
 
 }
 
+/**
+ * Moves an alarm one row up in the list
+**/
+static void up_clicked(GtkButton *button, gpointer data){
+
+  plugin_data *pd = (plugin_data *)data;
+
+  GtkTreeIter iter,iter_prev;
+  GtkTreeSelection *select;
+  gboolean valid;
+  gint row_count;
+
+  /* Get the selected row */
+  select=gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+
+  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter_prev);
+  
+  /* First item can't be moved up */
+  if(!valid || gtk_tree_selection_iter_is_selected(select,&iter_prev))
+	return;
+
+  iter = iter_prev;
+  valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
+ 
+  row_count=1;
+
+  while (valid){
+
+
+     /* The selected one is swapped with the previous one */
+     if(gtk_tree_selection_iter_is_selected(select,&iter)){
+
+	   gtk_list_store_swap(pd->list, &iter, &iter_prev);
+       if(pd->selected == row_count) /* Update the index of the selected item */
+          pd->selected = row_count-1;          
+       else if(pd->selected == row_count-1)
+          pd->selected = row_count;
+       break;
+     }
+
+	 iter_prev = iter;
+     valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);    
+     row_count++;   
+
+  }
+
+  make_menu(pd);
+
+}
+
+/**
+ * Moves an alarm one row down in the list
+**/
+static void down_clicked(GtkButton *button, gpointer data){
+
+  plugin_data *pd = (plugin_data *)data;
+
+  GtkTreeIter iter,iter_next;
+  GtkTreeSelection *select;
+  gboolean valid;
+  gint row_count;
+
+  /* Get the selected row */
+  select=gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+
+  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
+
+  if(!valid)
+	return;
+
+  iter_next = iter;
+  valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter_next);
+ 
+  row_count=0;
+
+  while (valid){
+
+
+     /* The selected one is swapped with the next one */
+     if(gtk_tree_selection_iter_is_selected(select,&iter)){
+
+	   gtk_list_store_swap(pd->list, &iter, &iter_next);
+       if(pd->selected == row_count) /* Update the index of the selected item */
+          pd->selected = row_count+1;          
+       else if(pd->selected == row_count+1)
+          pd->selected = row_count - 1;
+       break;
+     }
+
+	 iter = iter_next;
+     valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter_next);    
+     row_count++;   
+
+  }
+
+  make_menu(pd);
+
+}
 
 /**
  * Adds the progressbar, taking into account the orientation.
@@ -904,7 +1011,9 @@ static void remove_clicked(GtkButton *button, gpointer data){
 **/
 static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
-  gtk_widget_hide(pd->eventbox);
+  //g_signal_handler_disconnect (G_OBJECT(plugin), pd->handler);
+
+  gtk_widget_hide(GTK_WIDGET(plugin));
 
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
@@ -918,7 +1027,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box=gtk_hbox_new(TRUE,0);
-    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
+    gtk_container_add(GTK_CONTAINER(plugin),pd->box);
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_BOTTOM_TO_TOP);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
@@ -929,7 +1038,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   }
   else{ /* horizontal bar */
     pd->box=gtk_vbox_new(TRUE,0);
-    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
+    gtk_container_add(GTK_CONTAINER(plugin),pd->box);
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_LEFT_TO_RIGHT);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
@@ -938,8 +1047,11 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
     gtk_box_pack_start(GTK_BOX(pd->box),gtk_hseparator_new(),FALSE,FALSE,0);
 
   }
+  
+  gtk_widget_show_all(GTK_WIDGET(plugin));
 
-  gtk_widget_show_all(pd->eventbox);
+  g_signal_connect  (G_OBJECT(plugin), "button_press_event",
+            G_CALLBACK(pbar_clicked), pd);       
 }
 
 /**
@@ -1150,6 +1262,8 @@ static void tree_selected (GtkTreeSelection *select, gpointer data){
 
   gtk_widget_set_sensitive(pd->buttonedit,TRUE);
   gtk_widget_set_sensitive(pd->buttonremove,TRUE);
+  gtk_widget_set_sensitive(pd->buttonup,TRUE);
+  gtk_widget_set_sensitive(pd->buttondown,TRUE);
 
 }
 
@@ -1189,7 +1303,6 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
     g_array_free(pd->menuarray,TRUE);
 
   /* destroy all widgets */
-  gtk_widget_destroy(GTK_WIDGET(pd->eventbox));
 
   /* destroy the tooltips */
   /*gtk_object_destroy(GTK_OBJECT(pd->tip));*/
@@ -1364,21 +1477,33 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   pd->buttonadd=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING<<1);
   gtk_widget_set_sensitive(button,TRUE);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked),                                     pd);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked), pd);
 
 
   button = gtk_button_new_from_stock (GTK_STOCK_EDIT);
   pd->buttonedit=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING<<1);
   gtk_widget_set_sensitive(button,FALSE);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked),                                     pd);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked), pd);
 
   button = gtk_button_new_from_stock (GTK_STOCK_REMOVE);
   pd->buttonremove=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(button,FALSE);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(remove_clicked),                                       pd);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(remove_clicked), pd);
 
+  button = gtk_button_new_from_stock (GTK_STOCK_GO_UP);
+  pd->buttonup=button;
+  gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
+  gtk_widget_set_sensitive(button,FALSE);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(up_clicked), pd);
+  
+  button = gtk_button_new_from_stock (GTK_STOCK_GO_DOWN);
+  pd->buttondown=button;
+  gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
+  gtk_widget_set_sensitive(button,FALSE);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(down_clicked), pd);
+  
   gtk_box_pack_start(GTK_BOX(vbox),gtk_hseparator_new(),FALSE,FALSE,BORDER);
 
   button=gtk_check_button_new_with_label(_("Don't display a warning  if an alarm command is set"));
@@ -1453,8 +1578,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
          G_TYPE_INT);    /* Timer period in seconds if countdown.
                     Alarm time in minutes if 24h format is used,
                     (i.e. 60 x Hr + Min) */
-
-  pd->eventbox=gtk_event_box_new();
   pd->box=NULL;
   pd->timer_on=FALSE;
   pd->timeout=0;
@@ -1493,10 +1616,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
   load_settings(pd);
 
   make_menu(pd);
-
-  g_signal_connect  (G_OBJECT(pd->eventbox), "button_press_event",
-            G_CALLBACK(pbar_clicked), pd);
-
+                      
   gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
                     GTK_PROGRESS_CONTINUOUS);
   gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
@@ -1504,11 +1624,8 @@ create_plugin_control (XfcePanelPlugin *plugin)
   add_pbar(pd->base,pd);
 
   /* Trying to get a thin box, but no way */
-  /*gtk_widget_set_size_request(pd->eventbox,0,0);*/
   gtk_widget_set_size_request(GTK_WIDGET(plugin),10,10);
   xfce_panel_plugin_set_expand(plugin,FALSE);
-
-  gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
 
   gtk_widget_show_all(GTK_WIDGET(plugin));
 

@@ -28,6 +28,7 @@ typedef struct {
 		*pbar, 					/* Progress bar */
 		*tree, 					/* Treeview */
 		*buttonadd,*buttonedit,*buttonremove,	/* options window buttons */
+		*buttonup, *buttondown,
 		*spin_repeat, *spin_interval,		/* spinbuttons for alarm repeat */
 		*menu,
 		*repeat_alarm_box;			/* Box holding the repeat 

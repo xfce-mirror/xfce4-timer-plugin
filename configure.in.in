@@ -4,7 +4,7 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 dnl version info
-m4_define([xfce4_timer_version], [0.6.2])
+m4_define([xfce4_timer_version], [0.6.4])
 
 dnl init autoconf
 AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [ilgar_eroglu@yahoo.com])
@@ -55,54 +55,56 @@ else
   packageprefix=${prefix}
 fi
 
-dnl Set PACKAGE DATA & DOC DIR
-packagedatadir=share
-packagedocdir=doc/${PACKAGE}
+#dnl Set PACKAGE DATA & DOC DIR
+#packagedatadir=share
+#packagedocdir=doc/${PACKAGE}
 
-dnl Set PACKAGE DIRS in config.h.
-packagepixmapsdir=${packagedatadir}/pixmaps
-packagehelpdir=${packagedatadir}/help
-packagemenudir=${packagedatadir}
+#dnl Set PACKAGE DIRS in config.h.
+#packagepixmapsdir=${packagedatadir}/pixmaps
+#packagehelpdir=${packagedatadir}/help
+#packagemenudir=${packagedatadir}
 
-dnl Subst PACKAGE_DATA_DIR.
-NO_PREFIX_PACKAGE_DATA_DIR="${packagedatadir}"
-AC_SUBST(NO_PREFIX_PACKAGE_DATA_DIR)
-PACKAGE_DATA_DIR="${packageprefix}/${packagedatadir}"
-AC_SUBST(PACKAGE_DATA_DIR)
+#dnl Subst PACKAGE_DATA_DIR.
+#NO_PREFIX_PACKAGE_DATA_DIR="${packagedatadir}"
+#AC_SUBST(NO_PREFIX_PACKAGE_DATA_DIR)
+#PACKAGE_DATA_DIR="${packageprefix}/${packagedatadir}"
+#AC_SUBST(PACKAGE_DATA_DIR)
 
-dnl Subst PACKAGE_DOC_DIR.
-NO_PREFIX_PACKAGE_DOC_DIR="${packagedocdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
-PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
-AC_SUBST(PACKAGE_DOC_DIR)
+#dnl Subst PACKAGE_DOC_DIR.
+#NO_PREFIX_PACKAGE_DOC_DIR="${packagedocdir}"
+#AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
+#PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
+#AC_SUBST(PACKAGE_DOC_DIR)
 
-dnl Subst PACKAGE_PIXMAPS_DIR.
-NO_PREFIX_PACKAGE_PIXMAPS_DIR="${packagepixmapsdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_PIXMAPS_DIR)
-PACKAGE_PIXMAPS_DIR="${packageprefix}/${packagepixmapsdir}"
-AC_SUBST(PACKAGE_PIXMAPS_DIR)
+#dnl Subst PACKAGE_PIXMAPS_DIR.
+#NO_PREFIX_PACKAGE_PIXMAPS_DIR="${packagepixmapsdir}"
+#AC_SUBST(NO_PREFIX_PACKAGE_PIXMAPS_DIR)
+#PACKAGE_PIXMAPS_DIR="${packageprefix}/${packagepixmapsdir}"
+#AC_SUBST(PACKAGE_PIXMAPS_DIR)
 
-dnl Subst PACKAGE_HELP_DIR.
-NO_PREFIX_PACKAGE_HELP_DIR="${packagehelpdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_HELP_DIR)
-PACKAGE_HELP_DIR="${packageprefix}/${packagehelpdir}"
-AC_SUBST(PACKAGE_HELP_DIR)
+#dnl Subst PACKAGE_HELP_DIR.
+#NO_PREFIX_PACKAGE_HELP_DIR="${packagehelpdir}"
+#AC_SUBST(NO_PREFIX_PACKAGE_HELP_DIR)
+#PACKAGE_HELP_DIR="${packageprefix}/${packagehelpdir}"
+#AC_SUBST(PACKAGE_HELP_DIR)
 
-dnl Subst PACKAGE_MENU_DIR.
-NO_PREFIX_PACKAGE_MENU_DIR="${packagemenudir}"
-AC_SUBST(NO_PREFIX_PACKAGE_MENU_DIR)
-PACKAGE_MENU_DIR="${packageprefix}/${packagemenudir}"
-AC_SUBST(PACKAGE_MENU_DIR)
+#dnl Subst PACKAGE_MENU_DIR.
+#NO_PREFIX_PACKAGE_MENU_DIR="${packagemenudir}"
+#AC_SUBST(NO_PREFIX_PACKAGE_MENU_DIR)
+#PACKAGE_MENU_DIR="${packageprefix}/${packagemenudir}"
+#AC_SUBST(PACKAGE_MENU_DIR)
 
-AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/${packagedatadir}")
-AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/${packagedocdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/${packagepixmapsdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_HELP_DIR, "${packageprefix}/${packagehelpdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_MENU_DIR, "${packageprefix}/${packagemenudir}")
-AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/${packagedatadir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/${packagedocdir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/${packagepixmapsdir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_HELP_DIR, "${packageprefix}/${packagehelpdir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_MENU_DIR, "${packageprefix}/${packagemenudir}")
+#AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
 
 AC_OUTPUT([
 Makefile
 po/Makefile.in
 src/Makefile
+icons/Makefile
+icons/48x48/Makefile
 ])

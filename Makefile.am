@@ -5,7 +5,8 @@
 
 SUBDIRS = \
 	src \
-	po
+	po \
+	icons
 
 AUTOMAKE_OPTIONS = \
 	1.8 \
