@@ -703,7 +703,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   adata->pd=pd;
 
   gtk_window_set_modal(GTK_WINDOW(window),TRUE);
-  parent_window = gtk_widget_get_toplevel(buttonn);
+  parent_window = gtk_widget_get_toplevel(GTK_WIDGET(buttonn));
   if (gtk_widget_is_toplevel(parent_window))
       gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(parent_window));
 
@@ -1011,10 +1011,11 @@ static void down_clicked(GtkButton *button, gpointer data){
 **/
 static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
-  //g_signal_handler_disconnect (G_OBJECT(plugin), pd->handler);
-
+//#ifdef HAVE_XFCE48
   gtk_widget_hide(GTK_WIDGET(plugin));
-
+//#else
+//  gtk_widget_hide(GTK_WIDGET(pd->eventbox));
+//#endif
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   /* Always true except at initialization */
@@ -1027,7 +1028,11 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box=gtk_hbox_new(TRUE,0);
+#ifdef HAVE_XFCE48    
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
+#else    
+    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
+#endif
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_BOTTOM_TO_TOP);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
@@ -1038,7 +1043,11 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   }
   else{ /* horizontal bar */
     pd->box=gtk_vbox_new(TRUE,0);
+#ifdef HAVE_XFCE48    
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
+#else    
+    gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
+#endif
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_LEFT_TO_RIGHT);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
@@ -1048,10 +1057,11 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
   }
   
-  gtk_widget_show_all(GTK_WIDGET(plugin));
-
-  g_signal_connect  (G_OBJECT(plugin), "button_press_event",
-            G_CALLBACK(pbar_clicked), pd);       
+#ifdef HAVE_XFCE48
+  gtk_widget_show_all(GTK_WIDGET(plugin)); 
+#else
+  gtk_widget_show_all(GTK_WIDGET(pd->eventbox));
+#endif
 }
 
 /**
@@ -1303,6 +1313,9 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
     g_array_free(pd->menuarray,TRUE);
 
   /* destroy all widgets */
+#ifndef HAVE_XFCE48
+	gtk_widget_destroy(GTK_WIDGET(pd->eventbox));
+#endif  
 
   /* destroy the tooltips */
   /*gtk_object_destroy(GTK_OBJECT(pd->tip));*/
@@ -1578,6 +1591,9 @@ create_plugin_control (XfcePanelPlugin *plugin)
          G_TYPE_INT);    /* Timer period in seconds if countdown.
                     Alarm time in minutes if 24h format is used,
                     (i.e. 60 x Hr + Min) */
+#ifndef HAVE_XFCE48
+  pd->eventbox = gtk_event_box_new();
+#endif  
   pd->box=NULL;
   pd->timer_on=FALSE;
   pd->timeout=0;
@@ -1626,6 +1642,15 @@ create_plugin_control (XfcePanelPlugin *plugin)
   /* Trying to get a thin box, but no way */
   gtk_widget_set_size_request(GTK_WIDGET(plugin),10,10);
   xfce_panel_plugin_set_expand(plugin,FALSE);
+
+#ifdef HAVE_XFCE48
+  g_signal_connect  (G_OBJECT(plugin), "button_press_event",
+            G_CALLBACK(pbar_clicked), pd);      
+#else
+  gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
+  g_signal_connect  (G_OBJECT(pd->eventbox), "button_press_event",
+            G_CALLBACK(pbar_clicked), pd);
+#endif  
 
   gtk_widget_show_all(GTK_WIDGET(plugin));
 

@@ -2,6 +2,7 @@
 	* Version 0.6.4
 	* Commit patch by Guido Berhoerster, replacing certain fixed-size strings with variable-size code. Fixes bug 8420.
 	* Commit patch by Guido Berhoerster, making the notification dialog modal and the add/edit window transient for the configuration window. Fixes bug 8420.
+	* The mouse click receive code is separated for pre-4.8 and 4.8 panels (couldn't make them work simultaneously).
 	* Added an icon (thanks to Ilgim Eroglu).
 05/01/2012 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
 	* Version 0.6.3
