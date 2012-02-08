@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2012-02-08 07:49+0300\n"
+"PO-Revision-Date: 2012-02-08 07:51+0300\n"
 "Last-Translator: Mohammad Alhargan <malham1@hotmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/opensuse-11-4/ar/list/\n"
 "Language: ar\n"
@@ -102,6 +102,8 @@ msgid ""
 "\n"
 "or\n"
 msgstr ""
+"\n"
+"أو\n"
 
 #. **************
 #: ../src/xfcetimer.c:673
