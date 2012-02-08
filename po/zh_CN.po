@@ -3,7 +3,7 @@
 # This file is distributed under the same license as
 # the xfce4-timer-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2008.
-# Chipong Luo <chipong_l@yahoo.com>, 2011, 2012.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
