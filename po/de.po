@@ -132,7 +132,6 @@ msgid "Xfce4 Timer Options"
 msgstr "Einstellungen für die Xfce-Eieruhr"
 
 #: ../src/xfcetimer.c:1205
-#, fuzzy
 msgid ""
 "Timer\n"
 "name"
@@ -153,7 +152,6 @@ msgid "Alarm command"
 msgstr "Alarmbefehl"
 
 #: ../src/xfcetimer.c:1257
-#, fuzzy
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
