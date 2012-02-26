@@ -1,16 +1,17 @@
-# Korean translation for xfce4-timer-plugin package.
-# Copyright (C) 2005-2012 Kemal Ilgar Eroglu et al.
-# This file is distributed under the same license as the xfce4-timer-plugin package.
-# Seong-ho, Cho <darkcircle.0426@gmail.com>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin.master\n"
-"Report-Msgid-Bugs-To: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2012-02-26 13:08+0900\n"
+"PO-Revision-Date: 2012-02-26 13:16+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
