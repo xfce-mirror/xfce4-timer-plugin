@@ -1,174 +1,115 @@
-# Korean translation for xfce4-timer-plugin package.
-# Copyright (C) 2005-2012 Kemal Ilgar Eroglu et al.
-# This file is distributed under the same license as the xfce4-timer-plugin package.
-# Seong-ho, Cho <darkcircle.0426@gmail.com>, 2012.
+# Korean translations for xfce4-trigger-launcher package.
+# Copyright (C) 2003-2006 The Xfce development team.
+# This file is distributed under the same license as the xfce4-trigger-launcher package.
+# ByungHyun Choi <byunghyunchoi@rtlinux.or.kr>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer-plugin.master\n"
-"Report-Msgid-Bugs-To: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2012-02-26 12:55+0900\n"
+"Project-Id-Version: xfce4-trigger-launcher.master\n"
+"Report-Msgid-Bugs-To: xfce4-users-kr-i8n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2006-05-18 00:44+0900\n"
+"PO-Revision-Date: 2012-02-26 12:48+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
-"Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Language-Team: xfce4-users-kr-i8n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Language: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Korean\n"
-"X-Poedit-Country: KOREA, REPUBLIC OF\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/xfcetimer.c:100
+#: ../panel-plugin/triggerlauncher-old2.c:287
+msgid "Check status every"
+msgstr "다음 시간마다 상태 검사"
+
+#: ../panel-plugin/triggerlauncher-old2.c:296
+#: ../panel-plugin/xfce-trigger-launcher-options.c:132
+msgid "seconds"
+msgstr "초"
+
+#: ../panel-plugin/triggerlauncher-old2.c:1005
+msgid "Icon (off)"
+msgstr "아이콘 (끔)"
+
+#: ../panel-plugin/triggerlauncher-old2.c:1006
+msgid "Icon (on)"
+msgstr "아이콘 (켬)"
+
+#: ../panel-plugin/triggerlauncher-old2.c:1143
+msgid "Two-state Launcher"
+msgstr "두 상태 실행기"
+
+#: ../panel-plugin/xfce-file-chooser-button.c:141
+msgid "Select Icon"
+msgstr "아이콘 선택"
+
+#: ../panel-plugin/xfce-file-chooser-button.c:146
+msgid "_Select"
+msgstr "선택(_S)"
+
+#: ../panel-plugin/xfce-file-chooser-button.c:157
+msgid "(None Selected)"
+msgstr "(선택하지 않음)"
+
+#: ../panel-plugin/xfce-launcher-command-entry.c:118
 #, c-format
-msgid "%dh %dm %ds left"
-msgstr ""
+msgid "Could not run \"%s\""
+msgstr "\"%s\"을(를) 실행하지 못 했습니다"
 
-#: ../src/xfcetimer.c:103
-#, c-format
-msgid "%dm %ds left"
-msgstr ""
+#: ../panel-plugin/xfce-launcher-command-entry.c:120
+msgid "Xfce Panel"
+msgstr "Xfce 패널"
 
-#: ../src/xfcetimer.c:105
-#, c-format
-msgid "%ds left"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:127
+msgid "Command To Check Status:"
+msgstr "상태 확인 명령:"
 
-#: ../src/xfcetimer.c:126
-msgid ""
-"Beeep! :) \n"
-"Time is up!"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:128
+msgid "Command To Enable:"
+msgstr "활성화 명령:"
 
-#: ../src/xfcetimer.c:424
-msgid "Stop timer"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:129
+msgid "Command To Disable:"
+msgstr "비활성화 명령:"
 
-#: ../src/xfcetimer.c:426
-msgid "Start timer"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:130
+msgid "Command to Poke:"
+msgstr "포크할 명령:"
 
-#: ../src/xfcetimer.c:436
-msgid "Stop the alarm"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:131
+msgid "Check Interval:"
+msgstr "확인 간격:"
 
-#: ../src/xfcetimer.c:482
-#: ../src/xfcetimer.c:556
-#, c-format
-msgid "%dh %dm %ds"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:134
+#: ../panel-plugin/xfce-trigger-launcher-options.c:135
+#: ../panel-plugin/xfce-trigger-launcher-options.c:136
+#: ../panel-plugin/xfce-trigger-launcher-options.c:137
+msgid "Icon:"
+msgstr "아이콘:"
 
-#: ../src/xfcetimer.c:484
-#: ../src/xfcetimer.c:558
-#, c-format
-msgid "%dm %ds"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:236
+msgid "To Check Status"
+msgstr "상태 확인 조건"
 
-#: ../src/xfcetimer.c:486
-#: ../src/xfcetimer.c:560
-#, c-format
-msgid "%ds"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:237
+msgid "When Disabled"
+msgstr "비활성화 되었을 때"
 
-#: ../src/xfcetimer.c:496
-#: ../src/xfcetimer.c:570
-#, c-format
-msgid "At %02d:%02d"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:238
+msgid "When Enabled"
+msgstr "활성화 되었을 떄"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:239
+msgid "When Undefined"
+msgstr "정의되지 않았을 떄"
 
-#. ********
-#: ../src/xfcetimer.c:627
-msgid "Enter the countdown time"
-msgstr ""
+#: ../panel-plugin/xfce-trigger-launcher-options.c:240
+msgid "When Dodgy"
+msgstr "곤란할 때"
 
-#: ../src/xfcetimer.c:629
-msgid "Enter the time of alarm (24h format)"
-msgstr ""
+#: ../panel-plugin/xfce4-trigger-launcher.desktop.in.in.h:1
+msgid "Keeps track of the state of something and can control it"
+msgstr "어떤 것에 대한 상태를 감시하고 제어할 수 있습니다"
 
-#: ../src/xfcetimer.c:640
-msgid "h  "
-msgstr ""
-
-#: ../src/xfcetimer.c:645
-msgid "m  "
-msgstr ""
-
-#: ../src/xfcetimer.c:650
-msgid "s  "
-msgstr ""
-
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
-msgstr ""
-
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
-msgstr ""
-
-#: ../src/xfcetimer.c:699
-msgid "Add new alarm"
-msgstr ""
-
-#: ../src/xfcetimer.c:737
-msgid "Edit alarm"
-msgstr ""
-
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr ""
-
-#: ../src/xfcetimer.c:1174
-msgid "Xfce4 Timer Options"
-msgstr ""
-
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
-msgstr ""
-
-#: ../src/xfcetimer.c:1210
-msgid ""
-"Countdown period /\n"
-"Alarm time"
-msgstr ""
-
-#: ../src/xfcetimer.c:1214
-msgid "Alarm command"
-msgstr ""
-
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
-msgstr ""
-
-#: ../src/xfcetimer.c:1264
-msgid "Repeat the alarm command:"
-msgstr ""
-
-#: ../src/xfcetimer.c:1271
-msgid "Number of repetitions"
-msgstr ""
-
-#: ../src/xfcetimer.c:1277
-msgid "  Time interval (sec.)"
-msgstr ""
-
-#: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Timer plugin for Xfce 4.4 panel"
-msgstr ""
-
-#: ../src/xfce4-timer.desktop.in.in.h:2
-msgid "Xfce4 Timer"
-msgstr ""
+#: ../panel-plugin/xfce4-trigger-launcher.desktop.in.in.h:2
+msgid "Trigger Launcher Plugin"
+msgstr "트리거 실행기 플러그인"
 
