@@ -158,8 +158,11 @@ static gboolean update_function (gpointer data){
   if(pd->timer)
      g_timer_destroy(pd->timer);
   pd->timer=NULL;
+  
+  gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
   gtk_tooltips_disable(pd->tip);
-
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+    
   pd->timeout=0;
 
   pd->timer_on=FALSE;
@@ -1011,17 +1014,26 @@ static void down_clicked(GtkButton *button, gpointer data){
 **/
 static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 
+  gdouble frac;
+
   gtk_widget_hide(GTK_WIDGET(plugin));
 
-  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
-
   /* Always true except at initialization */
-  if(pd->box){
-    g_object_ref(G_OBJECT(pd->pbar));
-    gtk_container_remove(GTK_CONTAINER(pd->box),pd->pbar);
-    gtk_widget_destroy(pd->box);
-  }
+//  if(pd->box){
+    //g_object_ref(G_OBJECT(pd->pbar));
+//    gtk_container_remove(GTK_CONTAINER(pd->box),pd->pbar);
+//    gtk_widget_destroy(pd->box);
+//  }
 
+  if (pd -> box) {
+    frac = gtk_progress_bar_get_fraction (GTK_PROGRESS_BAR (pd->pbar));
+    gtk_widget_destroy(pd->box);
+    pd->pbar = gtk_progress_bar_new ();
+    gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
+                    GTK_PROGRESS_CONTINUOUS);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),frac);
+  }
+  
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box=gtk_hbox_new(TRUE,0);
@@ -1043,7 +1055,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
 #ifdef HAVE_XFCE48    
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 #else    
-    gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
+    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
 #endif
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_LEFT_TO_RIGHT);
@@ -1053,12 +1065,9 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
     gtk_box_pack_start(GTK_BOX(pd->box),gtk_hseparator_new(),FALSE,FALSE,0);
 
   }
-  
-#ifdef HAVE_XFCE48
+
   gtk_widget_show_all(GTK_WIDGET(plugin)); 
-#else
-  gtk_widget_show_all(GTK_WIDGET(pd->eventbox));
-#endif
+
 }
 
 /**
@@ -1560,7 +1569,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
   char command[1024];
   gchar *filename,*pathname;
 
-
+  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   plugin_data *pd=g_new(plugin_data,1);
 
