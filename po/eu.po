@@ -3,19 +3,19 @@
 # This file is distributed under the same license as
 #   the xfce4-timer package.
 # Piarres Beobide <pi@beobide.net>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-06 23:51+0200\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2008-11-09 15:43+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Librezale <Librezale@librezale.org>\n"
-"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 1.2.0\n"
 
@@ -34,11 +34,7 @@ msgstr "%dm %ds falta dira"
 msgid "%ds left"
 msgstr "%ds falta dira"
 
-#: ../src/xfcetimer.c:108
-msgid " (Paused)"
-msgstr ""
-
-#: ../src/xfcetimer.c:131
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -46,111 +42,105 @@ msgstr ""
 "Beep! :) \n"
 "Ordua pasa da!"
 
-#: ../src/xfcetimer.c:415
-#, fuzzy
-msgid "Resume timer"
-msgstr "Abiarazte ordua"
-
-#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr "Amaiera ordua"
 
-#: ../src/xfcetimer.c:475
-msgid "Pause timer"
-msgstr "Abiarazte ordua"
-
-#: ../src/xfcetimer.c:491
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr "Abiarazte ordua"
 
-#: ../src/xfcetimer.c:501
+#: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "Alarma gelditu"
 
-#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%do %dm %ds"
 
-#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d-etan"
 
-#: ../src/xfcetimer.c:718
-#, fuzzy
-msgid "Name:"
+#: ../src/xfcetimer.c:619
+msgid "Name"
 msgstr "Izena"
 
 #. ********
-#: ../src/xfcetimer.c:726
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr "atzekoz aurrera kontatze denbora idatzi"
 
-#: ../src/xfcetimer.c:729
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarmaren ordua idatzi (24h formatua)"
 
-#: ../src/xfcetimer.c:741
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr "o  "
 
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:751
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr "s  "
 
-#: ../src/xfcetimer.c:754
-#, fuzzy
-msgid "or"
+#: ../src/xfcetimer.c:653
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 "\n"
 "edo\n"
 
-#: ../src/xfcetimer.c:777
-#, fuzzy
-msgid "Command to run:"
+#. **************
+#: ../src/xfcetimer.c:673
+msgid ""
+"\n"
+"The command to run"
 msgstr ""
 "\n"
 "abiarazteko komandoa"
 
-#: ../src/xfcetimer.c:807
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr "Alarma Berri bat gehitu"
 
-#: ../src/xfcetimer.c:846
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr "Alarma Editatu"
 
-#: ../src/xfcetimer.c:1399
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 Kronometro Aukerak"
+#: ../src/xfcetimer.c:1162
+msgid "Properties"
+msgstr "Propietateak"
 
-#: ../src/xfcetimer.c:1411
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 Kronometro Aukerak"
 
-#: ../src/xfcetimer.c:1443
-#, fuzzy
-msgid "Timer name"
+#: ../src/xfcetimer.c:1205
+msgid ""
+"Timer\n"
+"name"
 msgstr ""
 "Kronometroa\n"
 "izena"
 
-#: ../src/xfcetimer.c:1448
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -158,26 +148,27 @@ msgstr ""
 "Kontatze aldia /\n"
 "Alarma ordua"
 
-#: ../src/xfcetimer.c:1452
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr "Alarma komandoa"
 
-#: ../src/xfcetimer.c:1508
-#, fuzzy
-msgid "Don't display a warning  if an alarm command is set"
+#: ../src/xfcetimer.c:1257
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
 msgstr ""
 "Abisu leihoa ez bistarazi\n"
 "alarma komando bat ezarririk badago"
 
-#: ../src/xfcetimer.c:1515
+#: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
 msgstr "Alarma komandoa errepikatu:"
 
-#: ../src/xfcetimer.c:1522
+#: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
 msgstr "Errepikapen kopurua"
 
-#: ../src/xfcetimer.c:1528
+#: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
 msgstr "  Denbora tartea (seg.)"
 
@@ -189,5 +180,16 @@ msgstr "Xfce 4.4 panelarentzat kronometro plugin-a"
 msgid "Xfce4 Timer"
 msgstr "Xfce4 kronometroa"
 
-#~ msgid "Properties"
-#~ msgstr "Propietateak"
+#~ msgid "Resume timer"
+#~ msgstr "Abiarazte ordua"
+
+#~ msgid "Pause timer"
+#~ msgstr "Abiarazte ordua"
+
+#~ msgid "or"
+#~ msgstr ""
+#~ "\n"
+#~ "edo\n"
+
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Xfce4 Kronometro Aukerak"
