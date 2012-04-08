@@ -179,7 +179,7 @@ msgstr "  시간 간격 (초.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Xfce 4.4 패널을 위한 타이머 플러그인"
+msgstr "Xfce 4.4 패널용 타이머 플러그인"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
