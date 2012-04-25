@@ -84,7 +84,7 @@ msgstr "Wartezeit eingeben"
 
 #: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
-msgstr "Alarmzeit eingeben: "
+msgstr "Alarmzeit eingeben "
 
 #: ../src/xfcetimer.c:640
 msgid "h  "
@@ -165,7 +165,7 @@ msgstr "Alarmbefehl wiederholen:"
 
 #: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
-msgstr "Anzahl der Wiederholungen: "
+msgstr "Anzahl der Wiederholungen"
 
 #: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
