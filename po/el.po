@@ -1,18 +1,20 @@
 # Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-06 23:51+0200\n"
-"PO-Revision-Date: 2009-01-27 23:00+0200\n"
-"Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
-"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"PO-Revision-Date: 2012-05-20 11:36+0300\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
+"Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
 "X-Generator: Lokalize 0.2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../src/xfcetimer.c:100
 #, c-format
@@ -29,11 +31,7 @@ msgstr "%dλ %dδ απέμειναν"
 msgid "%ds left"
 msgstr "%dδ απέμειναν"
 
-#: ../src/xfcetimer.c:108
-msgid " (Paused)"
-msgstr ""
-
-#: ../src/xfcetimer.c:131
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -41,112 +39,105 @@ msgstr ""
 "Μπιιιιιμπ! :) \n"
 "Ο χρόνος ολοκληρώθηκε!"
 
-#: ../src/xfcetimer.c:415
-msgid "Resume timer"
-msgstr ""
-
-#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr "Τερματισμός χρονόμετρου "
 
-#: ../src/xfcetimer.c:475
-#, fuzzy
-msgid "Pause timer"
-msgstr "Έναρξη χρονόμετρου "
-
-#: ../src/xfcetimer.c:491
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr "Έναρξη χρονόμετρου "
 
-#: ../src/xfcetimer.c:501
+#: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "Τερματισμός ειδοποίησης  "
 
-#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dω %dλ %dδ"
 
-#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%dλ %dδ"
 
-#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%dδ"
 
-#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Σε %02d:%02d"
 
-#: ../src/xfcetimer.c:718
-#, fuzzy
-msgid "Name:"
+#: ../src/xfcetimer.c:619
+msgid "Name"
 msgstr "Όνομα"
 
 #. ********
-#: ../src/xfcetimer.c:726
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr "Εισαγωγή του αντίστροφου χρόνου"
 
-#: ../src/xfcetimer.c:729
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr "Εισαγωγή της ώρας της ειδοποίησης (σε 24 μορφή)"
 
-#: ../src/xfcetimer.c:741
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr "ώρα"
 
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr "λεπτά"
 
-#: ../src/xfcetimer.c:751
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr "δευτ"
 
-#: ../src/xfcetimer.c:754
-#, fuzzy
-msgid "or"
+#: ../src/xfcetimer.c:653
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 "\n"
 "ή\n"
 
-#: ../src/xfcetimer.c:777
-#, fuzzy
-msgid "Command to run:"
+#. **************
+#: ../src/xfcetimer.c:673
+msgid ""
+"\n"
+"The command to run"
 msgstr ""
 "\n"
-"Τι εντολή να τρέξει"
+"Η εντολή που θα εκτελεστεί"
 
-#: ../src/xfcetimer.c:807
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr "Προσθήκη νέας ειδοποίησης  "
 
-#: ../src/xfcetimer.c:846
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr "Επεξεργασία ειδοποίησης "
 
-#: ../src/xfcetimer.c:1399
-#, fuzzy
-msgid "Xfce 4 Timer Plugin"
-msgstr "Επιλογές χρονόμετρου  xfce4"
+#: ../src/xfcetimer.c:1162
+msgid "Properties"
+msgstr "Ιδιότητες"
 
-#: ../src/xfcetimer.c:1411
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Επιλογές χρονόμετρου  xfce4"
 
-#: ../src/xfcetimer.c:1443
-#, fuzzy
-msgid "Timer name"
+#: ../src/xfcetimer.c:1205
+msgid ""
+"Timer\n"
+"name"
 msgstr ""
 "Όνομα\n"
 "χρονόμετρου"
 
-#: ../src/xfcetimer.c:1448
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -154,26 +145,27 @@ msgstr ""
 "Περίοδος αντίστροφου χρόνου /\n"
 "Χρόνος ειδοποίησης"
 
-#: ../src/xfcetimer.c:1452
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr "Εντολή ειδοποίησης "
 
-#: ../src/xfcetimer.c:1508
-#, fuzzy
-msgid "Don't display a warning  if an alarm command is set"
+#: ../src/xfcetimer.c:1257
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
 msgstr ""
 "Μην εμφανίσεις το παράθυρο προειδοποίησης\n"
-"εάν η εντολή ειδοποίησης έχει τεθεί"
+"εάν η εντολή ειδοποίησης έχει ορισθεί"
 
-#: ../src/xfcetimer.c:1515
+#: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
 msgstr "Επανάληψη της εντολής του ξυπνητήρι:"
 
-#: ../src/xfcetimer.c:1522
+#: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
 msgstr "Αριθμός επαναλήψεων"
 
-#: ../src/xfcetimer.c:1528
+#: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
 msgstr "Διαστημα ανανέωσης (δευτ.)"
 
@@ -185,5 +177,16 @@ msgstr "Άρθρωμα χρονόμετρου για το ταμπλό του xf
 msgid "Xfce4 Timer"
 msgstr "Χρονόμετρο xfce4"
 
-#~ msgid "Properties"
-#~ msgstr "Ιδιότητες"
+#, fuzzy
+#~ msgid "Pause timer"
+#~ msgstr "Έναρξη χρονόμετρου "
+
+#, fuzzy
+#~ msgid "or"
+#~ msgstr ""
+#~ "\n"
+#~ "ή\n"
+
+#, fuzzy
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Επιλογές χρονόμετρου  xfce4"
