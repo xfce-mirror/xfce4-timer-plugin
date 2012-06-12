@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer 0.3\n"
+"Project-Id-Version: xfce4-timer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-06 23:51+0200\n"
 "PO-Revision-Date: 2008-10-10 03:36+0900\n"
@@ -20,46 +20,44 @@ msgstr ""
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%d سائەت%d مىنۇت %dسېكۇنت قالدى"
+msgstr "%d سائەت %d مىنۇت %d سېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
-msgstr "%d مىنۇت %dسېكۇنت قالدى"
+msgstr "%d مىنۇت %d سېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
-msgstr "%dسېكۇنت قالدى"
+msgstr "%d سېكۇنت قالدى"
 
 #: ../src/xfcetimer.c:108
 msgid " (Paused)"
-msgstr ""
+msgstr " (ۋاقىتلىق توختىدى)"
 
 #: ../src/xfcetimer.c:131
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
-"تىرىڭ :) \n"
+msgstr "تىرىڭ :) \n"
 "ۋاقىت توشتى"
 
 #: ../src/xfcetimer.c:415
 msgid "Resume timer"
-msgstr ""
+msgstr "ۋاقىت ئۆلچىگۈچنى قايتا باشلا"
 
 #: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
 msgid "Stop timer"
-msgstr "timer توختات"
+msgstr "ۋاقىت ئۆلچىگۈچنى توختات"
 
 #: ../src/xfcetimer.c:475
-#, fuzzy
 msgid "Pause timer"
-msgstr "timer باشلا"
+msgstr "ۋاقىت ئۆلچىگۈچنى ۋاقىتلىق توختات"
 
 #: ../src/xfcetimer.c:491
 msgid "Start timer"
-msgstr "timer باشلا"
+msgstr "ۋاقىت ئۆلچىگۈچنى باشلا"
 
 #: ../src/xfcetimer.c:501
 msgid "Stop the alarm"
@@ -68,27 +66,26 @@ msgstr "قوڭغۇراقنى توختات"
 #: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dسائەت %dمىنۇت %dسېكۇنت"
+msgstr "%d سائەت %d مىنۇت %d سېكۇنت"
 
 #: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
 #, c-format
 msgid "%dm %ds"
-msgstr "%dمىنۇت %dسېكۇنت"
+msgstr "%d مىنۇت %d سېكۇنت"
 
 #: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
 #, c-format
 msgid "%ds"
-msgstr "%dسېكۇنت"
+msgstr "%d سېكۇنت"
 
 #: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
 #, c-format
 msgid "At %02d:%02d"
-msgstr "%02d:%02d"
+msgstr "%02d:%02d دە"
 
 #: ../src/xfcetimer.c:718
-#, fuzzy
 msgid "Name:"
-msgstr "ئاتى"
+msgstr "ئاتى:"
 
 #. ********
 #: ../src/xfcetimer.c:726
@@ -97,7 +94,7 @@ msgstr "تەتۈر ساناش ۋاقتىنى كىرگۈزۈڭ"
 
 #: ../src/xfcetimer.c:729
 msgid "Enter the time of alarm (24h format)"
-msgstr "قوڭغۇراق چېلىش ۋاقتىنى كىرگۈزۈڭ (24時間制)"
+msgstr "قوڭغۇراق چېلىش ۋاقتىنى كىرگۈزۈڭ (24 پىچىمىدا)"
 
 #: ../src/xfcetimer.c:741
 msgid "h  "
@@ -112,18 +109,12 @@ msgid "s  "
 msgstr "s  "
 
 #: ../src/xfcetimer.c:754
-#, fuzzy
 msgid "or"
-msgstr ""
-"\n"
-"ياكى\n"
+msgstr "or"
 
 #: ../src/xfcetimer.c:777
-#, fuzzy
 msgid "Command to run:"
-msgstr ""
-"\n"
-"ئىجرا بولىدىغان بۇيرۇق"
+msgstr "ئىجرا قىلىدىغان بۇيرۇق:"
 
 #: ../src/xfcetimer.c:807
 msgid "Add new alarm"
@@ -134,27 +125,22 @@ msgid "Edit alarm"
 msgstr "قوڭغۇراق تەھرىرلە"
 
 #: ../src/xfcetimer.c:1399
-#, fuzzy
 msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 Timer تاللانمىسى"
+msgstr "Xfce 4 ۋاقىت ئۆلچىگۈچ قىستۇرمىسى"
 
 #: ../src/xfcetimer.c:1411
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4 Timer تاللانمىسى"
+msgstr "Xfce4  ۋاقىت ئۆلچىگۈچ تاللانمىسى"
 
 #: ../src/xfcetimer.c:1443
-#, fuzzy
 msgid "Timer name"
-msgstr ""
-"Timer\n"
-"ئاتى"
+msgstr "ۋاقىت ئۆلچىگۈچ ئاتى"
 
 #: ../src/xfcetimer.c:1448
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"تەتۈر ساناش ۋاقتى/\n"
+msgstr "تەتۈر ساناش ۋاقتى/\n"
 "قوڭغۇراق ۋاقتى"
 
 #: ../src/xfcetimer.c:1452
@@ -162,11 +148,8 @@ msgid "Alarm command"
 msgstr "قوڭغۇراق بۇيرۇقى"
 
 #: ../src/xfcetimer.c:1508
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
-"قوڭغۇراق بۇيرۇقى بېكىتىلسە\n"
-"ئاگاھلاندۇرۇش كۆزنىكى چىقمىسۇن"
+msgstr "قوڭغۇراق بۇيرۇقى بەلگىلەن بولسا ئاگاھلاندۇرۇشنى كۆرسەتمىسۇن"
 
 #: ../src/xfcetimer.c:1515
 msgid "Repeat the alarm command:"
@@ -182,11 +165,11 @@ msgstr "  ۋاقىت ئىنتېرۋالى(سېكۇنت.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Xfce 4.4 نىڭ Timer قىستۇرمىسى"
+msgstr "Xfce 4.4 نىڭ ۋاقىت ئۆلچىگۈچ قىستۇرمىسى"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Timer"
+msgstr "Xfce4 ۋاقىت ئۆلچىگۈچى"
 
 #~ msgid "Properties"
 #~ msgstr "خاسلىق"
