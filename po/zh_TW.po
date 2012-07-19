@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-06 23:51+0200\n"
-"PO-Revision-Date: 2012-01-15 20:56+0800\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"PO-Revision-Date: 2012-07-19 22:06+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
 "Language: \n"
@@ -32,11 +32,7 @@ msgstr "剩下 %d 分 %d 秒"
 msgid "%ds left"
 msgstr "剩下 %d 秒"
 
-#: ../src/xfcetimer.c:108
-msgid " (Paused)"
-msgstr ""
-
-#: ../src/xfcetimer.c:131
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -44,112 +40,109 @@ msgstr ""
 "嗶！:) \n"
 "時間到！"
 
-#: ../src/xfcetimer.c:415
-msgid "Resume timer"
-msgstr ""
-
-#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr "停止定時器"
 
-#: ../src/xfcetimer.c:475
-#, fuzzy
-msgid "Pause timer"
-msgstr "啟動定時器"
-
-#: ../src/xfcetimer.c:491
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr "啟動定時器"
 
-#: ../src/xfcetimer.c:501
+#: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "停止鬧鈴"
 
-#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:482
+#: ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d 小時 %d 分 %d 秒"
 
-#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
+#: ../src/xfcetimer.c:484
+#: ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%d 分 %d 秒"
 
-#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
+#: ../src/xfcetimer.c:486
+#: ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%d 秒"
 
-#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
+#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "於 %02d:%02d"
 
-#: ../src/xfcetimer.c:718
-#, fuzzy
-msgid "Name:"
+#: ../src/xfcetimer.c:619
+msgid "Name"
 msgstr "名稱"
 
 #. ********
-#: ../src/xfcetimer.c:726
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr "請輸入倒數時間"
 
-#: ../src/xfcetimer.c:729
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr "請輸入鬧鈴時間 (24 小時制)"
 
-#: ../src/xfcetimer.c:741
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr "點"
 
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr "分"
 
-#: ../src/xfcetimer.c:751
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr "秒"
 
-#: ../src/xfcetimer.c:754
-#, fuzzy
-msgid "or"
+#: ../src/xfcetimer.c:653
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 "\n"
 "或\n"
 
-#: ../src/xfcetimer.c:777
-#, fuzzy
-msgid "Command to run:"
+#. **************
+#: ../src/xfcetimer.c:673
+msgid ""
+"\n"
+"The command to run"
 msgstr ""
 "\n"
 "要執行的指令"
 
-#: ../src/xfcetimer.c:807
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr "加入新鬧鈴"
 
-#: ../src/xfcetimer.c:846
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr "編輯鬧鈴"
 
-#: ../src/xfcetimer.c:1399
-#, fuzzy
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 定時器選項"
+#: ../src/xfcetimer.c:1162
+msgid "Properties"
+msgstr "屬性"
 
-#: ../src/xfcetimer.c:1411
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 定時器選項"
 
-#: ../src/xfcetimer.c:1443
-#, fuzzy
-msgid "Timer name"
+#: ../src/xfcetimer.c:1205
+msgid ""
+"Timer\n"
+"name"
 msgstr ""
 "定時器\n"
 "名稱"
 
-#: ../src/xfcetimer.c:1448
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -157,26 +150,27 @@ msgstr ""
 "倒數期 /\n"
 "鬧鈴時間"
 
-#: ../src/xfcetimer.c:1452
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr "鬧鈴指令"
 
-#: ../src/xfcetimer.c:1508
-#, fuzzy
-msgid "Don't display a warning  if an alarm command is set"
+#: ../src/xfcetimer.c:1257
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
 msgstr ""
 "不要顯示警告視窗\n"
 "如果有設定鬧鈴指令的話"
 
-#: ../src/xfcetimer.c:1515
+#: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
 msgstr "重複鬧鈴指令："
 
-#: ../src/xfcetimer.c:1522
+#: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
 msgstr "重複次數"
 
-#: ../src/xfcetimer.c:1528
+#: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
 msgstr "  時間間隔 (秒)"
 
@@ -188,5 +182,16 @@ msgstr "Xfce 4.4 面板的定時器插件"
 msgid "Xfce4 Timer"
 msgstr "Xfce4 定時器"
 
-#~ msgid "Properties"
-#~ msgstr "屬性"
+#, fuzzy
+#~ msgid "Pause timer"
+#~ msgstr "啟動定時器"
+
+#, fuzzy
+#~ msgid "or"
+#~ msgstr ""
+#~ "\n"
+#~ "或\n"
+
+#, fuzzy
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Xfce4 定時器選項"
