@@ -4,9 +4,9 @@ dnl If you don't want it to overwrite it,
 dnl 	Please disable it in the Anjuta project configuration
 
 dnl version info
-m4_define([xfce4_timer_version_major], [0])
-m4_define([xfce4_timer_version_minor], [6])
-m4_define([xfce4_timer_version_micro], [4])
+m4_define([xfce4_timer_version_major], [1])
+m4_define([xfce4_timer_version_minor], [0])
+m4_define([xfce4_timer_version_micro], [0])
 m4_define([xfce4_timer_version_build], [@REVISION@])
 m4_define([xfce4_timer_version_tag])
 m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_tag(), [git], [xfce4_timer_version_tag()-xfce4_timer_version_build()], [xfce4_timer_version_tag()])])
@@ -16,8 +16,9 @@ AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [ilgar_eroglu@yahoo.com])
 AC_PREREQ([2.50])
 
 dnl init automake
-XFCE4_TIMER_VERSION=xfce4_timer_version
-AM_INIT_AUTOMAKE([xfce4-timer-plugin], [$XFCE4_TIMER_VERSION])
+dnl XFCE4_TIMER_VERSION=xfce4_timer_version
+dnl AM_INIT_AUTOMAKE([xfce4-timer-plugin], [$XFCE4_TIMER_VERSION])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2 tar-ustar])
 AM_CONFIG_HEADER([config.h])
 AM_MAINTAINER_MODE
 
@@ -38,10 +39,14 @@ XDT_I18N([@LINGUAS@])
 dnl required
 XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.4.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.4.0])
-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
+dnl AC_DEFINE ([HAS4UI], [TRUE], [Desc])
+XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0], [has4ui=true] , [XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0], [has4ui=false])])
+AM_CONDITIONAL([HAVE_4UI], [test x$has4ui = xtrue])
+dnl XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
 XDT_CHECK_OPTIONAL_PACKAGE([XFCE48], [libxfce4panel-1.0], [4.8.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.3.0])
+
 
 
 AC_OUTPUT([

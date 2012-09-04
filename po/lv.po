@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he xfce4-timer package 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-06 23:51+0200\n"
+"POT-Creation-Date: 2012-09-04 15:53+0300\n"
 "PO-Revision-Date: 2007-11-16 21:23+0300\n"
 "Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
 "Language-Team: Latvian <rprieditis@inbox.lv>\n"
@@ -16,26 +16,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/xfcetimer.c:100
+#: ../src/xfcetimer.c:108
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dh %dm %ds palicis"
 
-#: ../src/xfcetimer.c:103
+#: ../src/xfcetimer.c:111
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds palicis"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:113
 #, c-format
 msgid "%ds left"
 msgstr "%ds palicis"
 
-#: ../src/xfcetimer.c:108
+#: ../src/xfcetimer.c:116
 msgid " (Paused)"
 msgstr ""
 
-#: ../src/xfcetimer.c:131
+#: ../src/xfcetimer.c:141
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -43,112 +43,112 @@ msgstr ""
 "Pīīīīp! :) \n"
 "Laiks iztecējis!"
 
-#: ../src/xfcetimer.c:415
+#: ../src/xfcetimer.c:430
 msgid "Resume timer"
 msgstr ""
 
-#: ../src/xfcetimer.c:421 ../src/xfcetimer.c:489
+#: ../src/xfcetimer.c:436 ../src/xfcetimer.c:504
 msgid "Stop timer"
 msgstr "Apturēt taimeri"
 
-#: ../src/xfcetimer.c:475
+#: ../src/xfcetimer.c:490
 #, fuzzy
 msgid "Pause timer"
 msgstr "Palaist taimeri"
 
-#: ../src/xfcetimer.c:491
+#: ../src/xfcetimer.c:506
 msgid "Start timer"
 msgstr "Palaist taimeri"
 
-#: ../src/xfcetimer.c:501
+#: ../src/xfcetimer.c:516
 msgid "Stop the alarm"
 msgstr "Apturēt trauksmi"
 
-#: ../src/xfcetimer.c:547 ../src/xfcetimer.c:622
+#: ../src/xfcetimer.c:562 ../src/xfcetimer.c:637
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:549 ../src/xfcetimer.c:624
+#: ../src/xfcetimer.c:564 ../src/xfcetimer.c:639
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:551 ../src/xfcetimer.c:626
+#: ../src/xfcetimer.c:566 ../src/xfcetimer.c:641
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:561 ../src/xfcetimer.c:636
+#: ../src/xfcetimer.c:576 ../src/xfcetimer.c:651
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Pie %02d:%02d"
 
-#: ../src/xfcetimer.c:718
+#: ../src/xfcetimer.c:733
 #, fuzzy
 msgid "Name:"
 msgstr "Nosaukums"
 
 #. ********
-#: ../src/xfcetimer.c:726
+#: ../src/xfcetimer.c:741
 msgid "Enter the countdown time"
 msgstr "Ievadiet atskaites punkta laiku"
 
-#: ../src/xfcetimer.c:729
+#: ../src/xfcetimer.c:744
 msgid "Enter the time of alarm (24h format)"
 msgstr "Ievadiet trauksmes laiku (24st formāts)"
 
-#: ../src/xfcetimer.c:741
+#: ../src/xfcetimer.c:756
 msgid "h  "
 msgstr "st  "
 
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:761
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:751
+#: ../src/xfcetimer.c:766
 msgid "s  "
 msgstr "s  "
 
-#: ../src/xfcetimer.c:754
+#: ../src/xfcetimer.c:769
 #, fuzzy
 msgid "or"
 msgstr ""
 "\n"
 "vai\n"
 
-#: ../src/xfcetimer.c:777
+#: ../src/xfcetimer.c:792
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "Izpildāmā komanda"
 
-#: ../src/xfcetimer.c:807
+#: ../src/xfcetimer.c:822
 msgid "Add new alarm"
 msgstr "Pievienot jaunu trauksmi"
 
-#: ../src/xfcetimer.c:846
+#: ../src/xfcetimer.c:861
 msgid "Edit alarm"
 msgstr "Rediģēt trauksmi"
 
-#: ../src/xfcetimer.c:1399
+#: ../src/xfcetimer.c:1439 ../src/xfcetimer.c:1448
+msgid "Xfce4 Timer Options"
+msgstr "Xfce4 Taimera Uzstādījumi"
+
+#: ../src/xfcetimer.c:1450
 #, fuzzy
 msgid "Xfce 4 Timer Plugin"
 msgstr "Xfce4 Taimera Uzstādījumi"
 
-#: ../src/xfcetimer.c:1411
-msgid "Xfce4 Timer Options"
-msgstr "Xfce4 Taimera Uzstādījumi"
-
-#: ../src/xfcetimer.c:1443
+#: ../src/xfcetimer.c:1499
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "Taimera\n"
 "nosaukums"
 
-#: ../src/xfcetimer.c:1448
+#: ../src/xfcetimer.c:1504
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -156,32 +156,36 @@ msgstr ""
 "Atskaites periods /\n"
 "Trauksmes laiks"
 
-#: ../src/xfcetimer.c:1452
+#: ../src/xfcetimer.c:1508
 msgid "Alarm command"
 msgstr "Trauksmes komanda"
 
-#: ../src/xfcetimer.c:1508
+#: ../src/xfcetimer.c:1564
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Nerādit brīdinājuma logu,\n"
 "ja trauksmes komanda nav uzstādīta"
 
-#: ../src/xfcetimer.c:1515
+#: ../src/xfcetimer.c:1569
+msgid "Selecting a timer starts it"
+msgstr ""
+
+#: ../src/xfcetimer.c:1574
 msgid "Repeat the alarm command:"
 msgstr "Atkārtotas trauksmi komanda:"
 
-#: ../src/xfcetimer.c:1522
+#: ../src/xfcetimer.c:1581
 msgid "Number of repetitions"
 msgstr "Mēģinājumu skaits"
 
-#: ../src/xfcetimer.c:1528
+#: ../src/xfcetimer.c:1587
 msgid "  Time interval (sec.)"
 msgstr "  Laika intervāls (sek.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Taimera spraudnis Xfce 4.4 panelim"
+msgid "Timer plugin for Xfce panel"
+msgstr "Taimera spraudnis Xfce panelim"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"

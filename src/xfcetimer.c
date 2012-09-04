@@ -18,7 +18,8 @@
  */
 
 
-#define TIMEOUT_TIME    2000 /* Countdown update period in milliseconds */
+#define 	UPDATE_INTERVAL 2000 			/* Countdown update period in 
+											milliseconds */
 #define PBAR_THICKNESS  10
 
 #define BORDER 8
@@ -36,13 +37,20 @@
 #include <gtk/gtk.h>
 
 #include <libxfce4util/libxfce4util.h>
+#ifdef HAVE_XFCE48
+#include <libxfce4ui/libxfce4ui.h>
+#include <libxfce4panel/libxfce4panel.h>
+#else
 #include <libxfcegui4/xfce_iconbutton.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
 #include <libxfcegui4/dialogs.h>
+#endif
 
 #include "xfcetimer.h"
 
 static void create_plugin_control (XfcePanelPlugin *plugin);
+static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
+                                        data);
 XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(create_plugin_control);
 
 void make_menu(plugin_data *pd);
@@ -83,7 +91,7 @@ static gboolean update_function (gpointer data){
 
   plugin_data *pd=(plugin_data *)data;
   gint elapsed_sec,remaining;
-  gchar *tiptext = NULL;
+  gchar *tiptext = NULL, *temp;
   GtkWidget *dialog;
 
   elapsed_sec=(gint)g_timer_elapsed(pd->timer,NULL);
@@ -104,9 +112,11 @@ static gboolean update_function (gpointer data){
      else
        tiptext = g_strdup_printf(_("%ds left"),remaining);
        
-     if(pd->is_paused)
-       g_strlcat(tiptext,_(" (Paused)"),64);
-
+     if(pd->is_paused) {
+       temp = g_strconcat(tiptext,_(" (Paused)"),NULL);
+       g_free (tiptext);
+       tiptext = temp;
+     }
      gtk_progress_bar_set_fraction  (GTK_PROGRESS_BAR(pd->pbar),
                     1.0-((gdouble)elapsed_sec)/pd->timeout_period_in_sec);
 
@@ -159,6 +169,7 @@ static gboolean update_function (gpointer data){
      g_timer_destroy(pd->timer);
   pd->timer=NULL;
   
+  /* Disable tooltips, reset pbar */
   gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
   gtk_tooltips_disable(pd->tip);
   gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
@@ -166,9 +177,6 @@ static gboolean update_function (gpointer data){
   pd->timeout=0;
 
   pd->timer_on=FALSE;
-
-  /* reset pbar */
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
   make_menu(pd);
 
@@ -197,6 +205,10 @@ static void timer_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
   pd->selected=row_count;
 
   /*g_fprintf(stderr,"\n Selecten menuitem is %d",row_count);*/
+  
+  /* start the timer if the option to do so on selecting is set */
+  if(pd->selecting_starts && !pd->timer_on)
+    start_stop_selected(menuitem,event,data);  
 
 }
 
@@ -1037,6 +1049,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box=gtk_hbox_new(TRUE,0);
+  gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
 #ifdef HAVE_XFCE48    
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 #else    
@@ -1052,6 +1065,7 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   }
   else{ /* horizontal bar */
     pd->box=gtk_vbox_new(TRUE,0);
+    gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
 #ifdef HAVE_XFCE48    
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 #else    
@@ -1147,6 +1161,8 @@ static void load_settings(plugin_data *pd)
             xfce_rc_set_group(rc,"others");
             pd->nowin_if_alarm= xfce_rc_read_bool_entry
                 (rc,"nowin_if_alarm",FALSE);
+            pd->selecting_starts= xfce_rc_read_bool_entry
+               (rc,"selecting_starts",FALSE);                
             pd->repeat_alarm= xfce_rc_read_bool_entry
                 (rc,"repeat_alarm",FALSE);
             pd->repetitions= xfce_rc_read_int_entry
@@ -1248,6 +1264,7 @@ static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
   xfce_rc_set_group(rc,"others");
 
   xfce_rc_write_bool_entry(rc,"nowin_if_alarm",pd->nowin_if_alarm);
+  xfce_rc_write_bool_entry(rc,"selecting_starts",pd->selecting_starts);
   xfce_rc_write_bool_entry(rc,"repeat_alarm",pd->repeat_alarm);
   xfce_rc_write_int_entry(rc,"repetitions",pd->repetitions);
   xfce_rc_write_int_entry(rc,"repeat_interval",pd->repeat_interval);
@@ -1337,14 +1354,25 @@ options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
     save_settings(pd->base,pd);
 }
 
-/********************************/
+/**********************************/
 /* nowin_if_alarm toggle callback */
-/********************************/
+/**********************************/
 static void toggle_nowin_if_alarm(GtkToggleButton *button, gpointer data){
 
   plugin_data *pd=(plugin_data *)data;
 
   pd->nowin_if_alarm = gtk_toggle_button_get_active(button);
+
+}
+
+/************************************/
+/* selecting_starts toggle callback */
+/************************************/
+static void toggle_selecting_starts(GtkToggleButton *button, gpointer data){
+
+  plugin_data *pd=(plugin_data *)data;
+
+  pd->selecting_starts = gtk_toggle_button_get_active(button);
 
 }
 
@@ -1400,11 +1428,25 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   GtkTreeViewColumn *column;
   GtkTreeIter iter;
 
-  GtkWidget *dlg, *header;
+  GtkWidget *dlg=NULL, *header=NULL;
 
 
   xfce_panel_plugin_block_menu (plugin);
 
+
+
+#ifdef HAVE_XFCE48
+  header = xfce_titled_dialog_new_with_buttons (_("Xfce4 Timer Options"), 
+                     GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
+                                               GTK_DIALOG_DESTROY_WITH_PARENT |
+                                               GTK_DIALOG_NO_SEPARATOR,
+                                               GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
+                                               NULL);
+
+ dlg = header;                                               
+#else                                               
+  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
+  
   dlg = gtk_dialog_new_with_buttons (_("Xfce 4 Timer Plugin"),
               GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
               GTK_DIALOG_DESTROY_WITH_PARENT |
@@ -1412,17 +1454,22 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
               GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
               NULL);
 
+
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header,
+                      FALSE, TRUE, 0);    
+#endif  
+
   g_signal_connect (dlg, "response", G_CALLBACK (options_dialog_response),
                     pd);
 
   gtk_container_set_border_width (GTK_CONTAINER(dlg), BORDER);
 
-  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
-  gtk_widget_set_size_request (GTK_BIN (header)->child, 200, 32);
+  gtk_widget_set_size_request (dlg, 650, 450);
+  gtk_window_set_position(GTK_WINDOW(header),GTK_WIN_POS_CENTER);
+  
   //gtk_container_set_border_width (GTK_CONTAINER (header), 6);
-  gtk_widget_show (header);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header,
-                      FALSE, TRUE, 0);
+  //gtk_widget_show (header);
+
 
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), vbox,
                       TRUE, TRUE, WIDGET_SPACING);
@@ -1519,7 +1566,10 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_nowin_if_alarm),pd);
   gtk_box_pack_start(GTK_BOX(vbox),button,FALSE,FALSE,WIDGET_SPACING);
 
-
+  button=gtk_check_button_new_with_label(_("Selecting a timer starts it"));
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),pd->selecting_starts);
+  g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_selecting_starts),pd);
+  gtk_box_pack_start(GTK_BOX(vbox),button,FALSE,FALSE,WIDGET_SPACING);
 
   button=gtk_check_button_new_with_label(_("Repeat the alarm command:"));
   gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),pd->repeat_alarm);
@@ -1602,6 +1652,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
   pd->timeout_command=NULL;
   pd->timer=NULL;
   pd->nowin_if_alarm=FALSE;
+  pd->selecting_starts=FALSE;
   pd->repeat_alarm=FALSE;
   pd->is_paused=FALSE;
   pd->is_countdown=TRUE;

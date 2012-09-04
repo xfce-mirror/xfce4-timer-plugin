@@ -158,7 +158,7 @@ msgid "  Time interval (sec.)"
 msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Timer plugin for Xfce 4.4 panel"
+msgid "Timer plugin for Xfce panel"
 msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:2

@@ -7,34 +7,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2012-09-04 15:53+0300\n"
 "PO-Revision-Date: 2008-10-14 15:19+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: da\n"
 "X-Poedit-Language: Danish\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: DENMARK\n"
 
-#: ../src/xfcetimer.c:100
+#: ../src/xfcetimer.c:108
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dt %dm %ds tilbage"
 
-#: ../src/xfcetimer.c:103
+#: ../src/xfcetimer.c:111
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds tilbage"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:113
 #, c-format
 msgid "%ds left"
 msgstr "%ds tilbage"
 
-#: ../src/xfcetimer.c:126
+#: ../src/xfcetimer.c:116
+msgid " (Paused)"
+msgstr ""
+
+#: ../src/xfcetimer.c:141
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -42,105 +46,110 @@ msgstr ""
 "Biiip! :) \n"
 "Tiden er gået!"
 
-#: ../src/xfcetimer.c:424
+#: ../src/xfcetimer.c:430
+msgid "Resume timer"
+msgstr "Start timer"
+
+#: ../src/xfcetimer.c:436 ../src/xfcetimer.c:504
 msgid "Stop timer"
 msgstr "Stop timer"
 
-#: ../src/xfcetimer.c:426
+#: ../src/xfcetimer.c:490
+msgid "Pause timer"
+msgstr "Start timer"
+
+#: ../src/xfcetimer.c:506
 msgid "Start timer"
 msgstr "Start timer"
 
-#: ../src/xfcetimer.c:436
+#: ../src/xfcetimer.c:516
 msgid "Stop the alarm"
 msgstr "Stop alarmen"
 
-#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
+#: ../src/xfcetimer.c:562 ../src/xfcetimer.c:637
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dt %dm %ds"
 
-#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
+#: ../src/xfcetimer.c:564 ../src/xfcetimer.c:639
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
+#: ../src/xfcetimer.c:566 ../src/xfcetimer.c:641
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
+#: ../src/xfcetimer.c:576 ../src/xfcetimer.c:651
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Ved %02d:%02d"
 
-#: ../src/xfcetimer.c:619
-msgid "Name"
+#: ../src/xfcetimer.c:733
+#, fuzzy
+msgid "Name:"
 msgstr "Navn"
 
 #. ********
-#: ../src/xfcetimer.c:627
+#: ../src/xfcetimer.c:741
 msgid "Enter the countdown time"
 msgstr "Indtast nedtællingstiden"
 
-#: ../src/xfcetimer.c:629
+#: ../src/xfcetimer.c:744
 msgid "Enter the time of alarm (24h format)"
 msgstr "Indtast tiden for alarmen (24t format)"
 
-#: ../src/xfcetimer.c:640
+#: ../src/xfcetimer.c:756
 msgid "h  "
 msgstr "t  "
 
-#: ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:761
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:650
+#: ../src/xfcetimer.c:766
 msgid "s  "
 msgstr "s  "
 
-#: ../src/xfcetimer.c:653
-msgid ""
-"\n"
-"or\n"
+#: ../src/xfcetimer.c:769
+#, fuzzy
+msgid "or"
 msgstr ""
 "\n"
 "eller\n"
 
-#. **************
-#: ../src/xfcetimer.c:673
-msgid ""
-"\n"
-"The command to run"
+#: ../src/xfcetimer.c:792
+#, fuzzy
+msgid "Command to run:"
 msgstr ""
 "\n"
 "Kommadoen der skal køres"
 
-#: ../src/xfcetimer.c:699
+#: ../src/xfcetimer.c:822
 msgid "Add new alarm"
 msgstr "Tilføj ny alarm"
 
-#: ../src/xfcetimer.c:737
+#: ../src/xfcetimer.c:861
 msgid "Edit alarm"
 msgstr "Redigér alarm"
 
-#: ../src/xfcetimer.c:1162
-msgid "Properties"
-msgstr "Egenskaber"
-
-#: ../src/xfcetimer.c:1174
+#: ../src/xfcetimer.c:1439 ../src/xfcetimer.c:1448
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4-timerindstillinger"
 
-#: ../src/xfcetimer.c:1205
-msgid ""
-"Timer\n"
-"name"
+#: ../src/xfcetimer.c:1450
+msgid "Xfce 4 Timer Plugin"
+msgstr "Xfce4-timerindstillinger"
+
+#: ../src/xfcetimer.c:1499
+#, fuzzy
+msgid "Timer name"
 msgstr ""
 "Timer\n"
 "navn"
 
-#: ../src/xfcetimer.c:1210
+#: ../src/xfcetimer.c:1504
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -148,48 +157,47 @@ msgstr ""
 "Nedtællingsperiode /\n"
 "Alarmtid"
 
-#: ../src/xfcetimer.c:1214
+#: ../src/xfcetimer.c:1508
 msgid "Alarm command"
 msgstr "Alarmkommando"
 
-#: ../src/xfcetimer.c:1257
-msgid ""
-"Don't display the warning window\n"
-"if an alarm command is set"
+#: ../src/xfcetimer.c:1564
+#, fuzzy
+msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Vis ikke advarselsvinduet\n"
 "hvis en alarmkommando er indstillet"
 
-#: ../src/xfcetimer.c:1264
+#: ../src/xfcetimer.c:1569
+msgid "Selecting a timer starts it"
+msgstr ""
+
+#: ../src/xfcetimer.c:1574
 msgid "Repeat the alarm command:"
 msgstr "Gentag alarmkommandoen:"
 
-#: ../src/xfcetimer.c:1271
+#: ../src/xfcetimer.c:1581
 msgid "Number of repetitions"
 msgstr "Antal gentagelser"
 
-#: ../src/xfcetimer.c:1277
+#: ../src/xfcetimer.c:1587
 msgid "  Time interval (sec.)"
 msgstr "  Tidsinterval (sek.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Timer plugin for Xfce 4.4 panel"
-msgstr "Timer-udvidelsesmodul til Xfce 4.4 panelet"
+msgid "Timer plugin for Xfce panel"
+msgstr "Timer-udvidelsesmodul til Xfce panelet"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Xfce4-timer"
 
-#~ msgid "Resume timer"
-#~ msgstr "Start timer"
-
-#~ msgid "Pause timer"
-#~ msgstr "Start timer"
-
-#~ msgid "or"
+#~ msgid ""
+#~ "\n"
+#~ "or\n"
 #~ msgstr ""
 #~ "\n"
 #~ "eller\n"
 
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Xfce4-timerindstillinger"
+#~ msgid "Properties"
+#~ msgstr "Egenskaber"

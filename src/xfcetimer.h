@@ -18,50 +18,48 @@
  */
 
 
-#define 	UPDATE_INTERVAL 2000 			/* Countdown update period in 
-							   milliseconds */
-
 typedef struct {
-  GtkWidget 	*eventbox,				/* Main container widget
-		 					   in ctrl->base */
+  GtkWidget 	*eventbox,		/* Main container widget
+								in ctrl->base */
 		*box,					/* v/hbox that holds pbar */  
 		*pbar, 					/* Progress bar */
 		*tree, 					/* Treeview */
 		*buttonadd,*buttonedit,*buttonremove,	/* options window buttons */
 		*buttonup, *buttondown,
-		*spin_repeat, *spin_interval,		/* spinbuttons for alarm repeat */
+		*spin_repeat, *spin_interval,			/* spinbuttons for alarm repeat */
 		*menu,
-		*repeat_alarm_box;			/* Box holding the repeat 
-							   alarm settings */
+		*repeat_alarm_box;		/* Box holding the repeat 
+								alarm settings */
 		
-  XfcePanelPlugin *base;				/* The plugin widget */
-  GtkListStore *list;					/* The alarms list */
-  gint 		count,					/* Nubmer of alarms */
-		selected,
-		timeout_period_in_sec,			/* Active countdown period */
-		repetitions,				/* Number of alarm repeats */
-		rem_repetitions,			/* Remaining repeats */
-		repeat_interval;			/* Time interval between
-							   repeats (in secs) */
-  guint 	timeout,repeat_timeout;			/* The timeout IDs */
+  XfcePanelPlugin *base;			/* The plugin widget */
+  GtkListStore *list;				/* The alarms list */
+  gint 		count,					/* Number of alarms */
+			selected,
+			timeout_period_in_sec,	/* Active countdown period */
+			repetitions,			/* Number of alarm repeats */
+			rem_repetitions,		/* Remaining repeats */
+			repeat_interval;		/* Time interval between
+									repeats (in secs) */
+  guint 	timeout,repeat_timeout;	/* The timeout IDs */
   gboolean 	timer_on,				/* TRUE if countdown 
-							   is in progress */
-		nowin_if_alarm,				/* Show warning window when
-							   alarm command is set */
-		repeat_alarm,				/* Repeat alarm */
-		alarm_repeating,			/* True while alarm repeats */
-		is_paused,					/* True if the countdown is paused */
-		is_countdown;				/* True if the alarm type is contdown */
-  GtkTooltips 	*tip;					/* Tooltip for panel */
-  GArray 	*menuarray;				/* Array of popup 
-							   menuitems (alarms). These 
-							   are used to find the index
-							   of the selected menuitem. */
-  gchar 	*timeout_command,			/* Command when countdown ends */
-  			*configfile;			/* Full address of the permanent
-  									config file -- this is not the
-  									plugin rc file. */
-  GTimer 	*timer;					/* Keeps time elapsed */
+									is in progress */							   
+			nowin_if_alarm,			/* Show warning window when
+									alarm command is set */
+			selecting_starts,       /* selecting a timer also starts it */							   
+			repeat_alarm,			/* Repeat alarm */
+			alarm_repeating,		/* True while alarm repeats */
+			is_paused,				/* True if the countdown is paused */
+			is_countdown;			/* True if the alarm type is contdown */
+  GtkTooltips 	*tip;				/* Tooltip for panel */
+  GArray 	*menuarray;			/* Array of popup 
+								menuitems (alarms). These 
+								are used to find the index
+								of the selected menuitem. */
+  gchar 	*timeout_command,	/* Command when countdown ends */
+  			*configfile;		/* Full address of the permanent
+  								config file -- this is not the
+  								plugin rc file. */
+  GTimer 	*timer;				/* Keeps time elapsed */
 
 } plugin_data;
 

@@ -1,3 +1,10 @@
+04/09/2012 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
+	* Version 1.0.0
+	* Fix compile/install issues
+	* Fix a crash with 4.8+ panels
+	* Fix a segfault when the timer is paused
+	* Commit patch by Harald Judt to fix border sizez (bug #8894)
+	* Commit patch by lorb (bug #7902). This has code cleanups and introduces the optional feature "selecting a timer starts it".
 06/02/2012 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
 	* Version 0.6.4
 	* Commit patch by Guido Berhoerster, replacing certain fixed-size strings with variable-size code. Fixes bug 8420.
