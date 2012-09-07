@@ -127,7 +127,7 @@ msgstr "Eigenschappen"
 
 #: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4 Timer-opties"
+msgstr "Xfce4 Schakelklok-opties"
 
 #: ../src/xfcetimer.c:1205
 msgid ""
@@ -171,11 +171,11 @@ msgstr "  Tijdinterval (sec.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce panel"
-msgstr "Timer-plugin voor Xfce4-werkbalk"
+msgstr "Schakelklok-invoegtoepassing voor Xfce4-werkbalk"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Timer"
+msgstr "Xfce4 Schakelklok"
 
 #~ msgid "Resume timer"
 #~ msgstr "Begin met aftellen"
