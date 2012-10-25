@@ -3,7 +3,7 @@
 # This file is distributed under the same license as
 #   the xfce4-timer package.
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer\n"
@@ -36,8 +36,7 @@ msgstr "%d سېكۇنت قالدى"
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
-"تىرىڭ :) \n"
+msgstr "تىرىڭ :) \n"
 "ۋاقىت توشتى"
 
 #: ../src/xfcetimer.c:424
@@ -101,17 +100,15 @@ msgstr "s  "
 msgid ""
 "\n"
 "or\n"
-msgstr ""
-"\n"
-"ياكى\n"
+msgstr "\n"
+"or\n"
 
 #. **************
 #: ../src/xfcetimer.c:673
 msgid ""
 "\n"
 "The command to run"
-msgstr ""
-"\n"
+msgstr "\n"
 "ئىجرا قىلىدىغان بۇيرۇق:"
 
 #: ../src/xfcetimer.c:699
@@ -134,16 +131,14 @@ msgstr "Xfce4  ۋاقىت ئۆلچىگۈچ تاللانمىسى"
 msgid ""
 "Timer\n"
 "name"
-msgstr ""
-"ۋاقىت ئۆلچىگۈچ\n"
+msgstr "ۋاقىت ئۆلچىگۈچ\n"
 "ئاتى"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"تەتۈر ساناش ۋاقتى/\n"
+msgstr "تەتۈر ساناش ۋاقتى/\n"
 "قوڭغۇراق ۋاقتى"
 
 #: ../src/xfcetimer.c:1214
@@ -154,8 +149,7 @@ msgstr "قوڭغۇراق بۇيرۇقى"
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr ""
-"قوڭغۇراق بۇيرۇقى بەلگىلەن بولسا\n"
+msgstr "قوڭغۇراق بۇيرۇقى بەلگىلەن بولسا\n"
 "ئاگاھلاندۇرۇشنى كۆرسەتمىسۇن"
 
 #: ../src/xfcetimer.c:1264
