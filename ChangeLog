@@ -1,3 +1,8 @@
+22/04/2013 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
+	* Version 1.0.2
+	* Some code cleanup
+	* Now the alarm dialog window displays the alarm name
+	* Added the option to define a default alarm command
 04/09/2012 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
 	* Version 1.0.0
 	* Fix compile/install issues

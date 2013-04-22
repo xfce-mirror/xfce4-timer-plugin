@@ -28,6 +28,10 @@ typedef struct {
 		*buttonup, *buttondown,
 		*spin_repeat, *spin_interval,			/* spinbuttons for alarm repeat */
 		*menu,
+		*glob_command_entry,		/* Text entry widget for
+								the default alarm command */
+		*global_command_box,	/* Box holding the default
+								command settings */
 		*repeat_alarm_box;		/* Box holding the repeat 
 								alarm settings */
 		
@@ -47,6 +51,8 @@ typedef struct {
 									alarm command is set */
 			selecting_starts,       /* selecting a timer also starts it */							   
 			repeat_alarm,			/* Repeat alarm */
+			use_global_command,		/* Use a default alarm command
+									if no alarm command is set */
 			alarm_repeating,		/* True while alarm repeats */
 			is_paused,				/* True if the countdown is paused */
 			is_countdown;			/* True if the alarm type is contdown */
@@ -56,10 +62,13 @@ typedef struct {
 								are used to find the index
 								of the selected menuitem. */
   gchar 	*timeout_command,	/* Command when countdown ends */
+			*global_command,	/* The global (default) command to be
+								run when countdown ends */
+			*active_timer_name, /* Name of the timer running */
   			*configfile;		/* Full address of the permanent
   								config file -- this is not the
   								plugin rc file. */
-  GTimer 	*timer;				/* Keeps time elapsed */
+  GTimer 	*timer;				/* Keeps track of the time elapsed */
 
 } plugin_data;
 

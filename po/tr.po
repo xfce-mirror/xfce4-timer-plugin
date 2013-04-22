@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-04 15:53+0300\n"
+"POT-Creation-Date: 2013-04-22 19:23+0300\n"
 "PO-Revision-Date: 2008-11-11 14:07+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -18,139 +18,141 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/xfcetimer.c:108
+#: ../src/xfcetimer.c:105
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dsa %ddk %dsn kaldı"
 
-#: ../src/xfcetimer.c:111
+#: ../src/xfcetimer.c:108
 #, c-format
 msgid "%dm %ds left"
 msgstr "%ddk %dsn kaldı"
 
-#: ../src/xfcetimer.c:113
+#: ../src/xfcetimer.c:110
 #, c-format
 msgid "%ds left"
 msgstr "%dsn kaldı"
 
-#: ../src/xfcetimer.c:116
+#: ../src/xfcetimer.c:113
 msgid " (Paused)"
 msgstr " (Dondurulmuş)"
 
-#: ../src/xfcetimer.c:141
+#. Display the name of the alarm when the countdown ends
+#: ../src/xfcetimer.c:134
+#, fuzzy, c-format
 msgid ""
 "Beeep! :) \n"
-"Time is up!"
+"Time is up for the alarm %s."
 msgstr ""
 "Biiiiip ! :)\n"
-"Süre doldu !"
+"\"%s\" alarmı için süre doldu!"
 
-#: ../src/xfcetimer.c:430
+#: ../src/xfcetimer.c:439
 msgid "Resume timer"
 msgstr "Saati devam ettir"
 
-#: ../src/xfcetimer.c:436 ../src/xfcetimer.c:504
+#: ../src/xfcetimer.c:445 ../src/xfcetimer.c:510
 msgid "Stop timer"
 msgstr "Saati durdur"
 
-#: ../src/xfcetimer.c:490
+#: ../src/xfcetimer.c:496
 #, fuzzy
 msgid "Pause timer"
 msgstr "Saati dondur"
 
-#: ../src/xfcetimer.c:506
+#: ../src/xfcetimer.c:512
 msgid "Start timer"
 msgstr "Saati başlat"
 
-#: ../src/xfcetimer.c:516
+#: ../src/xfcetimer.c:522
 msgid "Stop the alarm"
 msgstr "Uyarıyı durdur"
 
-#: ../src/xfcetimer.c:562 ../src/xfcetimer.c:637
+#: ../src/xfcetimer.c:568 ../src/xfcetimer.c:643
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dsa %ddk %dsn"
 
-#: ../src/xfcetimer.c:564 ../src/xfcetimer.c:639
+#: ../src/xfcetimer.c:570 ../src/xfcetimer.c:645
 #, c-format
 msgid "%dm %ds"
 msgstr "%ddk %dsn"
 
-#: ../src/xfcetimer.c:566 ../src/xfcetimer.c:641
+#: ../src/xfcetimer.c:572 ../src/xfcetimer.c:647
 #, c-format
 msgid "%ds"
 msgstr "%dsn"
 
-#: ../src/xfcetimer.c:576 ../src/xfcetimer.c:651
+#: ../src/xfcetimer.c:582 ../src/xfcetimer.c:657
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Alarm saati: %02d:%02d"
 
-#: ../src/xfcetimer.c:733
+#: ../src/xfcetimer.c:738
 #, fuzzy
 msgid "Name:"
 msgstr "İsim"
 
 #. ********
-#: ../src/xfcetimer.c:741
+#: ../src/xfcetimer.c:746
 msgid "Enter the countdown time"
 msgstr "Gerisayım süresini giriniz"
 
-#: ../src/xfcetimer.c:744
+#: ../src/xfcetimer.c:749
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarm satini giriniz (24 saat formatında)"
 
-#: ../src/xfcetimer.c:756
+#: ../src/xfcetimer.c:761
 msgid "h  "
 msgstr "sa  "
 
-#: ../src/xfcetimer.c:761
+#: ../src/xfcetimer.c:766
 msgid "m  "
 msgstr "dk  "
 
-#: ../src/xfcetimer.c:766
+#: ../src/xfcetimer.c:771
 msgid "s  "
 msgstr "sn  "
 
-#: ../src/xfcetimer.c:769
+#: ../src/xfcetimer.c:774
 #, fuzzy
 msgid "or"
 msgstr ""
 "\n"
 "ya da\n"
 
-#: ../src/xfcetimer.c:792
+#: ../src/xfcetimer.c:797
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "Çalıştırılacak komut"
 
-#: ../src/xfcetimer.c:822
+#: ../src/xfcetimer.c:827
 msgid "Add new alarm"
 msgstr "Yeni alarm ekle"
 
-#: ../src/xfcetimer.c:861
+#: ../src/xfcetimer.c:866
 msgid "Edit alarm"
 msgstr "Alarmı düzenle"
 
-#: ../src/xfcetimer.c:1439 ../src/xfcetimer.c:1448
+#: ../src/xfcetimer.c:1460 ../src/xfcetimer.c:1469
 msgid "Xfce4 Timer Options"
 msgstr "XFCE4 Timer Özellikleri"
 
-#: ../src/xfcetimer.c:1450
+#: ../src/xfcetimer.c:1471
 #, fuzzy
 msgid "Xfce 4 Timer Plugin"
 msgstr "XFCE4 Timer Özellikleri"
 
-#: ../src/xfcetimer.c:1499
+#: ../src/xfcetimer.c:1516
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "Alarmın\n"
 "adı"
 
-#: ../src/xfcetimer.c:1504
+#: ../src/xfcetimer.c:1521
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -158,40 +160,53 @@ msgstr ""
 "Gerisayım süresi /\n"
 "Alarm saati"
 
-#: ../src/xfcetimer.c:1508
+#: ../src/xfcetimer.c:1525
 msgid "Alarm command"
 msgstr "Alarm komutu"
 
-#: ../src/xfcetimer.c:1564
+#: ../src/xfcetimer.c:1583
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Eğer alarm komutu girilmişse\n"
 "uyarı penceresini gösterme"
 
-#: ../src/xfcetimer.c:1569
+#: ../src/xfcetimer.c:1588
 msgid "Selecting a timer starts it"
 msgstr "Seçilen alarm başlasın"
 
-#: ../src/xfcetimer.c:1574
-msgid "Repeat the alarm command:"
+#. Default alarm command config
+#: ../src/xfcetimer.c:1596
+#, fuzzy
+msgid "Use a default alarm command"
 msgstr "Uyarı komutunu yinele:"
 
-#: ../src/xfcetimer.c:1581
+#: ../src/xfcetimer.c:1603
+#, fuzzy
+msgid "Default command: "
+msgstr "Alarm komutu"
+
+#. Alarm repetitions config
+#: ../src/xfcetimer.c:1615
+#, fuzzy
+msgid "Repeat the alarm command"
+msgstr "Uyarı komutunu yinele:"
+
+#: ../src/xfcetimer.c:1622
 msgid "Number of repetitions"
 msgstr "Yinelemelerin sayısı"
 
-#: ../src/xfcetimer.c:1587
+#: ../src/xfcetimer.c:1628
 msgid "  Time interval (sec.)"
 msgstr "  Zaman aralığı (saniye)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Timer plugin for Xfce panel"
-msgstr "XFCE paneli için alarm eklentisi"
-
-#: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "XFCE4 Alarm Eklentisi -- XFCE4 Timer"
+
+#: ../src/xfce4-timer.desktop.in.in.h:2
+msgid "Timer plugin for Xfce panel"
+msgstr "XFCE paneli için alarm eklentisi"
 
 #~ msgid "Properties"
 #~ msgstr "Özellikler"
