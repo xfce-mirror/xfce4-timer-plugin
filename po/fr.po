@@ -34,7 +34,6 @@ msgid "%ds left"
 msgstr "%ds restante(s)"
 
 #: ../src/xfcetimer.c:126
-#, fuzzy
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
@@ -153,7 +152,6 @@ msgid "Alarm command"
 msgstr "Commande d'alarme"
 
 #: ../src/xfcetimer.c:1257
-#, fuzzy
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
