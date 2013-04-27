@@ -41,11 +41,11 @@ msgstr "Tijd is voorbij!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr "Staak aftellen"
+msgstr "Staak tijdmeter"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr "Begin met aftellen"
+msgstr "Start tijdmeter"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
@@ -171,11 +171,11 @@ msgstr "  Tijdinterval (sec.)"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Timer plugin for Xfce panel"
-msgstr "Aftelklok-invoegtoepassing voor Xfce4-werkbalk"
+msgstr "Tijdmeter-invoegtoepassing voor Xfce4-werkbalk"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
-msgstr "Xfce4-Aftelklok"
+msgstr "Xfce4-Tijdmeter"
 
 #~ msgid "Resume timer"
 #~ msgstr "Hervat aftellen"
