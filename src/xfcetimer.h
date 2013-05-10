@@ -16,7 +16,15 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
+ 
+typedef struct {
 
+  gchar *name,*command,*info;
+  gint  time;
+  gboolean iscountdown;
+  gpointer pd;
+  
+} alarm_t;
 
 typedef struct {
   GtkWidget 	*eventbox,		/* Main container widget
@@ -36,9 +44,8 @@ typedef struct {
 								alarm settings */
 		
   XfcePanelPlugin *base;			/* The plugin widget */
-  GtkListStore *list;				/* The alarms list */
-  gint 		count,					/* Number of alarms */
-			selected,
+  GtkListStore *liststore;				/* The alarms list */
+  gint 		count,
 			timeout_period_in_sec,	/* Active countdown period */
 			repetitions,			/* Number of alarm repeats */
 			rem_repetitions,		/* Remaining repeats */
@@ -57,10 +64,6 @@ typedef struct {
 			is_paused,				/* True if the countdown is paused */
 			is_countdown;			/* True if the alarm type is contdown */
   GtkTooltips 	*tip;				/* Tooltip for panel */
-  GArray 	*menuarray;			/* Array of popup 
-								menuitems (alarms). These 
-								are used to find the index
-								of the selected menuitem. */
   gchar 	*timeout_command,	/* Command when countdown ends */
 			*global_command,	/* The global (default) command to be
 								run when countdown ends */
@@ -69,6 +72,8 @@ typedef struct {
   								config file -- this is not the
   								plugin rc file. */
   GTimer 	*timer;				/* Keeps track of the time elapsed */
+  GList		*alarm_list,		/* List of alarms */
+  			*selected;			/* Selected alarm */
 
 } plugin_data;
 
@@ -82,3 +87,4 @@ typedef struct {
   GtkWindow 	*window;				/* Add/Edit window */
   plugin_data 	*pd;					/* Plugin data */
 } alarm_data;
+

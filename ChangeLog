@@ -1,3 +1,9 @@
+10/05/2013 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
+	* Version 1.5.0
+	* Major code reorganization
+	* Allow popup menuitems to be activated by keyboard (bug #10035)
+	* Various minor bugfixes
+	* Add the "About" dialog
 22/04/2013 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
 	* Version 1.0.2
 	* Some code cleanup

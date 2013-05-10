@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-22 19:23+0300\n"
+"POT-Creation-Date: 2013-05-10 12:32+0300\n"
 "PO-Revision-Date: 2012-11-18 22:49+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Poedit-Language: Arabic\n"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:141
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dس %dد %ds تبقت"
 
-#: ../src/xfcetimer.c:108
+#: ../src/xfcetimer.c:144
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dد %dث تبقت"
 
-#: ../src/xfcetimer.c:110
+#: ../src/xfcetimer.c:146
 #, c-format
 msgid "%ds left"
 msgstr "%dث تبقت"
 
-#: ../src/xfcetimer.c:113
+#: ../src/xfcetimer.c:149
 msgid " (Paused)"
 msgstr ""
 
 #. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:134
+#: ../src/xfcetimer.c:170
 #, fuzzy, c-format
 msgid ""
 "Beeep! :) \n"
@@ -47,111 +47,112 @@ msgstr ""
 "بيييب! :) \n"
 "حان الوقت!"
 
-#: ../src/xfcetimer.c:439
+#: ../src/xfcetimer.c:462
 #, fuzzy
 msgid "Resume timer"
 msgstr "بدء تشغيل ضبط المؤقت"
 
-#: ../src/xfcetimer.c:445 ../src/xfcetimer.c:510
+#: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
 msgstr "إيقاف ضبط المؤقت"
 
-#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:513
 #, fuzzy
 msgid "Pause timer"
 msgstr "بدء تشغيل ضبط المؤقت"
 
-#: ../src/xfcetimer.c:512
+#: ../src/xfcetimer.c:527
 msgid "Start timer"
 msgstr "بدء تشغيل ضبط المؤقت"
 
-#: ../src/xfcetimer.c:522
+#: ../src/xfcetimer.c:536
 msgid "Stop the alarm"
 msgstr "إيقاف التنبيه"
 
-#: ../src/xfcetimer.c:568 ../src/xfcetimer.c:643
+#: ../src/xfcetimer.c:591 ../src/xfcetimer.c:662
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dس %dد %dث"
 
-#: ../src/xfcetimer.c:570 ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:593 ../src/xfcetimer.c:664
 #, c-format
 msgid "%dm %ds"
 msgstr "%dد %dث"
 
-#: ../src/xfcetimer.c:572 ../src/xfcetimer.c:647
+#: ../src/xfcetimer.c:595 ../src/xfcetimer.c:666
 #, c-format
 msgid "%ds"
 msgstr "%dث"
 
-#: ../src/xfcetimer.c:582 ../src/xfcetimer.c:657
+#: ../src/xfcetimer.c:604 ../src/xfcetimer.c:675
 #, c-format
 msgid "At %02d:%02d"
 msgstr "عند %02d:%02d"
 
-#: ../src/xfcetimer.c:738
+#: ../src/xfcetimer.c:774
 #, fuzzy
 msgid "Name:"
 msgstr "اسم"
 
 #. ********
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:782
 msgid "Enter the countdown time"
 msgstr "أدخل وقت العد التنازلي"
 
-#: ../src/xfcetimer.c:749
+#: ../src/xfcetimer.c:785
 msgid "Enter the time of alarm (24h format)"
 msgstr "أدخل وقت التنبيه (تنسيق 24 ساعة)"
 
-#: ../src/xfcetimer.c:761
+#: ../src/xfcetimer.c:797
 msgid "h  "
 msgstr "س  "
 
-#: ../src/xfcetimer.c:766
+#: ../src/xfcetimer.c:802
 msgid "m  "
 msgstr "د  "
 
-#: ../src/xfcetimer.c:771
+#: ../src/xfcetimer.c:807
 msgid "s  "
 msgstr "ث  "
 
-#: ../src/xfcetimer.c:774
+#: ../src/xfcetimer.c:810
 #, fuzzy
 msgid "or"
 msgstr "أو"
 
-#: ../src/xfcetimer.c:797
+#. **************
+#: ../src/xfcetimer.c:830
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "الأمر للتشغيل"
 
-#: ../src/xfcetimer.c:827
+#: ../src/xfcetimer.c:860
 msgid "Add new alarm"
 msgstr "أضف تنبيه جديد"
 
-#: ../src/xfcetimer.c:866
+#: ../src/xfcetimer.c:897
 msgid "Edit alarm"
 msgstr "حرّر المنبّه"
 
-#: ../src/xfcetimer.c:1460 ../src/xfcetimer.c:1469
+#: ../src/xfcetimer.c:1450 ../src/xfcetimer.c:1459
 msgid "Xfce4 Timer Options"
 msgstr "خيارات ضبط مؤقت اكسفس4"
 
-#: ../src/xfcetimer.c:1471
+#: ../src/xfcetimer.c:1461
 #, fuzzy
 msgid "Xfce 4 Timer Plugin"
 msgstr "خيارات ضبط المؤقت Xfce4"
 
-#: ../src/xfcetimer.c:1516
+#: ../src/xfcetimer.c:1507
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "اسم\n"
 "المؤقت"
 
-#: ../src/xfcetimer.c:1521
+#: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -159,45 +160,58 @@ msgstr ""
 "فترة العد التنازلي /\n"
 "وقت التنبيه"
 
-#: ../src/xfcetimer.c:1525
+#: ../src/xfcetimer.c:1516
 msgid "Alarm command"
 msgstr "أمر التنبيه"
 
-#: ../src/xfcetimer.c:1583
+#: ../src/xfcetimer.c:1572
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "لا تعرض إطار التنبيه\n"
 "إذا تم ضبط أمر التنبيه"
 
-#: ../src/xfcetimer.c:1588
+#: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
 msgstr ""
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1596
+#: ../src/xfcetimer.c:1585
 #, fuzzy
 msgid "Use a default alarm command"
 msgstr "تكرار أمر التنبيه:"
 
-#: ../src/xfcetimer.c:1603
+#: ../src/xfcetimer.c:1592
 #, fuzzy
 msgid "Default command: "
 msgstr "أمر التنبيه"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1615
+#: ../src/xfcetimer.c:1604
 #, fuzzy
 msgid "Repeat the alarm command"
 msgstr "تكرار أمر التنبيه:"
 
-#: ../src/xfcetimer.c:1622
+#: ../src/xfcetimer.c:1611
 msgid "Number of repetitions"
 msgstr "مرات التكرار"
 
-#: ../src/xfcetimer.c:1628
+#: ../src/xfcetimer.c:1617
 msgid "  Time interval (sec.)"
 msgstr "  الفاصل الزمني (ثانية.)"
+
+#: ../src/xfcetimer.c:1678
+#, fuzzy
+msgid "About xfce4-timer-plugin"
+msgstr "خيارات ضبط المؤقت Xfce4"
+
+#: ../src/xfcetimer.c:1683
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr ""
+
+#: ../src/xfcetimer.c:1685
+msgid "Copyright (c) 2005-2013\n"
+msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"

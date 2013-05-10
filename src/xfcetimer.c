@@ -49,7 +49,8 @@
 #include "xfcetimer.h"
 
 static void create_plugin_control (XfcePanelPlugin *plugin);
-static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
+
+static void start_stop_selected (GtkWidget* menuitem, gpointer
                                         data);
 XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(create_plugin_control);
 
@@ -70,7 +71,7 @@ static gboolean repeat_alarm (gpointer data){
         g_free(pd->timeout_command);
     pd->timeout_command=NULL;
     pd->alarm_repeating=FALSE;
-    make_menu(pd);
+    //make_menu(pd);
 
     return FALSE;
 
@@ -82,6 +83,41 @@ static gboolean repeat_alarm (gpointer data){
   return TRUE;
 }
 
+/**
+ * Fills in the pd->liststore to create the treeview
+ * in the options window. The second arguments indicates
+ * the alarm whose row will be highlighted in the
+ * treeview. If it is NULL, no action is taken.
+**/
+
+static void fill_liststore (plugin_data *pd, GList *selected) {
+	
+  GtkTreeIter iter;
+  GList *list;
+  alarm_t *alrm;
+	
+  if(pd->liststore)
+  	gtk_list_store_clear (pd->liststore);
+  	
+  list = pd->alarm_list;
+  
+  
+  while (list) {
+	
+	alrm = (alarm_t *) list->data;
+	
+	gtk_list_store_append (pd->liststore, &iter);
+	
+	gtk_list_store_set (pd->liststore, &iter, 0, list, 1, alrm->name, 2, alrm->info, 3, alrm->command,-1);
+	
+	/* We select the given row */
+	if (selected && list == selected)
+		gtk_tree_selection_select_iter(gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree)),&iter);
+	
+	list = g_list_next (list);  
+	  
+  }
+}
 
 /**
  * This is the update function that updates the
@@ -184,7 +220,7 @@ static gboolean update_function (gpointer data){
 
   pd->timer_on=FALSE;
 
-  make_menu(pd);
+  //make_menu(pd);
 
   /* This function won't be called again */
   return FALSE;
@@ -196,23 +232,32 @@ static gboolean update_function (gpointer data){
  * is selected in the popup menu
 **/
 
-static void timer_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer data){
+//static void timer_selected (GtkWidget* menuitem, GdkEventButton *event, gpointer data){
+static void timer_selected (GtkWidget* menuitem, gpointer data){
+  GList *list = (GList *) data;
+  alarm_t *alrm;
+  plugin_data *pd;
+  GtkRadioMenuItem *rmi;
 
-  plugin_data *pd=(plugin_data *)data;
-  gint row_count;
+  rmi = (GtkRadioMenuItem *) menuitem;
 
-  row_count=0;
+  // We do this to get rid of the (irrelevant) "activate" signals
+  // emitted by the first radio check button in the pop-up
+  // menu when the menu is created and also by the (deactivated)
+  // previous selection when a new selection is made. Another workaround
+  // is to listen to the button_press_event but it does not capture
+  // the Enter key press on the menuitem.  
+  if(!gtk_check_menu_item_get_active(GTK_CHECK_MENU_ITEM(rmi)))
+  	return;
+  
+  alrm = (alarm_t *) list->data;
+  pd = (plugin_data *) alrm->pd;
 
-  /* Find the index of the menuitem selected, save it in pd->selected. Not very
-     elegant, though */
-  while (GTK_MENU_ITEM(menuitem)!=g_array_index(pd->menuarray,GtkMenuItem*,row_count) )
-     row_count++;
-
-  pd->selected=row_count;
+  pd->selected = list;
 
   /* start the timer if the option to do so on selecting is set */
   if(pd->selecting_starts && !pd->timer_on)
-    start_stop_selected(menuitem,event,data);  
+    start_stop_selected(menuitem,pd);  
 
 }
 
@@ -221,20 +266,18 @@ static void timer_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
  * start/stop item is selected in the popup menu
 **/
 
-static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
+static void start_stop_selected (GtkWidget* menuitem, gpointer
                                         data){
 
   plugin_data *pd=(plugin_data *)data;
-  GtkTreeIter iter;
-  gboolean valid;
   GSList *group=NULL;
-  gchar *timerinfo,*tout_command,*timername;
   gchar temp[8];
   gint row_count,cur_h,cur_m,cur_s,time;
   gint timeout_period;
   gboolean is_cd;
   GTimeVal timeval;
   struct tm *current;
+  alarm_t *alrm;
 
   /* If counting down, we stop the timer and free the resources */
   if(pd->timer_on){
@@ -245,20 +288,20 @@ static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpo
        g_source_remove(pd->timeout);
     if(pd->timeout_command)
        g_free(pd->timeout_command);
+    if(pd->active_timer_name)
+       g_free(pd->active_timer_name);
 
-    pd->timer=NULL;
-    pd->timeout_command=NULL;
-    pd->timeout=0;
-    pd->timer_on=FALSE;
-    pd->is_paused=FALSE;
+    pd->timer = NULL;
+    pd->timeout_command = NULL;
+    pd->active_timer_name = NULL;
+    pd->timeout = 0;
+    pd->timer_on = FALSE;
+    pd->is_paused = FALSE;
 
     /* Disable tooltips, reset pbar */
     gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
     gtk_tooltips_disable(pd->tip);
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
-
-    /* update menu*/
-    make_menu(pd);
 
     return;
 
@@ -266,53 +309,44 @@ static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpo
 
   /* If we're here then the timer is off, so we start it */
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
-  row_count=0;
-
   /* Empty timer list-> Nothing to do. pd->selected=0, though. */
-  if(!valid)
+  if(pd->selected == NULL)
     return;
 
-  /* Search the list item with the  right index */
-  while (valid && row_count!=pd->selected){
-      valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
-      row_count++;
-  }
-
-  gtk_tree_model_get    (GTK_TREE_MODEL(pd->list), &iter, 1, &timername, 2, &timerinfo, 3,
-            &tout_command, 4, &is_cd ,5, &time, -1);
-
+  alrm = (alarm_t *) pd->selected->data;
+  
   /* Record the timer name */
   if (pd->active_timer_name)
 	g_free(pd->active_timer_name);
-  pd->active_timer_name = timername; /* It's freed next time or at exit */
-
+	
+  pd->active_timer_name = g_strdup(alrm->name); /* It's freed next time 
+  															or at exit */ 
+  if(pd->timeout_command)
+    g_free(pd->timeout_command);
+    
   /* If an alarm command is set, it overrides the default (if any) */
-  if (strlen(tout_command)>0)
-    /* This will not be freed until the timeout is destroyed */
-	pd->timeout_command=tout_command;
-  else if (pd->use_global_command) {
-
+  if (strlen(alrm->command)>0)
+	pd->timeout_command = g_strdup(alrm->command); /* It's freed next 
+															time or at exit */
+  else if (pd->use_global_command)
 	pd->timeout_command = g_strdup (pd->global_command);
-	/* tout_command is no longer needed, free it */
-	g_free(tout_command);
-  } else
+  else
 	pd->timeout_command = g_strdup("");
   
   /* If it's a 24h type alarm, we find the difference with current time
      Here 'time' is in minutes */
-  if(!is_cd) {
+  if(!alrm->iscountdown) {
 
      g_get_current_time(&timeval);
      current = localtime((time_t *)&timeval.tv_sec);
      strftime(temp,7,"%H",current);
-     cur_h=atoi(temp);
+     cur_h = atoi(temp);
      strftime(temp,7,"%M",current);
-     cur_m=atoi(temp);
+     cur_m = atoi(temp);
      strftime(temp,7,"%S",current);
-     cur_s=atoi(temp);
+     cur_s = atoi(temp);
 
-     timeout_period=time*60 - ((60*cur_h + cur_m)*60 + cur_s);
+     timeout_period = (alrm->time)*60 - ((60*cur_h + cur_m)*60 + cur_s);
 
      if(timeout_period <0)
         timeout_period+= 24*60*60;
@@ -320,11 +354,11 @@ static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpo
      pd->is_countdown = FALSE;
 
   }
-  /* Else 'time' already gives the countdown period in seconds */
+  /* Else 'pd->selected->time' already gives the countdown period in seconds */
   else {
   
 	  pd->is_countdown = TRUE;
-      timeout_period=time;
+      timeout_period = alrm->time;
 
   }
   pd->timeout_period_in_sec=timeout_period;
@@ -333,20 +367,15 @@ static void start_stop_selected (GtkWidget* menuitem, GdkEventButton* event, gpo
   pd->timer=g_timer_new();
   pd->timer_on=TRUE;
 
-  /* update stuff */
-  make_menu(pd);
-
-  gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(pd->base), timerinfo, NULL);
+  gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(pd->base), alrm->info, NULL);
   gtk_tooltips_enable(pd->tip);
-  g_free(timerinfo);
 
   g_timer_start(pd->timer);
   pd->timeout = g_timeout_add(UPDATE_INTERVAL, update_function,pd);
 
-
 }
 
-static void pause_resume_selected (GtkWidget* menuitem, GdkEventButton* event, gpointer
+static void pause_resume_selected (GtkWidget* menuitem, gpointer
                                         data){
 
   plugin_data *pd=(plugin_data *)data;
@@ -366,7 +395,7 @@ static void pause_resume_selected (GtkWidget* menuitem, GdkEventButton* event, g
   
   }
   
-  make_menu(pd);
+  //make_menu(pd);
 
 }
 
@@ -374,7 +403,7 @@ static void pause_resume_selected (GtkWidget* menuitem, GdkEventButton* event, g
  * Callback when "Stop the alarm" is selected in the popup menu
 **/
 
-static void stop_repeating_alarm (GtkWidget* menuitem, GdkEventButton* event, gpointer
+static void stop_repeating_alarm (GtkWidget* menuitem, gpointer
                                         data){
    plugin_data *pd=(plugin_data *)data;
 
@@ -387,7 +416,7 @@ static void stop_repeating_alarm (GtkWidget* menuitem, GdkEventButton* event, gp
     pd->timeout_command=NULL;
    }
 
-   make_menu(pd);
+   //make_menu(pd);
 
 }
 
@@ -398,13 +427,13 @@ static void pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
 
     plugin_data *pd=(plugin_data *)data;
 
-    if(!pd->menu){
-      g_fprintf(stderr,"\nNo menu\n");
+    make_menu(pd);
+      
+    if(!pd->menu)
       return;
-    }
 
     if(event->button==1)
-      gtk_menu_popup (GTK_MENU(pd->menu),NULL,NULL,NULL,NULL,event->button,event->time);
+      gtk_menu_popup (GTK_MENU(pd->menu),NULL,NULL,NULL,NULL,event->button,event->time);  
     else
       gtk_menu_popdown(GTK_MENU(pd->menu));
 
@@ -415,96 +444,82 @@ static void pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
 **/
 void make_menu(plugin_data *pd){
 
-  GtkTreeIter iter;
-  gboolean valid;
-  GSList *group=NULL;
-  GtkWidget *menuitem;
-  gchar *timername,*timerinfo;
-  gchar *itemtext = NULL;
-  gint row_count;
+  GSList *group = NULL;
+  GList *list = NULL;
+  alarm_t *alrm;
+  GtkWidget *menuitem, *to_be_activated;
+  gchar *itemtext;
 
 
   /* Destroy the existing one */
   if(pd->menu)
     gtk_widget_destroy(pd->menu);
 
-  if(pd->menuarray)
-    g_array_free(pd->menuarray,TRUE);
-
   pd->menu=gtk_menu_new();
-  pd->menuarray=g_array_new(FALSE,TRUE,sizeof(menuitem));
-
+  
   /* If the alarm is paused, the only option is to resume or stop */
   if (pd->is_paused) {
       menuitem=gtk_menu_item_new_with_label(_("Resume timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-      g_signal_connect  (G_OBJECT(menuitem),"button_press_event",
+      g_signal_connect  (G_OBJECT(menuitem),"activate",
                 G_CALLBACK(pause_resume_selected),pd);
       gtk_widget_show(menuitem);
+      
       menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-      g_signal_connect  (G_OBJECT(menuitem),"button_press_event",
+      g_signal_connect  (G_OBJECT(menuitem),"activate",
                 G_CALLBACK(start_stop_selected),pd);
       gtk_widget_show(menuitem);      
       gtk_widget_show(pd->menu);
       return;	  
   }
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
-  row_count=0;
+  list = pd->alarm_list;
 
-  while (valid){
+  while (list){
 
       /* Run through the list, read name and timer period info */
 
-      gtk_tree_model_get(GTK_TREE_MODEL(pd->list),&iter,1,&timername,2,&timerinfo,-1);
-      itemtext = g_strdup_printf("%s (%s)",timername,timerinfo);
-      menuitem=gtk_radio_menu_item_new_with_label(group,itemtext);
-      gtk_widget_show(menuitem);
-      g_free(timername);
-      g_free(timerinfo);
-      group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (menuitem));
-      g_signal_connect  (G_OBJECT(menuitem),"button_press_event",
-            G_CALLBACK(timer_selected),pd);
+	  alrm = (alarm_t *) list->data;
+
+      itemtext = g_strdup_printf("%s (%s)",alrm->name,alrm->info);
+      menuitem=gtk_radio_menu_item_new_with_label(group,itemtext);      
+      gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
       /* The selected timer is always active */
-      if(row_count==pd->selected)
-        gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menuitem),TRUE);
+      if(list == pd->selected)
+        gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menuitem),TRUE);       
       /* others are disabled when timer or alarm is already running */
       else if(pd->timer_on || pd->alarm_repeating)
         gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
 
-      gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-
+      group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (menuitem));
+      g_signal_connect  (G_OBJECT(menuitem),"activate",
+            G_CALLBACK(timer_selected),list);
+            
       g_free(itemtext);
 
-      /* We add the address of menuitem to the array */
-      g_array_append_val(pd->menuarray,menuitem);
-
-      valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
-      row_count++;
+      list = list->next;
+ 
   }
 
   /* Horizontal line (empty item) */
   menuitem=gtk_menu_item_new();
   gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-  gtk_widget_show(menuitem);
 
   /* Pause menu item */
   if(pd->timer_on && !pd->is_paused && pd->is_countdown) {
     menuitem=gtk_menu_item_new_with_label(_("Pause timer"));
 
     gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menuitem);
-    g_signal_connect    (G_OBJECT(menuitem),"button_press_event",
+    g_signal_connect    (G_OBJECT(menuitem),"activate",
             G_CALLBACK(pause_resume_selected),pd);
-    gtk_widget_show(menuitem);
 
-    gtk_widget_show(pd->menu);
+
   }
  
   /* Start/stop menu item */
-
   if(!pd->alarm_repeating){
       if(pd->timer_on)
         menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
@@ -512,9 +527,8 @@ void make_menu(plugin_data *pd){
         menuitem=gtk_menu_item_new_with_label(_("Start timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-      g_signal_connect  (G_OBJECT(menuitem),"button_press_event",
+      g_signal_connect  (G_OBJECT(menuitem),"activate",
                 G_CALLBACK(start_stop_selected),pd);
-      gtk_widget_show(menuitem);
   }
 
   /* Stop repeating alarm if so */
@@ -522,13 +536,11 @@ void make_menu(plugin_data *pd){
     menuitem=gtk_menu_item_new_with_label(_("Stop the alarm"));
 
     gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menuitem);
-    g_signal_connect    (G_OBJECT(menuitem),"button_press_event",
+    g_signal_connect    (G_OBJECT(menuitem),"activate",
             G_CALLBACK(stop_repeating_alarm),pd);
-    gtk_widget_show(menuitem);
-
-    gtk_widget_show(pd->menu);
   }  
 
+  gtk_widget_show_all(pd->menu);
 }
 
 
@@ -538,23 +550,33 @@ void make_menu(plugin_data *pd){
 static void ok_add(GtkButton *button, gpointer data){
 
   alarm_data *adata = (alarm_data *)data;
+  alarm_t *newalarm;
   GtkTreeIter iter;
   gint t1,t2,t3,t;
   gchar *timeinfo = NULL;
 
-  /* Add item to the list */
-  gtk_list_store_append(adata->pd->list,&iter);
+  /* Add item to the alarm list and liststore */
 
-  gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,
-            0,adata->pd->count,
-            1,gtk_entry_get_text(GTK_ENTRY(adata->name)),
-            3,gtk_entry_get_text(GTK_ENTRY(adata->command)),
-            4,gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
-                                    rb1)),-1);
+  newalarm = g_new0(alarm_t,1);
+  newalarm->name = g_strdup(gtk_entry_get_text(GTK_ENTRY(adata->name)));
+  newalarm->command = g_strdup(gtk_entry_get_text(GTK_ENTRY(adata->command)));
+  newalarm->iscountdown = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
+                                    rb1));
+  newalarm->pd = (gpointer) adata->pd;
+                                    
+  adata->pd->alarm_list = g_list_append (adata->pd->alarm_list, newalarm);
+
+  gtk_list_store_append(adata->pd->liststore,&iter);
+
+  gtk_list_store_set(GTK_LIST_STORE(adata->pd->liststore),&iter,
+            0,g_list_last(adata->pd->alarm_list),
+            1,newalarm->name,
+            3,newalarm->command,
+            -1);
   /* Item count goes up by one */
   adata->pd->count=adata->pd->count+1;
 
-  /* If the h-m-s format was chosen, convert time to seconds,
+  /* If the h-m-s format (countdown) was chosen, convert time to seconds,
      save the choice into the list */
   if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->rb1))){
 
@@ -563,7 +585,8 @@ static void ok_add(GtkButton *button, gpointer data){
     t3=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->times));
     t=t1*3600+t2*60+t3;
 
-    gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
+	
+    
     if(t1>0)
        timeinfo = g_strdup_printf(_("%dh %dm %ds"),t1,t2,t3);
     else if(t2>0)
@@ -571,27 +594,98 @@ static void ok_add(GtkButton *button, gpointer data){
     else
        timeinfo = g_strdup_printf(_("%ds"),t3);
 
-    gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
+    
   }
-  else{ /* The 24h format. Save time in minutes */
+  else{ /* The 24h format (alarm at specified time). Save time in minutes */
 
     t1=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_h));
     t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
     t=t1*60+t2;
-    gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
     timeinfo = g_strdup_printf(_("At %02d:%02d"),t1,t2);
-    gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
 
   }
 
-  /* Update menu */
-  make_menu(adata->pd);
+  newalarm->time = t;
+  newalarm->info = timeinfo;
+  gtk_list_store_set(GTK_LIST_STORE(adata->pd->liststore),&iter,2,timeinfo,-1);
+
 
   /* Free resources */
   gtk_widget_destroy(GTK_WIDGET(adata->window));
 
   g_free(adata);
-  g_free(timeinfo);
+}
+
+
+
+/**
+ * Callback for OK button on Edit window. See ok_add for comments.
+**/
+static void ok_edit(GtkButton *button, gpointer data){
+
+  alarm_data *adata = (alarm_data *)data;
+  GtkTreeIter iter;
+  gint t1,t2,t3,t;
+  gchar *timeinfo = NULL;
+  GList *list;
+  alarm_t *alrm;
+  GtkTreeSelection *select;
+  GtkTreeModel *model;
+
+  select = gtk_tree_view_get_selection (GTK_TREE_VIEW (adata->pd->tree));
+
+  if (gtk_tree_selection_get_selected (select, &model, &iter))
+  {
+	  
+	 gtk_tree_model_get(GTK_TREE_MODEL(adata->pd->liststore), &iter, 0, &list,-1);
+	 alrm = (alarm_t *) list->data;
+	 
+	 alrm->name = g_strdup(gtk_entry_get_text(GTK_ENTRY(adata->name)));
+	 alrm->command = g_strdup(gtk_entry_get_text(GTK_ENTRY(adata->command)));
+	 alrm->iscountdown = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
+                                    rb1));
+	 /* This should be unnecessary, but do it anyway */
+	 alrm->pd = (gpointer) adata->pd;
+	 
+     gtk_list_store_set(GTK_LIST_STORE(adata->pd->liststore),&iter,
+            1,alrm->name,
+            3,alrm->command ,-1);
+            
+     if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->rb1))){
+
+        t1=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->timeh));
+        t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->timem));
+        t3=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->times));
+        t=t1*3600+t2*60+t3;
+        
+        if(t1>0)
+           timeinfo = g_strdup_printf(_("%dh %dm %ds"),t1,t2,t3);
+        else if(t2>0)
+           timeinfo = g_strdup_printf(_("%dm %ds"),t2,t3);
+        else
+           timeinfo = g_strdup_printf(_("%ds"),t3);
+
+        
+      }
+      else{
+
+        t1=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_h));
+        t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
+        t=t1*60+t2;
+        timeinfo = g_strdup_printf(_("At %02d:%02d"),t1,t2);
+      }
+
+	  alrm->time = t;
+	  alrm->info = timeinfo;
+	  gtk_list_store_set(GTK_LIST_STORE(adata->pd->liststore),&iter,2,timeinfo,-1);
+	  
+  }
+
+  //make_menu(adata->pd);
+
+  gtk_widget_destroy(GTK_WIDGET(adata->window));
+
+  g_free(adata);
 }
 
 
@@ -607,66 +701,6 @@ static void cancel_add_edit(GtkButton *button, gpointer data){
 
   g_free(adata);
 
-}
-
-
-/**
- * Callback for OK button on Edit window. See ok_add for comments.
-**/
-static void ok_edit(GtkButton *button, gpointer data){
-
-  alarm_data *adata = (alarm_data *)data;
-  GtkTreeIter iter;
-  gint t1,t2,t3,t;
-  gchar *timeinfo = NULL;
-
-  GtkTreeSelection *select;
-  GtkTreeModel *model;
-
-  select = gtk_tree_view_get_selection (GTK_TREE_VIEW (adata->pd->tree));
-
-  if (gtk_tree_selection_get_selected (select, &model, &iter))
-  {
-     gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,
-            1,gtk_entry_get_text(GTK_ENTRY(adata->name)),
-            3,gtk_entry_get_text(GTK_ENTRY(adata->command)),
-            4,gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
-                                    rb1)),-1);
-     if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->rb1))){
-
-        t1=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->timeh));
-        t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->timem));
-        t3=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->times));
-        t=t1*3600+t2*60+t3;
-        gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-        if(t1>0)
-           timeinfo = g_strdup_printf(_("%dh %dm %ds"),t1,t2,t3);
-        else if(t2>0)
-           timeinfo = g_strdup_printf(_("%dm %ds"),t2,t3);
-        else
-           timeinfo = g_strdup_printf(_("%ds"),t3);
-
-        gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
-      }
-      else{
-
-        t1=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_h));
-        t2=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(adata->time_m));
-        t=t1*60+t2;
-        gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,5,t,-1);
-        timeinfo = g_strdup_printf(_("At %02d:%02d"),t1,t2);
-        gtk_list_store_set(GTK_LIST_STORE(adata->pd->list),&iter,2,timeinfo,-1);
-
-      }
-
-  }
-
-  make_menu(adata->pd);
-
-  gtk_widget_destroy(GTK_WIDGET(adata->window));
-
-  g_free(adata);
-  g_free(timeinfo);
 }
 
 /**
@@ -711,11 +745,13 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   GtkSpinButton *timeh,*timem,*times,*time_h,*time_m;
   GtkRadioButton *rb1,*rb2;
   GtkWidget *hbox,*vbox,*button;
-  alarm_data *adata=g_new(alarm_data,1);
+  alarm_data *adata=g_new0(alarm_data,1);
   gchar *nc; gboolean is_cd; gint time;
   GtkTreeIter iter;
   GtkTreeSelection *select;
   GtkTreeModel *model;
+  GList *list;
+  alarm_t *alrm;
 
   window = (GtkWindow *)gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
@@ -736,7 +772,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   gtk_box_pack_start(GTK_BOX(vbox),hbox,FALSE,FALSE, WIDGET_SPACING);
 
   label = (GtkLabel *)gtk_label_new (_("Name:"));
-  name = (GtkEntry *) gtk_entry_new_with_max_length(1023);
+  name = (GtkEntry *) gtk_entry_new();
   adata->name=name;
 
   gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(label),FALSE,FALSE,0);
@@ -791,14 +827,11 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   /****************/
 
-  hbox=gtk_hbox_new(FALSE, BORDER);
-  gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(hbox),TRUE,TRUE,WIDGET_SPACING);
-
   label = (GtkLabel *)gtk_label_new (_("Command to run:"));
-  gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(label),FALSE,FALSE,WIDGET_SPACING);
-  command = (GtkEntry *)gtk_entry_new_with_max_length(1023);
+  gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(label),FALSE,FALSE,WIDGET_SPACING);
+  command = (GtkEntry *)gtk_entry_new();
   adata->command=command;
-  gtk_box_pack_start(GTK_BOX(hbox),GTK_WIDGET(command),TRUE,TRUE,WIDGET_SPACING);
+  gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(command),TRUE,TRUE,WIDGET_SPACING);
 
   /****************/
 
@@ -835,18 +868,16 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   /*gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);*/
 
   if (gtk_tree_selection_get_selected (select, &model, &iter)){
-      gtk_tree_model_get(model,&iter,1,&nc,-1);
-      gtk_entry_set_text(GTK_ENTRY(name),nc);
-      g_free(nc);
+	  
+      gtk_tree_model_get(model,&iter,0,&list,-1);
+      alrm = (alarm_t *) list->data;
+      
+      gtk_entry_set_text(GTK_ENTRY(name),alrm->name);
+      gtk_entry_set_text(GTK_ENTRY(command),alrm->command);
+      
+      time = alrm->time;
 
-      gtk_tree_model_get(model,&iter,3,&nc,-1);
-      gtk_entry_set_text(GTK_ENTRY(command),nc);
-      g_free(nc);
-
-      gtk_tree_model_get(model,&iter,4,&is_cd,-1);
-      gtk_tree_model_get(model,&iter,5,&time,-1);
-
-      if(is_cd){
+      if(alrm->iscountdown){
 
          gtk_spin_button_set_value(GTK_SPIN_BUTTON(timeh),time/3600);
          gtk_spin_button_set_value(GTK_SPIN_BUTTON(timem),(time%3600)/60);
@@ -876,52 +907,30 @@ static void remove_clicked(GtkButton *button, gpointer data){
 
   plugin_data *pd = (plugin_data *)data;
 
-  GtkTreeIter iter,iter_remove;
-  GtkTreeSelection *select;
-  GtkTreePath *path;
+  GtkTreeIter iter;
   GtkTreeModel *model;
-  gboolean valid;
-  gint row_count;
-
+  GtkTreeSelection *select;
+  GList *list;
+  
   /* Get the selected row */
-  select=gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  select = gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  
+  if (!select)
+  	return;
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
+  if (!gtk_tree_selection_get_selected (select, &model, &iter)) 
+  	return;
 
-  row_count=0;
-
-  while (valid){
-
-     /* Re-index the other rows */
-
-     /* The selected one is removed, the corresponding menuitem array is also
-        updated */
-     if(gtk_tree_selection_iter_is_selected(select,&iter)){
-       iter_remove=iter; /* Mark to be deleted */
-       g_array_remove_index(pd->menuarray,row_count);
-       if(pd->selected==row_count) /* Update the index of the selected item */
-          pd->selected=0; /* If the selected is deleted, new selected one is the first
-                one. The first radiomenuitem gets activated anyway */
-       else if(pd->selected > row_count)
-          pd->selected=pd->selected-1;  /* Those coming after are shifted one behind */
-     }
-     else{
-       /* Save new index on the remaning ones */
-       gtk_list_store_set (pd->list, &iter, 0,row_count, -1);
-       row_count++;
-    }
-
-    valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
-
+  gtk_tree_model_get(model,&iter,0,&list,-1);
+  
+  if (pd->selected == list) {
+	  pd->alarm_list = g_list_delete_link (pd->alarm_list, list);
+	  pd->selected = pd->alarm_list;
+  } else {
+	  pd->alarm_list = g_list_delete_link (pd->alarm_list, list);
   }
-
-  /* Remove the marked one */
-  gtk_list_store_remove (pd->list, &iter_remove);
-
-  /* Update item count and menu */
-  pd->count=row_count;
-
-  make_menu(pd);
+  
+  fill_liststore (pd,NULL);
 
 }
 
@@ -932,47 +941,41 @@ static void up_clicked(GtkButton *button, gpointer data){
 
   plugin_data *pd = (plugin_data *)data;
 
-  GtkTreeIter iter,iter_prev;
+  GtkTreeIter iter;
+  GtkTreeModel *model;
   GtkTreeSelection *select;
-  gboolean valid;
-  gint row_count;
+  GList *list, *list_prev;
 
   /* Get the selected row */
-  select=gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  select = gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  
+  if (!select)
+  	return;
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter_prev);
+  if (!gtk_tree_selection_get_selected (select, &model, &iter)) 
+  	return;
+
+  /* This is the item to be moved up */
+  gtk_tree_model_get(model,&iter,0,&list,-1);
   
   /* First item can't be moved up */
-  if(!valid || gtk_tree_selection_iter_is_selected(select,&iter_prev))
+  if(g_list_position(pd->alarm_list, list) <= 0)
 	return;
 
-  iter = iter_prev;
-  valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
- 
-  row_count=1;
-
-  while (valid){
-
-
-     /* The selected one is swapped with the previous one */
-     if(gtk_tree_selection_iter_is_selected(select,&iter)){
-
-	   gtk_list_store_swap(pd->list, &iter, &iter_prev);
-       if(pd->selected == row_count) /* Update the index of the selected item */
-          pd->selected = row_count-1;          
-       else if(pd->selected == row_count-1)
-          pd->selected = row_count;
-       break;
-     }
-
-	 iter_prev = iter;
-     valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);    
-     row_count++;   
-
-  }
-
-  make_menu(pd);
-
+  /* swap places */
+  list_prev = list->prev;
+  if(list_prev->prev)
+  	list_prev->prev->next = list;
+  if(list->next)
+  	list->next->prev = list_prev;
+  list_prev->next = list->next;
+  list->prev = list_prev->prev;
+  list->next = list_prev;
+  list_prev->prev = list;
+  
+  pd->alarm_list = g_list_first(list);
+  
+  fill_liststore (pd, list);
 }
 
 /**
@@ -982,47 +985,43 @@ static void down_clicked(GtkButton *button, gpointer data){
 
   plugin_data *pd = (plugin_data *)data;
 
-  GtkTreeIter iter,iter_next;
+  GtkTreeIter iter;
   GtkTreeSelection *select;
-  gboolean valid;
-  gint row_count;
+  GtkTreeModel *model;
+  GList *list,*list_next;
 
   /* Get the selected row */
-  select=gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  select = gtk_tree_view_get_selection(GTK_TREE_VIEW(pd->tree));
+  
+  if (!select)
+  	return;
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
+  if (!gtk_tree_selection_get_selected (select, &model, &iter)) 
+  	return;
 
-  if(!valid)
-	return;
-
-  iter_next = iter;
-  valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter_next);
+  /* This is the item to be moved down */
+  gtk_tree_model_get(model,&iter,0,&list,-1);
  
-  row_count=0;
+  /* Last item can't go down) */
+  if (list == g_list_last(pd->alarm_list))
+  	return;
 
-  while (valid){
-
-
-     /* The selected one is swapped with the next one */
-     if(gtk_tree_selection_iter_is_selected(select,&iter)){
-
-	   gtk_list_store_swap(pd->list, &iter, &iter_next);
-       if(pd->selected == row_count) /* Update the index of the selected item */
-          pd->selected = row_count+1;          
-       else if(pd->selected == row_count+1)
-          pd->selected = row_count - 1;
-       break;
-     }
-
-	 iter = iter_next;
-     valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter_next);    
-     row_count++;   
-
-  }
-
-  make_menu(pd);
-
+  /* swap places */
+  list_next = list->next;
+  if(list_next->next)
+  	list_next->next->prev = list;
+  if(list->prev)
+  	list->prev->next = list_next;
+  list_next->prev = list ->prev;
+  list->next = list_next->next;
+  list_next->next = list;
+  list->prev = list_next;
+  
+  pd->alarm_list = g_list_first(list_next);
+  
+  fill_liststore (pd, list);
 }
+
 
 /**
  * Adds the progressbar, taking into account the orientation.
@@ -1097,7 +1096,8 @@ static void orient_change(XfcePanelPlugin *plugin, GtkOrientation orient, plugin
 }
 
 /**
- * Loads the list from a keyfile, then saves them in a list_store
+ * Loads the settings and alarm list from a keyfile, saves the
+ * alarm list in the linked list pd->alarm_list 
 **/
 static void load_settings(plugin_data *pd)
 {
@@ -1106,7 +1106,8 @@ static void load_settings(plugin_data *pd)
   const gchar *timerstring;
   gint groupnum,time;
   gboolean is_cd;
-  GtkTreeIter iter;
+  alarm_t *alrm;
+  
   XfceRc *rc;
 
   //if ((file=xfce_panel_plugin_lookup_rc_file (pd->base)) != NULL) {
@@ -1127,24 +1128,29 @@ static void load_settings(plugin_data *pd)
 
           while(xfce_rc_has_group(rc,groupname)){
 
-                 xfce_rc_set_group(rc,groupname);
-
-             gtk_list_store_append(pd->list,&iter);
-
+             xfce_rc_set_group(rc,groupname);
+			
+             alrm = g_new0 (alarm_t,1);
+			 pd->alarm_list = g_list_append(pd->alarm_list, alrm);
+			 
              timerstring=(gchar *)xfce_rc_read_entry(rc,"timername","No name");
-             gtk_list_store_set(pd->list,&iter,0,groupnum,1,timerstring,-1);
-    
+    		 alrm->name = g_strdup(timerstring);
+    		 
              timerstring=(gchar *)xfce_rc_read_entry(rc,"timercommand","");
-             gtk_list_store_set(pd->list,&iter,3,timerstring,-1);
-
+			 alrm->command = g_strdup(timerstring);
+			 
              timerstring=(gchar *)xfce_rc_read_entry(rc,"timerinfo","");
-             gtk_list_store_set(pd->list,&iter,2,timerstring,-1);
+             alrm->info = g_strdup(timerstring);
 
              is_cd=xfce_rc_read_bool_entry(rc,"is_countdown",TRUE);
+             alrm->iscountdown = is_cd;
+             
              time=xfce_rc_read_int_entry(rc,"time",0);
-
-             gtk_list_store_set(pd->list,&iter,4,is_cd,5,time,-1);
-
+			 alrm->time = time;
+			 
+			 /* Include a link to the whole data */
+			 alrm->pd = (gpointer) pd;
+			 
              groupnum++;
              g_snprintf(groupname,5,"G%d",groupnum);
 
@@ -1192,20 +1198,11 @@ static void load_settings(plugin_data *pd)
 **/
 static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
 
-  gchar *timername,*timercommand,*timerinfo;
-  gint time;
-  gboolean is_cd;
-  gchar settings[1024];
-  gchar settingsbak[1024];
-  gchar line[1024];
   gchar groupname[8];
-  GtkTreeIter iter;
-  gboolean valid;
   gint row_count;
-  gsize size;
-
+  GList *list;
+  alarm_t *alrm;
   FILE *conffile;
-
   XfceRc *rc;
   gchar *file, *contents=NULL;
 
@@ -1225,38 +1222,30 @@ static void save_settings(XfcePanelPlugin *plugin, plugin_data *pd){
   if (!rc)
     return;
 
-  valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL(pd->list), &iter);
+  list = pd->alarm_list;
 
-  row_count=0;
+  row_count = 0;
 
-  while (valid){
-
-      gtk_tree_model_get (GTK_TREE_MODEL(pd->list), &iter,
-            1, &timername,
-            2, &timerinfo,
-            3, &timercommand,
-            4, &is_cd,
-            5, &time, -1);
+  while (list){
 
       g_snprintf(groupname,7,"G%d",row_count);
+      
       xfce_rc_set_group(rc,groupname);
+      
+      alrm = (alarm_t *) list->data;
 
-      xfce_rc_write_entry(rc,"timername",timername);
+      xfce_rc_write_entry(rc,"timername",alrm->name);
 
-      xfce_rc_write_int_entry(rc,"time",time);
+      xfce_rc_write_int_entry(rc,"time",alrm->time);
 
-      xfce_rc_write_entry(rc,"timercommand",timercommand);
+      xfce_rc_write_entry(rc,"timercommand",alrm->command);
 
-      xfce_rc_write_entry(rc,"timerinfo",timerinfo);
+      xfce_rc_write_entry(rc,"timerinfo",alrm->info);
 
-      xfce_rc_write_bool_entry(rc,"is_countdown",is_cd);
-
-      g_free(timername);
-      g_free(timercommand);
-      g_free(timerinfo);
+      xfce_rc_write_bool_entry(rc,"is_countdown",alrm->iscountdown);
 
       row_count ++;
-      valid = gtk_tree_model_iter_next (GTK_TREE_MODEL(pd->list), &iter);
+      list = list->next;
   }
 
 
@@ -1319,31 +1308,34 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
   if(pd->timer)
     g_timer_destroy(pd->timer);
-
+    
+  if(pd->active_timer_name)
+    g_free(pd->active_timer_name);
+        
   if(pd->timeout_command)
     g_free(pd->timeout_command);
 
   if(pd->global_command)
     g_free(pd->global_command);
-    
-  if(pd->active_timer_name)
-    g_free(pd->active_timer_name);
-        
+
   if(pd->configfile)
     g_free(pd->configfile);
+    
+  if(pd->liststore) {
+	gtk_list_store_clear (pd->liststore);
+    //g_free (pd->liststore);
+  }
+  
+  if(pd->alarm_list)
+    g_list_free (pd->alarm_list);  
 
+  /* destroy the tooltips */
   gtk_object_destroy(GTK_OBJECT(pd->tip));
-
-  if(pd->menuarray)
-    g_array_free(pd->menuarray,TRUE);
 
   /* destroy all widgets */
 #ifndef HAVE_XFCE48
 	gtk_widget_destroy(GTK_WIDGET(pd->eventbox));
 #endif  
-
-  /* destroy the tooltips */
-  /*gtk_object_destroy(GTK_OBJECT(pd->tip));*/
 
   /* free the plugin data structure */
   g_free(pd);
@@ -1445,11 +1437,9 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   GtkWidget *hbox=gtk_hbox_new(FALSE,0); /* holds the treeview and buttons */
   GtkWidget *buttonbox,*button,*sw,*tree,*spinbutton;
   GtkTreeSelection *select;
-  GtkCellRenderer *renderer;
   GtkTreeViewColumn *column;
-  GtkTreeIter iter;
-
   GtkWidget *dlg=NULL, *header=NULL;
+  GtkCellRenderer *renderer;
 
 
   xfce_panel_plugin_block_menu (plugin);
@@ -1505,14 +1495,15 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
   gtk_box_pack_start(GTK_BOX(hbox),sw,TRUE,TRUE,0);
 
-  tree=gtk_tree_view_new_with_model(GTK_TREE_MODEL(pd->list));
+  fill_liststore (pd,NULL);
+      
+  tree=gtk_tree_view_new_with_model(GTK_TREE_MODEL(pd->liststore));
   pd->tree=tree;
   gtk_tree_view_set_rules_hint  (GTK_TREE_VIEW (tree), TRUE);
   gtk_tree_selection_set_mode   (gtk_tree_view_get_selection (GTK_TREE_VIEW (tree)),
                  GTK_SELECTION_SINGLE);
-
-  renderer = gtk_cell_renderer_text_new ();
-
+     
+  renderer = gtk_cell_renderer_text_new ();            
   column = gtk_tree_view_column_new_with_attributes (_("Timer name"), renderer,
                             "text", 1, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
@@ -1529,8 +1520,6 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
   if(tree)
      gtk_container_add(GTK_CONTAINER(sw),tree);
-  else
-     g_fprintf(stderr,"\n pd->tree is NULL\n");
 
   gtk_widget_set_size_request(GTK_WIDGET(sw),350,200);
 
@@ -1604,7 +1593,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   pd->glob_command_entry = (GtkWidget *) gtk_entry_new();
   gtk_widget_set_size_request(pd->glob_command_entry,400,-1);
   gtk_entry_set_text(GTK_ENTRY(pd->glob_command_entry), pd->global_command);
-  gtk_box_pack_start(GTK_BOX(hbox),pd->glob_command_entry,FALSE,FALSE,0);
+  gtk_box_pack_start(GTK_BOX(hbox),pd->glob_command_entry,FALSE,FALSE,10);
 
   gtk_box_pack_start(GTK_BOX(vbox),hbox,FALSE,FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(hbox,pd->use_global_command);
@@ -1624,11 +1613,11 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   pd->spin_repeat=spinbutton;
   gtk_spin_button_set_value(GTK_SPIN_BUTTON(spinbutton), pd->repetitions);
   g_signal_connect(G_OBJECT(spinbutton),"value-changed", G_CALLBACK(spin1_changed), pd);
-  gtk_box_pack_start(GTK_BOX(hbox),spinbutton,FALSE,FALSE,0);
+  gtk_box_pack_start(GTK_BOX(hbox),spinbutton,FALSE,FALSE,10);
   gtk_box_pack_start(GTK_BOX(hbox),gtk_label_new(_("  Time interval (sec.)")),FALSE,FALSE,0);
   spinbutton=gtk_spin_button_new_with_range(1,600,1);
   pd->spin_interval=spinbutton;
-  gtk_box_pack_start(GTK_BOX(hbox),spinbutton,FALSE,FALSE,0);
+  gtk_box_pack_start(GTK_BOX(hbox),spinbutton,FALSE,FALSE,10);
   gtk_spin_button_set_value(GTK_SPIN_BUTTON(spinbutton), pd->repeat_interval);
   g_signal_connect(G_OBJECT(spinbutton),"value-changed", G_CALLBACK(spin2_changed), pd);
 
@@ -1641,6 +1630,66 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
 }
 
+/**
+ * Show the "About" window
+**/
+static void show_about_window(XfcePanelPlugin *plugin, plugin_data *pd)
+{
+   GdkPixbuf *icon;
+   const gchar *author[] = { "Kemal Ilgar Eroğlu <ilgar_eroglu@yahoo.com>", NULL};
+   const gchar *translators = 
+"Mohammad Alhargan <malham1@hotmail.com> \n\
+Marcos Antonio Alvarez Costales <marcoscostales@gmail.com> \n\
+Harald Servat <redcrash@gmail.com> \n\
+Michal Várady <miko.vaji@gmail.com>\n\
+Per Kongstad <p_kongstad@op.pl>\n\
+Simon Schneider <simon@schneiderimtal.de>\n\
+Efstathios Iosifidis <iosifidis@opensuse.org>\n\
+Jeff Bailes <thepizzaking@gmail.com>\n\
+Sergio <oigres200@gmail.com>\n\
+Piarres Beobide <pi@beobide.net>\n\
+Maximilian Schleiss <maximilian@xfce.org>\n\
+Leandro Regueiro <leandro.regueiro@gmail.com>\n\
+Ivica Kolić <ikoli@yahoo.com>\n\
+Gabor Kelemen <kelemeng at gnome dot hu>\n\
+Andhika Padmawan <andhika.padmawan@gmail.com>\n\
+Cristian Marchi <cri.penta@gmail.com>\n\
+Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n\
+Seong-ho Cho <darkcircle.0426@gmail.com>\n\
+Rihards Priedītis <rprieditis@inbox.lv>\n\
+Pjotr <pjotrvertaalt@gmail.com>\n\
+Piotr Sokół <piotr.sokol@10g.pl>\n\
+Sérgio Marques <smarquespt@gmail.com>\n\
+Rafael Ferreira <rafael.f.f1@gmail.com>\n\
+Dima Smirnov <arch@cnc-parts.info>\n\
+Tomáš Vadina <kyberdev@gmail.com>\n\
+Besnik Bleta <besnik@programeshqip.org>\n\
+Саша Петровић <salepetronije@gmail.com>\n\
+Daniel Nylander <po@danielnylander.se>\n\
+Kemal Ilgar Eroğlu <ilgar_eroglu@yahoo.com>\n\
+Gheyret T.Kenji <gheyret@gmail.com>\n\
+Dmitry Nikitin <luckas_fb@mail.ru>\n\
+Muhammad Ali Makki <makki.ma@gmail.com>\n\
+Hunt Xu <huntxu@live.cn>\n\
+Cheng-Chia Tseng <pswo10680@gmail.com>\n";
+	   
+   icon = xfce_panel_pixbuf_from_source("xfce4-timer", NULL, 48);
+   gtk_show_about_dialog(NULL,
+   	  "title", _("About xfce4-timer-plugin"),
+      "logo", icon,
+      "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
+      "version", PACKAGE_VERSION,
+      "program-name", PACKAGE_NAME,
+      "comments", _("A plugin to define countdown timers or alarms at given times."),
+      "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin",
+      "copyright", _("Copyright (c) 2005-2013\n"),
+      "authors", author,
+      "translator-credits" , translators,
+      NULL);
+
+   if(icon)
+      g_object_unref(G_OBJECT(icon));
+}
 
 /**
  * create_sample_control
@@ -1651,8 +1700,8 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
  *
  * Returns %TRUE on success, %FALSE on failure.
  **/
-static void
-create_plugin_control (XfcePanelPlugin *plugin)
+ 
+static void create_plugin_control (XfcePanelPlugin *plugin)
 {
 
   GtkWidget *base,*menu,*socket,*menuitem,*box,*pbar2;
@@ -1662,21 +1711,17 @@ create_plugin_control (XfcePanelPlugin *plugin)
 
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
-  plugin_data *pd=g_new(plugin_data,1);
+  plugin_data *pd=g_new0(plugin_data,1);
 
   pd->base=plugin;
   pd->count=0;
   pd->pbar=gtk_progress_bar_new();
-  pd->list=gtk_list_store_new(6,
-         G_TYPE_INT,     /* Column 0: Index */
+  pd->liststore=gtk_list_store_new(4,
+         G_TYPE_POINTER, /* Column 0: GList alarm list node */
          G_TYPE_STRING,  /* Column 1: Name */
-         G_TYPE_STRING,  /* Column 2: Timer period/alarm time */
-         G_TYPE_STRING,  /* Command to run */
-         G_TYPE_BOOLEAN, /* TRUE= Is countdown, i.e. h-m-s format.
-                    FALSE= 24h format */
-         G_TYPE_INT);    /* Timer period in seconds if countdown.
-                    Alarm time in minutes if 24h format is used,
-                    (i.e. 60 x Hr + Min) */
+         G_TYPE_STRING,  /* Column 2: Timer period/alarm time - info string */
+         G_TYPE_STRING);  /* Command to run */
+
 #ifndef HAVE_XFCE48
   pd->eventbox = gtk_event_box_new();
 #endif  
@@ -1687,8 +1732,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
   pd->buttonedit=NULL;
   pd->buttonremove=NULL;
   pd->menu=NULL;
-  pd->menuarray=NULL;
-  pd->selected=0;
   pd->tip=gtk_tooltips_new();
   pd->timeout_command=NULL;
   pd->timer=NULL;
@@ -1708,12 +1751,14 @@ create_plugin_control (XfcePanelPlugin *plugin)
   pd->repeat_interval=10;
   pd->alarm_repeating=FALSE;
   pd->repeat_timeout=0;
-
+  pd->alarm_list = NULL;
+  pd->selected=NULL;
+  
   gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(plugin), "", NULL);
   gtk_tooltips_disable(pd->tip);
 
 
-  g_object_ref(pd->list);
+  g_object_ref(pd->liststore);
 
   filename = xfce_panel_plugin_save_location (pd->base,TRUE);
   pathname = g_path_get_dirname (filename);
@@ -1722,9 +1767,8 @@ create_plugin_control (XfcePanelPlugin *plugin)
   g_free(pathname);
 
   load_settings(pd);
-
-  make_menu(pd);
-                      
+  pd->selected = pd->alarm_list;
+      
   gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
                     GTK_PROGRESS_CONTINUOUS);
   gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
@@ -1737,7 +1781,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
 
 #ifdef HAVE_XFCE48
   g_signal_connect  (G_OBJECT(plugin), "button_press_event",
-            G_CALLBACK(pbar_clicked), pd);      
+            G_CALLBACK(pbar_clicked), pd);   
 #else
   gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
   g_signal_connect  (G_OBJECT(pd->eventbox), "button_press_event",
@@ -1758,6 +1802,9 @@ create_plugin_control (XfcePanelPlugin *plugin)
   xfce_panel_plugin_menu_show_configure (plugin);
   g_signal_connect (plugin, "configure-plugin",
                       G_CALLBACK (plugin_create_options), pd);
+
+  xfce_panel_plugin_menu_show_about(plugin);
+  g_signal_connect (plugin, "about", G_CALLBACK (show_about_window), pd);                      
                    
 }
 

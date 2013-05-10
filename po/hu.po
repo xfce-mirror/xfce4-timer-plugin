@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-22 19:23+0300\n"
+"POT-Creation-Date: 2013-05-10 12:32+0300\n"
 "PO-Revision-Date: 2009-07-25 01:53+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at gnome dot hu>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:141
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dó %dp %dmp van hátra"
 
-#: ../src/xfcetimer.c:108
+#: ../src/xfcetimer.c:144
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dp %dmp van hátra"
 
-#: ../src/xfcetimer.c:110
+#: ../src/xfcetimer.c:146
 #, c-format
 msgid "%ds left"
 msgstr "%dmp van hátra"
 
-#: ../src/xfcetimer.c:113
+#: ../src/xfcetimer.c:149
 msgid " (Paused)"
 msgstr ""
 
 #. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:134
+#: ../src/xfcetimer.c:170
 #, fuzzy, c-format
 msgid ""
 "Beeep! :) \n"
@@ -48,107 +48,108 @@ msgstr ""
 "Csörrr! :)\n"
 "Letelt az idő!"
 
-#: ../src/xfcetimer.c:439
+#: ../src/xfcetimer.c:462
 msgid "Resume timer"
 msgstr "Időzítő indítása"
 
-#: ../src/xfcetimer.c:445 ../src/xfcetimer.c:510
+#: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
 msgstr "Időzítő leállítása"
 
-#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:513
 msgid "Pause timer"
 msgstr "Időzítő indítása"
 
-#: ../src/xfcetimer.c:512
+#: ../src/xfcetimer.c:527
 msgid "Start timer"
 msgstr "Időzítő indítása"
 
-#: ../src/xfcetimer.c:522
+#: ../src/xfcetimer.c:536
 msgid "Stop the alarm"
 msgstr "Figyelmeztetés leállítása"
 
-#: ../src/xfcetimer.c:568 ../src/xfcetimer.c:643
+#: ../src/xfcetimer.c:591 ../src/xfcetimer.c:662
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dó %dp %dmp"
 
-#: ../src/xfcetimer.c:570 ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:593 ../src/xfcetimer.c:664
 #, c-format
 msgid "%dm %ds"
 msgstr "%dp %dmp"
 
-#: ../src/xfcetimer.c:572 ../src/xfcetimer.c:647
+#: ../src/xfcetimer.c:595 ../src/xfcetimer.c:666
 #, c-format
 msgid "%ds"
 msgstr "%dmp"
 
-#: ../src/xfcetimer.c:582 ../src/xfcetimer.c:657
+#: ../src/xfcetimer.c:604 ../src/xfcetimer.c:675
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Ekkor: %02d.%02d"
 
-#: ../src/xfcetimer.c:738
+#: ../src/xfcetimer.c:774
 #, fuzzy
 msgid "Name:"
 msgstr "Név"
 
 #. ********
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:782
 msgid "Enter the countdown time"
 msgstr "Adja meg a visszaszámlálási időt"
 
-#: ../src/xfcetimer.c:749
+#: ../src/xfcetimer.c:785
 msgid "Enter the time of alarm (24h format)"
 msgstr "Adja meg a figyelmeztetés időpontját (24 órás formátumban)"
 
-#: ../src/xfcetimer.c:761
+#: ../src/xfcetimer.c:797
 msgid "h  "
 msgstr "ó  "
 
-#: ../src/xfcetimer.c:766
+#: ../src/xfcetimer.c:802
 msgid "m  "
 msgstr "p  "
 
-#: ../src/xfcetimer.c:771
+#: ../src/xfcetimer.c:807
 msgid "s  "
 msgstr "mp  "
 
-#: ../src/xfcetimer.c:774
+#: ../src/xfcetimer.c:810
 msgid "or"
 msgstr "vagy"
 
-#: ../src/xfcetimer.c:797
+#. **************
+#: ../src/xfcetimer.c:830
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "Futtatandó parancs"
 
-#: ../src/xfcetimer.c:827
+#: ../src/xfcetimer.c:860
 msgid "Add new alarm"
 msgstr "Új figyelmeztetés hozzáadása"
 
-#: ../src/xfcetimer.c:866
+#: ../src/xfcetimer.c:897
 msgid "Edit alarm"
 msgstr "Figyelmeztetés szerkesztése"
 
-#: ../src/xfcetimer.c:1460 ../src/xfcetimer.c:1469
+#: ../src/xfcetimer.c:1450 ../src/xfcetimer.c:1459
 msgid "Xfce4 Timer Options"
 msgstr "Xfce 4 időzítő beállításai"
 
-#: ../src/xfcetimer.c:1471
+#: ../src/xfcetimer.c:1461
 msgid "Xfce 4 Timer Plugin"
 msgstr "Xfce 4 időzítő bővítmény"
 
-#: ../src/xfcetimer.c:1516
+#: ../src/xfcetimer.c:1507
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "Időzítő\n"
 "neve"
 
-#: ../src/xfcetimer.c:1521
+#: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -156,45 +157,58 @@ msgstr ""
 "Visszaszámlálási idő/\n"
 "Figyelmeztetés ideje"
 
-#: ../src/xfcetimer.c:1525
+#: ../src/xfcetimer.c:1516
 msgid "Alarm command"
 msgstr "Figyelmeztető parancs"
 
-#: ../src/xfcetimer.c:1583
+#: ../src/xfcetimer.c:1572
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "Ne jelenjen meg figyelmeztetés,\n"
 "ha be van állítva figyelmeztető parancs"
 
-#: ../src/xfcetimer.c:1588
+#: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
 msgstr ""
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1596
+#: ../src/xfcetimer.c:1585
 #, fuzzy
 msgid "Use a default alarm command"
 msgstr "A figyelmeztető parancs ismétlése:"
 
-#: ../src/xfcetimer.c:1603
+#: ../src/xfcetimer.c:1592
 #, fuzzy
 msgid "Default command: "
 msgstr "Figyelmeztető parancs"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1615
+#: ../src/xfcetimer.c:1604
 #, fuzzy
 msgid "Repeat the alarm command"
 msgstr "A figyelmeztető parancs ismétlése:"
 
-#: ../src/xfcetimer.c:1622
+#: ../src/xfcetimer.c:1611
 msgid "Number of repetitions"
 msgstr "Ismétlések száma"
 
-#: ../src/xfcetimer.c:1628
+#: ../src/xfcetimer.c:1617
 msgid "  Time interval (sec.)"
 msgstr "Időköz (mp)"
+
+#: ../src/xfcetimer.c:1678
+#, fuzzy
+msgid "About xfce4-timer-plugin"
+msgstr "Xfce 4 időzítő bővítmény"
+
+#: ../src/xfcetimer.c:1683
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr ""
+
+#: ../src/xfcetimer.c:1685
+msgid "Copyright (c) 2005-2013\n"
+msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"

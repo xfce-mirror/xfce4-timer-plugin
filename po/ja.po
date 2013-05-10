@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-22 19:23+0300\n"
+"POT-Creation-Date: 2013-05-10 12:32+0300\n"
 "PO-Revision-Date: 2008-10-10 03:36+0900\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -20,27 +20,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/xfcetimer.c:105
+#: ../src/xfcetimer.c:141
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "残り%d時間%d分%d秒"
 
-#: ../src/xfcetimer.c:108
+#: ../src/xfcetimer.c:144
 #, c-format
 msgid "%dm %ds left"
 msgstr "残り%d分%d秒"
 
-#: ../src/xfcetimer.c:110
+#: ../src/xfcetimer.c:146
 #, c-format
 msgid "%ds left"
 msgstr "残り%d秒"
 
-#: ../src/xfcetimer.c:113
+#: ../src/xfcetimer.c:149
 msgid " (Paused)"
 msgstr ""
 
 #. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:134
+#: ../src/xfcetimer.c:170
 #, fuzzy, c-format
 msgid ""
 "Beeep! :) \n"
@@ -49,112 +49,113 @@ msgstr ""
 "ビーー! :) \n"
 "時間です!"
 
-#: ../src/xfcetimer.c:439
+#: ../src/xfcetimer.c:462
 msgid "Resume timer"
 msgstr ""
 
-#: ../src/xfcetimer.c:445 ../src/xfcetimer.c:510
+#: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
 msgstr "タイマーを停止する"
 
-#: ../src/xfcetimer.c:496
+#: ../src/xfcetimer.c:513
 #, fuzzy
 msgid "Pause timer"
 msgstr "タイマーを開始する"
 
-#: ../src/xfcetimer.c:512
+#: ../src/xfcetimer.c:527
 msgid "Start timer"
 msgstr "タイマーを開始する"
 
-#: ../src/xfcetimer.c:522
+#: ../src/xfcetimer.c:536
 msgid "Stop the alarm"
 msgstr "アラームを停止する"
 
-#: ../src/xfcetimer.c:568 ../src/xfcetimer.c:643
+#: ../src/xfcetimer.c:591 ../src/xfcetimer.c:662
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d時間%d分%d秒"
 
-#: ../src/xfcetimer.c:570 ../src/xfcetimer.c:645
+#: ../src/xfcetimer.c:593 ../src/xfcetimer.c:664
 #, c-format
 msgid "%dm %ds"
 msgstr "%d分%d秒"
 
-#: ../src/xfcetimer.c:572 ../src/xfcetimer.c:647
+#: ../src/xfcetimer.c:595 ../src/xfcetimer.c:666
 #, c-format
 msgid "%ds"
 msgstr "%d秒"
 
-#: ../src/xfcetimer.c:582 ../src/xfcetimer.c:657
+#: ../src/xfcetimer.c:604 ../src/xfcetimer.c:675
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../src/xfcetimer.c:738
+#: ../src/xfcetimer.c:774
 #, fuzzy
 msgid "Name:"
 msgstr "名前"
 
 #. ********
-#: ../src/xfcetimer.c:746
+#: ../src/xfcetimer.c:782
 msgid "Enter the countdown time"
 msgstr "秒読みする時間を入力してください"
 
-#: ../src/xfcetimer.c:749
+#: ../src/xfcetimer.c:785
 msgid "Enter the time of alarm (24h format)"
 msgstr "アラームが鳴る時間を入力してください (24時間制)"
 
-#: ../src/xfcetimer.c:761
+#: ../src/xfcetimer.c:797
 msgid "h  "
 msgstr "時間  "
 
-#: ../src/xfcetimer.c:766
+#: ../src/xfcetimer.c:802
 msgid "m  "
 msgstr "分  "
 
-#: ../src/xfcetimer.c:771
+#: ../src/xfcetimer.c:807
 msgid "s  "
 msgstr "秒  "
 
-#: ../src/xfcetimer.c:774
+#: ../src/xfcetimer.c:810
 #, fuzzy
 msgid "or"
 msgstr ""
 "\n"
 "または\n"
 
-#: ../src/xfcetimer.c:797
+#. **************
+#: ../src/xfcetimer.c:830
 #, fuzzy
 msgid "Command to run:"
 msgstr ""
 "\n"
 "実行するコマンド"
 
-#: ../src/xfcetimer.c:827
+#: ../src/xfcetimer.c:860
 msgid "Add new alarm"
 msgstr "新規アラームを追加"
 
-#: ../src/xfcetimer.c:866
+#: ../src/xfcetimer.c:897
 msgid "Edit alarm"
 msgstr "アラームの編集"
 
-#: ../src/xfcetimer.c:1460 ../src/xfcetimer.c:1469
+#: ../src/xfcetimer.c:1450 ../src/xfcetimer.c:1459
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 タイマーオプション"
 
-#: ../src/xfcetimer.c:1471
+#: ../src/xfcetimer.c:1461
 #, fuzzy
 msgid "Xfce 4 Timer Plugin"
 msgstr "Xfce4 タイマーオプション"
 
-#: ../src/xfcetimer.c:1516
+#: ../src/xfcetimer.c:1507
 #, fuzzy
 msgid "Timer name"
 msgstr ""
 "タイマー\n"
 "名"
 
-#: ../src/xfcetimer.c:1521
+#: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -162,45 +163,58 @@ msgstr ""
 "秒読み時間 /\n"
 "アラーム時間"
 
-#: ../src/xfcetimer.c:1525
+#: ../src/xfcetimer.c:1516
 msgid "Alarm command"
 msgstr "アラームコマンド"
 
-#: ../src/xfcetimer.c:1583
+#: ../src/xfcetimer.c:1572
 #, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
 "アラームコマンドが設定されている場合は\n"
 "警告ウィンドウを表示しない"
 
-#: ../src/xfcetimer.c:1588
+#: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
 msgstr ""
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1596
+#: ../src/xfcetimer.c:1585
 #, fuzzy
 msgid "Use a default alarm command"
 msgstr "繰り返すアラームコマンド:"
 
-#: ../src/xfcetimer.c:1603
+#: ../src/xfcetimer.c:1592
 #, fuzzy
 msgid "Default command: "
 msgstr "アラームコマンド"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1615
+#: ../src/xfcetimer.c:1604
 #, fuzzy
 msgid "Repeat the alarm command"
 msgstr "繰り返すアラームコマンド:"
 
-#: ../src/xfcetimer.c:1622
+#: ../src/xfcetimer.c:1611
 msgid "Number of repetitions"
 msgstr "繰り返し回数"
 
-#: ../src/xfcetimer.c:1628
+#: ../src/xfcetimer.c:1617
 msgid "  Time interval (sec.)"
 msgstr "  時間間隔 (秒.)"
+
+#: ../src/xfcetimer.c:1678
+#, fuzzy
+msgid "About xfce4-timer-plugin"
+msgstr "Xfce4 タイマーオプション"
+
+#: ../src/xfcetimer.c:1683
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr ""
+
+#: ../src/xfcetimer.c:1685
+msgid "Copyright (c) 2005-2013\n"
+msgstr ""
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
