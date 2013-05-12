@@ -1,14 +1,14 @@
 # Korean translation for the xfce4-timer-plugin
 # Copyright (C) 2012 xfce4-timer-plugin's author et al.
 # This file is distributed under the same license as the xfce4-timer-plugin package.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012, 2013
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-timer-plugin.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-10 12:32+0300\n"
-"PO-Revision-Date: 2012-09-18 13:22+0900\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"PO-Revision-Date: 2013-05-12 15:59+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce-i18n <xfce-i18n@xfce.org>\n"
 "Language: ko\n"
@@ -16,146 +16,131 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Korean\n"
-"X-Poedit-Country: KOREA, REPUBLIC OF\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#: ../src/xfcetimer.c:141
+#: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%d시 %d분 %d초 남음"
 
-#: ../src/xfcetimer.c:144
+#: ../src/xfcetimer.c:103
 #, c-format
 msgid "%dm %ds left"
 msgstr "%d분 %d초 남음"
 
-#: ../src/xfcetimer.c:146
+#: ../src/xfcetimer.c:105
 #, c-format
 msgid "%ds left"
 msgstr "%d초 남음"
 
-#: ../src/xfcetimer.c:149
-msgid " (Paused)"
-msgstr ""
-
-#. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:170
-#, fuzzy, c-format
+#: ../src/xfcetimer.c:126
 msgid ""
 "Beeep! :) \n"
-"Time is up for the alarm %s."
+"Time is up!"
 msgstr ""
 "삑~~~! :) \n"
 "시간이 되었습니다!"
 
-#: ../src/xfcetimer.c:462
-msgid "Resume timer"
-msgstr ""
-
-#: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
+#: ../src/xfcetimer.c:424
 msgid "Stop timer"
 msgstr "타이머 멈추기"
 
-#: ../src/xfcetimer.c:513
-#, fuzzy
-msgid "Pause timer"
-msgstr "타이머 시작하기"
-
-#: ../src/xfcetimer.c:527
+#: ../src/xfcetimer.c:426
 msgid "Start timer"
 msgstr "타이머 시작하기"
 
-#: ../src/xfcetimer.c:536
+#: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
 msgstr "알림 중단하기"
 
-#: ../src/xfcetimer.c:591 ../src/xfcetimer.c:662
+#: ../src/xfcetimer.c:482 ../src/xfcetimer.c:556
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d시 %d분 %d초"
 
-#: ../src/xfcetimer.c:593 ../src/xfcetimer.c:664
+#: ../src/xfcetimer.c:484 ../src/xfcetimer.c:558
 #, c-format
 msgid "%dm %ds"
 msgstr "%d분 %d초"
 
-#: ../src/xfcetimer.c:595 ../src/xfcetimer.c:666
+#: ../src/xfcetimer.c:486 ../src/xfcetimer.c:560
 #, c-format
 msgid "%ds"
 msgstr "%d초"
 
-#: ../src/xfcetimer.c:604 ../src/xfcetimer.c:675
+#: ../src/xfcetimer.c:496 ../src/xfcetimer.c:570
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../src/xfcetimer.c:774
-#, fuzzy
-msgid "Name:"
+#: ../src/xfcetimer.c:619
+msgid "Name"
 msgstr "이름"
 
 #. ********
-#: ../src/xfcetimer.c:782
+#: ../src/xfcetimer.c:627
 msgid "Enter the countdown time"
 msgstr "카운트다운 시간 입력"
 
-#: ../src/xfcetimer.c:785
+#: ../src/xfcetimer.c:629
 msgid "Enter the time of alarm (24h format)"
 msgstr "알림 시간 입력(24시간제 형식)"
 
-#: ../src/xfcetimer.c:797
+#: ../src/xfcetimer.c:640
 msgid "h  "
 msgstr "시"
 
-#: ../src/xfcetimer.c:802
+#: ../src/xfcetimer.c:645
 msgid "m  "
 msgstr "분"
 
-#: ../src/xfcetimer.c:807
+#: ../src/xfcetimer.c:650
 msgid "s  "
 msgstr "초"
 
-#: ../src/xfcetimer.c:810
-#, fuzzy
-msgid "or"
+#: ../src/xfcetimer.c:653
+msgid ""
+"\n"
+"or\n"
 msgstr ""
 "\n"
 "또는\n"
 
 #. **************
-#: ../src/xfcetimer.c:830
-#, fuzzy
-msgid "Command to run:"
+#: ../src/xfcetimer.c:673
+msgid ""
+"\n"
+"The command to run"
 msgstr ""
 "\n"
 "실행할 명령"
 
-#: ../src/xfcetimer.c:860
+#: ../src/xfcetimer.c:699
 msgid "Add new alarm"
 msgstr "새 알림 추가"
 
-#: ../src/xfcetimer.c:897
+#: ../src/xfcetimer.c:737
 msgid "Edit alarm"
 msgstr "알림 편집"
 
-#: ../src/xfcetimer.c:1450 ../src/xfcetimer.c:1459
+#: ../src/xfcetimer.c:1162
+msgid "Properties"
+msgstr "속성"
+
+#: ../src/xfcetimer.c:1174
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 타이머 옵션"
 
-#: ../src/xfcetimer.c:1461
-#, fuzzy
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 타이머 옵션"
-
-#: ../src/xfcetimer.c:1507
-#, fuzzy
-msgid "Timer name"
+#: ../src/xfcetimer.c:1205
+msgid ""
+"Timer\n"
+"name"
 msgstr ""
 "타이머\n"
 "이름"
 
-#: ../src/xfcetimer.c:1512
+#: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
@@ -163,66 +148,60 @@ msgstr ""
 "카운트다운 주기 /\n"
 "알림 시간"
 
-#: ../src/xfcetimer.c:1516
+#: ../src/xfcetimer.c:1214
 msgid "Alarm command"
 msgstr "알림 명령"
 
-#: ../src/xfcetimer.c:1572
-#, fuzzy
-msgid "Don't display a warning  if an alarm command is set"
+#: ../src/xfcetimer.c:1257
+msgid ""
+"Don't display the warning window\n"
+"if an alarm command is set"
 msgstr ""
 "알림 명령을 설정했을 경우\n"
 "경고 창을 표시하지 않습니다"
 
-#: ../src/xfcetimer.c:1577
-msgid "Selecting a timer starts it"
-msgstr ""
-
-#. Default alarm command config
-#: ../src/xfcetimer.c:1585
-#, fuzzy
-msgid "Use a default alarm command"
+#: ../src/xfcetimer.c:1264
+msgid "Repeat the alarm command:"
 msgstr "반복할 알림 명령:"
 
-#: ../src/xfcetimer.c:1592
-#, fuzzy
-msgid "Default command: "
-msgstr "알림 명령"
-
-#. Alarm repetitions config
-#: ../src/xfcetimer.c:1604
-#, fuzzy
-msgid "Repeat the alarm command"
-msgstr "반복할 알림 명령:"
-
-#: ../src/xfcetimer.c:1611
+#: ../src/xfcetimer.c:1271
 msgid "Number of repetitions"
 msgstr "반복 횟수"
 
-#: ../src/xfcetimer.c:1617
+#: ../src/xfcetimer.c:1277
 msgid "  Time interval (sec.)"
 msgstr "  시간 간격(초)"
 
-#: ../src/xfcetimer.c:1678
-#, fuzzy
-msgid "About xfce4-timer-plugin"
-msgstr "Xfce4 타이머 옵션"
-
-#: ../src/xfcetimer.c:1683
-msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-
-#: ../src/xfcetimer.c:1685
-msgid "Copyright (c) 2005-2013\n"
-msgstr ""
-
 #: ../src/xfce4-timer.desktop.in.in.h:1
-msgid "Xfce4 Timer"
-msgstr "Xfce4 타이머"
-
-#: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Xfce 패널용 타이머 플러그인"
 
-#~ msgid "Properties"
-#~ msgstr "속성"
+#: ../src/xfce4-timer.desktop.in.in.h:2
+msgid "Xfce4 Timer"
+msgstr "Xfce4 타이머"
+
+#, fuzzy
+#~ msgid "Pause timer"
+#~ msgstr "타이머 시작하기"
+
+#, fuzzy
+#~ msgid "or"
+#~ msgstr ""
+#~ "\n"
+#~ "또는\n"
+
+#, fuzzy
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Xfce4 타이머 옵션"
+
+#, fuzzy
+#~ msgid "Use a default alarm command"
+#~ msgstr "반복할 알림 명령:"
+
+#, fuzzy
+#~ msgid "Default command: "
+#~ msgstr "알림 명령"
+
+#, fuzzy
+#~ msgid "About xfce4-timer-plugin"
+#~ msgstr "Xfce4 타이머 옵션"
