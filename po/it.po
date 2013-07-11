@@ -1,24 +1,23 @@
-# Italian translation of xfce4-timer-plugin.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-timer-plugin package.
-# Cristian Marchi <cri.penta@gmail.com>, 2009.
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# cri <cri.penta@gmail.com>, 2009,2013
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer-plugin\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2009-02-01 19:33+0100\n"
-"Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
-"Language-Team: Italian <xfce-it-translators@googlegroups.com>\n"
+"PO-Revision-Date: 2013-07-11 12:10+0000\n"
+"Last-Translator: cri <cri.penta@gmail.com>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# GLOSSARIO
-# left = mancare
-# timer = sveglia
 #: ../src/xfcetimer.c:100
 #, c-format
 msgid "%dh %dm %ds left"
@@ -38,17 +37,15 @@ msgstr "Mancano %dsecondi"
 msgid ""
 "Beeep! :) \n"
 "Time is up!"
-msgstr ""
-"Driiin! :) \n"
-"Il tempo è scaduto!"
+msgstr "Driiin! :) \nIl tempo è scaduto!"
 
 #: ../src/xfcetimer.c:424
 msgid "Stop timer"
-msgstr "Interrompi la sveglia"
+msgstr "Interrompi il cronometro"
 
 #: ../src/xfcetimer.c:426
 msgid "Start timer"
-msgstr "Avvia la sveglia"
+msgstr "Avvia il cronometro"
 
 #: ../src/xfcetimer.c:436
 msgid "Stop the alarm"
@@ -103,18 +100,14 @@ msgstr "s  "
 msgid ""
 "\n"
 "or\n"
-msgstr ""
-"\n"
-"or\n"
+msgstr "\nor\n"
 
 #. **************
 #: ../src/xfcetimer.c:673
 msgid ""
 "\n"
 "The command to run"
-msgstr ""
-"\n"
-"Il comando da eseguire"
+msgstr "\nIl comando da eseguire"
 
 #: ../src/xfcetimer.c:699
 msgid "Add new alarm"
@@ -136,17 +129,13 @@ msgstr "Opzioni della sveglia di Xfce4"
 msgid ""
 "Timer\n"
 "name"
-msgstr ""
-"Nome\n"
-"sveglia"
+msgstr "Nome\nsveglia"
 
 #: ../src/xfcetimer.c:1210
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Durata del conto alla rovescia/\n"
-"ora della sveglia."
+msgstr "Durata del conto alla rovescia/\nora della sveglia."
 
 #: ../src/xfcetimer.c:1214
 msgid "Alarm command"
@@ -156,9 +145,7 @@ msgstr "Comando di sveglia"
 msgid ""
 "Don't display the warning window\n"
 "if an alarm command is set"
-msgstr ""
-"Non visualizzare la finestra di avviso\n"
-"se è impostato un comando di sveglia"
+msgstr "Non visualizzare la finestra di avviso\nse è impostato un comando di sveglia"
 
 #: ../src/xfcetimer.c:1264
 msgid "Repeat the alarm command:"
@@ -179,24 +166,3 @@ msgstr "Plugin della sveglia per il pannello di Xfce"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Xfce4 Timer"
 msgstr "Sveglia di Xfce4"
-
-#~ msgid "Resume timer"
-#~ msgstr "Avvia la sveglia"
-
-#~ msgid "Pause timer"
-#~ msgstr "Avvia la sveglia"
-
-#~ msgid "or"
-#~ msgstr "or"
-
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Opzioni della sveglia di Xfce4"
-
-#~ msgid "Use a default alarm command"
-#~ msgstr "Ripeti il comando di sveglia:"
-
-#~ msgid "Default command: "
-#~ msgstr "Comando di sveglia"
-
-#~ msgid "About xfce4-timer-plugin"
-#~ msgstr "Opzioni della sveglia di Xfce4"
