@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-07-14 12:49+0000\n"
+"PO-Revision-Date: 2013-07-20 13:21+0000\n"
 "Last-Translator: cri <cri.penta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "Non mostrare un avviso se è impostato il comando di sveglia"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Selezionando un cronometro questo verrà avviato"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
