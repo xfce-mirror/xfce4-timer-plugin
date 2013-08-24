@@ -1,20 +1,21 @@
-# Czech translations for xfce4-timer package.
-# Copyright (C) 2006 THE xfce4-timer'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-timer package.
-# Michal Várady <miko.vaji@gmail.com>, 2006-2012.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Alois Nešpor <info@aloisnespor.info>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer 0.3\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-10 12:32+0300\n"
-"PO-Revision-Date: 2012-04-08 11:37+0100\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
-"Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
-"Language: cs\n"
+"POT-Creation-Date: 2013-07-13 22:15+0200\n"
+"PO-Revision-Date: 2013-08-24 06:23+0000\n"
+"Last-Translator: Alois Nešpor <info@aloisnespor.info>\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/xfce/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/xfcetimer.c:141
@@ -34,21 +35,19 @@ msgstr "%ds zbývá"
 
 #: ../src/xfcetimer.c:149
 msgid " (Paused)"
-msgstr ""
+msgstr "(Pozastaveno)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:170
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Pííííp! :) \n"
-"Čas vypršel!"
+msgstr "Beeep! :) ⏎\nČas vypršl pro alarm %s."
 
 #: ../src/xfcetimer.c:462
 msgid "Resume timer"
-msgstr "Spustit odpočet času"
+msgstr "Obnovit odpočet času"
 
 #: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
@@ -56,7 +55,7 @@ msgstr "Zastavit odpočet času"
 
 #: ../src/xfcetimer.c:513
 msgid "Pause timer"
-msgstr "Spustit odpočet času"
+msgstr "Pozastavit odpočet času"
 
 #: ../src/xfcetimer.c:527
 msgid "Start timer"
@@ -87,9 +86,8 @@ msgid "At %02d:%02d"
 msgstr "V %02d:%02d"
 
 #: ../src/xfcetimer.c:774
-#, fuzzy
 msgid "Name:"
-msgstr "Název"
+msgstr "Název:"
 
 #. ********
 #: ../src/xfcetimer.c:782
@@ -118,11 +116,8 @@ msgstr "nebo"
 
 #. **************
 #: ../src/xfcetimer.c:830
-#, fuzzy
 msgid "Command to run:"
-msgstr ""
-"\n"
-"Příkaz ke spuštění"
+msgstr "Příkaz ke spuštění:"
 
 #: ../src/xfcetimer.c:860
 msgid "Add new alarm"
@@ -138,52 +133,41 @@ msgstr "Volby zásuvného modulu Odpočet času pro Xfce4"
 
 #: ../src/xfcetimer.c:1461
 msgid "Xfce 4 Timer Plugin"
-msgstr "Volby zásuvného modulu Odpočet času pro Xfce4"
+msgstr "Odpočet času pro Xfce4"
 
 #: ../src/xfcetimer.c:1507
-#, fuzzy
 msgid "Timer name"
-msgstr ""
-"Název\n"
-"odpočtu"
+msgstr "Název odpočtu času"
 
 #: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Interval odpočtu /\n"
-"Čas výstrahy"
+msgstr "Interval odpočtu /\nČas výstrahy"
 
 #: ../src/xfcetimer.c:1516
 msgid "Alarm command"
 msgstr "Příkaz výstrahy"
 
 #: ../src/xfcetimer.c:1572
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
-"Nezobrazovat okno s varováním\n"
-"pokud je příkaz výstrahy nastaven"
+msgstr "Nezobrazovat varování, když je nastaven příkaz alarmu"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Vybrání časovače jej spustí"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
-#, fuzzy
 msgid "Use a default alarm command"
-msgstr "Opakovat příkaz výstrahy"
+msgstr "Použít výchozí příkaz alarmu"
 
 #: ../src/xfcetimer.c:1592
-#, fuzzy
 msgid "Default command: "
-msgstr "Příkaz výstrahy"
+msgstr "Výchozí příkaz:"
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1604
-#, fuzzy
 msgid "Repeat the alarm command"
 msgstr "Opakovat příkaz výstrahy"
 
@@ -196,17 +180,16 @@ msgid "  Time interval (sec.)"
 msgstr "  Časový interval (s)"
 
 #: ../src/xfcetimer.c:1678
-#, fuzzy
 msgid "About xfce4-timer-plugin"
-msgstr "Volby zásuvného modulu Odpočet času pro Xfce4"
+msgstr "O pluginu"
 
 #: ../src/xfcetimer.c:1683
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Plugin odpočtu časů nebo alarmů v daných časech."
 
 #: ../src/xfcetimer.c:1685
 msgid "Copyright (c) 2005-2013\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2013⏎\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
@@ -215,13 +198,3 @@ msgstr "Odpočet času pro Xfce4"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Zásuvný modul pro odpočítávání času pro panel Xfce"
-
-#~ msgid ""
-#~ "\n"
-#~ "or\n"
-#~ msgstr ""
-#~ "\n"
-#~ "nebo\n"
-
-#~ msgid "Properties"
-#~ msgstr "Vlastnosti"
