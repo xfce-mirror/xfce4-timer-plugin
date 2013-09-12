@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-09-11 10:44+0000\n"
+"PO-Revision-Date: 2013-09-12 04:42+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgstr "关于 xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1683
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "在指定时间内设定倒数计时器或者闹钟的插件。"
 
 #: ../src/xfcetimer.c:1685
 msgid "Copyright (c) 2005-2013\n"
