@@ -1,21 +1,22 @@
-# German translations for xfce4-timer-plugin package
-# German messages for xfce4-timer-plugin.
-# Copyright (C) 2009 THE xfce4-timer-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-timer-plugin package.
-# Simon Schneider <simon@schneiderimtal.de>, 2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# gem <eckert.georg@gmx.de>, 2013
+# Simon Schneider <simon@schneiderimtal.de>, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer-plugin\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-10 12:32+0300\n"
-"PO-Revision-Date: 2009-03-13 14:03+0000\n"
-"Last-Translator: Simon Schneider <simon@schneiderimtal.de>\n"
-"Language-Team: German <xfce-i18n-de@xfce.org>\n"
-"Language: de\n"
+"POT-Creation-Date: 2013-07-13 22:15+0200\n"
+"PO-Revision-Date: 2013-09-19 11:24+0000\n"
+"Last-Translator: gem <eckert.georg@gmx.de>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:141
@@ -35,21 +36,19 @@ msgstr "verbleibend: %d Sekunden"
 
 #: ../src/xfcetimer.c:149
 msgid " (Paused)"
-msgstr ""
+msgstr "(Angehalten)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:170
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr ""
-"Bing! :) \n"
-"Die Zeit ist abgelaufen"
 
 #: ../src/xfcetimer.c:462
 msgid "Resume timer"
-msgstr "Uhr starten"
+msgstr ""
 
 #: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
@@ -57,7 +56,7 @@ msgstr "Uhr stoppen"
 
 #: ../src/xfcetimer.c:513
 msgid "Pause timer"
-msgstr "Uhr starten"
+msgstr ""
 
 #: ../src/xfcetimer.c:527
 msgid "Start timer"
@@ -88,9 +87,8 @@ msgid "At %02d:%02d"
 msgstr "Bei %02d: %02d"
 
 #: ../src/xfcetimer.c:774
-#, fuzzy
 msgid "Name:"
-msgstr "Name"
+msgstr ""
 
 #. ********
 #: ../src/xfcetimer.c:782
@@ -119,11 +117,8 @@ msgstr "oder"
 
 #. **************
 #: ../src/xfcetimer.c:830
-#, fuzzy
 msgid "Command to run:"
-msgstr ""
-"\n"
-"Auszuführender Befehl:"
+msgstr "Befehl ausführen:"
 
 #: ../src/xfcetimer.c:860
 msgid "Add new alarm"
@@ -139,33 +134,25 @@ msgstr "Einstellungen für die Xfce-Eieruhr"
 
 #: ../src/xfcetimer.c:1461
 msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce-Eieruhr"
+msgstr "Xfce 4 Eieruhr-Plugin"
 
 #: ../src/xfcetimer.c:1507
-#, fuzzy
 msgid "Timer name"
 msgstr ""
-"Name der\n"
-"Eieruhr"
 
 #: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Wartezeit /\n"
-"Alarmzeit"
+msgstr "Wartezeit /\nAlarmzeit"
 
 #: ../src/xfcetimer.c:1516
 msgid "Alarm command"
 msgstr "Alarmbefehl"
 
 #: ../src/xfcetimer.c:1572
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
-"Meldungsfenster nicht anzeigen,\n"
-"wenn ein Alarmbefehl angegeben ist"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
@@ -173,18 +160,15 @@ msgstr ""
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
-#, fuzzy
 msgid "Use a default alarm command"
-msgstr "Alarmbefehl wiederholen:"
+msgstr ""
 
 #: ../src/xfcetimer.c:1592
-#, fuzzy
 msgid "Default command: "
-msgstr "Alarmbefehl"
+msgstr "Standardbefehl:"
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1604
-#, fuzzy
 msgid "Repeat the alarm command"
 msgstr "Alarmbefehl wiederholen:"
 
@@ -197,9 +181,8 @@ msgid "  Time interval (sec.)"
 msgstr "Zeitabstand (Sek.): "
 
 #: ../src/xfcetimer.c:1678
-#, fuzzy
 msgid "About xfce4-timer-plugin"
-msgstr "Xfce-Eieruhr"
+msgstr "Über xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1683
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -207,7 +190,7 @@ msgstr ""
 
 #: ../src/xfcetimer.c:1685
 msgid "Copyright (c) 2005-2013\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
@@ -216,13 +199,3 @@ msgstr "Xfce4-Eieruhr"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Eieruhr für die Xfce-Leiste"
-
-#~ msgid ""
-#~ "\n"
-#~ "or\n"
-#~ msgstr ""
-#~ "\n"
-#~ "oder\n"
-
-#~ msgid "Properties"
-#~ msgstr "Eigenschaften"
