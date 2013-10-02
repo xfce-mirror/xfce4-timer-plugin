@@ -4,14 +4,15 @@
 # 
 # Translators:
 # gem <eckert.georg@gmx.de>, 2013
+# hjudt <h.judt@gmx.at>, 2013
 # Simon Schneider <simon@schneiderimtal.de>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-09-19 11:24+0000\n"
-"Last-Translator: gem <eckert.georg@gmx.de>\n"
+"PO-Revision-Date: 2013-10-02 15:17+0000\n"
+"Last-Translator: hjudt <h.judt@gmx.at>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,23 +45,23 @@ msgstr "(Angehalten)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "Biiing! :)\nDie Zeit für %s ist abgelaufen."
 
 #: ../src/xfcetimer.c:462
 msgid "Resume timer"
-msgstr ""
+msgstr "Eieruhr fortsetzen"
 
 #: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
-msgstr "Uhr stoppen"
+msgstr "Eieruhr stoppen"
 
 #: ../src/xfcetimer.c:513
 msgid "Pause timer"
-msgstr ""
+msgstr "Eieruhr anhalten"
 
 #: ../src/xfcetimer.c:527
 msgid "Start timer"
-msgstr "Uhr starten"
+msgstr "Eieruhr starten"
 
 #: ../src/xfcetimer.c:536
 msgid "Stop the alarm"
@@ -84,11 +85,11 @@ msgstr "%d Sekunden"
 #: ../src/xfcetimer.c:604 ../src/xfcetimer.c:675
 #, c-format
 msgid "At %02d:%02d"
-msgstr "Bei %02d: %02d"
+msgstr "Bei %02d:%02d"
 
 #: ../src/xfcetimer.c:774
 msgid "Name:"
-msgstr ""
+msgstr "Bezeichnung:"
 
 #. ********
 #: ../src/xfcetimer.c:782
@@ -97,7 +98,7 @@ msgstr "Wartezeit eingeben"
 
 #: ../src/xfcetimer.c:785
 msgid "Enter the time of alarm (24h format)"
-msgstr "Alarmzeit eingeben "
+msgstr "Alarmzeit eingeben (24h-Format)"
 
 #: ../src/xfcetimer.c:797
 msgid "h  "
@@ -138,7 +139,7 @@ msgstr "Xfce 4 Eieruhr-Plugin"
 
 #: ../src/xfcetimer.c:1507
 msgid "Timer name"
-msgstr ""
+msgstr "Bezeichnung"
 
 #: ../src/xfcetimer.c:1512
 msgid ""
@@ -152,16 +153,16 @@ msgstr "Alarmbefehl"
 
 #: ../src/xfcetimer.c:1572
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "Zeige keine Warnung bei vorhandenem Alarmbefehl"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Auswahl einer Eieruhr startet diese"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "Benutze den vorgegebenen Alarmbefehl"
 
 #: ../src/xfcetimer.c:1592
 msgid "Default command: "
@@ -186,7 +187,7 @@ msgstr "Über xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1683
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Ein Plugin zum Konfigurieren von Eieruhren und Alarmen."
 
 #: ../src/xfcetimer.c:1685
 msgid "Copyright (c) 2005-2013\n"
