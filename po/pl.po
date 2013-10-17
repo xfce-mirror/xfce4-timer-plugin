@@ -5,15 +5,16 @@
 # Translators:
 # Piotr Maliński <admin@rk.edu.pl>, 2006
 # Piotr Sokół <piotr.sokol@10g.pl>, 2009
+# Piotr Sokół <psokol@jabster.pl>, 2009,2013
 # Piotr Strębski <strebski@o2.pl>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-08-19 12:28+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
-"Language-Team: Polish <xfce-i18n-pl@xfce.org>\n"
+"PO-Revision-Date: 2013-10-17 09:34+0000\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/xfce/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,23 +46,23 @@ msgstr "(Wstrzymany)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Biiiiip! :) \nNadszedł czas wyznaczony alarmem %s."
+msgstr "Upłynął czas zdefiniowany alarmem %s."
 
 #: ../src/xfcetimer.c:462
 msgid "Resume timer"
-msgstr "Ponów czasomierz"
+msgstr "Wznów odliczanie"
 
 #: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
-msgstr "Zatrzymaj czasomierz"
+msgstr "Zatrzymaj odliczanie"
 
 #: ../src/xfcetimer.c:513
 msgid "Pause timer"
-msgstr "Wstrzymaj czasomierz"
+msgstr "Wstrzymaj odliczanie"
 
 #: ../src/xfcetimer.c:527
 msgid "Start timer"
-msgstr "Uruchom czasomierz"
+msgstr "Rozpocznij odliczanie"
 
 #: ../src/xfcetimer.c:536
 msgid "Stop the alarm"
@@ -89,7 +90,7 @@ msgstr "%02d:%02d"
 
 #: ../src/xfcetimer.c:774
 msgid "Name:"
-msgstr "Nazwa: "
+msgstr "Nazwa:"
 
 #. ********
 #: ../src/xfcetimer.c:782
@@ -98,19 +99,19 @@ msgstr "Czas odliczania"
 
 #: ../src/xfcetimer.c:785
 msgid "Enter the time of alarm (24h format)"
-msgstr "Godzina alarmu (format 24-godzinny)"
+msgstr "Czas alarmu (format 24-godzinny)"
 
 #: ../src/xfcetimer.c:797
 msgid "h  "
-msgstr "godz. "
+msgstr "godz  "
 
 #: ../src/xfcetimer.c:802
 msgid "m  "
-msgstr "min "
+msgstr "min  "
 
 #: ../src/xfcetimer.c:807
 msgid "s  "
-msgstr "s "
+msgstr "s  "
 
 #: ../src/xfcetimer.c:810
 msgid "or"
@@ -119,7 +120,7 @@ msgstr "lub"
 #. **************
 #: ../src/xfcetimer.c:830
 msgid "Command to run:"
-msgstr "Polecenie do uruchomienia:"
+msgstr "Polecenie:"
 
 #: ../src/xfcetimer.c:860
 msgid "Add new alarm"
@@ -131,21 +132,21 @@ msgstr "Edycja alarmu"
 
 #: ../src/xfcetimer.c:1450 ../src/xfcetimer.c:1459
 msgid "Xfce4 Timer Options"
-msgstr "Opcje czasomierza Xfce4"
+msgstr "Ustawienia minutnika"
 
 #: ../src/xfcetimer.c:1461
 msgid "Xfce 4 Timer Plugin"
-msgstr "Wtyczka czasomierza Xfce 4"
+msgstr "Minutnik"
 
 #: ../src/xfcetimer.c:1507
 msgid "Timer name"
-msgstr "Nazwa czasomierza"
+msgstr "Nazwa"
 
 #: ../src/xfcetimer.c:1512
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Czas odliczania / godzina alarmu"
+msgstr "Czas odliczania lub czas alarmu"
 
 #: ../src/xfcetimer.c:1516
 msgid "Alarm command"
@@ -153,16 +154,16 @@ msgstr "Polecenie"
 
 #: ../src/xfcetimer.c:1572
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Nie wyświetlaj ostrzeżenia jeśli polecenie alarmu jest ustawione"
+msgstr "Pomijanie wyświetlania ostrzeżenia jeśli ustalono polecenie alarmu"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Rozpoczęcie odliczania po zaznaczeniu minutnika"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
 msgid "Use a default alarm command"
-msgstr "Użyj domyślnego polecenia alarmu"
+msgstr "Użycie domyślnego polecenia"
 
 #: ../src/xfcetimer.c:1592
 msgid "Default command: "
@@ -171,7 +172,7 @@ msgstr "Domyślne polecenie:"
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1604
 msgid "Repeat the alarm command"
-msgstr "Powtórz polecenie alarmu"
+msgstr "Powtarzanie wykonania polecenia alarmu"
 
 #: ../src/xfcetimer.c:1611
 msgid "Number of repetitions"
@@ -187,16 +188,16 @@ msgstr "O xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1683
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Wtyczka określania zegarów odliczających czas lub alarmów o danej godzinie."
+msgstr "Odmierza czas i alarmuje po upłynięciu ustalonego czasu."
 
 #: ../src/xfcetimer.c:1685
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Prawa autorskie (c) 2005-2013\n"
+msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Czasomierz Xfce4"
+msgstr "Minutnik"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Wtyczka czasomierza dla panelu Xfce"
+msgstr "Odmierza ustalony czas"
