@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Cedric31 <cvalmary@yahoo.fr>, 2013
+# Cedric31 <cvalmary@yahoo.fr>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-12-07 09:05+0000\n"
+"PO-Revision-Date: 2013-12-10 12:56+0000\n"
 "Last-Translator: Cedric31 <cvalmary@yahoo.fr>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/projects/p/xfce/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +152,7 @@ msgstr "Comanda d'alarma"
 
 #: ../src/xfcetimer.c:1572
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "Afichetz  pas d'avertiment se una comanda d'alarma es programada"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
