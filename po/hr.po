@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# schizo <eveskovic@gmail.com>, 2014
 # Ivica  Kolić <ikoli@yahoo.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2013-09-23 11:10+0000\n"
-"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"PO-Revision-Date: 2014-02-16 09:28+0000\n"
+"Last-Translator: schizo <eveskovic@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,11 +44,11 @@ msgstr "(Pauzirano)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "Beeep! :)\nVrijeme alarma je isteklo %s."
 
 #: ../src/xfcetimer.c:462
 msgid "Resume timer"
-msgstr ""
+msgstr "Nastavi mjerač vremena"
 
 #: ../src/xfcetimer.c:469 ../src/xfcetimer.c:525
 msgid "Stop timer"
@@ -117,7 +118,7 @@ msgstr "ili"
 #. **************
 #: ../src/xfcetimer.c:830
 msgid "Command to run:"
-msgstr ""
+msgstr "Pokreni naredbu:"
 
 #: ../src/xfcetimer.c:860
 msgid "Add new alarm"
@@ -155,7 +156,7 @@ msgstr "Ne prikazuj upozorenje ako je postavljena naredba alarma"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Pokreni mjerač vremena odabirom"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1585
