@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-13 22:15+0200\n"
-"PO-Revision-Date: 2014-03-22 11:29+0000\n"
+"PO-Revision-Date: 2014-03-22 11:40+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr "o"
 #. **************
 #: ../src/xfcetimer.c:830
 msgid "Command to run:"
-msgstr "Comando a ejecutar:"
+msgstr "Orden a ejecutar:"
 
 #: ../src/xfcetimer.c:860
 msgid "Add new alarm"
@@ -149,11 +149,11 @@ msgstr "Periodo de cuenta atrás /\nHora de alarma"
 
 #: ../src/xfcetimer.c:1516
 msgid "Alarm command"
-msgstr "Comando de alarma"
+msgstr "Orden de la alarma"
 
 #: ../src/xfcetimer.c:1572
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "No mostrar advertencia\nsi se ha configurado un comando de alarma"
+msgstr "No mostrar un aviso si se definió una orden de alarma"
 
 #: ../src/xfcetimer.c:1577
 msgid "Selecting a timer starts it"
@@ -166,7 +166,7 @@ msgstr "Utilizar la orden de alarma predefinido"
 
 #: ../src/xfcetimer.c:1592
 msgid "Default command: "
-msgstr "Comando predeterminado:"
+msgstr "Orden predeterminada:"
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1604
