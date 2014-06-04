@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2005 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
+ *  Copyright (C) 2005-2014 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -50,6 +50,11 @@
 
 static void create_plugin_control (XfcePanelPlugin *plugin);
 
+static void start_timer (plugin_data *pd);
+
+static void
+dialog_response (GtkWidget *dlg, int response, plugin_data *pd);
+                                        
 static void start_stop_selected (GtkWidget* menuitem, gpointer
                                         data);
 XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(create_plugin_control);
@@ -163,25 +168,39 @@ static gboolean update_function (gpointer data){
 
   /* Countdown is over, stop timer and free resources */
 
+  if(pd->timer)
+     g_timer_destroy(pd->timer);
+  pd->timer=NULL;
+  
+  /* Disable tooltips, reset pbar */
+  gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
+  gtk_tooltips_disable(pd->tip);
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+    
+  pd->timeout=0;
+
+  pd->timer_on=FALSE;
+  
   if( (strlen(pd->timeout_command)==0) || !pd->nowin_if_alarm ) {
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
 
 	/* Display the name of the alarm when the countdown ends */
     dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), pd->active_timer_name);
+    dialog_title = g_strdup_printf("Xfce4 Timer Plugin: %s", pd->active_timer_name);
 
-    dialog = gtk_message_dialog_new     (NULL,
-                                    GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL,
+    dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL,
                                     GTK_MESSAGE_WARNING,
-                                    GTK_BUTTONS_CLOSE,
-                                    dialog_message);
+                                    GTK_BUTTONS_NONE, dialog_message);
+                           
+    gtk_window_set_title ((GtkWindow *) dialog, dialog_title);                                    
+ 
+    gtk_dialog_add_button ( (GtkDialog *) dialog, GTK_STOCK_CLOSE, 0);
+	gtk_dialog_add_button ( (GtkDialog *) dialog, _("Rerun the timer"), 1);
 
-    g_signal_connect_swapped (dialog, "response",
-                           G_CALLBACK (gtk_widget_destroy),
-                           dialog);
-    
-    dialog_title = g_strdup_printf("Xfce4 Timer Plugin: %s", pd->active_timer_name);                       
-    gtk_window_set_title ((GtkWindow *) dialog, dialog_title);  
-                        
+    g_signal_connect (dialog, "response",
+                           G_CALLBACK (dialog_response),
+                           pd);
+                           
 	g_free(dialog_title);
 	g_free(dialog_message);
 	
@@ -206,19 +225,6 @@ static gboolean update_function (gpointer data){
         pd->timeout_command=NULL;
     }
   }
-
-  if(pd->timer)
-     g_timer_destroy(pd->timer);
-  pd->timer=NULL;
-  
-  /* Disable tooltips, reset pbar */
-  gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
-  gtk_tooltips_disable(pd->tip);
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
-    
-  pd->timeout=0;
-
-  pd->timer_on=FALSE;
 
   //make_menu(pd);
 
@@ -262,14 +268,12 @@ static void timer_selected (GtkWidget* menuitem, gpointer data){
 }
 
 /**
- * This is the callback function called when the
- * start/stop item is selected in the popup menu
+ * Used for starting/rerunning the timer. Assumes 
+ * that the timer is already stopped.
 **/
 
-static void start_stop_selected (GtkWidget* menuitem, gpointer
-                                        data){
+static void start_timer (plugin_data *pd){
 
-  plugin_data *pd=(plugin_data *)data;
   GSList *group=NULL;
   gchar temp[8];
   gint row_count,cur_h,cur_m,cur_s,time;
@@ -278,36 +282,6 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
   GTimeVal timeval;
   struct tm *current;
   alarm_t *alrm;
-
-  /* If counting down, we stop the timer and free the resources */
-  if(pd->timer_on){
-
-    if(pd->timer)
-       g_timer_destroy(pd->timer);
-    if(pd->timeout)
-       g_source_remove(pd->timeout);
-    if(pd->timeout_command)
-       g_free(pd->timeout_command);
-    if(pd->active_timer_name)
-       g_free(pd->active_timer_name);
-
-    pd->timer = NULL;
-    pd->timeout_command = NULL;
-    pd->active_timer_name = NULL;
-    pd->timeout = 0;
-    pd->timer_on = FALSE;
-    pd->is_paused = FALSE;
-
-    /* Disable tooltips, reset pbar */
-    gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
-    gtk_tooltips_disable(pd->tip);
-    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
-
-    return;
-
-  }
-
-  /* If we're here then the timer is off, so we start it */
 
   /* Empty timer list-> Nothing to do. pd->selected=0, though. */
   if(pd->selected == NULL)
@@ -372,6 +346,57 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
 
   g_timer_start(pd->timer);
   pd->timeout = g_timeout_add(UPDATE_INTERVAL, update_function,pd);
+  											
+}
+/**
+ * This is the callback function called when the
+ * start/stop item is selected in the popup menu
+**/
+
+static void start_stop_selected (GtkWidget* menuitem, gpointer
+                                        data){
+
+  plugin_data *pd=(plugin_data *)data;
+  GSList *group=NULL;
+  gchar temp[8];
+  gint row_count,cur_h,cur_m,cur_s,time;
+  gint timeout_period;
+  gboolean is_cd;
+  GTimeVal timeval;
+  struct tm *current;
+  alarm_t *alrm;
+
+  /* If counting down, we stop the timer and free the resources */
+  if(pd->timer_on){
+
+    if(pd->timer)
+       g_timer_destroy(pd->timer);
+    if(pd->timeout)
+       g_source_remove(pd->timeout);
+    if(pd->timeout_command)
+       g_free(pd->timeout_command);
+    if(pd->active_timer_name)
+       g_free(pd->active_timer_name);
+
+    pd->timer = NULL;
+    pd->timeout_command = NULL;
+    pd->active_timer_name = NULL;
+    pd->timeout = 0;
+    pd->timer_on = FALSE;
+    pd->is_paused = FALSE;
+
+    /* Disable tooltips, reset pbar */
+    gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
+    gtk_tooltips_disable(pd->tip);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+
+    return;
+
+  }
+
+  /* If we're here then the timer is off, so we start it */
+
+  start_timer(pd);
 
 }
 
@@ -565,6 +590,8 @@ static void ok_add(GtkButton *button, gpointer data){
   newalarm->pd = (gpointer) adata->pd;
                                     
   adata->pd->alarm_list = g_list_append (adata->pd->alarm_list, newalarm);
+  if(g_list_length(adata->pd->alarm_list)==1)
+     adata->pd->selected = adata->pd->alarm_list;
 
   gtk_list_store_append(adata->pd->liststore,&iter);
 
@@ -1355,6 +1382,24 @@ options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
     gtk_widget_destroy (dlg);
     xfce_panel_plugin_unblock_menu (pd->base);
     save_settings(pd->base,pd);
+}
+
+
+/***************************/
+/*  Alarm dialog response  */
+/***************************/
+static void
+dialog_response (GtkWidget *dlg, int response, plugin_data *pd)
+{
+	
+	if (response!=1) {
+		gtk_widget_destroy(dlg);
+		return;
+	}
+	
+	start_timer(pd);
+	gtk_widget_destroy(dlg);
+	
 }
 
 /**

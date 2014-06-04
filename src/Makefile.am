@@ -39,22 +39,20 @@ endif
 #libxfce4_timer_la_LIBADD = 						\
 #	@XFCE4_PANEL_LIBS@
 
-#Old
-desktopdir = $(datadir)/xfce4/panel-plugins
-desktop_in_in_files = xfce4-timer.desktop.in.in
+desktop_in_in_files =							\
+	xfce4-timer.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
-%.desktop.in: %.desktop.in.in
-	sed -e "s,\@libexecdir\@,$(libexecdir),g" < $< > $@	
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+
+desktopdir = $(datadir)/xfce4/panel-plugins
+desktop_DATA = xfce4-timer.desktop
 @INTLTOOL_DESKTOP_RULE@
 
-#desktopdir = $(datadir)/xfce4/panel-plugins
-#desktop_in_files = xfce4-timer.desktop.in
-#desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-#@INTLTOOL_DESKTOP_RULE@
+%.desktop.in: %.desktop.in.in
+	sed -e "s^@EXTERNAL_PLUGIN_PATH@^$(plugindir)^" \
+		$< > $@
 
 EXTRA_DIST = 				\
 	$(desktop_in_in_files)
 
 DISTCLEANFILES =			\
-	$(desktop_DATA) $(desktop_in_files)
+	$(desktop_DATA)

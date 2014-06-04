@@ -1,3 +1,7 @@
+05/06/2014 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
+	* Version 1.6.0
+	* Added button in the alarm window to rerun the timer
+	* Minor fixes and code cleanup
 10/05/2013 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
 	* Version 1.5.0
 	* Major code reorganization

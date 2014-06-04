@@ -5,11 +5,13 @@ dnl 	Please disable it in the Anjuta project configuration
 
 dnl version info
 m4_define([xfce4_timer_version_major], [1])
-m4_define([xfce4_timer_version_minor], [5])
+m4_define([xfce4_timer_version_minor], [6])
 m4_define([xfce4_timer_version_micro], [0])
 m4_define([xfce4_timer_version_build], [@REVISION@])
 m4_define([xfce4_timer_version_tag]) # Leave empty only for releases, but use 'git' in most cases
 m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_tag(), [], [],[xfce4_timer_version_tag()-xfce4_timer_version_build()])])
+
+libexecdir = ${exec_prefix}/libexec
 
 dnl init autoconf
 AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [ilgar_eroglu@yahoo.com])
