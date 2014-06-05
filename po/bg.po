@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# lyubomirv, 2013
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2014
+# Lyubomir Vasilev, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-12-06 07:16+0000\n"
-"Last-Translator: lyubomirv\n"
-"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce/language/"
-"bg/)\n"
-"Language: bg\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-06-05 11:17+0000\n"
+"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -44,14 +44,11 @@ msgstr "(На пауза)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Зън! :)\n"
-"Времето изтече за алармата %s."
+msgstr "Зън! :)\nВремето изтече за алармата %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Продължаване на таймера"
+msgstr "Рестартиране на таймера"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -151,9 +148,7 @@ msgstr "Име на таймера"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Време за отброяване /\n"
-"Час за аларма"
+msgstr "Време за отброяване /\nЧас за аларма"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -195,8 +190,7 @@ msgstr "Относно xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Плъгин за дефиниране на таймери за отброяване или аларми по зададено време."
+msgstr "Плъгин за дефиниране на таймери за отброяване или аларми по зададено време."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
