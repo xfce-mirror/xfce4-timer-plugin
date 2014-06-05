@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# gem <eckert.georg@gmx.de>, 2013
-# hjudt <h.judt@gmx.at>, 2013
+# Georg Eckert <eckert.georg@gmx.de>, 2013
+# Harald Judt <h.judt@gmx.at>, 2013
 # Simon Schneider <simon@schneiderimtal.de>, 2009
+# Tobias Bannert, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-10-02 15:17+0000\n"
-"Last-Translator: hjudt <h.judt@gmx.at>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/xfce/language/"
-"de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-06-05 11:35+0000\n"
+"Last-Translator: Tobias Bannert\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xfce-panel-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -46,30 +46,27 @@ msgstr "(Angehalten)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Biiing! :)\n"
-"Die Zeit für %s ist abgelaufen."
+msgstr "Biiing! :)\nDie Zeit für %s ist abgelaufen."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Eieruhr fortsetzen"
+msgstr "Zeitschaltuhr erneut starten"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Eieruhr fortsetzen"
+msgstr "Zeitschaltuhr fortsetzen"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
-msgstr "Eieruhr stoppen"
+msgstr "Zeitschaltuhr stoppen"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Eieruhr anhalten"
+msgstr "Zeitschaltuhr anhalten"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
-msgstr "Eieruhr starten"
+msgstr "Zeitschaltuhr starten"
 
 #: ../src/xfcetimer.c:561
 msgid "Stop the alarm"
@@ -139,11 +136,11 @@ msgstr "Alarm bearbeiten"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Einstellungen für die Xfce-Eieruhr"
+msgstr "Einstellungen für die Xfce-Zeitschaltuhr"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce 4 Eieruhr-Plugin"
+msgstr "Xfce-4-Zeitschaltuhrerweiterung"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
@@ -153,9 +150,7 @@ msgstr "Bezeichnung"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Wartezeit /\n"
-"Alarmzeit"
+msgstr "Wartezeit /\nAlarmzeit"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -163,16 +158,16 @@ msgstr "Alarmbefehl"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Zeige keine Warnung bei vorhandenem Alarmbefehl"
+msgstr "Keine Warnung anzeigen, wenn ein Alarmbefehl eingestellt ist"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Auswahl einer Eieruhr startet diese"
+msgstr "Bei Auswahl einer Zeitschaltuhr startet diese"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr "Benutze den vorgegebenen Alarmbefehl"
+msgstr "Den vorgegebenen Alarmbefehl benutzen"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
@@ -197,16 +192,16 @@ msgstr "Über xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Ein Plugin zum Konfigurieren von Eieruhren und Alarmen."
+msgstr "Eine Erweiterung zum Konfigurieren von Zeitschaltuhren und Alarmen."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Copyright (c) 2005-2013\n"
+msgstr "Urheberrecht (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Xfce4-Eieruhr"
+msgstr "Xfce4-Zeitschaltuhr"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Eieruhr für die Xfce-Leiste"
+msgstr "Zeitschaltuhrerweiterung für die Xfce-Leiste"
