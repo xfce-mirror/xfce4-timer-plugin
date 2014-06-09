@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# k3lt01 <keltoiboy@gmail.com>, 2013-2014
+# Michael Findlay <keltoiboy@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2014-04-25 08:30+0000\n"
-"Last-Translator: k3lt01 <keltoiboy@gmail.com>\n"
-"Language-Team: English (Australia) (http://www.transifex.com/projects/p/xfce-"
-"panel-plugins/language/en_AU/)\n"
-"Language: en_AU\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-06-09 08:58+0000\n"
+"Last-Translator: Michael Findlay <keltoiboy@gmail.com>\n"
+"Language-Team: English (Australia) (http://www.transifex.com/projects/p/xfce-panel-plugins/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en_AU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -44,14 +43,11 @@ msgstr " (Paused)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :) \n"
-"Time is up for the alarm %s."
+msgstr "Beeep! :) \nTime is up for the alarm %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Resume timer"
+msgstr "Rerun the timer"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -151,9 +147,7 @@ msgstr "Timer name"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Countdown period /\n"
-"Alarm time"
+msgstr "Countdown period /\nAlarm time"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
