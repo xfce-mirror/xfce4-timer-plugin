@@ -1,45 +1,45 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
+# Andrey Ivankov <andrey.ivankov@gmail.com>, 2014
 # Dima Smirnov <arch@cnc-parts.info>, 2010
-# shlyapugin <shlyapugin@gmail.com>, 2013
+# Sergey Shlyapugin <shlyapugin@gmail.com>, 2013
+# Sergey Shlyapugin <shlyapugin@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-07-28 09:13+0000\n"
-"Last-Translator: shlyapugin <shlyapugin@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xfce/language/"
-"ru/)\n"
-"Language: ru\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-06-10 12:24+0000\n"
+"Last-Translator: Andrey Ivankov <andrey.ivankov@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/xfcetimer.c:146
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "Осталось %d ч %d мин %d сек"
+msgstr "Осталось %d ч %d м %d с"
 
 #: ../src/xfcetimer.c:149
 #, c-format
 msgid "%dm %ds left"
-msgstr "Осталось %d мин %d сек"
+msgstr "Осталось %d м %d с"
 
 #: ../src/xfcetimer.c:151
 #, c-format
 msgid "%ds left"
-msgstr "Осталось %d сек"
+msgstr "Осталось %d с"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr "(Приостановлено)"
+msgstr " (пауза)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -47,54 +47,51 @@ msgstr "(Приостановлено)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Та-дам! :)\n"
-"Время сигнала %s."
+msgstr "Динь-динь! :)\nВремя вышло по сигналу %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Возобновить таймер"
+msgstr "Перезапустить таймер"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Возобновить таймер"
+msgstr "Продолжить"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
-msgstr "Остановить таймер"
+msgstr "Остановить"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Приостановить таймер"
+msgstr "Пауза"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
-msgstr "Запустить таймер"
+msgstr "Запустить"
 
 #: ../src/xfcetimer.c:561
 msgid "Stop the alarm"
-msgstr "Остановить сигнал"
+msgstr "Остановить"
 
 #: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%d ч %d мин %d сек"
+msgstr "%d ч %d м %d с"
 
 #: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
 #, c-format
 msgid "%dm %ds"
-msgstr "%d мин %d сек"
+msgstr "%d м %d с"
 
 #: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
 #, c-format
 msgid "%ds"
-msgstr "%d сек"
+msgstr "%d с"
 
 #: ../src/xfcetimer.c:631 ../src/xfcetimer.c:702
 #, c-format
 msgid "At %02d:%02d"
-msgstr "В %02d:%02d"
+msgstr "сигнал в %02d:%02d"
 
 #: ../src/xfcetimer.c:801
 msgid "Name:"
@@ -103,11 +100,11 @@ msgstr "Название:"
 #. ********
 #: ../src/xfcetimer.c:809
 msgid "Enter the countdown time"
-msgstr "Введите время обратного отсчета"
+msgstr "Обратный отсчёт"
 
 #: ../src/xfcetimer.c:812
 msgid "Enter the time of alarm (24h format)"
-msgstr "Введите время сигнала (24-часовой формат)"
+msgstr "Сигнал (24-х часовой формат)"
 
 #: ../src/xfcetimer.c:824
 msgid "h  "
@@ -115,11 +112,11 @@ msgstr "ч  "
 
 #: ../src/xfcetimer.c:829
 msgid "m  "
-msgstr "мин  "
+msgstr "м  "
 
 #: ../src/xfcetimer.c:834
 msgid "s  "
-msgstr "сек  "
+msgstr "с  "
 
 #: ../src/xfcetimer.c:837
 msgid "or"
@@ -128,11 +125,11 @@ msgstr "или"
 #. **************
 #: ../src/xfcetimer.c:857
 msgid "Command to run:"
-msgstr "Команда для запуска:"
+msgstr "Выполнить команду:"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
-msgstr "Добавить новый сигнал"
+msgstr "Добавить новый таймер или сигнал"
 
 #: ../src/xfcetimer.c:924
 msgid "Edit alarm"
@@ -140,11 +137,11 @@ msgstr "Редактировать сигнал"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Настройка таймера"
+msgstr "Настройки таймера Xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Таймер"
+msgstr "Таймер Xfce4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
@@ -154,60 +151,57 @@ msgstr "Название таймера"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Время обратного отсчета /\n"
-"Время сигнала"
+msgstr "Период срабатывания"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
-msgstr "Команда сигнала"
+msgstr "Команда"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Не показывать предупреждение, если установлена команда сигнала"
+msgstr "Не показывать уведомление, если указана команда"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Выбранный таймер сразу стартует"
+msgstr "Запускать таймер при его выборе"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr "Использовать команду сигнала по умолчанию"
+msgstr "Использовать для сигнала команду по умолчанию"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
-msgstr "Команда по умолчанию:"
+msgstr "Команда по умолчанию: "
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr "Повторять команду сигнала"
+msgstr "Повторять команду"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
-msgstr "Число повторов "
+msgstr "Количество повторов "
 
 #: ../src/xfcetimer.c:1662
 msgid "  Time interval (sec.)"
-msgstr "  Интервал, сек "
+msgstr "  Интервал, с "
 
 #: ../src/xfcetimer.c:1723
 msgid "About xfce4-timer-plugin"
-msgstr "О таймере для Xfce 4"
+msgstr "О таймере xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Модуль для установки таймера обратного отсчета или сигнала в заданное время."
+msgstr "Модуль для создания таймеров обратного отсчёта или сигналов в заданное время."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Авторское право © 2005-2013\n"
+msgstr "Copyright © 2005 — 2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Таймер"
+msgstr "Таймер Xfce4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
