@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Gökmen Görgen <gkmngrgn@gmail.com>, 2008
 # Kemal Ilgar Eroglu, 2006
 # Necdet Yücel <necdetyucel@gmail.com>, 2013
-# wexaw, 2013
+# Redcode, 2013
+# zeki <zeki.ozguryazilim@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-09-06 10:59+0000\n"
-"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/xfce/language/"
-"tr/)\n"
-"Language: tr\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-07-15 06:36+0000\n"
+"Last-Translator: zeki <zeki.ozguryazilim@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/xfce-panel-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -39,7 +39,7 @@ msgstr "%dsn kaldı"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr "(Dondurulmuş)"
+msgstr "(Duraklatıldı)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -47,18 +47,15 @@ msgstr "(Dondurulmuş)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :) \n"
-"%s alarmı için süre doldu."
+msgstr "Beeep! :) \n%s alarmı için zaman geldi."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Alarmı tekrar çalıştır"
+msgstr "Zamanlayıcıyı yeniden çalıştır"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Saati devam ettir"
+msgstr "Zamanlayıcıya devam"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
@@ -66,7 +63,7 @@ msgstr "Saati durdur"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Saati dondur"
+msgstr "Zamanlayıcıyı durdur"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -123,7 +120,7 @@ msgstr "sn  "
 
 #: ../src/xfcetimer.c:837
 msgid "or"
-msgstr "ya da"
+msgstr "veya"
 
 #. **************
 #: ../src/xfcetimer.c:857
@@ -140,23 +137,21 @@ msgstr "Alarmı düzenle"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "XFCE4 Timer Seçenekleri"
+msgstr "XFCE4 Timer Özellikleri"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce 4 Alarm Eklentisi"
+msgstr "Xfce 4 Zamanlayıcı Eklentisi"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
-msgstr "Alarmın ismi"
+msgstr "Zamanlayıcı ismi"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Gerisayım süresi /\n"
-"Alarm saati"
+msgstr "Gerisayım süresi /\nAlarm saati"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -164,11 +159,11 @@ msgstr "Alarm komutu"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Alarm komutu girilmişse uyarı penceresi gösterme"
+msgstr "Bir uyarı gösterme  bir alarm komutu atanmışsa"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Seçilen alarm başlasın"
+msgstr "Onunla başlayan bir zamanlayıcı seçiliyor"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
@@ -182,7 +177,7 @@ msgstr "Varsayılan komut:"
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr "Alarm komutunu yinele"
+msgstr "Alarm komutunu tekrarla"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -194,16 +189,15 @@ msgstr "  Zaman aralığı (saniye)"
 
 #: ../src/xfcetimer.c:1723
 msgid "About xfce4-timer-plugin"
-msgstr "Xfce4-timer-plugin Hakkında"
+msgstr "Xfce4-timer-plugin hakkında"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Geri sayım ya da saat alarmı tanımlamak için bir eklenti."
+msgstr "Geriye sayan zamanlayıcılar veya zamanlı alarmlar tanımlamak için bir eklenti."
 
 #: ../src/xfcetimer.c:1730
-#, fuzzy
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Copyright (c) 2005-2014\n"
+msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
