@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# cri <cri.penta@gmail.com>, 2009,2013
+# Cristian Marchi <cri.penta@gmail.com>, 2009,2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-07-20 13:21+0000\n"
-"Last-Translator: cri <cri.penta@gmail.com>\n"
-"Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/"
-"it/)\n"
-"Language: it\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-08-02 15:38+0000\n"
+"Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -44,18 +43,15 @@ msgstr "(in pausa)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Driiin! :-)\n"
-"il tempo è scaduto per la sveglia %s."
+msgstr "Driiin! :-)\nil tempo è scaduto per la sveglia %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Riprendi"
+msgstr "Riavvia il cronometro"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Riprendi"
+msgstr "Riprendi il cronometro"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
@@ -151,9 +147,7 @@ msgstr "Nome del contatore"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Durata del conto alla rovescia/\n"
-"ora della sveglia."
+msgstr "Durata del conto alla rovescia/\nora della sveglia."
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -195,9 +189,7 @@ msgstr "Informazioni su xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Un plugin per impostare dei conti alla rovescia o delle sveglie a un tempo "
-"predefinito"
+msgstr "Un plugin per impostare dei conti alla rovescia o delle sveglie a un tempo predefinito"
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
