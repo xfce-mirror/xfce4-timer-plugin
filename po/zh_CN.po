@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2013
 # Hunt Xu <huntxu@live.cn>, 2008,2012
-# 玉堂白鹤 <yjwork@qq.com>, 2013
-# 玉堂白鹤 <yjwork@qq.com>, 2013
+# yjwork <yjwork@qq.com>, 2013-2014
+# yjwork <yjwork@qq.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-09-12 04:42+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce/"
-"language/zh_CN/)\n"
-"Language: zh_CN\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-08-14 11:30+0000\n"
+"Last-Translator: yjwork <yjwork@qq.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce-panel-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/xfcetimer.c:146
@@ -47,14 +46,11 @@ msgstr " (已暂停)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"嘟嘟嘟！:)\n"
-"闹钟 %s 时间到！"
+msgstr "嘟嘟嘟！:)\n闹钟 %s 时间到！"
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "恢复定时器"
+msgstr "重新运行计时器"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -154,9 +150,7 @@ msgstr "定时器名称"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"倒计时周期/\n"
-"闹钟时间"
+msgstr "倒计时周期/\n闹钟时间"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
