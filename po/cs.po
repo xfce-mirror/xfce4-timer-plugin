@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Alois Nešpor <info@aloisnespor.info>, 2013
+# Alois Nešpor <info@aloisnespor.info>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-08-24 06:23+0000\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-08-31 21:46+0000\n"
 "Last-Translator: Alois Nešpor <info@aloisnespor.info>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/xfce/language/"
-"cs/)\n"
-"Language: cs\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/xfcetimer.c:146
@@ -44,12 +43,9 @@ msgstr "(Pozastaveno)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :) ⏎\n"
-"Čas vypršl pro alarm %s."
+msgstr "Beeep! :) ⏎\nČas vypršl pro alarm %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
 msgstr "Obnovit odpočet času"
 
@@ -151,9 +147,7 @@ msgstr "Název odpočtu času"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Interval odpočtu /\n"
-"Čas výstrahy"
+msgstr "Interval odpočtu /\nČas výstrahy"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
