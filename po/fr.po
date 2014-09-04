@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Gérald Barré <g.barre@free.fr>, 2006
+# jc1 <jc1.quebecos@gmail.com>, 2013
 # Maximilian Schleiss <maximilian@xfce.org>, 2007
 # S. Roy <sroy@j2n.net>, 2006
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2013-07-14 17:14+0000\n"
-"Last-Translator: jc1 <jc1.quebecos@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/xfce/language/"
-"fr/)\n"
-"Language: fr\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2014-09-04 11:13+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/xfce-panel-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -46,14 +47,11 @@ msgstr " (En attente)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep ! :) \n"
-"Le temps est écoulé pour l'alarme %s ."
+msgstr "Biiip ! :) \nLe temps est écoulé pour l'alarme %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Reprendre le chronomètre"
+msgstr "Relancer le chronomètre"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -65,7 +63,7 @@ msgstr "Arrêter le chronomètre"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "minuterie de pause"
+msgstr "Mettre en pause le chronomètre"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -127,7 +125,7 @@ msgstr "ou"
 #. **************
 #: ../src/xfcetimer.c:857
 msgid "Command to run:"
-msgstr "Commande à exécuter:"
+msgstr "Commande à exécuter :"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -147,15 +145,13 @@ msgstr "Greffon chronomètre Xfce 4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
-msgstr "Nom de la minuterie"
+msgstr "Nom du chronomètre"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Période de compte à rebours /\n"
-"Heure d'alarme"
+msgstr "Période de compte à rebours /\nHeure d'alarme"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -163,16 +159,16 @@ msgstr "Commande d'alarme"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Ne pas afficher un avertissement si une commande d'alarme est réglée"
+msgstr "Don't display a warning  if an alarm command is set"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Sélection d'un retardateur démarre, il"
+msgstr "Un chronomètre démarre lorsqu'il est sélectionné"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr "Utilisez une commande d'alarme par défaut"
+msgstr "Utiliser une commande d'alarme par défaut"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
@@ -181,7 +177,7 @@ msgstr "Commande par défaut : "
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr "Répétez la commande d'alarme"
+msgstr "Répéter la commande de l'alarme"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -197,9 +193,7 @@ msgstr "À propos de xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Un greffon pour définir des comptes à rebours ou des alarmes à des moments "
-"donnés."
+msgstr "Un greffon pour définir des comptes à rebours ou des alarmes à des moments donnés."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
@@ -211,4 +205,4 @@ msgstr "Chronomètre Xfce4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Greffon de chronomètre pour le panneau Xfce"
+msgstr "Greffon de chronomètre pour le tableau de bord Xfce"
