@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
-# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
+# enolp <enolp@softastur.org>, 2015
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2014-05-08 07:48+0000\n"
-"Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
-"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-panel-"
-"plugins/language/ast/)\n"
-"Language: ast\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2015-02-22 23:46+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ast\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
@@ -45,14 +45,11 @@ msgstr " (Posáu)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"¡Biiiiiiip! :) \n"
-"Escosóse'l tiempu pa la to alarma %s."
+msgstr "¡Biiiiiiip! :) \nEscosóse'l tiempu pa la to alarma %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Posar temporizador"
+msgstr ""
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -152,9 +149,7 @@ msgstr "Nome del temporizador"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Periodu de cuenta atrás /\n"
-"Hora d'alarma"
+msgstr "Periodu de cuenta atrás /\nHora d'alarma"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -192,13 +187,11 @@ msgstr "  Intervalu tiempu (seg.)"
 
 #: ../src/xfcetimer.c:1723
 msgid "About xfce4-timer-plugin"
-msgstr "Tocante xfce4-timer-plugin"
+msgstr "Tocante a xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Un complementu pa definir los temporizadores de cuenta atrás o alarmes a les "
-"hores daes."
+msgstr "Un complementu pa definir los temporizadores de cuenta atrás o alarmes a les hores daes."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
