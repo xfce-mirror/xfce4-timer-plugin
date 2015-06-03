@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2015-06-03 16:00+0000\n"
+"PO-Revision-Date: 2015-06-03 16:45+0000\n"
 "Last-Translator: Påvel Nicklasson <pavelnicklasson@bahnhof.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/xfce-panel-plugins/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "Beeep! :) \nTiden är ute för alarmet %s."
 
 #: ../src/xfcetimer.c:198
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Kör om tidtagaren"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
