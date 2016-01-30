@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-01-13 02:01+0000\n"
+"PO-Revision-Date: 2016-01-29 23:41+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Iš naujo paleisti laikmatį"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Tęsti laikmatį"
+msgstr "Pratęsti laikmatį"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
