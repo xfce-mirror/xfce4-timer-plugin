@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>, 2016
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2015
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # ebal <ebalaskas@ebalaskas.gr>, 2009
@@ -11,9 +12,9 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2015-03-19 00:21+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/xfce-panel-plugins/language/el/)\n"
+"PO-Revision-Date: 2016-02-05 12:07+0000\n"
+"Last-Translator: Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/xfce/xfce-panel-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +38,7 @@ msgstr "%dδ απέμειναν"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr ""
+msgstr "(Σε παύση)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -61,7 +62,7 @@ msgstr "Τερματισμός χρονόμετρου "
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr ""
+msgstr "Παύση χρονομέτρου"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -139,11 +140,11 @@ msgstr "Επιλογές χρονόμετρου  xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr ""
+msgstr "Χρονόμετρο Xfce4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
-msgstr ""
+msgstr "Όνομα χρονομέτρου"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
@@ -166,7 +167,7 @@ msgstr ""
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "Χρήση μιας προεπιλεγμένης εντολής ειδοποίησης"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
@@ -175,7 +176,7 @@ msgstr "Προεπιλεγμένη εντολή:"
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr ""
+msgstr "Επανάληψη εντολής ειδοποίησης "
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -191,7 +192,7 @@ msgstr "Περί xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Ένα πρόσθετο για τη δημιουργία χρονομέτρων αντίστροφης μέτρησης και ειδοποιήσεων."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
