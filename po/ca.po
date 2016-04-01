@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Harald Servat <redcrash@gmail.com>, 2009
+# Davidmp <medipas@gmail.com>, 2016
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006
 # Roger Pueyo Centelles <transifex@rogerpueyo.com>, 2014-2015
 msgid ""
@@ -11,9 +12,9 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2015-04-15 11:05+0000\n"
-"Last-Translator: Roger Pueyo Centelles <transifex@rogerpueyo.com>\n"
-"Language-Team: Catalan (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ca/)\n"
+"PO-Revision-Date: 2016-04-01 12:51+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +38,7 @@ msgstr "queden %ds"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr ""
+msgstr "(Pausat)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -45,15 +46,15 @@ msgstr ""
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "Riiiiiiiiing! :) \nÉs l'hora de l'alarma %s."
 
 #: ../src/xfcetimer.c:198
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Torna a executar el temporitzador"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr ""
+msgstr "Fes continuar el temporitzador"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
@@ -98,11 +99,11 @@ msgstr "Nom:"
 #. ********
 #: ../src/xfcetimer.c:809
 msgid "Enter the countdown time"
-msgstr "Introdueix l'hora del compte enrere"
+msgstr "Introduïu l'hora del compte enrere"
 
 #: ../src/xfcetimer.c:812
 msgid "Enter the time of alarm (24h format)"
-msgstr "Introdueix l'ha de l'alarma (format de 24h)"
+msgstr "Introduïu l'hora de l'alarma (format de 24h)"
 
 #: ../src/xfcetimer.c:824
 msgid "h  "
@@ -123,7 +124,7 @@ msgstr "o"
 #. **************
 #: ../src/xfcetimer.c:857
 msgid "Command to run:"
-msgstr ""
+msgstr "Ordre per executar:"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -139,17 +140,17 @@ msgstr "Opcions del temporitzador Xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr ""
+msgstr "Temporitzador de l'Xfce4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
-msgstr ""
+msgstr "Nom del temporitzador"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Temps de compta enrere /\nHora de l'alarma"
+msgstr "Període de compte enrere /\nHora de l'alarma"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -157,25 +158,25 @@ msgstr "Ordre de l'alarma"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "No mostris una advertència si s'estableix una ordre d'alarma"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Seleccionar un temporitzador fa que s'iniciï"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "Utilitza una ordre d'alarma predeterminada"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
-msgstr ""
+msgstr "Ordre predeterminada:"
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr ""
+msgstr "Repeteix l'ordre d'alarma"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -187,20 +188,20 @@ msgstr "  Interval de temps (en segons)"
 
 #: ../src/xfcetimer.c:1723
 msgid "About xfce4-timer-plugin"
-msgstr ""
+msgstr "Quant a l'xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Un connector per definir temporitzadors de compte enrere i alarmes en moments determinats."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Temporitzador Xfce4"
+msgstr "Temporitzador de l'Xfce4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Connector de temporitzador pel quadre Xfce"
+msgstr "Connector de temporitzador per al quadre d'Xfce"
