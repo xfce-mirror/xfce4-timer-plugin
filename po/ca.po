@@ -6,14 +6,15 @@
 # Harald Servat <redcrash@gmail.com>, 2009
 # Davidmp <medipas@gmail.com>, 2016
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006
+# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
 # Roger Pueyo Centelles <transifex@rogerpueyo.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-04-01 12:51+0000\n"
-"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"PO-Revision-Date: 2016-05-01 21:29+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -140,7 +141,7 @@ msgstr "Opcions del temporitzador Xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Temporitzador de l'Xfce4"
+msgstr "Temporitzador de Xfce4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
@@ -188,7 +189,7 @@ msgstr "  Interval de temps (en segons)"
 
 #: ../src/xfcetimer.c:1723
 msgid "About xfce4-timer-plugin"
-msgstr "Quant a l'xfce4-timer-plugin"
+msgstr "Quant a xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -200,8 +201,8 @@ msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Temporitzador de l'Xfce4"
+msgstr "Temporitzador de Xfce4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Connector de temporitzador per al quadre d'Xfce"
+msgstr "Connector de temporitzador per al plafó de Xfce"
