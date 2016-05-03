@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-05-01 21:29+0000\n"
+"PO-Revision-Date: 2016-05-03 15:53+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -55,19 +55,19 @@ msgstr "Torna a executar el temporitzador"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Fes continuar el temporitzador"
+msgstr "Reprèn el temporitzador"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
-msgstr "Atura temporitzador"
+msgstr "Atura el temporitzador"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Pausar el temporitzador"
+msgstr "Pausa el temporitzador"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
-msgstr "Engega temporitzador"
+msgstr "Inicia el temporitzador"
 
 #: ../src/xfcetimer.c:561
 msgid "Stop the alarm"
@@ -100,7 +100,7 @@ msgstr "Nom:"
 #. ********
 #: ../src/xfcetimer.c:809
 msgid "Enter the countdown time"
-msgstr "Introduïu l'hora del compte enrere"
+msgstr "Introduïu el temps del compte enrere"
 
 #: ../src/xfcetimer.c:812
 msgid "Enter the time of alarm (24h format)"
@@ -125,7 +125,7 @@ msgstr "o"
 #. **************
 #: ../src/xfcetimer.c:857
 msgid "Command to run:"
-msgstr "Ordre per executar:"
+msgstr "Ordre a executar:"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -137,11 +137,11 @@ msgstr "Edita l'alarma"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Opcions del temporitzador Xfce4"
+msgstr "Opcions del temporitzador de Xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Temporitzador de Xfce4"
+msgstr "Connector del temporitzador de Xfce 4"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
@@ -163,7 +163,7 @@ msgstr "No mostris una advertència si s'estableix una ordre d'alarma"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Seleccionar un temporitzador fa que s'iniciï"
+msgstr "La selecció d'un temporitzador l'inicia"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
@@ -177,7 +177,7 @@ msgstr "Ordre predeterminada:"
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
 msgid "Repeat the alarm command"
-msgstr "Repeteix l'ordre d'alarma"
+msgstr "Repeteix l'ordre de l'alarma"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
