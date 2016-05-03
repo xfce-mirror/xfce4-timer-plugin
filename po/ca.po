@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-05-03 15:53+0000\n"
+"PO-Revision-Date: 2016-05-03 18:57+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -25,21 +25,21 @@ msgstr ""
 #: ../src/xfcetimer.c:146
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "queden %dh %dm %ds"
+msgstr "%d h %d min %d s restant"
 
 #: ../src/xfcetimer.c:149
 #, c-format
 msgid "%dm %ds left"
-msgstr "queden %dm %ds"
+msgstr "%d min %d s restant"
 
 #: ../src/xfcetimer.c:151
 #, c-format
 msgid "%ds left"
-msgstr "queden %ds"
+msgstr "%d s restant"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr "(Pausat)"
+msgstr "(en pausa)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -47,7 +47,7 @@ msgstr "(Pausat)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Riiiiiiiiing! :) \nÉs l'hora de l'alarma %s."
+msgstr "Riiiiiiiiing! :) \nJa és l'hora per a l'alarma %s."
 
 #: ../src/xfcetimer.c:198
 msgid "Rerun the timer"
@@ -63,7 +63,7 @@ msgstr "Atura el temporitzador"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Pausa el temporitzador"
+msgstr "Fes una pausa al temporitzador"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -76,12 +76,12 @@ msgstr "Atura l'alarma"
 #: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%d h %d min %d s"
 
 #: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
 #, c-format
 msgid "%dm %ds"
-msgstr "%dm %ds"
+msgstr "%d min %d s"
 
 #: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
 #, c-format
