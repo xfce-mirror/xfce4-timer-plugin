@@ -7,13 +7,13 @@
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # Per Kongstad <p_kongstad@op.pl>, 2008
-# scootergrisen, 2016
+# scootergrisen, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-12-31 13:40+0000\n"
+"PO-Revision-Date: 2017-01-14 14:26+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "Timernavn"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Nedtællingsperiode /\nAlarmtid"
+msgstr "Nedtællingsperiode/\nAlarmtid"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -197,7 +197,7 @@ msgstr "Et udvidelsesmodul til at definere nedtællinger eller alarmer på givne
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Copyright (c) 2005-2013\n"
+msgstr "Ophavsret (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
