@@ -1,25 +1,22 @@
-# Galician translation of xfce4-timer-plugin
-# Copyright (C) 2008-2009 Leandro Regueiro
-# This file is distributed under the same license as the xfce package.
-#
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2008, 2009.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en <http://trasno.net>
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2008-2009
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2009-07-15 18:13+0100\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
-"Language: gl\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2017-04-20 09:20+0000\n"
+"Last-Translator: Dani MF <dani@damufo.com>\n"
+"Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Language: gl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
 #, c-format
@@ -38,39 +35,35 @@ msgstr "quedan %ds"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr ""
+msgstr "(En pausa)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Biiiiiip! :) \n"
-"Esgotouse o tempo!"
+msgstr "Biiiiiip! :) \nEsgotouse o tempo do temporizador %s."
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Iniciar o contador"
+msgstr "Reiniciar o temporizador"
 
 #: ../src/xfcetimer.c:487
-#, fuzzy
 msgid "Resume timer"
-msgstr "Iniciar o contador"
+msgstr "Retomar o temporizador"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
-msgstr "Deter o contador"
+msgstr "Deter o temporizador"
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
-msgstr "Iniciar o contador"
+msgstr "Poñer en pausa o temporizador"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
-msgstr "Iniciar o contador"
+msgstr "Iniciar o temporizador"
 
 #: ../src/xfcetimer.c:561
 msgid "Stop the alarm"
@@ -97,18 +90,17 @@ msgid "At %02d:%02d"
 msgstr "Ás %02d:%02d"
 
 #: ../src/xfcetimer.c:801
-#, fuzzy
 msgid "Name:"
-msgstr "Nome"
+msgstr "Nome:"
 
 #. ********
 #: ../src/xfcetimer.c:809
 msgid "Enter the countdown time"
-msgstr "Introducir o tempo de conta"
+msgstr "Introducir a duración (tempo) do temporizador"
 
 #: ../src/xfcetimer.c:812
 msgid "Enter the time of alarm (24h format)"
-msgstr "Introduza a hora da alarma (formato 24h)"
+msgstr "Introducir a hora do temporizador (formato 24h)"
 
 #: ../src/xfcetimer.c:824
 msgid "h  "
@@ -123,83 +115,65 @@ msgid "s  "
 msgstr "s  "
 
 #: ../src/xfcetimer.c:837
-#, fuzzy
 msgid "or"
-msgstr ""
-"\n"
-"ou\n"
+msgstr "ou"
 
 #. **************
 #: ../src/xfcetimer.c:857
-#, fuzzy
 msgid "Command to run:"
-msgstr ""
-"\n"
-"A orde a executar"
+msgstr "Orde a executar:"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
-msgstr "Engadir nova alarma"
+msgstr "Engadir temporizador"
 
 #: ../src/xfcetimer.c:924
 msgid "Edit alarm"
-msgstr "Editar a alarma"
+msgstr "Modificar temporizador"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Opcións de Xfce4 Timer"
+msgstr "Opcións de Xfce4 Timer Plugin"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Opcións de Xfce4 Timer"
+msgstr "Xfce4 Timer Plugin"
 
-# Contador
 #: ../src/xfcetimer.c:1552
-#, fuzzy
 msgid "Timer name"
-msgstr ""
-"Nome do\n"
-"contador"
+msgstr "Nome do temporizador"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Periodo de conta/\n"
-"Tempo da alarma"
+msgstr "Duración/\nHora"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
-msgstr "Orde de alarma"
+msgstr "Orde a executar"
 
 #: ../src/xfcetimer.c:1617
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
-"Non mostrar a xanela de advertencia\n"
-"se se definiu unha orde de alarma"
+msgstr "Non amosar a xanela de advertencia se se definiu unha orde a executar"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr ""
+msgstr "Ao seleccionar un temporizador/alarma é iniciado"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
-#, fuzzy
 msgid "Use a default alarm command"
-msgstr "Repetir a orde de alarma:"
+msgstr "Executar a orde predeterminada de alarma"
 
 #: ../src/xfcetimer.c:1637
-#, fuzzy
 msgid "Default command: "
-msgstr "Orde de alarma"
+msgstr "Orde de alarma predeterminada:"
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
-#, fuzzy
 msgid "Repeat the alarm command"
-msgstr "Repetir a orde de alarma:"
+msgstr "Repetir a orde de alarma a executar"
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -210,17 +184,16 @@ msgid "  Time interval (sec.)"
 msgstr "  Intervalo de tempo (seg.)"
 
 #: ../src/xfcetimer.c:1723
-#, fuzzy
 msgid "About xfce4-timer-plugin"
-msgstr "Opcións de Xfce4 Timer"
+msgstr "Sobre Xfce4 Timer Plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Un engadido para definir temporizadores ou alarmas."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
@@ -228,14 +201,4 @@ msgstr "Xfce4 Timer"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Engadido de contador para o panel de Xfce"
-
-#~ msgid ""
-#~ "\n"
-#~ "or\n"
-#~ msgstr ""
-#~ "\n"
-#~ "ou\n"
-
-#~ msgid "Properties"
-#~ msgstr "Propiedades"
+msgstr "Engadido de temporizador para o panel de Xfce"
