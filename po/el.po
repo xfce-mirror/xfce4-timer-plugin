@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>, 2016
+# Apóstolos Papaðimitríu <apostolos.papadimitriu@gmail.com>, 2016
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2015
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # ebal <ebalaskas@ebalaskas.gr>, 2009
+# Ioannis LM, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2016-02-06 18:34+0000\n"
-"Last-Translator: Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>\n"
+"PO-Revision-Date: 2017-04-21 15:47+0000\n"
+"Last-Translator: Ioannis LM\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce-panel-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +47,7 @@ msgstr "(Σε παύση)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Μπιιπ :) \nΟ χρόνος έληξε για την ειδοποίηση %s."
+msgstr "Μπιιπ :) \nΤέλος χρόνου για την ειδοποίηση %s."
 
 #: ../src/xfcetimer.c:198
 msgid "Rerun the timer"
@@ -54,11 +55,11 @@ msgstr "Επανέναρξη του χρονομέτρου"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr ""
+msgstr "Συνέχιση χρονομέτρου"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
-msgstr "Τερματισμός χρονόμετρου "
+msgstr "Τερματισμός χρονομέτρου "
 
 #: ../src/xfcetimer.c:538
 msgid "Pause timer"
@@ -66,7 +67,7 @@ msgstr "Παύση χρονομέτρου"
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
-msgstr "Έναρξη χρονόμετρου "
+msgstr "Έναρξη χρονομέτρου "
 
 #: ../src/xfcetimer.c:561
 msgid "Stop the alarm"
@@ -99,11 +100,11 @@ msgstr "Όνομα:"
 #. ********
 #: ../src/xfcetimer.c:809
 msgid "Enter the countdown time"
-msgstr "Εισαγωγή του αντίστροφου χρόνου"
+msgstr "Εισαγωγή χρόνου αντίστροφης μέτρησης"
 
 #: ../src/xfcetimer.c:812
 msgid "Enter the time of alarm (24h format)"
-msgstr "Εισαγωγή της ώρας της ειδοποίησης (σε 24 μορφή)"
+msgstr "Εισαγωγή ώρας για την ειδοποίηση (σε 24 μορφή)"
 
 #: ../src/xfcetimer.c:824
 msgid "h  "
@@ -136,7 +137,7 @@ msgstr "Επεξεργασία ειδοποίησης "
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Επιλογές χρονόμετρου  xfce4"
+msgstr "Επιλογές χρονομέτρου  xfce4"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
@@ -150,7 +151,7 @@ msgstr "Όνομα χρονομέτρου"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Περίοδος αντίστροφου χρόνου /\nΧρόνος ειδοποίησης"
+msgstr "Περίοδος αντίστροφης μέτρησης /\nΧρόνος ειδοποίησης"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
@@ -204,4 +205,4 @@ msgstr "Χρονόμετρο xfce4"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Άρθρωμα χρονόμετρου για το ταμπλό του Xfce"
+msgstr "Άρθρωμα χρονομέτρου για το ταμπλό του Xfce"
