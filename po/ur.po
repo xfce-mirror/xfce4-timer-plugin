@@ -1,24 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-timer\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2009-05-14 03:24+0500\n"
-"Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
-"Language-Team: Urdu <makki.ma@gmail.com>\n"
-"Language: ur\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2017-07-25 11:28+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Urdu (http://www.transifex.com/xfce/xfce-panel-plugins/language/ur/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Urdu\n"
-"X-Poedit-Country: PAKISTAN\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: ur\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/xfcetimer.c:146
 #, c-format
@@ -41,18 +38,15 @@ msgstr ""
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr ""
-"بیپ! :) \n"
-"وقت پورا ہوگیا!"
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "ٹائمر شروع کریں"
+msgstr ""
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -63,9 +57,8 @@ msgid "Stop timer"
 msgstr "ٹائمر روکیں"
 
 #: ../src/xfcetimer.c:538
-#, fuzzy
 msgid "Pause timer"
-msgstr "ٹائمر شروع کریں"
+msgstr ""
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -96,9 +89,8 @@ msgid "At %02d:%02d"
 msgstr "پر %02d:%02d"
 
 #: ../src/xfcetimer.c:801
-#, fuzzy
 msgid "Name:"
-msgstr "نام"
+msgstr "نام:"
 
 #. ********
 #: ../src/xfcetimer.c:809
@@ -122,19 +114,13 @@ msgid "s  "
 msgstr "س"
 
 #: ../src/xfcetimer.c:837
-#, fuzzy
 msgid "or"
 msgstr ""
-"\n"
-"or\n"
 
 #. **************
 #: ../src/xfcetimer.c:857
-#, fuzzy
 msgid "Command to run:"
 msgstr ""
-"\n"
-"چلانے کے لیے کمانڈ"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -149,35 +135,26 @@ msgid "Xfce4 Timer Options"
 msgstr "ایکسفس4 الارم اختیارات"
 
 #: ../src/xfcetimer.c:1506
-#, fuzzy
 msgid "Xfce 4 Timer Plugin"
-msgstr "ایکسفس4 الارم اختیارات"
+msgstr ""
 
 #: ../src/xfcetimer.c:1552
-#, fuzzy
 msgid "Timer name"
 msgstr ""
-"ٹائمر\n"
-"نام"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"تنزلی مدت /\n"
-"الارم وقت"
+msgstr "تنزلی مدت /\nالارم وقت"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
 msgstr "الارم کمانڈ"
 
 #: ../src/xfcetimer.c:1617
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
-"اگر الارم کمانڈ مرتب ہو یہ\n"
-"انتباہی ونڈو ظاہر مت کریں"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
@@ -185,20 +162,17 @@ msgstr ""
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
-#, fuzzy
 msgid "Use a default alarm command"
-msgstr "الارم کمانڈ دہرائیں:"
+msgstr ""
 
 #: ../src/xfcetimer.c:1637
-#, fuzzy
 msgid "Default command: "
-msgstr "الارم کمانڈ"
+msgstr ""
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
-#, fuzzy
 msgid "Repeat the alarm command"
-msgstr "الارم کمانڈ دہرائیں:"
+msgstr ""
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -209,9 +183,8 @@ msgid "  Time interval (sec.)"
 msgstr "  وقت وقفہ (سیکنڈ)"
 
 #: ../src/xfcetimer.c:1723
-#, fuzzy
 msgid "About xfce4-timer-plugin"
-msgstr "ایکسفس4 الارم اختیارات"
+msgstr ""
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -228,6 +201,3 @@ msgstr "ایکسفس4 ٹائمر"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "ٹائمر پلگ ان برائے ایکسفس 4.4 پینل"
-
-#~ msgid "Properties"
-#~ msgstr "خصوصیات"
