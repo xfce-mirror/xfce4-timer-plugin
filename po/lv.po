@@ -1,20 +1,22 @@
-# Latvian translation of xfce4-timer-plugin.
-# Copyright (C) 2005 Kemal Ilgar Eroglu.
-# This file is distributed under the same license as the he xfce4-timer package package.
-# rihards Prieditis <rprieditis@inbox.lv>, 2007.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: he xfce4-timer package 0.3\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 01:42+0300\n"
-"PO-Revision-Date: 2007-11-16 21:23+0300\n"
-"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
-"Language-Team: Latvian <rprieditis@inbox.lv>\n"
-"Language: lv\n"
+"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"PO-Revision-Date: 2017-07-25 11:28+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Latvian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #: ../src/xfcetimer.c:146
 #, c-format
@@ -37,18 +39,15 @@ msgstr ""
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr ""
-"Pīīīīp! :) \n"
-"Laiks iztecējis!"
 
 #: ../src/xfcetimer.c:198
-#, fuzzy
 msgid "Rerun the timer"
-msgstr "Palaist taimeri"
+msgstr ""
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
@@ -59,9 +58,8 @@ msgid "Stop timer"
 msgstr "Apturēt taimeri"
 
 #: ../src/xfcetimer.c:538
-#, fuzzy
 msgid "Pause timer"
-msgstr "Palaist taimeri"
+msgstr ""
 
 #: ../src/xfcetimer.c:552
 msgid "Start timer"
@@ -92,9 +90,8 @@ msgid "At %02d:%02d"
 msgstr "Pie %02d:%02d"
 
 #: ../src/xfcetimer.c:801
-#, fuzzy
 msgid "Name:"
-msgstr "Nosaukums"
+msgstr "Nosaukums:"
 
 #. ********
 #: ../src/xfcetimer.c:809
@@ -118,17 +115,13 @@ msgid "s  "
 msgstr "s  "
 
 #: ../src/xfcetimer.c:837
-#, fuzzy
 msgid "or"
-msgstr "vai"
+msgstr ""
 
 #. **************
 #: ../src/xfcetimer.c:857
-#, fuzzy
 msgid "Command to run:"
 msgstr ""
-"\n"
-"Izpildāmā komanda"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -143,35 +136,26 @@ msgid "Xfce4 Timer Options"
 msgstr "Xfce4 Taimera Uzstādījumi"
 
 #: ../src/xfcetimer.c:1506
-#, fuzzy
 msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 Taimera Uzstādījumi"
+msgstr ""
 
 #: ../src/xfcetimer.c:1552
-#, fuzzy
 msgid "Timer name"
 msgstr ""
-"Taimera\n"
-"nosaukums"
 
 #: ../src/xfcetimer.c:1557
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Atskaites periods /\n"
-"Trauksmes laiks"
+msgstr "Atskaites periods /\nTrauksmes laiks"
 
 #: ../src/xfcetimer.c:1561
 msgid "Alarm command"
 msgstr "Trauksmes komanda"
 
 #: ../src/xfcetimer.c:1617
-#, fuzzy
 msgid "Don't display a warning  if an alarm command is set"
 msgstr ""
-"Nerādit brīdinājuma logu,\n"
-"ja trauksmes komanda nav uzstādīta"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
@@ -179,20 +163,17 @@ msgstr ""
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
-#, fuzzy
 msgid "Use a default alarm command"
-msgstr "Atkārtotas trauksmi komanda:"
+msgstr ""
 
 #: ../src/xfcetimer.c:1637
-#, fuzzy
 msgid "Default command: "
-msgstr "Trauksmes komanda"
+msgstr ""
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
-#, fuzzy
 msgid "Repeat the alarm command"
-msgstr "Atkārtotas trauksmi komanda:"
+msgstr ""
 
 #: ../src/xfcetimer.c:1656
 msgid "Number of repetitions"
@@ -203,9 +184,8 @@ msgid "  Time interval (sec.)"
 msgstr "  Laika intervāls (sek.)"
 
 #: ../src/xfcetimer.c:1723
-#, fuzzy
 msgid "About xfce4-timer-plugin"
-msgstr "Xfce4 Taimera Uzstādījumi"
+msgstr ""
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -222,6 +202,3 @@ msgstr "Xfce4 Taimeris"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Taimera spraudnis Xfce panelim"
-
-#~ msgid "Properties"
-#~ msgstr "Rekvizīti"
