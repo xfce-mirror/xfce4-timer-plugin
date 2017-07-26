@@ -35,16 +35,10 @@
 #include <string.h>
 
 #include <gtk/gtk.h>
-
+#include <glib/gprintf.h>  // for gcc's warning: implicit declaration of function 'g_sprintf'
 #include <libxfce4util/libxfce4util.h>
-#ifdef HAVE_XFCE48
 #include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4panel/libxfce4panel.h>
-#else
-#include <libxfcegui4/xfce_iconbutton.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
-#include <libxfcegui4/dialogs.h>
-#endif
 
 #include "xfcetimer.h"
 
@@ -57,7 +51,7 @@ dialog_response (GtkWidget *dlg, int response, plugin_data *pd);
                                         
 static void start_stop_selected (GtkWidget* menuitem, gpointer
                                         data);
-XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL(create_plugin_control);
+XFCE_PANEL_PLUGIN_REGISTER(create_plugin_control);
 
 void make_menu(plugin_data *pd);
 
@@ -1080,11 +1074,8 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box=gtk_hbox_new(TRUE,0);
   gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
-#ifdef HAVE_XFCE48    
+
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
-#else    
-    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
-#endif
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_BOTTOM_TO_TOP);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
@@ -1096,11 +1087,9 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   else{ /* horizontal bar */
     pd->box=gtk_vbox_new(TRUE,0);
     gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
-#ifdef HAVE_XFCE48    
+
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
-#else    
-    gtk_container_add(GTK_CONTAINER(pd->eventbox),pd->box);
-#endif
+
     gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
                     pbar),GTK_PROGRESS_LEFT_TO_RIGHT);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
@@ -1360,9 +1349,9 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
   gtk_object_destroy(GTK_OBJECT(pd->tip));
 
   /* destroy all widgets */
-#ifndef HAVE_XFCE48
+
 	gtk_widget_destroy(GTK_WIDGET(pd->eventbox));
-#endif  
+
 
   /* free the plugin data structure */
   g_free(pd);
@@ -1491,7 +1480,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
 
 
-#ifdef HAVE_XFCE48
+
   header = xfce_titled_dialog_new_with_buttons (_("Xfce4 Timer Options"), 
                      GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
                                                GTK_DIALOG_DESTROY_WITH_PARENT |
@@ -1500,20 +1489,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
                                                NULL);
 
  dlg = header;                                               
-#else                                               
-  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
-  
-  dlg = gtk_dialog_new_with_buttons (_("Xfce 4 Timer Plugin"),
-              GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-              GTK_DIALOG_DESTROY_WITH_PARENT |
-              GTK_DIALOG_NO_SEPARATOR,
-              GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
-              NULL);
 
-
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header,
-                      FALSE, TRUE, 0);    
-#endif  
 
   g_signal_connect (dlg, "response", G_CALLBACK (options_dialog_response),
                     pd);
@@ -1718,7 +1694,7 @@ Muhammad Ali Makki <makki.ma@gmail.com>\n\
 Hunt Xu <huntxu@live.cn>\n\
 Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 	   
-   icon = xfce_panel_pixbuf_from_source("xfce4-timer", NULL, 48);
+   icon = xfce_panel_pixbuf_from_source("xfce4-timer-plugin", NULL, 48);
    gtk_show_about_dialog(NULL,
    	  "title", _("About xfce4-timer-plugin"),
       "logo", icon,
@@ -1767,9 +1743,9 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
          G_TYPE_STRING,  /* Column 2: Timer period/alarm time - info string */
          G_TYPE_STRING);  /* Command to run */
 
-#ifndef HAVE_XFCE48
+
   pd->eventbox = gtk_event_box_new();
-#endif  
+
   pd->box=NULL;
   pd->timer_on=FALSE;
   pd->timeout=0;
@@ -1824,14 +1800,10 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
   gtk_widget_set_size_request(GTK_WIDGET(plugin),10,10);
   xfce_panel_plugin_set_expand(plugin,FALSE);
 
-#ifdef HAVE_XFCE48
+
   g_signal_connect  (G_OBJECT(plugin), "button_press_event",
             G_CALLBACK(pbar_clicked), pd);   
-#else
-  gtk_container_add(GTK_CONTAINER(plugin),pd->eventbox);
-  g_signal_connect  (G_OBJECT(pd->eventbox), "button_press_event",
-            G_CALLBACK(pbar_clicked), pd);
-#endif  
+
 
   gtk_widget_show_all(GTK_WIDGET(plugin));
 

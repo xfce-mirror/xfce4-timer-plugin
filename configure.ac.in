@@ -1,60 +1,118 @@
-dnl Process this file with autoconf to produce a configure script.
-dnl Created by Anjuta - will be overwritten
-dnl If you don't want it to overwrite it,
-dnl 	Please disable it in the Anjuta project configuration
+dnl $Id$
+dnl
+dnl xfce4-timer-plugin - A timer plugin for the Xfce panel
+dnl
+dnl
+dnl
 
-dnl version info
+dnl ***************************
+dnl *** Version information ***
+dnl ***************************
 m4_define([xfce4_timer_version_major], [1])
 m4_define([xfce4_timer_version_minor], [6])
 m4_define([xfce4_timer_version_micro], [0])
+m4_define([sample_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([xfce4_timer_version_build], [@REVISION@])
 m4_define([xfce4_timer_version_tag]) # Leave empty only for releases, but use 'git' in most cases
-m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_tag(), [], [],[xfce4_timer_version_tag()-xfce4_timer_version_build()])])
+m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_nano(), [], [], [.xfce4_timer_version_nano()])ifelse(xfce4_timer_version_tag(), [git], [xfce4_timer_version_tag()-xfce4_timer_version_build()], [xfce4_timer_version_tag()])])
 
-libexecdir = ${exec_prefix}/libexec
-
-dnl init autoconf
-AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [ilgar_eroglu@yahoo.com])
+AC_CONFIG_MACRO_DIR([m4])
+dnl ***************************
+dnl *** Initialize autoconf ***
+dnl ***************************
+AC_COPYRIGHT([Copyright (C) 2017
+        The Xfce development team. All rights reserved.])
+AC_INIT([xfce4-timer-plugin], [xfce4-timer_version], [https://bugzilla.xfce.org/], [xfce4-timer-plugin])
 AC_PREREQ([2.50])
+AC_REVISION([xfce4_panel_version_build])
 
-dnl init automake
-dnl XFCE4_TIMER_VERSION=xfce4_timer_version
-dnl AM_INIT_AUTOMAKE([xfce4-timer-plugin], [$XFCE4_TIMER_VERSION])
-AM_INIT_AUTOMAKE([1.9 dist-bzip2 tar-ustar])
-AM_CONFIG_HEADER([config.h])
-AM_MAINTAINER_MODE
+dnl ***************************
+dnl *** Initialize automake ***
+dnl ***************************
+AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-bzip2 tar-ustar])
+AC_CONFIG_HEADER([config.h])
+AM_MAINTAINER_MODE()
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-dnl Check for basic stuff
-AC_PROG_CC
-AC_HEADER_STDC
-AC_PROG_INSTALL
-AC_PROG_LIBTOOL
-AC_PROG_INTLTOOL()
-AM_PROG_CC_C_O
+nl **************************
+dnl *** Initialize libtool ***
+dnl **************************
+LT_PREREQ([2.2.6])
+LT_INIT([disable-static])
 
-dnl check for standard header files
-AC_HEADER_STDC
+dnl ********************************
+dnl *** Check for basic programs ***
+dnl ********************************
+AC_PROG_CC()
+AC_PROG_CC_C_O()
+AC_PROG_LD()
+AC_PROG_INSTALL()
+IT_PROG_INTLTOOL([0.35.0])
 
-dnl Check for i18n support
+dnl **********************************
+dnl *** Check for standard headers ***
+dnl **********************************
+AC_HEADER_STDC()
+AC_CHECK_HEADERS([stdlib.h unistd.h locale.h stdio.h errno.h time.h string.h \
+                  math.h sys/types.h sys/wait.h memory.h signal.h sys/prctl.h \
+                  libintl.h])
+AC_CHECK_FUNCS([bind_textdomain_codeset])
+
+dnl ******************************
+dnl *** Check for i18n support ***
+dnl ******************************
 XDT_I18N([@LINGUAS@])
 
-dnl required
+dnl *******************************
+dnl *** Check for X11 installed ***
+dnl *******************************
+XDT_CHECK_LIBX11_REQUIRE()
+
+dnl ***********************************
+dnl *** Check for required packages ***
+dnl ***********************************
+dnl XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.12.0])
+dnl XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
+
 XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.4.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.4.0])
-dnl AC_DEFINE ([HAS4UI], [TRUE], [Desc])
-XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0], [has4ui=true] , [XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0], [has4ui=false])])
-AM_CONDITIONAL([HAVE_4UI], [test x$has4ui = xtrue])
-dnl XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
-XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
-XDT_CHECK_OPTIONAL_PACKAGE([XFCE48], [libxfce4panel-1.0], [4.8.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.3.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.12.0])
+XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.12.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
 
 
+
+dnl ***********************************
+dnl *** Check for debugging support ***
+dnl ***********************************
+XDT_FEATURE_DEBUG()
+
+dnl *********************************
+dnl *** Substitute platform flags ***
+dnl *********************************
+AC_MSG_CHECKING([PLATFORM_CPPFLAGS])
+AC_MSG_RESULT([$PLATFORM_CPPFLAGS])
+AC_SUBST([PLATFORM_CPPFLAGS])
+AC_MSG_CHECKING([PLATFORM_CFLAGS])
+AC_MSG_RESULT([$PLATFORM_CFLAGS])
+AC_SUBST([PLATFORM_CFLAGS])
+AC_MSG_CHECKING([PLATFORM_LDFLAGS])
+AC_MSG_RESULT([$PLATFORM_LDFLAGS])
+AC_SUBST([PLATFORM_LDFLAGS])
 
 AC_OUTPUT([
 Makefile
-po/Makefile.in
-src/Makefile
 icons/Makefile
 icons/48x48/Makefile
+panel-plugin/Makefile
+po/Makefile.in
 ])
+
+dnl ***************************
+dnl *** Print configuration ***
+dnl ***************************
+echo
+echo "Build Configuration:"
+echo
+echo "* Debug Support:    $enable_debug"
+echo

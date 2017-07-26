@@ -1,10 +1,10 @@
 [Xfce Panel]
 Type=X-XFCE-PanelPlugin
 Encoding=UTF-8
-_Name=Xfce4 Timer
-_Comment=Timer plugin for Xfce panel
-Icon=xfce4-timer
+_Name=Xfce4 Timer Plugin
+_Comment=Xfce4 Timer Plugin for the Xfce panel
+Icon=xfce4-timer-plugin
+X-XFCE-Module=xfcetimer
 X-XFCE-Internal=false
-X-XFCE-Exec=@EXTERNAL_PLUGIN_PATH@/xfce4-timer
-
-
+X-XFCE-Unique=false
+X-XFCE-API=2.0
