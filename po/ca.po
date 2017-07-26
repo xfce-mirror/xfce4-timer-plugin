@@ -6,6 +6,7 @@
 # Harald Servat <redcrash@gmail.com>, 2009
 # Davidmp <medipas@gmail.com>, 2016
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 # Roger Pueyo Centelles <transifex@rogerpueyo.com>, 2014-2015
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-07-25 11:28+0000\n"
+"PO-Revision-Date: 2017-07-26 00:22+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -197,7 +198,7 @@ msgstr "Un connector per definir temporitzadors de compte enrere i alarmes en mo
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
-msgstr "Copyright (c) 2005-2013\n"
+msgstr "Drets d'autor (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
