@@ -7,4 +7,4 @@ Icon=xfce4-timer-plugin
 X-XFCE-Module=xfcetimer
 X-XFCE-Internal=false
 X-XFCE-Unique=false
-X-XFCE-API=2.0
+X-XFCE-API=1.0
