@@ -153,7 +153,7 @@ static gboolean update_function (gpointer data){
      gtk_progress_bar_set_fraction  (GTK_PROGRESS_BAR(pd->pbar),
                     1.0-((gdouble)elapsed_sec)/pd->timeout_period_in_sec);
 
-     gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),tiptext,NULL);
+     gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), tiptext);
 
      g_free(tiptext);
 
@@ -168,8 +168,7 @@ static gboolean update_function (gpointer data){
   pd->timer=NULL;
   
   /* Disable tooltips, reset pbar */
-  gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
-  gtk_tooltips_disable(pd->tip);
+  gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
   gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
     
   pd->timeout=0;
@@ -183,13 +182,17 @@ static gboolean update_function (gpointer data){
     dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), pd->active_timer_name);
     dialog_title = g_strdup_printf("Xfce4 Timer Plugin: %s", pd->active_timer_name);
 
-    dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL,
-                                    GTK_MESSAGE_WARNING,
-                                    GTK_BUTTONS_NONE, dialog_message);
+	/*
+	 * dialog_message when gcc warning: format not a string literal and no format arguments [-Wformat-security]
+	 * solution, to add "%s" to the arguments of the gtk_message_dialog_new() function
+	 */
+    dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
+    				GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
+
                            
     gtk_window_set_title ((GtkWindow *) dialog, dialog_title);                                    
  
-    gtk_dialog_add_button ( (GtkDialog *) dialog, GTK_STOCK_CLOSE, 0);
+    gtk_dialog_add_button((GtkDialog *) dialog, _("Close"), 0);
 	gtk_dialog_add_button ( (GtkDialog *) dialog, _("Rerun the timer"), 1);
 
     g_signal_connect (dialog, "response",
@@ -336,8 +339,7 @@ static void start_timer (plugin_data *pd){
   pd->timer=g_timer_new();
   pd->timer_on=TRUE;
 
-  gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(pd->base), alrm->info, NULL);
-  gtk_tooltips_enable(pd->tip);
+  gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), alrm->info);
 
   g_timer_start(pd->timer);
   pd->timeout = g_timeout_add(UPDATE_INTERVAL, update_function,pd);
@@ -381,8 +383,7 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
     pd->is_paused = FALSE;
 
     /* Disable tooltips, reset pbar */
-    gtk_tooltips_set_tip(pd->tip,GTK_WIDGET(pd->base),"",NULL);
-    gtk_tooltips_disable(pd->tip);
+    gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
     return;
@@ -453,7 +454,13 @@ static void pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
       return;
 
     if(event->button==1)
-      gtk_menu_popup (GTK_MENU(pd->menu),NULL,NULL,NULL,NULL,event->button,event->time);  
+      //gtk_menu_popup_at_widget
+	  //, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect
+      //gtk_menu_popup (GTK_MENU(pd->menu),NULL,NULL,NULL,NULL,event->button,event->time);
+    	gtk_menu_popup_at_widget(GTK_MENU(pd->menu), pd->pbar,
+    			GDK_GRAVITY_SOUTH_WEST,
+    			GDK_GRAVITY_NORTH_WEST,
+    			NULL);
     else
       gtk_menu_popdown(GTK_MENU(pd->menu));
 
@@ -785,12 +792,12 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   if (gtk_widget_is_toplevel(GTK_WIDGET(parent_window)))
       gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(parent_window));
 
-  vbox=gtk_vbox_new(FALSE, BORDER);
+  vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, BORDER);
   gtk_container_add(GTK_CONTAINER(window),vbox);
   gtk_container_set_border_width(GTK_CONTAINER(window), BORDER);
 
   /***********/
-  hbox=gtk_hbox_new(FALSE, BORDER);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, BORDER);
   gtk_box_pack_start(GTK_BOX(vbox),hbox,FALSE,FALSE, WIDGET_SPACING);
 
   label = (GtkLabel *)gtk_label_new (_("Name:"));
@@ -810,7 +817,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(rb1),TRUE,TRUE,0);
 
-  hbox=gtk_hbox_new(FALSE,0);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(hbox),TRUE,TRUE,0);
 
   timeh = (GtkSpinButton *)gtk_spin_button_new_with_range(0,23,1);
@@ -835,7 +842,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(rb2),TRUE,TRUE,0);
 
-  hbox=gtk_hbox_new(FALSE,WIDGET_SPACING);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, WIDGET_SPACING);
   gtk_box_pack_start(GTK_BOX(vbox),GTK_WIDGET(hbox),TRUE,TRUE,0);
 
   time_h = (GtkSpinButton *)gtk_spin_button_new_with_range(0,23,1);
@@ -858,17 +865,16 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   /****************/
 
   //hbox=gtk_hbox_new(TRUE,0);
-  hbox = gtk_hbutton_box_new();
+  hbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
   gtk_button_box_set_layout(GTK_BUTTON_BOX(hbox), GTK_BUTTONBOX_END);
-  gtk_button_box_set_spacing(GTK_BUTTON_BOX(hbox), BORDER);
+  //gtk_button_box_set_spacing(GTK_BUTTON_BOX(hbox), BORDER);
   gtk_box_pack_start(GTK_BOX(vbox),hbox,TRUE,TRUE,WIDGET_SPACING);
-  //gtk_container_set_border_width(GTK_CONTAINER(hbox), BORDER);
 
-  button=gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  button = gtk_button_new_with_label(_("Cancel"));
   gtk_box_pack_start(GTK_BOX(hbox),button,TRUE,TRUE,0);
   g_signal_connect(G_OBJECT(button),"clicked",G_CALLBACK(cancel_add_edit),adata);
 
-  button=gtk_button_new_from_stock(GTK_STOCK_OK);
+  button = gtk_button_new_with_label(_("Acept"));
   gtk_box_pack_start(GTK_BOX(hbox),button,TRUE,TRUE,0);
   if(GTK_WIDGET(buttonn)==pd->buttonadd)
      g_signal_connect(G_OBJECT(button),"clicked",G_CALLBACK(ok_add),adata);
@@ -887,7 +893,6 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
 
   /* Else fill the values in the boxes with the current choices */
   select = gtk_tree_view_get_selection (GTK_TREE_VIEW (pd->tree));
-  /*gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);*/
 
   if (gtk_tree_selection_get_selected (select, &model, &iter)){
 	  
@@ -1066,37 +1071,47 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
     frac = gtk_progress_bar_get_fraction (GTK_PROGRESS_BAR (pd->pbar));
     gtk_widget_destroy(pd->box);
     pd->pbar = gtk_progress_bar_new ();
-    gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
-                    GTK_PROGRESS_CONTINUOUS);
+    //gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
+    //                GTK_PROGRESS_CONTINUOUS);
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),frac);
   }
   
+  gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR(pd->pbar), TRUE);
+
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
-    pd->box=gtk_hbox_new(TRUE,0);
-  gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+    pd->box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
 
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
-    gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
-                    pbar),GTK_PROGRESS_BOTTOM_TO_TOP);
+    gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
+    							   GTK_ORIENTATION_VERTICAL);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),gtk_vseparator_new(),FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(pd->box),
+    				   gtk_separator_new(GTK_ORIENTATION_VERTICAL),
+					   FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(pd->box),pd->pbar,FALSE,FALSE,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),gtk_vseparator_new(),FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(pd->box),
+			           gtk_separator_new(GTK_ORIENTATION_VERTICAL),
+			           FALSE, FALSE, 0);
 
   }
   else{ /* horizontal bar */
-    pd->box=gtk_vbox_new(TRUE,0);
+	pd->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
 
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 
-    gtk_progress_bar_set_orientation    (GTK_PROGRESS_BAR(pd->
-                    pbar),GTK_PROGRESS_LEFT_TO_RIGHT);
+    gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
+    				GTK_ORIENTATION_HORIZONTAL);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
-    gtk_box_pack_start(GTK_BOX(pd->box),gtk_hseparator_new(),FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(pd->box),
+    		           gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
+					   FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(pd->box),pd->pbar,FALSE,FALSE,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),gtk_hseparator_new(),FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(pd->box),
+    				   gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
+					   FALSE, FALSE, 0);
 
   }
 
@@ -1346,9 +1361,6 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
   if(pd->alarm_list)
     g_list_free (pd->alarm_list);  
 
-  /* destroy the tooltips */
-  gtk_object_destroy(GTK_OBJECT(pd->tip));
-
   /* destroy all widgets */
 
 	gtk_widget_destroy(GTK_WIDGET(pd->eventbox));
@@ -1468,9 +1480,10 @@ static void spin2_changed(GtkSpinButton *button, gpointer data){
 **/
 static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
-  GtkWidget *vbox=gtk_vbox_new(FALSE,0); /*outermost box */
-  GtkWidget *hbox=gtk_hbox_new(FALSE,0); /* holds the treeview and buttons */
+  GtkWidget *vbox; /*outermost box */
+  GtkWidget *hbox; /* holds the treeview and buttons */
   GtkWidget *buttonbox,*button,*sw,*tree,*spinbutton;
+  GtkWidget *dialog_vbox;
   GtkTreeSelection *select;
   GtkTreeViewColumn *column;
   GtkWidget *dlg=NULL, *header=NULL;
@@ -1482,15 +1495,18 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
 
 
 
-  header = xfce_titled_dialog_new_with_buttons (_("Xfce4 Timer Options"), 
-                     GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-                                               GTK_DIALOG_DESTROY_WITH_PARENT |
-                                               GTK_DIALOG_NO_SEPARATOR,
-                                               GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
-                                               NULL);
+  header = xfce_titled_dialog_new_with_buttons(_("Xfce4 Timer Options"),
+			GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(plugin))),
+			GTK_DIALOG_DESTROY_WITH_PARENT, _("Close"), GTK_RESPONSE_OK, NULL);
 
- dlg = header;                                               
+  dlg = header;
 
+  gtk_window_set_icon_name(GTK_WINDOW(dlg), "xfce4-timer-plugin");
+
+  dialog_vbox = gtk_dialog_get_content_area(GTK_DIALOG(dlg));
+
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, BORDER);
+  gtk_box_pack_start(GTK_BOX(dialog_vbox), vbox, TRUE, TRUE, BORDER);
 
   g_signal_connect (dlg, "response", G_CALLBACK (options_dialog_response),
                     pd);
@@ -1500,11 +1516,11 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   gtk_widget_set_size_request (dlg, 650, -1);
   gtk_window_set_position(GTK_WINDOW(header),GTK_WIN_POS_CENTER);
 
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), vbox,
-                      TRUE, TRUE, WIDGET_SPACING);
+  //gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), vbox,
+  //                    TRUE, TRUE, WIDGET_SPACING);
 
 
-  hbox = gtk_hbox_new(FALSE, BORDER);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, BORDER);
   gtk_box_pack_start(GTK_BOX(vbox),hbox,TRUE,TRUE,BORDER);
 
   sw = gtk_scrolled_window_new (NULL, NULL);
@@ -1521,7 +1537,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
       
   tree=gtk_tree_view_new_with_model(GTK_TREE_MODEL(pd->liststore));
   pd->tree=tree;
-  gtk_tree_view_set_rules_hint  (GTK_TREE_VIEW (tree), TRUE);
+  //gtk_tree_view_set_rules_hint  (GTK_TREE_VIEW (tree), TRUE);
   gtk_tree_selection_set_mode   (gtk_tree_view_get_selection (GTK_TREE_VIEW (tree)),
                  GTK_SELECTION_SINGLE);
      
@@ -1551,37 +1567,37 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
             G_CALLBACK(tree_selected), pd);
 
 
-  buttonbox=gtk_vbutton_box_new();
+  buttonbox = gtk_button_box_new(GTK_ORIENTATION_VERTICAL);
   gtk_button_box_set_layout(GTK_BUTTON_BOX(buttonbox),GTK_BUTTONBOX_START);
-  gtk_button_box_set_spacing(GTK_BUTTON_BOX(buttonbox),WIDGET_SPACING<<1);
+  //gtk_button_box_set_spacing(GTK_BUTTON_BOX(buttonbox),WIDGET_SPACING<<1);
   gtk_box_pack_start(GTK_BOX(hbox),buttonbox,FALSE,FALSE,0);
 
-  button = gtk_button_new_from_stock (GTK_STOCK_ADD);
+  button = gtk_button_new_with_label(_("Add"));
   pd->buttonadd=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING<<1);
   gtk_widget_set_sensitive(button,TRUE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked), pd);
 
 
-  button = gtk_button_new_from_stock (GTK_STOCK_EDIT);
+  button = gtk_button_new_with_label(_("Edit"));
   pd->buttonedit=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING<<1);
   gtk_widget_set_sensitive(button,FALSE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(add_edit_clicked), pd);
 
-  button = gtk_button_new_from_stock (GTK_STOCK_REMOVE);
+  button = gtk_button_new_with_label(_("Remove"));
   pd->buttonremove=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(button,FALSE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(remove_clicked), pd);
 
-  button = gtk_button_new_from_stock (GTK_STOCK_GO_UP);
+  button = gtk_button_new_with_label(_("Up"));
   pd->buttonup=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(button,FALSE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK(up_clicked), pd);
   
-  button = gtk_button_new_from_stock (GTK_STOCK_GO_DOWN);
+  button = gtk_button_new_with_label(_("Down"));
   pd->buttondown=button;
   gtk_box_pack_start(GTK_BOX (buttonbox), button, FALSE, FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(button,FALSE);
@@ -1589,7 +1605,9 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   
   gtk_widget_set_size_request(hbox,-1,-1);
   
-  gtk_box_pack_start(GTK_BOX(vbox),gtk_hseparator_new(),FALSE,FALSE,BORDER);
+  gtk_box_pack_start(GTK_BOX(vbox),
+			gtk_separator_new(GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE,
+			BORDER);
 
   button=gtk_check_button_new_with_label(_("Don't display a warning  if an alarm command is set"));
   gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),pd->nowin_if_alarm);
@@ -1601,7 +1619,9 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_selecting_starts),pd);
   gtk_box_pack_start(GTK_BOX(vbox),button,FALSE,FALSE,WIDGET_SPACING);
 
-  gtk_box_pack_start(GTK_BOX(vbox),gtk_hseparator_new(),FALSE,FALSE,BORDER);
+  gtk_box_pack_start(GTK_BOX(vbox),
+			gtk_separator_new(GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE,
+			BORDER);
 
   /* Default alarm command config */
   button=gtk_check_button_new_with_label(_("Use a default alarm command"));
@@ -1609,7 +1629,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_global_command),pd);
   gtk_box_pack_start(GTK_BOX(vbox),button,FALSE,FALSE,WIDGET_SPACING);
 
-  hbox = gtk_hbox_new (FALSE,0);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
   pd->global_command_box=hbox;
   gtk_box_pack_start(GTK_BOX(hbox),gtk_label_new(_("Default command: ")),FALSE,FALSE,0);
   pd->glob_command_entry = (GtkWidget *) gtk_entry_new();
@@ -1620,7 +1640,9 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   gtk_box_pack_start(GTK_BOX(vbox),hbox,FALSE,FALSE,WIDGET_SPACING);
   gtk_widget_set_sensitive(hbox,pd->use_global_command);
   
-  gtk_box_pack_start(GTK_BOX(vbox),gtk_hseparator_new(),FALSE,FALSE,BORDER);
+  gtk_box_pack_start(GTK_BOX(vbox),
+			gtk_separator_new(GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE,
+			BORDER);
   
   /* Alarm repetitions config */  
   button=gtk_check_button_new_with_label(_("Repeat the alarm command"));
@@ -1628,7 +1650,7 @@ static void plugin_create_options (XfcePanelPlugin *plugin,plugin_data *pd) {
   g_signal_connect(G_OBJECT(button),"toggled",G_CALLBACK(toggle_repeat_alarm),pd);
   gtk_box_pack_start(GTK_BOX(vbox),button,FALSE,FALSE,WIDGET_SPACING);
   
-  hbox = gtk_hbox_new (FALSE,0);
+  hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
   pd->repeat_alarm_box=hbox;
   gtk_box_pack_start(GTK_BOX(hbox),gtk_label_new(_("Number of repetitions")),FALSE,FALSE,0);
   spinbutton=gtk_spin_button_new_with_range(1,50,1);
@@ -1727,13 +1749,11 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
 {
 
   GtkWidget *base,*menu,*socket,*menuitem,*box,*pbar2;
-  GtkTooltips *tooltip;
   char command[1024];
   gchar *filename,*pathname;
+  plugin_data *pd=g_new0(plugin_data, 1);
 
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
-
-  plugin_data *pd=g_new0(plugin_data,1);
 
   pd->base=plugin;
   pd->count=0;
@@ -1754,7 +1774,6 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
   pd->buttonedit=NULL;
   pd->buttonremove=NULL;
   pd->menu=NULL;
-  pd->tip=gtk_tooltips_new();
   pd->timeout_command=NULL;
   pd->timer=NULL;
   pd->active_timer_name = g_strdup("");
@@ -1776,8 +1795,7 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
   pd->alarm_list = NULL;
   pd->selected=NULL;
   
-  gtk_tooltips_set_tip(pd->tip, GTK_WIDGET(plugin), "", NULL);
-  gtk_tooltips_disable(pd->tip);
+  gtk_widget_set_tooltip_text (GTK_WIDGET(plugin), "");
 
 
   g_object_ref(pd->liststore);
@@ -1790,9 +1808,7 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
 
   load_settings(pd);
   pd->selected = pd->alarm_list;
-      
-  gtk_progress_bar_set_bar_style    (GTK_PROGRESS_BAR(pd->pbar),
-                    GTK_PROGRESS_CONTINUOUS);
+
   gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
   add_pbar(pd->base,pd);

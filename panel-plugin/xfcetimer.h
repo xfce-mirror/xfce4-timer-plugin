@@ -63,7 +63,6 @@ typedef struct {
 			alarm_repeating,		/* True while alarm repeats */
 			is_paused,				/* True if the countdown is paused */
 			is_countdown;			/* True if the alarm type is contdown */
-  GtkTooltips 	*tip;				/* Tooltip for panel */
   gchar 	*timeout_command,	/* Command when countdown ends */
 			*global_command,	/* The global (default) command to be
 								run when countdown ends */
