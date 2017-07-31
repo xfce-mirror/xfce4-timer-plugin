@@ -532,7 +532,7 @@ void make_menu(plugin_data *pd){
   }
 
   /* Horizontal line (empty item) */
-  menuitem=gtk_menu_item_new();
+  menuitem=gtk_separator_menu_item_new ();
   gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
 
   /* Pause menu item */
