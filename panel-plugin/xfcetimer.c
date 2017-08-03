@@ -181,10 +181,6 @@ static gboolean update_function (gpointer data){
     dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), pd->active_timer_name);
     dialog_title = g_strdup_printf("Xfce4 Timer Plugin: %s", pd->active_timer_name);
 
-	/*
-	 * dialog_message when gcc warning: format not a string literal and no format arguments [-Wformat-security]
-	 * solution, to add "%s" to the arguments of the gtk_message_dialog_new() function
-	 */
     dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
     				GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
 
