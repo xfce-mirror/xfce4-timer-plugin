@@ -38,7 +38,6 @@
 #include <glib/gprintf.h>  // for gcc's warning: implicit declaration of function 'g_sprintf'
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
-/*#include <libxfce4panel/xfce-panel-plugin.h>*/
 #include <libxfce4panel/libxfce4panel.h>
 
 #include "xfcetimer.h"
@@ -1081,37 +1080,38 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+    //gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+    gtk_container_set_border_width (GTK_CONTAINER(pd->box), 0);
 
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
     gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
     							   GTK_ORIENTATION_VERTICAL);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),
-    				   gtk_separator_new(GTK_ORIENTATION_VERTICAL),
-					   FALSE, FALSE, 0);
+    //gtk_box_pack_start(GTK_BOX(pd->box),
+    //				   gtk_separator_new(GTK_ORIENTATION_VERTICAL),
+	//				   FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(pd->box),pd->pbar,FALSE,FALSE,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),
-			           gtk_separator_new(GTK_ORIENTATION_VERTICAL),
-			           FALSE, FALSE, 0);
+    //gtk_box_pack_start(GTK_BOX(pd->box),
+	//		           gtk_separator_new(GTK_ORIENTATION_VERTICAL),
+	//		           FALSE, FALSE, 0);
 
   }
   else{ /* horizontal bar */
 	pd->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
-
+    //gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+	gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 
     gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
     				GTK_ORIENTATION_HORIZONTAL);
     gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
-    gtk_box_pack_start(GTK_BOX(pd->box),
-    		           gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
-					   FALSE, FALSE, 0);
+    //gtk_box_pack_start(GTK_BOX(pd->box),
+    //		           gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
+	//				   FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(pd->box),pd->pbar,FALSE,FALSE,0);
-    gtk_box_pack_start(GTK_BOX(pd->box),
-    				   gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
-					   FALSE, FALSE, 0);
+    //gtk_box_pack_start(GTK_BOX(pd->box),
+    //				   gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
+	//				   FALSE, FALSE, 0);
 
   }
 
