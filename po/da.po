@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"PO-Revision-Date: 2017-09-30 14:22+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -193,7 +193,7 @@ msgstr "Om xfce4-timer-plugin"
 
 #: ../src/xfcetimer.c:1728
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Et udvidelsesmodul til at definere nedtællinger eller alarmer på givne tidspunkter."
+msgstr "Et plugin til at definere nedtællinger eller alarmer på givne tidspunkter."
 
 #: ../src/xfcetimer.c:1730
 msgid "Copyright (c) 2005-2013\n"
@@ -205,4 +205,4 @@ msgstr "Xfce4-timer"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Timer-udvidelsesmodul til Xfce panelet"
+msgstr "Timer-plugin til Xfce-panelet"
