@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-09-30 14:22+0000\n"
+"PO-Revision-Date: 2017-11-01 16:45+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -137,11 +137,11 @@ msgstr "Redigér alarm"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Xfce4-timerindstillinger"
+msgstr "Valgmuligheder for Xfce4-timer"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
-msgstr "Timerudvidelse til Xfce 4"
+msgstr "Xfce 4 timer-plugin"
 
 #: ../src/xfcetimer.c:1552
 msgid "Timer name"
