@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-11-01 16:45+0000\n"
+"PO-Revision-Date: 2017-11-01 18:12+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "%ds tilbage"
 
 #: ../src/xfcetimer.c:154
 msgid " (Paused)"
-msgstr " (På pause)"
+msgstr " (Sat på pause)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../src/xfcetimer.c:188
@@ -51,11 +51,11 @@ msgstr "Biiiip! :) \nTiden er udløbet for alarmen %s."
 
 #: ../src/xfcetimer.c:198
 msgid "Rerun the timer"
-msgstr "Start tidtageren påny"
+msgstr "Kør timer igen"
 
 #: ../src/xfcetimer.c:487
 msgid "Resume timer"
-msgstr "Genoptag tidstager"
+msgstr "Genoptag timer"
 
 #: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
 msgid "Stop timer"
@@ -125,7 +125,7 @@ msgstr "eller"
 #. **************
 #: ../src/xfcetimer.c:857
 msgid "Command to run:"
-msgstr "Kommandoen der køres:"
+msgstr "Kommando der skal køres:"
 
 #: ../src/xfcetimer.c:887
 msgid "Add new alarm"
@@ -137,7 +137,7 @@ msgstr "Redigér alarm"
 
 #: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
 msgid "Xfce4 Timer Options"
-msgstr "Valgmuligheder for Xfce4-timer"
+msgstr "Valgmuligheder for Xfce4 timer"
 
 #: ../src/xfcetimer.c:1506
 msgid "Xfce 4 Timer Plugin"
@@ -159,20 +159,20 @@ msgstr "Alarmkommando"
 
 #: ../src/xfcetimer.c:1617
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Undlad at vise en advarsel, hvis der er angivet en alarmkommando"
+msgstr "Vise ikke en advarsel, hvis der er angivet en alarmkommando"
 
 #: ../src/xfcetimer.c:1622
 msgid "Selecting a timer starts it"
-msgstr "Valg af en timer, starter den"
+msgstr "Når en timer vælges, startes den"
 
 #. Default alarm command config
 #: ../src/xfcetimer.c:1630
 msgid "Use a default alarm command"
-msgstr "Brug en forvalgt alarmkommando"
+msgstr "Brug en standard alarmkommando"
 
 #: ../src/xfcetimer.c:1637
 msgid "Default command: "
-msgstr "Forvalgt kommando: "
+msgstr "Standardkommando: "
 
 #. Alarm repetitions config
 #: ../src/xfcetimer.c:1649
@@ -201,7 +201,7 @@ msgstr "Ophavsret (c) 2005-2013\n"
 
 #: ../src/xfce4-timer.desktop.in.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Xfce4-timer"
+msgstr "Xfce4 timer"
 
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
