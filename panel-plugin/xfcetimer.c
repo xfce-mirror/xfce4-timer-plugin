@@ -22,7 +22,7 @@
 											milliseconds */
 #define PBAR_THICKNESS  10
 
-#define BORDER 8
+#define BORDER 4
 #define WIDGET_SPACING 2
 
 #ifdef HAVE_CONFIG_H
@@ -1076,13 +1076,15 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
     pd->box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    //gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
-    gtk_container_set_border_width (GTK_CONTAINER(pd->box), 0);
+    gtk_widget_set_halign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
+    gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), TRUE);
+    gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+    //gtk_container_set_border_width (GTK_CONTAINER(pd->box), 0);
 
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
     gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
     							   GTK_ORIENTATION_VERTICAL);
-    gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
+    //gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),PBAR_THICKNESS,0);
     //gtk_box_pack_start(GTK_BOX(pd->box),
     //				   gtk_separator_new(GTK_ORIENTATION_VERTICAL),
 	//				   FALSE, FALSE, 0);
@@ -1094,13 +1096,15 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
   }
   else{ /* horizontal bar */
 	pd->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    //gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
+    gtk_widget_set_valign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
+    gtk_widget_set_vexpand (GTK_WIDGET (pd->pbar), TRUE);
+	//gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
 	gtk_container_set_border_width (GTK_CONTAINER(pd->box), BORDER/2);
     gtk_container_add(GTK_CONTAINER(plugin),pd->box);
 
     gtk_orientable_set_orientation(GTK_ORIENTABLE(pd->pbar),
     				GTK_ORIENTATION_HORIZONTAL);
-    gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
+    //gtk_widget_set_size_request(GTK_WIDGET(pd->pbar),0,PBAR_THICKNESS);
     //gtk_box_pack_start(GTK_BOX(pd->box),
     //		           gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
 	//				   FALSE, FALSE, 0);
