@@ -168,14 +168,14 @@ static gboolean update_function (gpointer data){
   
   /* Disable tooltips, reset pbar */
   gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
     
   pd->timeout=0;
 
   pd->timer_on=FALSE;
   
   if( (strlen(pd->timeout_command)==0) || !pd->nowin_if_alarm ) {
-    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
 	/* Display the name of the alarm when the countdown ends */
     dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), pd->active_timer_name);
@@ -281,6 +281,8 @@ static void start_timer (plugin_data *pd){
 
   alrm = (alarm_t *) pd->selected->data;
   
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
+
   /* Record the timer name */
   if (pd->active_timer_name)
 	g_free(pd->active_timer_name);
@@ -380,7 +382,7 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
 
     /* Disable tooltips, reset pbar */
     gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
-    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
     return;
 
@@ -1813,7 +1815,7 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
   load_settings(pd);
   pd->selected = pd->alarm_list;
 
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
 
   add_pbar(pd->base,pd);
 
