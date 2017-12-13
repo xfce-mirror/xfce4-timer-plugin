@@ -1071,10 +1071,13 @@ static void add_pbar(XfcePanelPlugin *plugin, plugin_data *pd){
     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),frac);
   }
   
-  gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR(pd->pbar), TRUE);
+
 
   /* vertical bar */
   if(xfce_panel_plugin_get_orientation(plugin)==GTK_ORIENTATION_HORIZONTAL){
+
+    gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR(pd->pbar), TRUE);
+
     pd->box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_set_halign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
     gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), TRUE);
