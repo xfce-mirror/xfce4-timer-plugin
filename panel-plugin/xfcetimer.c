@@ -168,7 +168,7 @@ static gboolean update_function (gpointer data){
   
   /* Disable tooltips, reset pbar */
   gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
     
   pd->timeout=0;
 
@@ -379,7 +379,7 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
 
     /* Disable tooltips, reset pbar */
     gtk_widget_set_tooltip_text (GTK_WIDGET(pd->base), "");
-    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
 
     return;
 
@@ -1809,7 +1809,7 @@ static void create_plugin_control (XfcePanelPlugin *plugin)
   load_settings(pd);
   pd->selected = pd->alarm_list;
 
-  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),0);
+  gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(pd->pbar),1);
 
   add_pbar(pd->base,pd);
 
