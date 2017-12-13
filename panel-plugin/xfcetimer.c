@@ -268,11 +268,9 @@ static void timer_selected (GtkWidget* menuitem, gpointer data){
 
 static void start_timer (plugin_data *pd){
 
-  GSList *group=NULL;
   gchar temp[8];
-  gint row_count,cur_h,cur_m,cur_s,time;
+  gint cur_h,cur_m,cur_s;
   gint timeout_period;
-  gboolean is_cd;
   GTimeVal timeval;
   struct tm *current;
   alarm_t *alrm;
@@ -350,14 +348,16 @@ static void start_stop_selected (GtkWidget* menuitem, gpointer
                                         data){
 
   plugin_data *pd=(plugin_data *)data;
-  GSList *group=NULL;
-  gchar temp[8];
-  gint row_count,cur_h,cur_m,cur_s,time;
-  gint timeout_period;
-  gboolean is_cd;
-  GTimeVal timeval;
-  struct tm *current;
-  alarm_t *alrm;
+
+
+
+
+
+
+
+
+
+
 
   /* If counting down, we stop the timer and free the resources */
   if(pd->timer_on){
@@ -470,7 +470,7 @@ void make_menu(plugin_data *pd){
   GSList *group = NULL;
   GList *list = NULL;
   alarm_t *alrm;
-  GtkWidget *menuitem, *to_be_activated;
+  GtkWidget *menuitem;
   gchar *itemtext;
 
 
@@ -771,7 +771,7 @@ static void add_edit_clicked (GtkButton *buttonn, gpointer data){
   GtkRadioButton *rb1,*rb2;
   GtkWidget *hbox,*vbox,*button;
   alarm_data *adata=g_new0(alarm_data,1);
-  gchar *nc; gboolean is_cd; gint time;
+  gint time;
   GtkTreeIter iter;
   GtkTreeSelection *select;
   GtkTreeModel *model;
@@ -1752,8 +1752,8 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 static void create_plugin_control (XfcePanelPlugin *plugin)
 {
 
-  GtkWidget *base,*menu,*socket,*menuitem,*box,*pbar2;
-  char command[1024];
+
+
   gchar *filename,*pathname;
   plugin_data *pd=g_new0(plugin_data, 1);
 
