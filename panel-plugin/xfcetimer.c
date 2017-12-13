@@ -185,7 +185,8 @@ static gboolean update_function (gpointer data){
     				GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
 
                            
-    gtk_window_set_title ((GtkWindow *) dialog, dialog_title);                                    
+    gtk_window_set_title ((GtkWindow *) dialog, dialog_title);
+    gtk_window_set_keep_above((GtkWindow *) dialog, TRUE);
  
     gtk_dialog_add_button((GtkDialog *) dialog, _("Close"), 0);
 	gtk_dialog_add_button ( (GtkDialog *) dialog, _("Rerun the timer"), 1);
