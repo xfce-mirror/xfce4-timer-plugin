@@ -64,13 +64,7 @@ make_menu (plugin_data *pd);
 
 
 
-/**
- * This is the timeout function that
- * repeats the alarm.
- **/
-
-
-
+/* This is the timeout function that repeats the alarm */
 static gboolean
 repeat_alarm (gpointer data)
 {
@@ -101,9 +95,6 @@ repeat_alarm (gpointer data)
  * the alarm whose row will be highlighted in the
  * treeview. If it is NULL, no action is taken.
  **/
-
-
-
 static void
 fill_liststore (plugin_data *pd, GList *selected)
 {
@@ -141,9 +132,6 @@ fill_liststore (plugin_data *pd, GList *selected)
  * This is the update function that updates the
  * tooltip, pbar and keeps track of elapsed time
  **/
-
-
-
 static gboolean
 update_function (gpointer data)
 {
@@ -261,9 +249,6 @@ update_function (gpointer data)
  * This is the callback function called when a timer
  * is selected in the popup menu
  **/
-
-
-
 static void
 timer_selected (GtkWidget* menuitem, gpointer data)
 {
@@ -298,12 +283,9 @@ timer_selected (GtkWidget* menuitem, gpointer data)
 
 
 /**
- * Used for starting/rerunning the timer.
- * Assumes that the timer is already stopped.
+ * Used for starting/rerunning the timer
+ * Assumes that the timer is already stopped
  **/
-
-
-
 static void
 start_timer (plugin_data *pd)
 {
@@ -315,7 +297,7 @@ start_timer (plugin_data *pd)
   struct tm *current;
   alarm_t *alrm;
 
-  /* Empty timer list-> Nothing to do. pd->selected=0, though. */
+  /* Empty timer list-> Nothing to do. pd->selected=0, though */
   if (pd->selected == NULL)
     return;
 
@@ -389,9 +371,6 @@ start_timer (plugin_data *pd)
  * This is the callback function called when the
  * start/stop item is selected in the popup menu
  **/
-
-
-
 static void
 start_stop_selected (GtkWidget* menuitem, gpointer data)
 {
@@ -454,9 +433,6 @@ pause_resume_selected (GtkWidget* menuitem, gpointer data)
 
 
 /* Callback when "Stop the alarm" is selected in the popup menu */
-
-
-
 static void
 stop_repeating_alarm (GtkWidget* menuitem, gpointer data)
 {
@@ -476,9 +452,6 @@ stop_repeating_alarm (GtkWidget* menuitem, gpointer data)
 
 
 /* Callback when clicking on pbar. Pops the menu up/down */
-
-
-
 static void
 pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
 {
@@ -499,12 +472,7 @@ pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
 
 
 
-/**
- * This function generates the popup menu
- **/
-
-
-
+/* This function generates the popup menu */
 void
 make_menu (plugin_data *pd)
 {
@@ -610,12 +578,7 @@ make_menu (plugin_data *pd)
 
 
 
-/**
- * Callback to the OK button in the Add window
- **/
-
-
-
+/* Callback to the OK button in the Add window */
 static void
 ok_add (GtkButton *button, gpointer data)
 {
@@ -685,12 +648,7 @@ ok_add (GtkButton *button, gpointer data)
 
 
 
-/**
- * Callback for OK button on Edit window. See ok_add for comments.
- **/
-
-
-
+/* Callback for OK button on Edit window. See ok_add for comments */
 static void
 ok_edit (GtkButton *button, gpointer data)
 {
@@ -764,12 +722,7 @@ ok_edit (GtkButton *button, gpointer data)
 
 
 
-/**
- * Callback for cancelling Add and Edit. Just closes the window :).
- **/
-
-
-
+/* Callback for cancelling Add and Edit. Just closes the window :) */
 static void
 cancel_add_edit (GtkButton *button, gpointer data)
 {
@@ -781,12 +734,7 @@ cancel_add_edit (GtkButton *button, gpointer data)
 
 
 
-/**
- * Callback when first radio button in dialog has been selected.
- */
-
-
-
+/* Callback when first radio button in dialog has been selected */
 static void
 alarmdialog_countdown_toggled (GtkButton *button, gpointer data)
 {
@@ -801,12 +749,7 @@ alarmdialog_countdown_toggled (GtkButton *button, gpointer data)
 
 
 
-/**
- * Callback when second radio button in dialog has been selected.
- */
-
-
-
+/* Callback when second radio button in dialog has been selected */
 static void
 alarmdialog_alarmtime_toggled (GtkButton *button, gpointer data)
 {
@@ -821,12 +764,9 @@ alarmdialog_alarmtime_toggled (GtkButton *button, gpointer data)
 
 
 /**
- * Callback to the Add button in options window.
- * Creates the Add window.
+ * Callback to the Add button in options window
+ * Creates the Add window
  **/
-
-
-
 static void
 add_edit_clicked (GtkButton *buttonn, gpointer data)
 {
@@ -997,7 +937,6 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
           gtk_spin_button_set_value (GTK_SPIN_BUTTON (time_m), time % 60);
           gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (rb2), TRUE); // active by default
         }
-
     }
 
   gtk_window_set_title (window, _ ("Edit alarm"));
@@ -1006,12 +945,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
 
 
-/**
- * Calllback for the remove button in the options
- **/
-
-
-
+/* Calllback for the remove button in the options */
 static void
 remove_clicked (GtkButton *button, gpointer data)
 {
@@ -1046,12 +980,7 @@ remove_clicked (GtkButton *button, gpointer data)
 
 
 
-/**
- * Moves an alarm one row up in the list
- **/
-
-
-
+/* Moves an alarm one row up in the list */
 static void
 up_clicked (GtkButton *button, gpointer data)
 {
@@ -1095,12 +1024,7 @@ up_clicked (GtkButton *button, gpointer data)
 
 
 
-/**
- * Moves an alarm one row down in the list
- **/
-
-
-
+/* Moves an alarm one row down in the list */
 static void
 down_clicked (GtkButton *button, gpointer data)
 {
@@ -1145,12 +1069,9 @@ down_clicked (GtkButton *button, gpointer data)
 
 
 /**
- * Adds the progressbar, taking into account the orientation.
+ * Adds the progressbar, taking into account the orientation
  * pd->pbar is not destroyed, just reparented (saves fraction setting code etc.).
  **/
-
-
-
 static void
 add_pbar (XfcePanelPlugin *plugin, plugin_data *pd)
 {
@@ -1201,12 +1122,7 @@ add_pbar (XfcePanelPlugin *plugin, plugin_data *pd)
 
 
 
-/**
- * Callback for orientation change of panel. Just calls add_pbar.
- **/
-
-
-
+/* Callback for orientation change of panel, just calls add_pbar */
 static void
 orient_change (XfcePanelPlugin *plugin, GtkOrientation orient, plugin_data *pd)
 {
@@ -1219,9 +1135,6 @@ orient_change (XfcePanelPlugin *plugin, GtkOrientation orient, plugin_data *pd)
  * Loads the settings and alarm list from a keyfile, saves the
  * alarm list in the linked list pd->alarm_list 
  **/
-
-
-
 static void
 load_settings (plugin_data *pd)
 {
@@ -1309,12 +1222,7 @@ load_settings (plugin_data *pd)
 
 
 
-/**
- * Saves the list to a keyfile, backup a permanent copy
- **/
-
-
-
+/* Saves the list to a keyfile, backup a permanent copy */
 static void
 save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
 {
@@ -1329,10 +1237,12 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
     return;
 
-  // We do this to start a fresh config file, otherwise if the old config file is longer,
-  // the tail will not get truncated. See
-  // http://bugzilla.xfce.org/show_bug.cgi?id=2647
-  // for a related bug report.
+  /**
+   * We do this to start a fresh config file, otherwise if the old config file
+   * is longer,   the tail will not get truncated
+   * See http://bugzilla.xfce.org/show_bug.cgi?id=2647
+   * for a related bug report
+   **/
   conffile = fopen (file, "w");
   if (conffile)
     fclose (conffile);
@@ -1395,12 +1305,7 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
 
 
 
-/**
- * Activates the Edit and Remove buttons when an item in the list is selected
- **/
-
-
-
+/* Activates the Edit and Remove buttons when an item in the list is selected */
 static void
 tree_selected (GtkTreeSelection *select, gpointer data)
 {
@@ -1411,12 +1316,6 @@ tree_selected (GtkTreeSelection *select, gpointer data)
   gtk_widget_set_sensitive (pd->buttondown, TRUE);
 
 }
-
-
-
-/**
- * plugin_free
- **/
 
 
 
@@ -1463,12 +1362,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
 
 
-/**
- * options dialog response
- **/
-
-
-
+/* options dialog response */
 static void
 options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
 {
@@ -1483,12 +1377,7 @@ options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
 
 
 
-/**
- * Alarm dialog response
- **/
-
-
-
+/* Alarm dialog response */
 static void
 dialog_response (GtkWidget *dlg, int response, plugin_data *pd)
 {
@@ -1504,12 +1393,7 @@ dialog_response (GtkWidget *dlg, int response, plugin_data *pd)
 
 
 
-/**
- * nowin_if_alarm toggle callback
- **/
-
-
-
+/* nowin_if_alarm toggle callback */
 static void
 toggle_nowin_if_alarm (GtkToggleButton *button, gpointer data)
 {
@@ -1521,12 +1405,7 @@ toggle_nowin_if_alarm (GtkToggleButton *button, gpointer data)
 
 
 
-/**
- * selecting_starts toggle callback
- **/
-
-
-
+/* selecting_starts toggle callback */
 static void
 toggle_selecting_starts (GtkToggleButton *button, gpointer data)
 {
@@ -1537,12 +1416,7 @@ toggle_selecting_starts (GtkToggleButton *button, gpointer data)
 
 
 
-/**
- * toggle_global_command toggle callback
- **/
-
-
-
+/* toggle_global_command toggle callback */
 static void
 toggle_global_command (GtkToggleButton *button, gpointer data)
 {
@@ -1555,12 +1429,7 @@ toggle_global_command (GtkToggleButton *button, gpointer data)
 
 
 
-/**
- * toggle_repeat_alarm toggle callback
- **/
-
-
-
+/* Toggle_repeat_alarm toggle callback */
 static void
 toggle_repeat_alarm (GtkToggleButton *button, gpointer data)
 {
@@ -1572,13 +1441,7 @@ toggle_repeat_alarm (GtkToggleButton *button, gpointer data)
 
 
 
-/**
- * Spinbutton 1 (#of alarm repetitions
- * value change callback              
- **/
-
-
-
+/* Spinbutton 1 (#of alarm repetitions value change callback */
 static void
 spin1_changed (GtkSpinButton *button, gpointer data)
 {
@@ -1589,13 +1452,7 @@ spin1_changed (GtkSpinButton *button, gpointer data)
 
 
 
-/**
- * Spinbutton 1 (alarm repetition 
- * interval) value change callback 
- **/
-
-
-
+/* Spinbutton 1 (alarm repetition interval) value change callback */
 static void
 spin2_changed (GtkSpinButton *button, gpointer data)
 {
@@ -1606,12 +1463,7 @@ spin2_changed (GtkSpinButton *button, gpointer data)
 
 
 
-/**
- * options dialog
- **/
-
-
-
+/* Options dialog */
 static void
 plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 {
@@ -1819,12 +1671,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 
 
 
-/**
- * Show the "About" window
- **/
-
-
-
+/* Show the "About" window */
 static void
 show_about_window (XfcePanelPlugin *plugin, plugin_data *pd)
 {
@@ -1886,16 +1733,10 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
 /**
  * create_sample_control
- *
  * Create a new instance of the plugin.
- *
  * @control : #Control parent container
- *
  * Returns %TRUE on success, %FALSE on failure.
  **/
-
-
-
 static void
 create_plugin_control (XfcePanelPlugin *plugin)
 {
@@ -1981,4 +1822,3 @@ create_plugin_control (XfcePanelPlugin *plugin)
   xfce_panel_plugin_menu_show_about (plugin);
   g_signal_connect (plugin, "about", G_CALLBACK (show_about_window), pd);
 }
-
