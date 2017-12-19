@@ -640,14 +640,14 @@ ok_add (GtkButton *button, gpointer data)
                       -1);
 
   /* Free resources */
-  gtk_widget_destroy (GTK_WIDGET (adata->window));
+  gtk_widget_destroy (GTK_WIDGET (adata->dialog));
 
   g_free (adata);
 }
 
 
 
-/* Callback for OK button on Edit window. See ok_add for comments */
+/* Callback for OK button on Edit dialog. See ok_add for comments */
 static void
 ok_edit (GtkButton *button, gpointer data)
 {
@@ -715,19 +715,19 @@ ok_edit (GtkButton *button, gpointer data)
                           timeinfo, -1);
     }
 
-  gtk_widget_destroy (GTK_WIDGET (adata->window));
+  gtk_widget_destroy (GTK_WIDGET (adata->dialog));
   g_free (adata);
 }
 
 
 
-/* Callback for cancelling Add and Edit. Just closes the window :) */
+/* Callback for cancelling Add and Edit. Just closes the dialog :) */
 static void
 cancel_add_edit (GtkButton *button, gpointer data)
 {
   alarm_data *adata = (alarm_data *) data;
 
-  gtk_widget_destroy (GTK_WIDGET (adata->window));
+  gtk_widget_destroy (GTK_WIDGET (adata->dialog));
   g_free (adata);
 }
 
@@ -771,7 +771,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 {
   plugin_data *pd = (plugin_data *) data;
   GtkWindow *parent_window;
-  GtkWindow *window;
+  GtkWidget *dialog;
+  GtkWidget *box;
   GtkLabel *label;
   GtkEntry *name, *command;
   GtkSpinButton *timeh, *timem, *times, *time_h, *time_m;
@@ -785,24 +786,31 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   GList *list;
   alarm_t *alrm;
 
-  window = (GtkWindow *) gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  parent_window = (GtkWindow *) gtk_widget_get_toplevel (GTK_WIDGET (buttonn));
 
-  adata->window = window;
+  /* Create dialog */
+  dialog = gtk_dialog_new ();
+
+  /* Set it modal and transient for main window. */
+  gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
+  gtk_window_set_transient_for (GTK_WINDOW (dialog),
+                                GTK_WINDOW (parent_window));
+
+  gtk_window_set_icon_name (GTK_WINDOW (dialog), "xfce4-timer-plugin");
+
+  adata->dialog = dialog;
   adata->pd = pd;
 
-  gtk_window_set_modal (GTK_WINDOW (window), TRUE);
-  parent_window = (GtkWindow *) gtk_widget_get_toplevel (GTK_WIDGET (buttonn));
-  if (gtk_widget_is_toplevel (GTK_WIDGET (parent_window)))
-    gtk_window_set_transient_for (GTK_WINDOW (window),
-                                  GTK_WINDOW (parent_window));
-
+  /* Set title */
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, BORDER);
-  gtk_container_add (GTK_CONTAINER (window), vbox);
-  gtk_container_set_border_width (GTK_CONTAINER (window), BORDER);
+  gtk_container_add (GTK_CONTAINER (dialog), vbox);
+  gtk_container_set_border_width (GTK_CONTAINER (dialog), BORDER);
+
+  box = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
 
   /***********/
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, BORDER);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (box), hbox, FALSE, FALSE, WIDGET_SPACING);
 
   label = (GtkLabel *) gtk_label_new (_ ("Name:"));
   name = (GtkEntry *) gtk_entry_new ();
@@ -823,10 +831,11 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
                     G_CALLBACK (alarmdialog_alarmtime_toggled), adata);
   adata->rb1 = rb1;
 
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (rb1), TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (rb1), TRUE, TRUE,
+  WIDGET_SPACING);
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (hbox), TRUE, TRUE, 0);
 
   timeh = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 23, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timeh), FALSE, FALSE,
@@ -851,12 +860,13 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   WIDGET_SPACING);
 
   label = (GtkLabel *) gtk_label_new (_ ("or"));
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (label), TRUE, TRUE, BORDER);
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), TRUE, TRUE, BORDER);
 
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (rb2), TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (rb2), TRUE, TRUE,
+  WIDGET_SPACING);
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, WIDGET_SPACING);
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (hbox), TRUE, TRUE, 0);
 
   time_h = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 23, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_h), FALSE, FALSE, 0);
@@ -872,18 +882,18 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   /****************/
 
   label = (GtkLabel *) gtk_label_new (_ ("Command to run:"));
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (label), FALSE, FALSE,
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), FALSE, FALSE,
   WIDGET_SPACING);
   command = (GtkEntry *) gtk_entry_new ();
   adata->command = command;
-  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (command), TRUE, TRUE,
+  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (command), TRUE, TRUE,
   WIDGET_SPACING);
 
   /****************/
 
   hbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (hbox), GTK_BUTTONBOX_END);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (box), hbox, TRUE, TRUE, WIDGET_SPACING);
 
   button = gtk_button_new_with_label (_ ("Cancel"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
@@ -901,8 +911,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   /* If this is the add window, we're done */
   if (GTK_WIDGET (buttonn) == pd->buttonadd)
     {
-      gtk_window_set_title (window, _ ("Add new alarm"));
-      gtk_widget_show_all (GTK_WIDGET (window));
+      gtk_window_set_title (GTK_WINDOW (dialog), _ ("Add new alarm"));
+      gtk_widget_show_all (GTK_WIDGET (dialog));
       alarmdialog_alarmtime_toggled (GTK_BUTTON (rb2), adata);
       return;
     }
@@ -938,8 +948,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
         }
     }
 
-  gtk_window_set_title (window, _ ("Edit alarm"));
-  gtk_widget_show_all (GTK_WIDGET (window));
+  gtk_window_set_title (GTK_WINDOW (dialog), _ ("Edit alarm"));
+  gtk_widget_show_all (GTK_WIDGET (dialog));
 }
 
 

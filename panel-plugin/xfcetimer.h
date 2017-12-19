@@ -69,6 +69,6 @@ typedef struct
   GtkSpinButton *time_h, *time_m; /* Spinbuttons for 24h format */
   GtkEntry *name, *command; /* Name, and command entries */
   GtkRadioButton *rb1; /* Radio button for the h-m-s format */
-  GtkWindow *window; /* Add/Edit window */
+  GtkWidget *dialog; /* Add/Edit dialog */
   plugin_data *pd; /* Plugin data */
 } alarm_data;
