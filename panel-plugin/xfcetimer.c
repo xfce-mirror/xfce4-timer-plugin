@@ -488,26 +488,6 @@ make_menu (plugin_data *pd)
 
   pd->menu = gtk_menu_new ();
 
-  /* If the alarm is paused, the only option is to resume or stop */
-  if (pd->is_paused)
-    {
-      menuitem = gtk_menu_item_new_with_label (_ ("Resume timer"));
-
-      gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
-      g_signal_connect (G_OBJECT (menuitem), "activate",
-                        G_CALLBACK (pause_resume_selected), pd);
-      gtk_widget_show (menuitem);
-
-      menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
-
-      gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
-      g_signal_connect (G_OBJECT (menuitem), "activate",
-                        G_CALLBACK (start_stop_selected), pd);
-      gtk_widget_show (menuitem);
-      gtk_widget_show (pd->menu);
-      return;
-    }
-
   list = pd->alarm_list;
 
   while (list)
@@ -540,39 +520,58 @@ make_menu (plugin_data *pd)
   menuitem = gtk_separator_menu_item_new ();
   gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
 
-  /* Pause menu item */
-  if (pd->timer_on && !pd->is_paused && pd->is_countdown)
+  /* If the alarm is paused, the only option is to resume or stop */
+  if (pd->is_paused)
     {
-      menuitem = gtk_menu_item_new_with_label (_ ("Pause timer"));
+      menuitem = gtk_menu_item_new_with_label (_ ("Resume timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
       g_signal_connect (G_OBJECT (menuitem), "activate",
                         G_CALLBACK (pause_resume_selected), pd);
-    }
+      gtk_widget_show (menuitem);
 
-  /* Start/stop menu item */
-  if (!pd->alarm_repeating)
-    {
-      if (pd->timer_on)
-        menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
-      else
-        menuitem = gtk_menu_item_new_with_label (_ ("Start timer"));
+      menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
       g_signal_connect (G_OBJECT (menuitem), "activate",
                         G_CALLBACK (start_stop_selected), pd);
+      gtk_widget_show (menuitem);
     }
-
-  /* Stop repeating alarm if so */
-  if (pd->alarm_repeating)
+  else
     {
-      menuitem = gtk_menu_item_new_with_label (_ ("Stop the alarm"));
+      /* Pause menu item */
+      if (pd->timer_on && !pd->is_paused && pd->is_countdown)
+        {
+          menuitem = gtk_menu_item_new_with_label (_ ("Pause timer"));
 
-      gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
-      g_signal_connect (G_OBJECT (menuitem), "activate",
-                        G_CALLBACK (stop_repeating_alarm), pd);
+          gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
+          g_signal_connect (G_OBJECT (menuitem), "activate",
+                            G_CALLBACK (pause_resume_selected), pd);
+        }
+
+      /* Start/stop menu item */
+      if (!pd->alarm_repeating)
+        {
+          if (pd->timer_on)
+            menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
+          else
+            menuitem = gtk_menu_item_new_with_label (_ ("Start timer"));
+
+          gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
+          g_signal_connect (G_OBJECT (menuitem), "activate",
+                            G_CALLBACK (start_stop_selected), pd);
+        }
+
+      /* Stop repeating alarm if so */
+      if (pd->alarm_repeating)
+        {
+          menuitem = gtk_menu_item_new_with_label (_ ("Stop the alarm"));
+
+          gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
+          g_signal_connect (G_OBJECT (menuitem), "activate",
+                            G_CALLBACK (stop_repeating_alarm), pd);
+        }
     }
-
   gtk_widget_show_all (pd->menu);
 }
 
