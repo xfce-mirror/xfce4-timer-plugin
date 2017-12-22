@@ -150,17 +150,17 @@ update_function (gpointer data)
       remaining = pd->timeout_period_in_sec - elapsed_sec;
 
       if (remaining >= 3600)
-        tiptext = g_strdup_printf (_ ("%dh %dm %ds left"), remaining / 3600,
+        tiptext = g_strdup_printf (_("%dh %dm %ds left"), remaining / 3600,
                                    (remaining % 3600) / 60, remaining % 60);
       else if (remaining >= 60)
-        tiptext = g_strdup_printf (_ ("%dm %ds left"), remaining / 60,
+        tiptext = g_strdup_printf (_("%dm %ds left"), remaining / 60,
                                    remaining % 60);
       else
-        tiptext = g_strdup_printf (_ ("%ds left"), remaining);
+        tiptext = g_strdup_printf (_("%ds left"), remaining);
 
       if (pd->is_paused)
         {
-          temp = g_strconcat (tiptext, _ (" (Paused)"), NULL);
+          temp = g_strconcat (tiptext, _(" (Paused)"), NULL);
           g_free (tiptext);
           tiptext = temp;
         }
@@ -195,7 +195,7 @@ update_function (gpointer data)
 
       /* Display the name of the alarm when the countdown ends */
       dialog_message = g_strdup_printf (
-          _ ("Beeep! :) \nTime is up for the alarm %s."),
+          _("Beeep! :) \nTime is up for the alarm %s."),
           pd->active_timer_name);
       dialog_title = g_strdup_printf ("Xfce4 Timer Plugin: %s",
                                       pd->active_timer_name);
@@ -207,8 +207,8 @@ update_function (gpointer data)
       gtk_window_set_title ((GtkWindow *) dialog, dialog_title);
       gtk_window_set_keep_above ((GtkWindow *) dialog, TRUE);
 
-      gtk_dialog_add_button ((GtkDialog *) dialog, _ ("Close"), 0);
-      gtk_dialog_add_button ((GtkDialog *) dialog, _ ("Rerun the timer"), 1);
+      gtk_dialog_add_button ((GtkDialog *) dialog, _("Close"), 0);
+      gtk_dialog_add_button ((GtkDialog *) dialog, _("Rerun the timer"), 1);
 
       g_signal_connect (dialog, "response", G_CALLBACK (dialog_response), pd);
 
@@ -523,14 +523,14 @@ make_menu (plugin_data *pd)
   /* If the alarm is paused, the only option is to resume or stop */
   if (pd->is_paused)
     {
-      menuitem = gtk_menu_item_new_with_label (_ ("Resume timer"));
+      menuitem = gtk_menu_item_new_with_label (_("Resume timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
       g_signal_connect (G_OBJECT (menuitem), "activate",
                         G_CALLBACK (pause_resume_selected), pd);
       gtk_widget_show (menuitem);
 
-      menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
+      menuitem = gtk_menu_item_new_with_label (_("Stop timer"));
 
       gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
       g_signal_connect (G_OBJECT (menuitem), "activate",
@@ -542,7 +542,7 @@ make_menu (plugin_data *pd)
       /* Pause menu item */
       if (pd->timer_on && !pd->is_paused && pd->is_countdown)
         {
-          menuitem = gtk_menu_item_new_with_label (_ ("Pause timer"));
+          menuitem = gtk_menu_item_new_with_label (_("Pause timer"));
 
           gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
           g_signal_connect (G_OBJECT (menuitem), "activate",
@@ -553,9 +553,9 @@ make_menu (plugin_data *pd)
       if (!pd->alarm_repeating)
         {
           if (pd->timer_on)
-            menuitem = gtk_menu_item_new_with_label (_ ("Stop timer"));
+            menuitem = gtk_menu_item_new_with_label (_("Stop timer"));
           else
-            menuitem = gtk_menu_item_new_with_label (_ ("Start timer"));
+            menuitem = gtk_menu_item_new_with_label (_("Start timer"));
 
           gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
           g_signal_connect (G_OBJECT (menuitem), "activate",
@@ -565,7 +565,7 @@ make_menu (plugin_data *pd)
       /* Stop repeating alarm if so */
       if (pd->alarm_repeating)
         {
-          menuitem = gtk_menu_item_new_with_label (_ ("Stop the alarm"));
+          menuitem = gtk_menu_item_new_with_label (_("Stop the alarm"));
 
           gtk_menu_shell_append (GTK_MENU_SHELL (pd->menu), menuitem);
           g_signal_connect (G_OBJECT (menuitem), "activate",
@@ -619,11 +619,11 @@ ok_add (GtkButton *button, gpointer data)
       t = t1 * 3600 + t2 * 60 + t3;
 
       if (t1 > 0)
-        timeinfo = g_strdup_printf (_ ("%dh %dm %ds"), t1, t2, t3);
+        timeinfo = g_strdup_printf (_("%dh %dm %ds"), t1, t2, t3);
       else if (t2 > 0)
-        timeinfo = g_strdup_printf (_ ("%dm %ds"), t2, t3);
+        timeinfo = g_strdup_printf (_("%dm %ds"), t2, t3);
       else
-        timeinfo = g_strdup_printf (_ ("%ds"), t3);
+        timeinfo = g_strdup_printf (_("%ds"), t3);
     }
   else
     {
@@ -631,7 +631,7 @@ ok_add (GtkButton *button, gpointer data)
       t1 = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (adata->time_h));
       t2 = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (adata->time_m));
       t = t1 * 60 + t2;
-      timeinfo = g_strdup_printf (_ ("At %02d:%02d"), t1, t2);
+      timeinfo = g_strdup_printf (_("At %02d:%02d"), t1, t2);
     }
 
   newalarm->time = t;
@@ -693,11 +693,11 @@ ok_edit (GtkButton *button, gpointer data)
           t = t1 * 3600 + t2 * 60 + t3;
 
           if (t1 > 0)
-            timeinfo = g_strdup_printf (_ ("%dh %dm %ds"), t1, t2, t3);
+            timeinfo = g_strdup_printf (_("%dh %dm %ds"), t1, t2, t3);
           else if (t2 > 0)
-            timeinfo = g_strdup_printf (_ ("%dm %ds"), t2, t3);
+            timeinfo = g_strdup_printf (_("%dm %ds"), t2, t3);
           else
-            timeinfo = g_strdup_printf (_ ("%ds"), t3);
+            timeinfo = g_strdup_printf (_("%ds"), t3);
         }
       else
         {
@@ -706,7 +706,7 @@ ok_edit (GtkButton *button, gpointer data)
           t2 = gtk_spin_button_get_value_as_int (
               GTK_SPIN_BUTTON (adata->time_m));
           t = t1 * 60 + t2;
-          timeinfo = g_strdup_printf (_ ("At %02d:%02d"), t1, t2);
+          timeinfo = g_strdup_printf (_("At %02d:%02d"), t1, t2);
         }
 
       alrm->time = t;
@@ -812,7 +812,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, BORDER);
   gtk_box_pack_start (GTK_BOX (box), hbox, FALSE, FALSE, WIDGET_SPACING);
 
-  label = (GtkLabel *) gtk_label_new (_ ("Name:"));
+  label = (GtkLabel *) gtk_label_new (_("Name:"));
   name = (GtkEntry *) gtk_entry_new ();
   adata->name = name;
 
@@ -821,12 +821,12 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
   /**********/
   rb1 = (GtkRadioButton *) gtk_radio_button_new_with_label (
-      NULL, _ ("Enter the countdown time"));
+      NULL, _("Enter the countdown time"));
   g_signal_connect (G_OBJECT (rb1), "toggled",
                     G_CALLBACK (alarmdialog_countdown_toggled), adata);
   rb2 = (GtkRadioButton *) gtk_radio_button_new_with_label (
       gtk_radio_button_get_group (rb1),
-      _ ("Enter the time of alarm (24h format)"));
+      _("Enter the time of alarm (24h format)"));
   g_signal_connect (G_OBJECT (rb2), "toggled",
                     G_CALLBACK (alarmdialog_alarmtime_toggled), adata);
   adata->rb1 = rb1;
@@ -841,25 +841,25 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timeh), FALSE, FALSE,
   WIDGET_SPACING);
   adata->timeh = timeh;
-  label = (GtkLabel *) gtk_label_new (_ ("h  "));
+  label = (GtkLabel *) gtk_label_new (_("h  "));
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
   WIDGET_SPACING);
   timem = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timem), FALSE, FALSE,
   WIDGET_SPACING);
   adata->timem = timem;
-  label = (GtkLabel *) gtk_label_new (_ ("m  "));
+  label = (GtkLabel *) gtk_label_new (_("m  "));
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
   WIDGET_SPACING);
   times = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (times), FALSE, FALSE,
   WIDGET_SPACING);
   adata->times = times;
-  label = (GtkLabel *) gtk_label_new (_ ("s  "));
+  label = (GtkLabel *) gtk_label_new (_("s  "));
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
   WIDGET_SPACING);
 
-  label = (GtkLabel *) gtk_label_new (_ ("or"));
+  label = (GtkLabel *) gtk_label_new (_("or"));
   gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), TRUE, TRUE, BORDER);
 
   gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (rb2), TRUE, TRUE,
@@ -881,7 +881,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
   /****************/
 
-  label = (GtkLabel *) gtk_label_new (_ ("Command to run:"));
+  label = (GtkLabel *) gtk_label_new (_("Command to run:"));
   gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), FALSE, FALSE,
   WIDGET_SPACING);
   command = (GtkEntry *) gtk_entry_new ();
@@ -895,12 +895,12 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   gtk_button_box_set_layout (GTK_BUTTON_BOX (hbox), GTK_BUTTONBOX_END);
   gtk_box_pack_start (GTK_BOX (box), hbox, TRUE, TRUE, WIDGET_SPACING);
 
-  button = gtk_button_new_with_label (_ ("Cancel"));
+  button = gtk_button_new_with_label (_("Cancel"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_add_edit),
                     adata);
 
-  button = gtk_button_new_with_label (_ ("Acept"));
+  button = gtk_button_new_with_label (_("Acept"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
   if (GTK_WIDGET (buttonn) == pd->buttonadd)
     g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_add), adata);
@@ -911,7 +911,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   /* If this is the add window, we're done */
   if (GTK_WIDGET (buttonn) == pd->buttonadd)
     {
-      gtk_window_set_title (GTK_WINDOW (dialog), _ ("Add new alarm"));
+      gtk_window_set_title (GTK_WINDOW (dialog), _("Add new alarm"));
       gtk_widget_show_all (GTK_WIDGET (dialog));
       alarmdialog_alarmtime_toggled (GTK_BUTTON (rb2), adata);
       return;
@@ -948,7 +948,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
         }
     }
 
-  gtk_window_set_title (GTK_WINDOW (dialog), _ ("Edit alarm"));
+  gtk_window_set_title (GTK_WINDOW (dialog), _("Edit alarm"));
   gtk_widget_show_all (GTK_WIDGET (dialog));
 }
 
@@ -1488,9 +1488,9 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   xfce_panel_plugin_block_menu (plugin);
 
   header = xfce_titled_dialog_new_with_buttons (
-      _ ("Xfce4 Timer Options"),
+      _("Xfce4 Timer Options"),
       GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-      GTK_DIALOG_DESTROY_WITH_PARENT, _ ("Close"), GTK_RESPONSE_OK, NULL);
+      GTK_DIALOG_DESTROY_WITH_PARENT, _("Close"), GTK_RESPONSE_OK, NULL);
 
   dlg = header;
 
@@ -1528,15 +1528,15 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
       gtk_tree_view_get_selection (GTK_TREE_VIEW (tree)), GTK_SELECTION_SINGLE);
 
   renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes (_ ("Timer name"), renderer,
+  column = gtk_tree_view_column_new_with_attributes (_("Timer name"), renderer,
                                                      "text", 1, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
   column = gtk_tree_view_column_new_with_attributes (
-      _ ("Countdown period /\nAlarm time"), renderer, "text", 2, NULL);
+      _("Countdown period /\nAlarm time"), renderer, "text", 2, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
-  column = gtk_tree_view_column_new_with_attributes (_ ("Alarm command"),
+  column = gtk_tree_view_column_new_with_attributes (_("Alarm command"),
                                                      renderer, "text", 3, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
@@ -1554,7 +1554,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   gtk_button_box_set_layout (GTK_BUTTON_BOX (buttonbox), GTK_BUTTONBOX_START);
   gtk_box_pack_start (GTK_BOX (hbox), buttonbox, FALSE, FALSE, 0);
 
-  button = gtk_button_new_with_label (_ ("Add"));
+  button = gtk_button_new_with_label (_("Add"));
   pd->buttonadd = button;
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
   WIDGET_SPACING << 1);
@@ -1562,7 +1562,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (add_edit_clicked),
                     pd);
 
-  button = gtk_button_new_with_label (_ ("Edit"));
+  button = gtk_button_new_with_label (_("Edit"));
   pd->buttonedit = button;
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
   WIDGET_SPACING << 1);
@@ -1570,7 +1570,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (add_edit_clicked),
                     pd);
 
-  button = gtk_button_new_with_label (_ ("Remove"));
+  button = gtk_button_new_with_label (_("Remove"));
   pd->buttonremove = button;
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
   WIDGET_SPACING);
@@ -1578,14 +1578,14 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (remove_clicked),
                     pd);
 
-  button = gtk_button_new_with_label (_ ("Up"));
+  button = gtk_button_new_with_label (_("Up"));
   pd->buttonup = button;
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
   WIDGET_SPACING);
   gtk_widget_set_sensitive (button, FALSE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (up_clicked), pd);
 
-  button = gtk_button_new_with_label (_ ("Down"));
+  button = gtk_button_new_with_label (_("Down"));
   pd->buttondown = button;
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
   WIDGET_SPACING);
@@ -1601,13 +1601,13 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                       BORDER);
 
   button = gtk_check_button_new_with_label (
-      _ ("Don't display a warning  if an alarm command is set"));
+      _("Don't display a warning  if an alarm command is set"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), pd->nowin_if_alarm);
   g_signal_connect (G_OBJECT (button), "toggled",
                     G_CALLBACK (toggle_nowin_if_alarm), pd);
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, WIDGET_SPACING);
 
-  button = gtk_check_button_new_with_label (_ ("Selecting a timer starts it"));
+  button = gtk_check_button_new_with_label (_("Selecting a timer starts it"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
                                 pd->selecting_starts);
   g_signal_connect (G_OBJECT (button), "toggled",
@@ -1620,7 +1620,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                       BORDER);
 
   /* Default alarm command config */
-  button = gtk_check_button_new_with_label (_ ("Use a default alarm command"));
+  button = gtk_check_button_new_with_label (_("Use a default alarm command"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
                                 pd->use_global_command);
   g_signal_connect (G_OBJECT (button), "toggled",
@@ -1629,7 +1629,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   pd->global_command_box = hbox;
-  gtk_box_pack_start (GTK_BOX (hbox), gtk_label_new (_ ("Default command: ")),
+  gtk_box_pack_start (GTK_BOX (hbox), gtk_label_new (_("Default command: ")),
                       FALSE, FALSE, 0);
   pd->glob_command_entry = (GtkWidget *) gtk_entry_new ();
   gtk_widget_set_size_request (pd->glob_command_entry, 400, -1);
@@ -1645,7 +1645,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                       BORDER);
 
   /* Alarm repetitions config */
-  button = gtk_check_button_new_with_label (_ ("Repeat the alarm command"));
+  button = gtk_check_button_new_with_label (_("Repeat the alarm command"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), pd->repeat_alarm);
   g_signal_connect (G_OBJECT (button), "toggled",
                     G_CALLBACK (toggle_repeat_alarm), pd);
@@ -1654,7 +1654,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   pd->repeat_alarm_box = hbox;
   gtk_box_pack_start (GTK_BOX (hbox),
-                      gtk_label_new (_ ("Number of repetitions")), FALSE, FALSE,
+                      gtk_label_new (_("Number of repetitions")), FALSE, FALSE,
                       0);
   spinbutton = gtk_spin_button_new_with_range (1, 50, 1);
   pd->spin_repeat = spinbutton;
@@ -1663,7 +1663,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                     G_CALLBACK (spin1_changed), pd);
   gtk_box_pack_start (GTK_BOX (hbox), spinbutton, FALSE, FALSE, 10);
   gtk_box_pack_start (GTK_BOX (hbox),
-                      gtk_label_new (_ ("  Time interval (sec.)")), FALSE,
+                      gtk_label_new (_("  Time interval (sec.)")), FALSE,
                       FALSE, 0);
   spinbutton = gtk_spin_button_new_with_range (1, 600, 1);
   pd->spin_interval = spinbutton;
@@ -1725,13 +1725,13 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
   icon = xfce_panel_pixbuf_from_source ("xfce4-timer-plugin", NULL, 48);
   gtk_show_about_dialog (
-      NULL, "title", _ ("About xfce4-timer-plugin"), "logo", icon, "license",
+      NULL, "title", _("About xfce4-timer-plugin"), "logo", icon, "license",
       xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME, "comments",
-      _ ("A plugin to define countdown timers or alarms at given times."),
+      _("A plugin to define countdown timers or alarms at given times."),
       "website",
       "http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin",
-      "copyright", _ ("Copyright (c) 2005-2013\n"), "authors", author,
+      "copyright", _("Copyright (c) 2005-2013\n"), "authors", author,
       "translator-credits", translators, NULL);
 
   if (icon)
