@@ -3,4 +3,4 @@
 panel-plugin/xfcetimer.c
 
 # files added by intltool-prepare.
-panel-plugin/xfce4-timer.desktop.in.in
+panel-plugin/xfce4-timer.desktop.in
