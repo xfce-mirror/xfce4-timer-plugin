@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Moo, 2015-2017
+# Moo, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2018-01-02 00:32+0100\n"
+"PO-Revision-Date: 2018-01-02 10:14+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -18,187 +18,213 @@ msgstr ""
 "Language: lt\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../src/xfcetimer.c:146
+#: ../panel-plugin/xfcetimer.c:153
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "Liko %dh %dm %ds"
 
-#: ../src/xfcetimer.c:149
+#: ../panel-plugin/xfcetimer.c:156
 #, c-format
 msgid "%dm %ds left"
 msgstr "Liko %dm %ds"
 
-#: ../src/xfcetimer.c:151
+#: ../panel-plugin/xfcetimer.c:159
 #, c-format
 msgid "%ds left"
 msgstr "Liko %ds"
 
-#: ../src/xfcetimer.c:154
+#: ../panel-plugin/xfcetimer.c:163
 msgid " (Paused)"
 msgstr " (Pristabdytas)"
 
-#. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:188
+#: ../panel-plugin/xfcetimer.c:198
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Biiip! :) \nPriminimo %s laikas baigėsi."
 
-#: ../src/xfcetimer.c:198
+#: ../panel-plugin/xfcetimer.c:210 ../panel-plugin/xfcetimer.c:1493
+msgid "Close"
+msgstr "Užverti"
+
+#: ../panel-plugin/xfcetimer.c:211
 msgid "Rerun the timer"
 msgstr "Iš naujo paleisti laikmatį"
 
-#: ../src/xfcetimer.c:487
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Pratęsti laikmatį"
 
-#: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
+#: ../panel-plugin/xfcetimer.c:533 ../panel-plugin/xfcetimer.c:556
 msgid "Stop timer"
 msgstr "Sustabdyti laikmatį"
 
-#: ../src/xfcetimer.c:538
+#: ../panel-plugin/xfcetimer.c:545
 msgid "Pause timer"
 msgstr "Pristabdyti laikmatį"
 
-#: ../src/xfcetimer.c:552
+#: ../panel-plugin/xfcetimer.c:558
 msgid "Start timer"
 msgstr "Paleisti laikmatį"
 
-#: ../src/xfcetimer.c:561
+#: ../panel-plugin/xfcetimer.c:568
 msgid "Stop the alarm"
 msgstr "Stabdyti priminimą"
 
-#: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
+#: ../panel-plugin/xfcetimer.c:622 ../panel-plugin/xfcetimer.c:696
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
+#: ../panel-plugin/xfcetimer.c:624 ../panel-plugin/xfcetimer.c:698
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:700
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:631 ../src/xfcetimer.c:702
+#: ../panel-plugin/xfcetimer.c:634 ../panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../src/xfcetimer.c:801
+#: ../panel-plugin/xfcetimer.c:815
 msgid "Name:"
 msgstr "Pavadinimas:"
 
-#. ********
-#: ../src/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:824
 msgid "Enter the countdown time"
 msgstr "Įveskite atgal skaičiuojamą laiką"
 
-#: ../src/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:829
 msgid "Enter the time of alarm (24h format)"
 msgstr "Įveskite priminimo laiką (24val. formatu)"
 
-#: ../src/xfcetimer.c:824
+#: ../panel-plugin/xfcetimer.c:844
 msgid "h  "
 msgstr "val."
 
-#: ../src/xfcetimer.c:829
+#: ../panel-plugin/xfcetimer.c:851
 msgid "m  "
 msgstr "min."
 
-#: ../src/xfcetimer.c:834
+#: ../panel-plugin/xfcetimer.c:858
 msgid "s  "
 msgstr "sek."
 
-#: ../src/xfcetimer.c:837
+#: ../panel-plugin/xfcetimer.c:862
 msgid "or"
 msgstr "arba"
 
 #. **************
-#: ../src/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "Komanda, kurią vykdyti"
 
-#: ../src/xfcetimer.c:887
+#: ../panel-plugin/xfcetimer.c:898
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: ../panel-plugin/xfcetimer.c:903
+msgid "Acept"
+msgstr "Priimti"
+
+#: ../panel-plugin/xfcetimer.c:914
 msgid "Add new alarm"
 msgstr "Pridėti naują priminimą"
 
-#: ../src/xfcetimer.c:924
+#: ../panel-plugin/xfcetimer.c:951
 msgid "Edit alarm"
 msgstr "Keisti priminimą"
 
-#: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
+#: ../panel-plugin/xfcetimer.c:1491
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 laikmačio parametrai"
 
-#: ../src/xfcetimer.c:1506
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce 4 laikmačio įskiepis"
-
-#: ../src/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:1531
 msgid "Timer name"
 msgstr "Laikmačio pavadinimas"
 
-#: ../src/xfcetimer.c:1557
+#: ../panel-plugin/xfcetimer.c:1536
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Atvirkštinis periodas /\nPriminimo laikas"
 
-#: ../src/xfcetimer.c:1561
+#: ../panel-plugin/xfcetimer.c:1539
 msgid "Alarm command"
 msgstr "Priminimo komanda"
 
-#: ../src/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1557
+msgid "Add"
+msgstr "Pridėti"
+
+#: ../panel-plugin/xfcetimer.c:1565
+msgid "Edit"
+msgstr "Taisyti"
+
+#: ../panel-plugin/xfcetimer.c:1573
+msgid "Remove"
+msgstr "Šalinti"
+
+#: ../panel-plugin/xfcetimer.c:1581
+msgid "Up"
+msgstr "Aukštyn"
+
+#: ../panel-plugin/xfcetimer.c:1588
+msgid "Down"
+msgstr "Žemyn"
+
+#: ../panel-plugin/xfcetimer.c:1604
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Nerodyti įspėjimo, jei yra nustatyta priminimo komanda"
 
-#: ../src/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1610
 msgid "Selecting a timer starts it"
 msgstr "Laikmačio pasirinkimas, jį paleidžia"
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1630
+#: ../panel-plugin/xfcetimer.c:1623
 msgid "Use a default alarm command"
 msgstr "Naudoti numatytąją priminimo komandą"
 
-#: ../src/xfcetimer.c:1637
+#: ../panel-plugin/xfcetimer.c:1632
 msgid "Default command: "
 msgstr "Numatytoji komanda:"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1649
+#: ../panel-plugin/xfcetimer.c:1648
 msgid "Repeat the alarm command"
 msgstr "Kartoti priminimo komandą"
 
-#: ../src/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1657
 msgid "Number of repetitions"
 msgstr "Kartojimų skaičius"
 
-#: ../src/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1666
 msgid "  Time interval (sec.)"
 msgstr "Laiko intervalas (sek.)"
 
-#: ../src/xfcetimer.c:1723
+#: ../panel-plugin/xfcetimer.c:1728
 msgid "About xfce4-timer-plugin"
 msgstr "Apie xfce4-timer-plugin"
 
-#: ../src/xfcetimer.c:1728
+#: ../panel-plugin/xfcetimer.c:1731
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Įskiepis, skirtas apibrėžti atvirkštinius laikmačius ar priminimus duotu laiku."
 
-#: ../src/xfcetimer.c:1730
-msgid "Copyright (c) 2005-2013\n"
-msgstr "Autorinės Teisės (c) 2005-2013\n"
+#: ../panel-plugin/xfcetimer.c:1734
+msgid "Copyright (c) 2005-2017\n"
+msgstr "Autorių teisės (c) 2005-2017\n"
 
-#: ../src/xfce4-timer.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
 msgstr "Xfce4 laikmatis"
 
-#: ../src/xfce4-timer.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Laikmačio įskiepis, skirtas Xfce skydeliui"
