@@ -900,7 +900,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_add_edit),
                     adata);
 
-  button = gtk_button_new_with_label (_("Acept"));
+  button = gtk_button_new_with_label (_("Accept"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
   if (GTK_WIDGET (buttonn) == pd->buttonadd)
     g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_add), adata);
