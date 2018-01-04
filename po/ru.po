@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 00:32+0100\n"
-"PO-Revision-Date: 2018-01-03 16:26+0000\n"
+"POT-Creation-Date: 2018-01-04 06:32+0100\n"
+"PO-Revision-Date: 2018-01-04 16:02+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/xfce-panel-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -136,7 +136,7 @@ msgid "Cancel"
 msgstr "Отменить"
 
 #: ../panel-plugin/xfcetimer.c:903
-msgid "Acept"
+msgid "Accept"
 msgstr "Принять"
 
 #: ../panel-plugin/xfcetimer.c:914
@@ -224,8 +224,8 @@ msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Модуль для создания таймеров обратного отсчёта или сигналов в заданное время."
 
 #: ../panel-plugin/xfcetimer.c:1734
-msgid "Copyright (c) 2005-2017\n"
-msgstr "Copyright (c) 2005-2017\n"
+msgid "Copyright (c) 2005-2018\n"
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
