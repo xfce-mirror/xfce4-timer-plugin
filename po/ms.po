@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014
+# abuyop <abuyop@gmail.com>, 2014,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-09-19 21:20+0000\n"
+"POT-Creation-Date: 2018-01-04 06:32+0100\n"
+"PO-Revision-Date: 2018-01-06 11:17+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/xfce/xfce-panel-plugins/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -18,187 +18,213 @@ msgstr ""
 "Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/xfcetimer.c:146
+#: ../panel-plugin/xfcetimer.c:153
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "j%dh %dm %ds berbaki"
 
-#: ../src/xfcetimer.c:149
+#: ../panel-plugin/xfcetimer.c:156
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds berbaki"
 
-#: ../src/xfcetimer.c:151
+#: ../panel-plugin/xfcetimer.c:159
 #, c-format
 msgid "%ds left"
 msgstr "%ds berbaki"
 
-#: ../src/xfcetimer.c:154
+#: ../panel-plugin/xfcetimer.c:163
 msgid " (Paused)"
 msgstr "(Dijeda)"
 
-#. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:188
+#: ../panel-plugin/xfcetimer.c:198
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Bip! :)\nMasa sudah tamat bagi penggera %s."
 
-#: ../src/xfcetimer.c:198
+#: ../panel-plugin/xfcetimer.c:210 ../panel-plugin/xfcetimer.c:1493
+msgid "Close"
+msgstr "Tutup"
+
+#: ../panel-plugin/xfcetimer.c:211
 msgid "Rerun the timer"
 msgstr "Jalan semula pemasa"
 
-#: ../src/xfcetimer.c:487
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Sambung semula pemasa"
 
-#: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
+#: ../panel-plugin/xfcetimer.c:533 ../panel-plugin/xfcetimer.c:556
 msgid "Stop timer"
 msgstr "Henti pemasa"
 
-#: ../src/xfcetimer.c:538
+#: ../panel-plugin/xfcetimer.c:545
 msgid "Pause timer"
 msgstr "Jeda pemasa"
 
-#: ../src/xfcetimer.c:552
+#: ../panel-plugin/xfcetimer.c:558
 msgid "Start timer"
 msgstr "Mula pemasa"
 
-#: ../src/xfcetimer.c:561
+#: ../panel-plugin/xfcetimer.c:568
 msgid "Stop the alarm"
 msgstr "Hentikan penggera"
 
-#: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
+#: ../panel-plugin/xfcetimer.c:622 ../panel-plugin/xfcetimer.c:696
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dj %dm %ds"
 
-#: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
+#: ../panel-plugin/xfcetimer.c:624 ../panel-plugin/xfcetimer.c:698
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:700
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:631 ../src/xfcetimer.c:702
+#: ../panel-plugin/xfcetimer.c:634 ../panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Pada %02d:%02d"
 
-#: ../src/xfcetimer.c:801
+#: ../panel-plugin/xfcetimer.c:815
 msgid "Name:"
 msgstr "Nama:"
 
-#. ********
-#: ../src/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:824
 msgid "Enter the countdown time"
 msgstr "Masukkan masa kiraan mengundur"
 
-#: ../src/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:829
 msgid "Enter the time of alarm (24h format)"
 msgstr "Masukkan masa penggera (format 24j)"
 
-#: ../src/xfcetimer.c:824
+#: ../panel-plugin/xfcetimer.c:844
 msgid "h  "
 msgstr "j"
 
-#: ../src/xfcetimer.c:829
+#: ../panel-plugin/xfcetimer.c:851
 msgid "m  "
 msgstr "m"
 
-#: ../src/xfcetimer.c:834
+#: ../panel-plugin/xfcetimer.c:858
 msgid "s  "
 msgstr "s"
 
-#: ../src/xfcetimer.c:837
+#: ../panel-plugin/xfcetimer.c:862
 msgid "or"
 msgstr "atau"
 
 #. **************
-#: ../src/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "Perintah untuk dijalan:"
 
-#: ../src/xfcetimer.c:887
+#: ../panel-plugin/xfcetimer.c:898
+msgid "Cancel"
+msgstr "Batal"
+
+#: ../panel-plugin/xfcetimer.c:903
+msgid "Accept"
+msgstr "Terima"
+
+#: ../panel-plugin/xfcetimer.c:914
 msgid "Add new alarm"
 msgstr "Tambah penggera baharu"
 
-#: ../src/xfcetimer.c:924
+#: ../panel-plugin/xfcetimer.c:951
 msgid "Edit alarm"
 msgstr "Sunting penggera"
 
-#: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
+#: ../panel-plugin/xfcetimer.c:1491
 msgid "Xfce4 Timer Options"
 msgstr "Pilihan Pemasa Xfce4"
 
-#: ../src/xfcetimer.c:1506
-msgid "Xfce 4 Timer Plugin"
-msgstr "Pemalam Pemasa Xfce4"
-
-#: ../src/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:1531
 msgid "Timer name"
 msgstr "Nama pemasa"
 
-#: ../src/xfcetimer.c:1557
+#: ../panel-plugin/xfcetimer.c:1536
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Tempoh kiraan mengundur/\nMasa penggera"
 
-#: ../src/xfcetimer.c:1561
+#: ../panel-plugin/xfcetimer.c:1539
 msgid "Alarm command"
 msgstr "Perintah penggera"
 
-#: ../src/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1557
+msgid "Add"
+msgstr "Tambah"
+
+#: ../panel-plugin/xfcetimer.c:1565
+msgid "Edit"
+msgstr "Sunting"
+
+#: ../panel-plugin/xfcetimer.c:1573
+msgid "Remove"
+msgstr "Buang"
+
+#: ../panel-plugin/xfcetimer.c:1581
+msgid "Up"
+msgstr "Nai"
+
+#: ../panel-plugin/xfcetimer.c:1588
+msgid "Down"
+msgstr "Turun"
+
+#: ../panel-plugin/xfcetimer.c:1604
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Jangan papar amaran jika perintah amaran ditetapkan"
 
-#: ../src/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1610
 msgid "Selecting a timer starts it"
 msgstr "Memilih pemasa memulakannya"
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1630
+#: ../panel-plugin/xfcetimer.c:1623
 msgid "Use a default alarm command"
 msgstr "Guna perintah penggera lalai"
 
-#: ../src/xfcetimer.c:1637
+#: ../panel-plugin/xfcetimer.c:1632
 msgid "Default command: "
 msgstr "Perintah lalai:"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1649
+#: ../panel-plugin/xfcetimer.c:1648
 msgid "Repeat the alarm command"
 msgstr "Ulang perintah penggera"
 
-#: ../src/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1657
 msgid "Number of repetitions"
 msgstr "Bilangan ulangan"
 
-#: ../src/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1666
 msgid "  Time interval (sec.)"
 msgstr "Sela masa (saat)"
 
-#: ../src/xfcetimer.c:1723
+#: ../panel-plugin/xfcetimer.c:1728
 msgid "About xfce4-timer-plugin"
 msgstr "Perihal xfce4-timer-plugin"
 
-#: ../src/xfcetimer.c:1728
+#: ../panel-plugin/xfcetimer.c:1731
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Merupakan pemalam yang mentakrif pemasa kiraan mengundur atau penggera pada masa yang diberikan."
 
-#: ../src/xfcetimer.c:1730
-msgid "Copyright (c) 2005-2013\n"
-msgstr "Hakcipta (c) 2005-2013\n"
+#: ../panel-plugin/xfcetimer.c:1734
+msgid "Copyright (c) 2005-2018\n"
+msgstr "Hakcipta (c) 2005-2018\n"
 
-#: ../src/xfce4-timer.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
 msgstr "Pemasa Xfce4"
 
-#: ../src/xfce4-timer.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Pemalam pemasa untuk panel Xfce"
