@@ -1,8 +1,8 @@
-Timer plugin for XFCE 4.4
+Timer plugin for Xfce 4.12
 
 Copyright (C) 2005 Kemal Ilgar Eroglu <kieroglu@math.washington.edu>
 
-You need XFCE 4.4 for this plugin.
+You need Xfce 4.12 for this plugin.
 
 Nothing to describe really. Use the options menu to add timers. You can choose them to be 
 countdown periods or alarms at certain times. Only one of them can be run at a time.

@@ -1,0 +1,14 @@
+1.7.0
+======
+- Port to GTK+3.
+- New icon (Bug #13517).
+- Add "keep above" for Beep dialog (Bug #13514).
+- When paused show all menu timers (Bug #13516).
+- Small UI improvements (Bug #13515).
+- Translation updates: Albanian, Arabic, Asturian, Basque, Bulgarian, Catalan,
+  Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch,
+  English (Australia), English (United Kingdom), Finnish, French, Galician,
+  German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Italian, Japanese,
+  Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan, Polish,
+  Portuguese, Portuguese (Brazil), Russian, Serbian, Slovak, Spanish, Swedish,
+  Thai, Turkish, Ukrainian, Urdu, Urdu (Pakistan), Uyghur
