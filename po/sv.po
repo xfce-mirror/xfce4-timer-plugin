@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Daniel Nylander <po@danielnylander.se>, 2008-2009
+# Påvel Nicklasson <pavel2@frimix.se>, 2015,2018
 # Påvel Nicklasson<pavel@frimix.se>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 06:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2018-01-04 06:32+0100\n"
+"PO-Revision-Date: 2018-03-02 08:25+0000\n"
 "Last-Translator: Påvel Nicklasson <pavel2@frimix.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/xfce/xfce-panel-plugins/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -19,187 +20,213 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/xfcetimer.c:146
+#: ../panel-plugin/xfcetimer.c:153
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dh %dm %ds kvar"
 
-#: ../src/xfcetimer.c:149
+#: ../panel-plugin/xfcetimer.c:156
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds kvar"
 
-#: ../src/xfcetimer.c:151
+#: ../panel-plugin/xfcetimer.c:159
 #, c-format
 msgid "%ds left"
 msgstr "%ds kvar"
 
-#: ../src/xfcetimer.c:154
+#: ../panel-plugin/xfcetimer.c:163
 msgid " (Paused)"
 msgstr "(Pausad)"
 
-#. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:188
+#: ../panel-plugin/xfcetimer.c:198
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Beeep! :) \nTiden är ute för alarmet %s."
 
-#: ../src/xfcetimer.c:198
+#: ../panel-plugin/xfcetimer.c:210 ../panel-plugin/xfcetimer.c:1493
+msgid "Close"
+msgstr "Stäng"
+
+#: ../panel-plugin/xfcetimer.c:211
 msgid "Rerun the timer"
 msgstr "Kör om tidtagaren"
 
-#: ../src/xfcetimer.c:487
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Återstarta tidtagaren"
 
-#: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
+#: ../panel-plugin/xfcetimer.c:533 ../panel-plugin/xfcetimer.c:556
 msgid "Stop timer"
 msgstr "Stoppa tidtagare"
 
-#: ../src/xfcetimer.c:538
+#: ../panel-plugin/xfcetimer.c:545
 msgid "Pause timer"
 msgstr "Pausa tidtagaren"
 
-#: ../src/xfcetimer.c:552
+#: ../panel-plugin/xfcetimer.c:558
 msgid "Start timer"
 msgstr "Starta tidtagare"
 
-#: ../src/xfcetimer.c:561
+#: ../panel-plugin/xfcetimer.c:568
 msgid "Stop the alarm"
 msgstr "Stoppa alarmet"
 
-#: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
+#: ../panel-plugin/xfcetimer.c:622 ../panel-plugin/xfcetimer.c:696
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
+#: ../panel-plugin/xfcetimer.c:624 ../panel-plugin/xfcetimer.c:698
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:700
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../src/xfcetimer.c:631 ../src/xfcetimer.c:702
+#: ../panel-plugin/xfcetimer.c:634 ../panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Klockan %02d.%02d"
 
-#: ../src/xfcetimer.c:801
+#: ../panel-plugin/xfcetimer.c:815
 msgid "Name:"
 msgstr "Namn:"
 
-#. ********
-#: ../src/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:824
 msgid "Enter the countdown time"
 msgstr "Ange nedräkningstid"
 
-#: ../src/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:829
 msgid "Enter the time of alarm (24h format)"
 msgstr "Ange tid för alarmet (24-timmarsformat)"
 
-#: ../src/xfcetimer.c:824
+#: ../panel-plugin/xfcetimer.c:844
 msgid "h  "
 msgstr "h  "
 
-#: ../src/xfcetimer.c:829
+#: ../panel-plugin/xfcetimer.c:851
 msgid "m  "
 msgstr "m  "
 
-#: ../src/xfcetimer.c:834
+#: ../panel-plugin/xfcetimer.c:858
 msgid "s  "
 msgstr "s  "
 
-#: ../src/xfcetimer.c:837
+#: ../panel-plugin/xfcetimer.c:862
 msgid "or"
 msgstr "eller"
 
 #. **************
-#: ../src/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "Kommando att köra:"
 
-#: ../src/xfcetimer.c:887
+#: ../panel-plugin/xfcetimer.c:898
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../panel-plugin/xfcetimer.c:903
+msgid "Accept"
+msgstr "Acceptera"
+
+#: ../panel-plugin/xfcetimer.c:914
 msgid "Add new alarm"
 msgstr "Lägg till nytt alarm"
 
-#: ../src/xfcetimer.c:924
+#: ../panel-plugin/xfcetimer.c:951
 msgid "Edit alarm"
 msgstr "Redigera alarm"
 
-#: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
+#: ../panel-plugin/xfcetimer.c:1491
 msgid "Xfce4 Timer Options"
 msgstr "Alternativ för Xfce4-tidtagare"
 
-#: ../src/xfcetimer.c:1506
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 Tidtagarinsticksprogram"
-
-#: ../src/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:1531
 msgid "Timer name"
 msgstr "Tidtagningsnamn"
 
-#: ../src/xfcetimer.c:1557
+#: ../panel-plugin/xfcetimer.c:1536
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Nedräkningsperiod /\nAlarmtid"
 
-#: ../src/xfcetimer.c:1561
+#: ../panel-plugin/xfcetimer.c:1539
 msgid "Alarm command"
 msgstr "Alarmkommando"
 
-#: ../src/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1557
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../panel-plugin/xfcetimer.c:1565
+msgid "Edit"
+msgstr "Redigera"
+
+#: ../panel-plugin/xfcetimer.c:1573
+msgid "Remove"
+msgstr "Ta bort"
+
+#: ../panel-plugin/xfcetimer.c:1581
+msgid "Up"
+msgstr "Upp"
+
+#: ../panel-plugin/xfcetimer.c:1588
+msgid "Down"
+msgstr "Ner"
+
+#: ../panel-plugin/xfcetimer.c:1604
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Visa ingen varning om ett alarmkommando är inställt"
 
-#: ../src/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1610
 msgid "Selecting a timer starts it"
 msgstr "Att välja en tidtagare startar den"
 
 #. Default alarm command config
-#: ../src/xfcetimer.c:1630
+#: ../panel-plugin/xfcetimer.c:1623
 msgid "Use a default alarm command"
 msgstr "Använd ett standardalarmkommando"
 
-#: ../src/xfcetimer.c:1637
+#: ../panel-plugin/xfcetimer.c:1632
 msgid "Default command: "
 msgstr "Standardkommando:"
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1649
+#: ../panel-plugin/xfcetimer.c:1648
 msgid "Repeat the alarm command"
 msgstr "Upprepa alarmkommandot"
 
-#: ../src/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1657
 msgid "Number of repetitions"
 msgstr "Antal upprepningar"
 
-#: ../src/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1666
 msgid "  Time interval (sec.)"
 msgstr "  Tidsintervall (s)"
 
-#: ../src/xfcetimer.c:1723
+#: ../panel-plugin/xfcetimer.c:1728
 msgid "About xfce4-timer-plugin"
 msgstr "Om xfce4-tidtagare-insticksprogram"
 
-#: ../src/xfcetimer.c:1728
+#: ../panel-plugin/xfcetimer.c:1731
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Ett insticksprogram för att ställa in nedräkningstidur eller larm vid bestämda tider."
 
-#: ../src/xfcetimer.c:1730
-msgid "Copyright (c) 2005-2013\n"
-msgstr "Copyright (c) 2005-2013\n"
+#: ../panel-plugin/xfcetimer.c:1734
+msgid "Copyright (c) 2005-2018\n"
+msgstr "Copyright (c) 2005-2018\n"
 
-#: ../src/xfce4-timer.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
 msgstr "Xfce4-tidtagare"
 
-#: ../src/xfce4-timer.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Tidtagare för Xfce-panelen"
