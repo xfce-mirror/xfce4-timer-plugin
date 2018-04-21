@@ -53,7 +53,6 @@ typedef struct
   gint repetitions; /* Number of alarm repeats */
   gint repeat_interval; /* Time interval between repeats (in secs) */
   gboolean nowin_if_alarm; /* Show warning window when alarm command is set */
-  gboolean selecting_starts; /* selecting a timer also starts it */
   gboolean repeat_alarm_command; /* Repeat alarm command*/
   gboolean use_global_command; /* Use a default alarm command if no alarm command is set */
   gchar *global_command; /* The global (default) command to be run when countdown ends */

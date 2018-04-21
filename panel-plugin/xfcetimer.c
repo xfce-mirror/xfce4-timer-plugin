@@ -56,7 +56,7 @@ static void
 dialog_response (GtkWidget *dlg, int response, alarm_t* alrm);
 
 static void
-start_stop_selected (GtkWidget* menuitem, gpointer data);
+start_stop_callback (GtkWidget* menuitem, gpointer data);
 XFCE_PANEL_PLUGIN_REGISTER ( create_plugin_control);
 
 void
@@ -300,9 +300,7 @@ timer_selected (GtkWidget* menuitem, gpointer data)
 
   pd->selected = list;
 
-  /* start the timer if the option to do so on selecting is set */
-  if (pd->selecting_starts)
-    start_stop_selected (menuitem, list);
+  start_stop_callback (menuitem, list);
 }
 
 
@@ -376,7 +374,7 @@ start_timer (plugin_data *pd, alarm_t* alrm)
  * start/stop item is selected in the popup menu
  **/
 static void
-start_stop_selected (GtkWidget* menuitem, gpointer list)
+start_stop_callback (GtkWidget* menuitem, gpointer list)
 {
 	  GList *listitem = (GList *) list;
 	  plugin_data *pd;
@@ -537,7 +535,7 @@ make_menu (plugin_data *pd)
 
 		gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
 		g_signal_connect  (G_OBJECT(menuitem),"activate",
-				G_CALLBACK(start_stop_selected),list);
+				G_CALLBACK(start_stop_callback),list);
 
 
 	}else{
@@ -898,7 +896,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
 
    //add alarm autostart check button
-  button=gtk_check_button_new_with_label(_("Auto start"));
+  button=gtk_check_button_new_with_label(_("Auto start when plugin loads"));
   gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),FALSE);
   adata->autostart_cb=button;
   gtk_box_pack_start(GTK_BOX(box),button,FALSE,FALSE,WIDGET_SPACING);
@@ -1227,8 +1225,6 @@ load_settings (plugin_data *pd)
               pd->nowin_if_alarm = xfce_rc_read_bool_entry (rc,
                                                             "nowin_if_alarm",
                                                             FALSE);
-              pd->selecting_starts = xfce_rc_read_bool_entry (
-                  rc, "selecting_starts", FALSE);
               pd->use_global_command = xfce_rc_read_bool_entry (
                   rc, "use_global_command", FALSE);
 
@@ -1318,7 +1314,6 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   /* save the other options */
   xfce_rc_set_group (rc, "others");
   xfce_rc_write_bool_entry (rc, "nowin_if_alarm", pd->nowin_if_alarm);
-  xfce_rc_write_bool_entry (rc, "selecting_starts", pd->selecting_starts);
   xfce_rc_write_bool_entry (rc, "use_global_command", pd->use_global_command);
   xfce_rc_write_entry (rc, "global_command", pd->global_command);
   xfce_rc_write_bool_entry (rc, "repeat_alarm", pd->repeat_alarm_command);
@@ -1443,18 +1438,6 @@ toggle_nowin_if_alarm (GtkToggleButton *button, gpointer data)
   pd->nowin_if_alarm = gtk_toggle_button_get_active (button);
 
 }
-
-
-
-/* selecting_starts toggle callback */
-static void
-toggle_selecting_starts (GtkToggleButton *button, gpointer data)
-{
-  plugin_data *pd = (plugin_data *) data;
-
-  pd->selecting_starts = gtk_toggle_button_get_active (button);
-}
-
 
 
 /* toggle_global_command toggle callback */
@@ -1639,13 +1622,6 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                     G_CALLBACK (toggle_nowin_if_alarm), pd);
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, WIDGET_SPACING);
 
-  button = gtk_check_button_new_with_label (_("Selecting a timer starts it"));
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
-                                pd->selecting_starts);
-  g_signal_connect (G_OBJECT (button), "toggled",
-                    G_CALLBACK (toggle_selecting_starts), pd);
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, WIDGET_SPACING);
-
   gtk_box_pack_start (GTK_BOX (vbox),
                       gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE,
                       FALSE,
@@ -1803,7 +1779,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
   pd->buttonremove = NULL;
   pd->menu = NULL;
   pd->nowin_if_alarm = FALSE;
-  pd->selecting_starts = FALSE;
   pd->repeat_alarm_command = FALSE;
   pd->use_global_command = FALSE;
   pd->glob_command_entry = NULL;

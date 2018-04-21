@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Edin Veskovic <edin.lockedin@gmail.com>, 2018
 # Edin Veskovic <edin.lockedin@gmail.com>, 2014
@@ -10,217 +10,227 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 00:32+0100\n"
+"POT-Creation-Date: 2018-04-21 18:00+0300\n"
 "PO-Revision-Date: 2018-01-02 11:12+0000\n"
 "Last-Translator: Edin Veskovic <edin.lockedin@gmail.com>\n"
-"Language-Team: Croatian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hr/)\n"
+"Language-Team: Croatian (http://www.transifex.com/xfce/xfce-panel-plugins/"
+"language/hr/)\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: ../panel-plugin/xfcetimer.c:153
+#: ../panel-plugin/xfcetimer.c:167
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dh %dm %ds preostalo"
 
-#: ../panel-plugin/xfcetimer.c:156
+#: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds preostalo"
 
-#: ../panel-plugin/xfcetimer.c:159
+#: ../panel-plugin/xfcetimer.c:173
 #, c-format
 msgid "%ds left"
 msgstr "%ds preostalo"
 
-#: ../panel-plugin/xfcetimer.c:163
+#: ../panel-plugin/xfcetimer.c:177
 msgid " (Paused)"
 msgstr "(Pauzirano)"
 
-#: ../panel-plugin/xfcetimer.c:198
+#. Display the name of the alarm when the countdown ends
+#: ../panel-plugin/xfcetimer.c:213
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Beeep! :)\nVrijeme alarma je isteklo %s."
+msgstr ""
+"Beeep! :)\n"
+"Vrijeme alarma je isteklo %s."
 
-#: ../panel-plugin/xfcetimer.c:210 ../panel-plugin/xfcetimer.c:1493
+#: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
 msgstr "Zatvori"
 
-#: ../panel-plugin/xfcetimer.c:211
+#: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
 msgstr "Ponovno pokreni mjerač vremena"
 
-#: ../panel-plugin/xfcetimer.c:526
-msgid "Resume timer"
-msgstr "Nastavi mjerač vremena"
-
-#: ../panel-plugin/xfcetimer.c:533 ../panel-plugin/xfcetimer.c:556
-msgid "Stop timer"
-msgstr "Zaustavi mjerač vremena"
-
-#: ../panel-plugin/xfcetimer.c:545
+#: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
 msgstr "Pauziraj mjerač vremena"
 
-#: ../panel-plugin/xfcetimer.c:558
-msgid "Start timer"
-msgstr "Pokreni mjerač vremena"
+#: ../panel-plugin/xfcetimer.c:523
+msgid "Resume timer"
+msgstr "Nastavi mjerač vremena"
 
-#: ../panel-plugin/xfcetimer.c:568
-msgid "Stop the alarm"
-msgstr "Zaustavi alarm"
+#: ../panel-plugin/xfcetimer.c:534
+msgid "Stop timer"
+msgstr "Zaustavi mjerač vremena"
 
-#: ../panel-plugin/xfcetimer.c:622 ../panel-plugin/xfcetimer.c:696
+#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:624 ../panel-plugin/xfcetimer.c:698
+#: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:700
+#: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:634 ../panel-plugin/xfcetimer.c:709
+#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
 #, c-format
 msgid "At %02d:%02d"
 msgstr "U %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:815
+#: ../panel-plugin/xfcetimer.c:812
 msgid "Name:"
 msgstr "Ime:"
 
-#: ../panel-plugin/xfcetimer.c:824
+#: ../panel-plugin/xfcetimer.c:821
 msgid "Enter the countdown time"
 msgstr "Unesite vrijeme odbrojavanja"
 
-#: ../panel-plugin/xfcetimer.c:829
+#: ../panel-plugin/xfcetimer.c:826
 msgid "Enter the time of alarm (24h format)"
 msgstr "Unesite vrijeme alarma (format 24 sata)"
 
-#: ../panel-plugin/xfcetimer.c:844
+#: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
 msgstr "h "
 
-#: ../panel-plugin/xfcetimer.c:851
+#: ../panel-plugin/xfcetimer.c:848
 msgid "m  "
 msgstr "m  "
 
-#: ../panel-plugin/xfcetimer.c:858
+#: ../panel-plugin/xfcetimer.c:855
 msgid "s  "
 msgstr "s  "
 
-#: ../panel-plugin/xfcetimer.c:862
+#: ../panel-plugin/xfcetimer.c:859
 msgid "or"
 msgstr "ili"
 
 #. **************
-#: ../panel-plugin/xfcetimer.c:884
+#: ../panel-plugin/xfcetimer.c:881
 msgid "Command to run:"
 msgstr "Pokreni naredbu:"
 
-#: ../panel-plugin/xfcetimer.c:898
+#. **************
+#. add recurring alarm check button
+#: ../panel-plugin/xfcetimer.c:892
+msgid "Recurring alarm"
+msgstr ""
+
+#. add alarm autostart check button
+#: ../panel-plugin/xfcetimer.c:899
+msgid "Auto start when plugin loads"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
 msgstr "Odustani"
 
-#: ../panel-plugin/xfcetimer.c:903
-msgid "Acept"
+#: ../panel-plugin/xfcetimer.c:914
+#, fuzzy
+msgid "Accept"
 msgstr "Prihvati"
 
-#: ../panel-plugin/xfcetimer.c:914
+#: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
 msgstr "Dodaj novi alarm"
 
-#: ../panel-plugin/xfcetimer.c:951
+#: ../panel-plugin/xfcetimer.c:966
 msgid "Edit alarm"
 msgstr "Uredi alarm"
 
-#: ../panel-plugin/xfcetimer.c:1491
+#: ../panel-plugin/xfcetimer.c:1506
 msgid "Xfce4 Timer Options"
 msgstr "Opcije Xfce4 mjerača vremena"
 
-#: ../panel-plugin/xfcetimer.c:1531
+#: ../panel-plugin/xfcetimer.c:1546
 msgid "Timer name"
 msgstr "Ime mjerača vremena"
 
-#: ../panel-plugin/xfcetimer.c:1536
+#: ../panel-plugin/xfcetimer.c:1551
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Period odbrojavanja /\nVrijeme alarma"
+msgstr ""
+"Period odbrojavanja /\n"
+"Vrijeme alarma"
 
-#: ../panel-plugin/xfcetimer.c:1539
+#: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
 msgstr "Naredba alarma"
 
-#: ../panel-plugin/xfcetimer.c:1557
+#: ../panel-plugin/xfcetimer.c:1572
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../panel-plugin/xfcetimer.c:1565
+#: ../panel-plugin/xfcetimer.c:1580
 msgid "Edit"
 msgstr "Uredi"
 
-#: ../panel-plugin/xfcetimer.c:1573
+#: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
 msgstr "Obriši"
 
-#: ../panel-plugin/xfcetimer.c:1581
+#: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
 msgstr "Gore"
 
-#: ../panel-plugin/xfcetimer.c:1588
+#: ../panel-plugin/xfcetimer.c:1603
 msgid "Down"
 msgstr "Dole"
 
-#: ../panel-plugin/xfcetimer.c:1604
+#: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Ne prikazuj upozorenje ako je postavljena naredba alarma"
 
-#: ../panel-plugin/xfcetimer.c:1610
-msgid "Selecting a timer starts it"
-msgstr "Pokreni mjerač vremena odabirom"
-
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1623
+#: ../panel-plugin/xfcetimer.c:1631
 msgid "Use a default alarm command"
 msgstr "Koristi zadanu naredbu alarma"
 
-#: ../panel-plugin/xfcetimer.c:1632
+#: ../panel-plugin/xfcetimer.c:1640
 msgid "Default command: "
 msgstr "Zadana naredba:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1648
+#: ../panel-plugin/xfcetimer.c:1656
 msgid "Repeat the alarm command"
 msgstr "Ponovi naredbu alarma"
 
-#: ../panel-plugin/xfcetimer.c:1657
+#: ../panel-plugin/xfcetimer.c:1665
 msgid "Number of repetitions"
 msgstr "Broj ponavljanja"
 
-#: ../panel-plugin/xfcetimer.c:1666
+#: ../panel-plugin/xfcetimer.c:1674
 msgid "  Time interval (sec.)"
 msgstr "Vremenski interval (sec.)"
 
-#: ../panel-plugin/xfcetimer.c:1728
+#: ../panel-plugin/xfcetimer.c:1736
 msgid "About xfce4-timer-plugin"
 msgstr "O priključku xfce4-mjerač vremena"
 
-#: ../panel-plugin/xfcetimer.c:1731
+#: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Priključak za definiranje odbrojavanja mjerača vremena ili alarma u dano vrijeme."
+msgstr ""
+"Priključak za definiranje odbrojavanja mjerača vremena ili alarma u dano "
+"vrijeme."
 
-#: ../panel-plugin/xfcetimer.c:1734
-msgid "Copyright (c) 2005-2017\n"
+#: ../panel-plugin/xfcetimer.c:1742
+#, fuzzy
+msgid "Copyright (c) 2005-2018\n"
 msgstr "Copyright (c) 2005-2017\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
@@ -230,3 +240,12 @@ msgstr "Xfce4 Mjerač vremena"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Priključak mjerača vremena za Xfce4 ploču"
+
+#~ msgid "Selecting a timer starts it"
+#~ msgstr "Pokreni mjerač vremena odabirom"
+
+#~ msgid "Start timer"
+#~ msgstr "Pokreni mjerač vremena"
+
+#~ msgid "Stop the alarm"
+#~ msgstr "Zaustavi alarm"

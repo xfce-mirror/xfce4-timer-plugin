@@ -1,204 +1,249 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 06:31+0200\n"
+"POT-Creation-Date: 2018-04-21 18:00+0300\n"
 "PO-Revision-Date: 2017-09-19 18:06+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
+"Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/"
+"language/is/)\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
-#: ../src/xfcetimer.c:146
+#: ../panel-plugin/xfcetimer.c:167
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dklst %dmín %dsek eftir"
 
-#: ../src/xfcetimer.c:149
+#: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dmín %dsek eftir"
 
-#: ../src/xfcetimer.c:151
+#: ../panel-plugin/xfcetimer.c:173
 #, c-format
 msgid "%ds left"
 msgstr "%dsek eftir"
 
-#: ../src/xfcetimer.c:154
+#: ../panel-plugin/xfcetimer.c:177
 msgid " (Paused)"
 msgstr " (í bið)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../src/xfcetimer.c:188
+#: ../panel-plugin/xfcetimer.c:213
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Píííp! :) \nTíminn er liðinn fyrir áminninguna %s."
+msgstr ""
+"Píííp! :) \n"
+"Tíminn er liðinn fyrir áminninguna %s."
 
-#: ../src/xfcetimer.c:198
+#: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
+msgid "Close"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
 msgstr "Keyra niðurtalningu aftur"
 
-#: ../src/xfcetimer.c:487
-msgid "Resume timer"
-msgstr "Halda áfram með niðurtalningu"
-
-#: ../src/xfcetimer.c:494 ../src/xfcetimer.c:550
-msgid "Stop timer"
-msgstr "Stöðva niðurtalningu"
-
-#: ../src/xfcetimer.c:538
+#: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
 msgstr "Gera hlé á niðurtalningu"
 
-#: ../src/xfcetimer.c:552
-msgid "Start timer"
-msgstr "Byrja niðurtalningu"
+#: ../panel-plugin/xfcetimer.c:523
+msgid "Resume timer"
+msgstr "Halda áfram með niðurtalningu"
 
-#: ../src/xfcetimer.c:561
-msgid "Stop the alarm"
-msgstr "Stöðva áminninguna"
+#: ../panel-plugin/xfcetimer.c:534
+msgid "Stop timer"
+msgstr "Stöðva niðurtalningu"
 
-#: ../src/xfcetimer.c:618 ../src/xfcetimer.c:689
+#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dklst %dmín %dsek"
 
-#: ../src/xfcetimer.c:620 ../src/xfcetimer.c:691
+#: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
 #, c-format
 msgid "%dm %ds"
 msgstr "%dmín %dsek"
 
-#: ../src/xfcetimer.c:622 ../src/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "%ds"
 msgstr "%dsek"
 
-#: ../src/xfcetimer.c:631 ../src/xfcetimer.c:702
+#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Klukkan %02d:%02d"
 
-#: ../src/xfcetimer.c:801
+#: ../panel-plugin/xfcetimer.c:812
 msgid "Name:"
 msgstr "Heiti:"
 
-#. ********
-#: ../src/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:821
 msgid "Enter the countdown time"
 msgstr "Sláðu inn tíma niðurtalningar"
 
-#: ../src/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:826
 msgid "Enter the time of alarm (24h format)"
 msgstr "Sláðu inn tíma áminningar (24t snið)"
 
-#: ../src/xfcetimer.c:824
+#: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
 msgstr "klst  "
 
-#: ../src/xfcetimer.c:829
+#: ../panel-plugin/xfcetimer.c:848
 msgid "m  "
 msgstr "mín  "
 
-#: ../src/xfcetimer.c:834
+#: ../panel-plugin/xfcetimer.c:855
 msgid "s  "
 msgstr "sek  "
 
-#: ../src/xfcetimer.c:837
+#: ../panel-plugin/xfcetimer.c:859
 msgid "or"
 msgstr "eða"
 
 #. **************
-#: ../src/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:881
 msgid "Command to run:"
 msgstr "Skipun sem á að keyra:"
 
-#: ../src/xfcetimer.c:887
+#. **************
+#. add recurring alarm check button
+#: ../panel-plugin/xfcetimer.c:892
+msgid "Recurring alarm"
+msgstr ""
+
+#. add alarm autostart check button
+#: ../panel-plugin/xfcetimer.c:899
+msgid "Auto start when plugin loads"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:909
+msgid "Cancel"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:914
+msgid "Accept"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
 msgstr "Bæta við nýrri áminningu"
 
-#: ../src/xfcetimer.c:924
+#: ../panel-plugin/xfcetimer.c:966
 msgid "Edit alarm"
 msgstr "Breyta áminningu"
 
-#: ../src/xfcetimer.c:1495 ../src/xfcetimer.c:1504
+#: ../panel-plugin/xfcetimer.c:1506
 msgid "Xfce4 Timer Options"
 msgstr "Valkostir Xfce4 tímamælingar"
 
-#: ../src/xfcetimer.c:1506
-msgid "Xfce 4 Timer Plugin"
-msgstr "Xfce4 tímamælingarviðbót"
-
-#: ../src/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:1546
 msgid "Timer name"
 msgstr "Heiti niðurtalningar"
 
-#: ../src/xfcetimer.c:1557
+#: ../panel-plugin/xfcetimer.c:1551
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Tími niðurtalningar /\nTími áminningar"
+msgstr ""
+"Tími niðurtalningar /\n"
+"Tími áminningar"
 
-#: ../src/xfcetimer.c:1561
+#: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
 msgstr "Skipun við áminningu"
 
-#: ../src/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1572
+msgid "Add"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:1580
+msgid "Edit"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:1588
+msgid "Remove"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:1596
+msgid "Up"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:1603
+msgid "Down"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Ekki birta aðvörun ef skipun er sett fyrir áminningu"
 
-#: ../src/xfcetimer.c:1622
-msgid "Selecting a timer starts it"
-msgstr "Val á niðurtalningu ræsir hana"
-
 #. Default alarm command config
-#: ../src/xfcetimer.c:1630
+#: ../panel-plugin/xfcetimer.c:1631
 msgid "Use a default alarm command"
 msgstr "Nota sjálfgefna áminningarskipun"
 
-#: ../src/xfcetimer.c:1637
+#: ../panel-plugin/xfcetimer.c:1640
 msgid "Default command: "
 msgstr "Sjálfgefin skipun: "
 
 #. Alarm repetitions config
-#: ../src/xfcetimer.c:1649
+#: ../panel-plugin/xfcetimer.c:1656
 msgid "Repeat the alarm command"
 msgstr "Endurtaka áminningarskipunina"
 
-#: ../src/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1665
 msgid "Number of repetitions"
 msgstr "Fjöldi endurtekninga"
 
-#: ../src/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1674
 msgid "  Time interval (sec.)"
 msgstr "  Tímabil (sek.)"
 
-#: ../src/xfcetimer.c:1723
+#: ../panel-plugin/xfcetimer.c:1736
 msgid "About xfce4-timer-plugin"
 msgstr "Um xfce4-timer-plugin"
 
-#: ../src/xfcetimer.c:1728
+#: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Viðbót til að skilgreina niðurtalningar eða áminningar á tilteknum tíma."
+msgstr ""
+"Viðbót til að skilgreina niðurtalningar eða áminningar á tilteknum tíma."
 
-#: ../src/xfcetimer.c:1730
-msgid "Copyright (c) 2005-2013\n"
+#: ../panel-plugin/xfcetimer.c:1742
+#, fuzzy
+msgid "Copyright (c) 2005-2018\n"
 msgstr "Höfundarréttur (c) 2005-2013\n"
 
-#: ../src/xfce4-timer.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
 msgstr "Xfce4 tímamæling"
 
-#: ../src/xfce4-timer.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Tímamælingarviðbót fyrir Xfce4 skjástikur"
+
+#~ msgid "Selecting a timer starts it"
+#~ msgstr "Val á niðurtalningu ræsir hana"
+
+#~ msgid "Start timer"
+#~ msgstr "Byrja niðurtalningu"
+
+#~ msgid "Stop the alarm"
+#~ msgstr "Stöðva áminninguna"
+
+#~ msgid "Xfce 4 Timer Plugin"
+#~ msgstr "Xfce4 tímamælingarviðbót"

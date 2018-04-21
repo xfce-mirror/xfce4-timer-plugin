@@ -11,9 +11,9 @@ dnl ***************************
 m4_define([xfce4_timer_version_major], [1])
 m4_define([xfce4_timer_version_minor], [7])
 m4_define([xfce4_timer_version_micro], [0])
-m4_define([xfce4_timer_version_nano],  [git]) dnl leave this empty to have no nano version
+m4_define([xfce4_timer_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([xfce4_timer_version_build], [@REVISION@])
-m4_define([xfce4_timer_version_tag], []) # Leave empty only for releases, but use 'git' in most cases
+m4_define([xfce4_timer_version_tag], [git]) # Leave empty only for releases, but use 'git' in most cases
 m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_nano(), [], [], [.xfce4_timer_version_nano()])ifelse(xfce4_timer_version_tag(), [git], [xfce4_timer_version_tag()-xfce4_timer_version_build()], [xfce4_timer_version_tag()])])
 
 AC_CONFIG_MACRO_DIR([m4])
