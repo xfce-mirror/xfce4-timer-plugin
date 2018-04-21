@@ -19,10 +19,19 @@
 
 typedef struct
 {
-  gchar *name, *command, *info;
+  gchar *name, *info;
+  gchar *command; /* Command when countdown ends */
   gint time;
-  gboolean iscountdown;
+  gboolean is_recurring, is_auto_start, timer_on;
+
+  gboolean is_repeating; /* True while alarm repeats */
+  gboolean is_paused; /* True if the countdown is paused */
+  gboolean is_countdown; /* True if the alarm type is contdown */
   gpointer pd;
+  gint timeout_period_in_sec,    /* Active countdown period */
+          rem_repetitions;      /* Remaining repeats */
+  guint timeout,repeat_timeout;	/* The timeout IDs */
+  GTimer *timer; /* Keeps track of the time elapsed */
 } alarm_t;
 
 typedef struct
@@ -41,26 +50,17 @@ typedef struct
   XfcePanelPlugin *base; /* The plugin widget */
   GtkListStore *liststore; /* The alarms list */
   gint count;
-  gint timeout_period_in_sec; /* Active countdown period */
   gint repetitions; /* Number of alarm repeats */
-  gint rem_repetitions; /* Remaining repeats */
   gint repeat_interval; /* Time interval between repeats (in secs) */
-  guint timeout, repeat_timeout; /* The timeout IDs */
-  gboolean timer_on; /* TRUE if countdown is in progress */
   gboolean nowin_if_alarm; /* Show warning window when alarm command is set */
   gboolean selecting_starts; /* selecting a timer also starts it */
-  gboolean repeat_alarm; /* Repeat alarm */
+  gboolean repeat_alarm_command; /* Repeat alarm command*/
   gboolean use_global_command; /* Use a default alarm command if no alarm command is set */
-  gboolean alarm_repeating; /* True while alarm repeats */
-  gboolean is_paused; /* True if the countdown is paused */
-  gboolean is_countdown; /* True if the alarm type is contdown */
-  gchar *timeout_command; /* Command when countdown ends */
   gchar *global_command; /* The global (default) command to be run when countdown ends */
-  gchar *active_timer_name; /* Name of the timer running */
   gchar *configfile; /* Full address of the permanent config file -- this is not the plugin rc file. */
-  GTimer *timer; /* Keeps track of the time elapsed */
   GList *alarm_list; /* List of alarms */
   GList *selected; /* Selected alarm */
+  guint num_active_timers;
 } plugin_data;
 
 typedef struct
@@ -69,6 +69,7 @@ typedef struct
   GtkSpinButton *time_h, *time_m; /* Spinbuttons for 24h format */
   GtkEntry *name, *command; /* Name, and command entries */
   GtkRadioButton *rb1; /* Radio button for the h-m-s format */
+  GtkWidget *recur_cb, *autostart_cb; /* check buttons for recurring alarm, autostart */
   GtkWidget *dialog; /* Add/Edit dialog */
   plugin_data *pd; /* Plugin data */
 } alarm_data;

@@ -203,3 +203,9 @@ msgstr "Xfce4 Timer"
 #: ../src/xfce4-timer.desktop.in.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Timer plugin for Xfce panel"
+
+msgid "Recurring alarm"
+msgstr "Recurring alarm"
+
+msgid "Auto start"
+msgstr "Auto start"
