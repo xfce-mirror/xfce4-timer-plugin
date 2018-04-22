@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Harald Servat <redcrash@gmail.com>, 2009
 # Davidmp <medipas@gmail.com>, 2016
@@ -13,15 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-02 08:15+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-22 07:24+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/ca/)\n"
-"Language: ca\n"
+"Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -49,9 +48,7 @@ msgstr "(en pausa)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Riiiiiiiiing! :) \n"
-"Ja és l'hora per a l'alarma %s."
+msgstr "Riiiiiiiiing! :) \nJa és l'hora per a l'alarma %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -130,19 +127,18 @@ msgstr "Ordre a executar:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Alarma recurrent"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Inicia automàticament quan es carregi el connector"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #: ../panel-plugin/xfcetimer.c:914
-#, fuzzy
 msgid "Accept"
 msgstr "Accepta"
 
@@ -166,9 +162,7 @@ msgstr "Nom del temporitzador"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Període de compte enrere /\n"
-"Hora de l'alarma"
+msgstr "Període de compte enrere /\nHora de l'alarma"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -226,14 +220,11 @@ msgstr "Quant a xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Un connector per definir temporitzadors de compte enrere i alarmes en "
-"moments determinats."
+msgstr "Un connector per definir temporitzadors de compte enrere i alarmes en moments determinats."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Drets d'autor (c) 2005-2017\n"
+msgstr "Drets d'autor (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -242,12 +233,3 @@ msgstr "Temporitzador de Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Connector de temporitzador per al plafó de Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "La selecció d'un temporitzador l'inicia"
-
-#~ msgid "Start timer"
-#~ msgstr "Inicia el temporitzador"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Atura l'alarma"
