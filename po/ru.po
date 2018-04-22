@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
 # Andrey Ivankov <andrey.ivankov@gmail.com>, 2014
@@ -14,18 +14,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-04 16:02+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-22 01:20+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/ru/)\n"
-"Language: ru\n"
+"Language-Team: Russian (http://www.transifex.com/xfce/xfce-panel-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
@@ -52,9 +49,7 @@ msgstr " (пауза)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Динь-динь! :)\n"
-"Время вышло по сигналу %s."
+msgstr "Динь-динь! :)\nВремя вышло по сигналу %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -62,19 +57,19 @@ msgstr "Закрыть"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
-msgstr "Перезапустить"
+msgstr "Перезапустить таймер"
 
 #: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
-msgstr "Пауза"
+msgstr "Поставить таймер на паузу"
 
 #: ../panel-plugin/xfcetimer.c:523
 msgid "Resume timer"
-msgstr "Продолжить"
+msgstr "Возобновить таймер"
 
 #: ../panel-plugin/xfcetimer.c:534
 msgid "Stop timer"
-msgstr "Остановить"
+msgstr "Остановить таймер"
 
 #: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
@@ -94,7 +89,7 @@ msgstr "%d с"
 #: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
 #, c-format
 msgid "At %02d:%02d"
-msgstr "сигнал в %02d:%02d"
+msgstr "В %02d:%02d"
 
 #: ../panel-plugin/xfcetimer.c:812
 msgid "Name:"
@@ -102,11 +97,11 @@ msgstr "Название:"
 
 #: ../panel-plugin/xfcetimer.c:821
 msgid "Enter the countdown time"
-msgstr "Обратный отсчёт"
+msgstr "Введите время обратного отсчёта"
 
 #: ../panel-plugin/xfcetimer.c:826
 msgid "Enter the time of alarm (24h format)"
-msgstr "Сигнал (24-х часовой формат)"
+msgstr "Введите время сигнала (24-х часовой формат)"
 
 #: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
@@ -133,12 +128,12 @@ msgstr "Выполнить команду:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Повторяющийся сигнал"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Запускать автоматически при загрузке модуля"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -168,7 +163,7 @@ msgstr "Название таймера"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Период срабатывания"
+msgstr "Период обратного отсчёта /\nвремя сигнала"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -226,8 +221,7 @@ msgstr "О таймере xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Модуль для создания таймеров обратного отсчёта или сигналов в заданное время."
+msgstr "Модуль для создания таймеров обратного отсчёта или сигналов в заданное время."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -240,12 +234,3 @@ msgstr "Таймер Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Модуль таймера для панели Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Запускать таймер при его выборе"
-
-#~ msgid "Start timer"
-#~ msgstr "Запустить"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Остановить"
