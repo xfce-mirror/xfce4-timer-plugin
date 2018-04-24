@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2013,2015
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # Per Kongstad <p_kongstad@op.pl>, 2008
 # scootergrisen, 2016-2018
+# Tony Albers, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-08 16:09+0000\n"
-"Last-Translator: scootergrisen\n"
-"Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/da/)\n"
-"Language: da\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-24 05:55+0000\n"
+"Last-Translator: Tony Albers\n"
+"Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -48,9 +48,7 @@ msgstr " (Sat på pause)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Biiiip! :) \n"
-"Tiden er udløbet for alarmen %s."
+msgstr "Biiiip! :) \nTiden er udløbet for alarmen %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -129,12 +127,12 @@ msgstr "Kommando der skal køres:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Gentagen alarm"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Start automatisk når plugin startes"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -164,9 +162,7 @@ msgstr "Timernavn"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Nedtællingsperiode/\n"
-"Alarmtid"
+msgstr "Nedtællingsperiode/\nAlarmtid"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -224,8 +220,7 @@ msgstr "Om xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Et plugin til at definere nedtællinger eller alarmer på givne tidspunkter."
+msgstr "Et plugin til at definere nedtællinger eller alarmer på givne tidspunkter."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -238,12 +233,3 @@ msgstr "Xfce4 timer"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Timer-plugin til Xfce-panelet"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Når en timer vælges, startes den"
-
-#~ msgid "Start timer"
-#~ msgstr "Start timer"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Stop alarmen"
