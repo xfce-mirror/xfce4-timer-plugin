@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Elishai Eliyahu <e1907@mm.st>, 2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-07 16:51+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-25 12:30+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
-"Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/he/)\n"
-"Language: he\n"
+"Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -44,9 +43,7 @@ msgstr "(מופסק)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"ביייפ! :)\n"
-"הזמן של האזעקה %s עבר."
+msgstr "ביייפ! :)\nהזמן של האזעקה %s עבר."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -125,12 +122,12 @@ msgstr "פקודה להפעלה:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "התראה חוזרת"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "התחלה אוטומטית כאשר תוסף נטען"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -160,9 +157,7 @@ msgstr "שם קוצב זמן"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"משך ספירה /\n"
-"זמן אזעקה"
+msgstr "משך ספירה /\nזמן אזעקה"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -233,12 +228,3 @@ msgstr "קוצב זמן Xfce4 "
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "תוסף קוצב זמן עבור פאנל Xfce "
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "בחירת קוצב זמן מפעילה אותו"
-
-#~ msgid "Start timer"
-#~ msgstr "התחל את קוצב הזמן"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "עצור את האזעקה"
