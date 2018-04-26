@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # abuyop <abuyop@gmail.com>, 2014,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-06 11:17+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-26 02:03+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/ms/)\n"
-"Language: ms\n"
+"Language-Team: Malay (http://www.transifex.com/xfce/xfce-panel-plugins/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -44,9 +43,7 @@ msgstr "(Dijeda)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Bip! :)\n"
-"Masa sudah tamat bagi penggera %s."
+msgstr "Bip! :)\nMasa sudah tamat bagi penggera %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -125,12 +122,12 @@ msgstr "Perintah untuk dijalan:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Penggera berulang"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Auto mula bila pemalam dimuatkan"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -160,9 +157,7 @@ msgstr "Nama pemasa"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Tempoh kiraan mengundur/\n"
-"Masa penggera"
+msgstr "Tempoh kiraan mengundur/\nMasa penggera"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -220,9 +215,7 @@ msgstr "Perihal xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Merupakan pemalam yang mentakrif pemasa kiraan mengundur atau penggera pada "
-"masa yang diberikan."
+msgstr "Merupakan pemalam yang mentakrif pemasa kiraan mengundur atau penggera pada masa yang diberikan."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -235,12 +228,3 @@ msgstr "Pemasa Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Pemalam pemasa untuk panel Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Memilih pemasa memulakannya"
-
-#~ msgid "Start timer"
-#~ msgstr "Mula pemasa"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Hentikan penggera"
