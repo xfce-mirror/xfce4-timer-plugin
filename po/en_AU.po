@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# John Humphrys <john.humphrys@protonmail.com>, 2018
+# John Humphrys <john.humphrys@pm.me>, 2018
 # Michael Findlay <translate@cobber-linux.org>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-04-06 00:25+0000\n"
-"Last-Translator: John Humphrys <john.humphrys@protonmail.com>\n"
-"Language-Team: English (Australia) (http://www.transifex.com/xfce/xfce-panel-"
-"plugins/language/en_AU/)\n"
-"Language: en_AU\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-27 00:03+0000\n"
+"Last-Translator: John Humphrys <john.humphrys@pm.me>\n"
+"Language-Team: English (Australia) (http://www.transifex.com/xfce/xfce-panel-plugins/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en_AU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -45,9 +44,7 @@ msgstr " (Paused)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :) \n"
-"Time is up for the alarm %s."
+msgstr "Beeep! :) \nTime is up for the alarm %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -126,12 +123,12 @@ msgstr "Command to run:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Recurring alarm"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Auto start when plugin loads"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -161,9 +158,7 @@ msgstr "Timer name"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Countdown period /\n"
-"Alarm time"
+msgstr "Countdown period /\nAlarm time"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -234,12 +229,3 @@ msgstr "Xfce4 Timer"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Timer plugin for Xfce panel"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Selecting a timer starts it"
-
-#~ msgid "Start timer"
-#~ msgstr "Start timer"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Stop the alarm"
