@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Andre Miranda <andre42m@gmail.com>, 2018
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
@@ -13,15 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-06 04:11+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-26 23:31+0000\n"
 "Last-Translator: Andre Miranda <andre42m@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/xfce-panel-"
-"plugins/language/pt_BR/)\n"
-"Language: pt_BR\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -49,9 +48,7 @@ msgstr "(Pausado)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Biiip! :) \n"
-"Acabou o tempo do alarme %s."
+msgstr "Biiip! :) \nAcabou o tempo do alarme %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -130,12 +127,12 @@ msgstr "comando a ser executado:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Alarme recorrente"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Iniciar automaticamente quando o plugin for carregado"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -165,9 +162,7 @@ msgstr "Nome do cronômetro"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Período de contagem regressiva /\n"
-"Hora do alarme"
+msgstr "Período de contagem regressiva /\nHora do alarme"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -225,9 +220,7 @@ msgstr "Sobre xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Um plugin para definir contagens regressiva  ou alarmes em momento "
-"informados."
+msgstr "Um plugin para definir contagens regressiva  ou alarmes em momento informados."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -240,12 +233,3 @@ msgstr "Temporizador do Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Plugin temporizador para o painel do Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Ao selecionar um cronômetro, incia-o."
-
-#~ msgid "Start timer"
-#~ msgstr "Iniciar o temporizador"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Parar o alarme"
