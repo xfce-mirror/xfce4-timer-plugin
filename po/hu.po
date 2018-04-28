@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+# Balázs Meskó <meskobalazs@gmail.com>, 2018
 # Benedek Imre <nucleo@indamail.hu>, 2013
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Hungarian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/hu/)\n"
-"Language: hu\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-28 20:41+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -45,17 +45,15 @@ msgstr "(Felfüggesztve)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Csörrr! :)\n"
-"Lejárt a(z) %s riasztás ideje."
+msgstr "Csörrr! :)\nLejárt a(z) %s riasztás ideje."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Időzítő újra futtatása"
 
 #: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
@@ -161,9 +159,7 @@ msgstr "Időzítő neve"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Visszaszámlálási idő/\n"
-"Figyelmeztetés ideje"
+msgstr "Visszaszámlálási idő/\nFigyelmeztetés ideje"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -191,8 +187,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
-"Ne jelenjen meg figyelmeztetés, ha be van állítva figyelmeztető parancs"
+msgstr "Ne jelenjen meg figyelmeztetés, ha be van állítva figyelmeztető parancs"
 
 #. Default alarm command config
 #: ../panel-plugin/xfcetimer.c:1631
@@ -222,14 +217,11 @@ msgstr "Az Xfce 4 Időzítő bővítmény névjegye"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Bővítmény visszaszámláló időzítőkhöz és riasztásokhoz a megadott "
-"időpontokban."
+msgstr "Bővítmény visszaszámláló időzítőkhöz és riasztásokhoz a megadott időpontokban."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright (c) 2005-2013\n"
+msgstr ""
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -238,15 +230,3 @@ msgstr "Xfce 4 időzítő"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Időzítő bővítmény az Xfce panelhez"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Az időzítő kiválasztása elindítja azt"
-
-#~ msgid "Start timer"
-#~ msgstr "Időzítő indítása"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Figyelmeztetés leállítása"
-
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Xfce 4 Időzítő bővítmény"
