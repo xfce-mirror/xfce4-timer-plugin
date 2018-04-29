@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-04-28 20:41+0000\n"
+"PO-Revision-Date: 2018-04-29 10:47+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -124,20 +124,20 @@ msgstr "Futtatandó parancs:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Ismétlődő figyelmeztetés"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Automatikus indítás a bővítmény betöltésekor"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
-msgstr ""
+msgstr "Elfogadás"
 
 #: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
@@ -167,23 +167,23 @@ msgstr "Figyelmeztető parancs"
 
 #: ../panel-plugin/xfcetimer.c:1572
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: ../panel-plugin/xfcetimer.c:1580
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
-msgstr ""
+msgstr "Fel"
 
 #: ../panel-plugin/xfcetimer.c:1603
 msgid "Down"
-msgstr ""
+msgstr "Le"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
@@ -221,7 +221,7 @@ msgstr "Bővítmény visszaszámláló időzítőkhöz és riasztásokhoz a mega
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
