@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-06-10 00:29+0000\n"
+"PO-Revision-Date: 2018-06-18 07:15+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -22,17 +22,17 @@ msgstr ""
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "quedan %dh %dm %ds"
+msgstr "Quedan %dh %dm %ds"
 
 #: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
-msgstr "quedan %dm %ds"
+msgstr "Quedan %dm %ds"
 
 #: ../panel-plugin/xfcetimer.c:173
 #, c-format
 msgid "%ds left"
-msgstr "quedan %ds"
+msgstr "Quedan %ds"
 
 #: ../panel-plugin/xfcetimer.c:177
 msgid " (Paused)"
