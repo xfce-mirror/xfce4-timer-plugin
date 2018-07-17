@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-07-15 10:50+0000\n"
+"PO-Revision-Date: 2018-07-17 12:13+0000\n"
 "Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.me>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/xfce-panel-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -23,17 +23,17 @@ msgstr ""
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "Mancano %dore %dminuti %dsecondi"
+msgstr "Mancano %d ore %d minuti %d secondi"
 
 #: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
-msgstr "Mancano %dminuti %dsecondi"
+msgstr "Mancano %d minuti %d secondi"
 
 #: ../panel-plugin/xfcetimer.c:173
 #, c-format
 msgid "%ds left"
-msgstr "Mancano %dsecondi"
+msgstr "Mancano %d secondi"
 
 #: ../panel-plugin/xfcetimer.c:177
 msgid " (Paused)"
@@ -45,7 +45,7 @@ msgstr "(in pausa)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Driiin! :-)\nil tempo è scaduto per la sveglia %s."
+msgstr "Driiin! :-)\nIl tempo è scaduto per la sveglia %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -57,7 +57,7 @@ msgstr "Riavvia il cronometro"
 
 #: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
-msgstr "Pausa"
+msgstr "Metti in pausa il cronometro"
 
 #: ../panel-plugin/xfcetimer.c:523
 msgid "Resume timer"
@@ -70,17 +70,17 @@ msgstr "Interrompi il cronometro"
 #: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%d ore %d minuti %d secondi"
 
 #: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
 #, c-format
 msgid "%dm %ds"
-msgstr "%dm %ds"
+msgstr "%d minuti %d secondi"
 
 #: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "%ds"
-msgstr "%ds"
+msgstr "%d secondi"
 
 #: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
 #, c-format
@@ -101,15 +101,15 @@ msgstr "Inserire l'ora della sveglia (nel formato a 24 ore)"
 
 #: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
-msgstr "h  "
+msgstr "ore"
 
 #: ../panel-plugin/xfcetimer.c:848
 msgid "m  "
-msgstr "m  "
+msgstr "minuti"
 
 #: ../panel-plugin/xfcetimer.c:855
 msgid "s  "
-msgstr "s  "
+msgstr "secondi"
 
 #: ../panel-plugin/xfcetimer.c:859
 msgid "or"
@@ -129,7 +129,7 @@ msgstr "Sveglia ricorrente"
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr "Avvio automatico quando il plugin si carica"
+msgstr "Avvio automatico quando il componente aggiuntivo si carica"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -149,17 +149,17 @@ msgstr "Modifica sveglia"
 
 #: ../panel-plugin/xfcetimer.c:1506
 msgid "Xfce4 Timer Options"
-msgstr "Opzioni della sveglia di Xfce4"
+msgstr "Opzioni del cronometro di Xfce4"
 
 #: ../panel-plugin/xfcetimer.c:1546
 msgid "Timer name"
-msgstr "Nome del contatore"
+msgstr "Nome del cronometro"
 
 #: ../panel-plugin/xfcetimer.c:1551
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Durata del conto alla rovescia/\nora della sveglia."
+msgstr "Durata del conto alla rovescia /\nora della sveglia."
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -217,7 +217,7 @@ msgstr "Informazioni su xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Un plugin per impostare dei conti alla rovescia o delle sveglie a un tempo predefinito"
+msgstr "Un componente aggiuntivo per impostare dei conti alla rovescia o delle sveglie ad un tempo predefinito."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -225,8 +225,8 @@ msgstr "Copyright © 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
-msgstr "Sveglia di Xfce4"
+msgstr "Cronometro di Xfce4"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Plugin della sveglia per il pannello di Xfce"
+msgstr "Componente aggiuntivo del cronometro per il pannello di Xfce"
