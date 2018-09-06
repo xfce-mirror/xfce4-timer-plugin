@@ -799,15 +799,19 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   adata->pd = pd;
 
   /* Set title */
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, BORDER);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (dialog), vbox);
-  gtk_container_set_border_width (GTK_CONTAINER (dialog), BORDER);
-
+  
   box = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+  gtk_container_set_border_width (GTK_CONTAINER (box), 2);
+
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  gtk_box_pack_start (GTK_BOX (box), vbox, FALSE, FALSE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (vbox), 12);
 
   /***********/
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, BORDER);
-  gtk_box_pack_start (GTK_BOX (box), hbox, FALSE, FALSE, WIDGET_SPACING);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
 
   label = (GtkLabel *) gtk_label_new (_("Name:"));
   name = (GtkEntry *) gtk_entry_new ();
@@ -815,6 +819,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (name), TRUE, TRUE, 0);
+
+  gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
 
   /**********/
   rb1 = (GtkRadioButton *) gtk_radio_button_new_with_label (
@@ -828,83 +834,87 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
                     G_CALLBACK (alarmdialog_alarmtime_toggled), adata);
   adata->rb1 = rb1;
 
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (rb1), TRUE, TRUE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (rb1), TRUE, TRUE, 0);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  gtk_widget_set_margin_start (GTK_WIDGET (hbox), 12);
 
   timeh = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 23, 1);
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timeh), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timeh), FALSE, FALSE, 0);
   adata->timeh = timeh;
+
   label = (GtkLabel *) gtk_label_new (_("h  "));
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
+
   timem = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timem), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (timem), FALSE, FALSE, 0);
   adata->timem = timem;
+
   label = (GtkLabel *) gtk_label_new (_("m  "));
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
+
   times = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (times), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (times), FALSE, FALSE, 0);
   adata->times = times;
+
   label = (GtkLabel *) gtk_label_new (_("s  "));
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
 
   label = (GtkLabel *) gtk_label_new (_("or"));
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), TRUE, TRUE, BORDER);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (label), TRUE, TRUE, 6);
 
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (rb2), TRUE, TRUE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (rb2), TRUE, TRUE, 0);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, WIDGET_SPACING);
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+  gtk_widget_set_margin_start (GTK_WIDGET (hbox), 12);
 
   time_h = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 23, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_h), FALSE, FALSE, 0);
   adata->time_h = time_h;
+
   label = (GtkLabel *) gtk_label_new (":");
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
+
   time_m = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
-  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_m), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_m), FALSE, FALSE, 0);
   adata->time_m = time_m;
 
+  gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
+
   /****************/
+
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
 
   label = (GtkLabel *) gtk_label_new (_("Command to run:"));
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (label), FALSE, FALSE,
-  WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
+
   command = (GtkEntry *) gtk_entry_new ();
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (command), TRUE, TRUE, 0);
   adata->command = command;
-  gtk_box_pack_start (GTK_BOX (box), GTK_WIDGET (command), TRUE, TRUE,
-  WIDGET_SPACING);
 
   /****************/
 
-  //add recurring alarm check button
-  button=gtk_check_button_new_with_label(_("Recurring alarm"));
-  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),FALSE);
-  adata->recur_cb=button;
-  gtk_box_pack_start(GTK_BOX(box),button,FALSE,FALSE,WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
 
+  //add recurring alarm check button
+  button = gtk_check_button_new_with_label(_("Recurring alarm"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(button), FALSE);
+  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+  adata->recur_cb = button;
 
    //add alarm autostart check button
-  button=gtk_check_button_new_with_label(_("Auto start when plugin loads"));
-  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button),FALSE);
+  button = gtk_check_button_new_with_label(_("Auto start when plugin loads"));
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button), FALSE);
+  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
   adata->autostart_cb=button;
-  gtk_box_pack_start(GTK_BOX(box),button,FALSE,FALSE,WIDGET_SPACING);
-
 
   hbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+  gtk_box_set_spacing (GTK_BOX (hbox), 6);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (hbox), GTK_BUTTONBOX_END);
-  gtk_box_pack_start (GTK_BOX (box), hbox, TRUE, TRUE, WIDGET_SPACING);
+  gtk_box_pack_start (GTK_BOX (box), hbox, TRUE, TRUE, 0);
 
   button = gtk_button_new_with_label (_("Cancel"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
@@ -1513,18 +1523,18 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 
   dialog_vbox = gtk_dialog_get_content_area (GTK_DIALOG (dlg));
 
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, BORDER);
-  gtk_box_pack_start (GTK_BOX (dialog_vbox), vbox, TRUE, TRUE, BORDER);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  gtk_box_pack_start (GTK_BOX (dialog_vbox), vbox, TRUE, TRUE, 0);
 
   g_signal_connect (dlg, "response", G_CALLBACK (options_dialog_response), pd);
 
-  gtk_container_set_border_width (GTK_CONTAINER (dlg), BORDER);
+  gtk_container_set_border_width (GTK_CONTAINER (vbox), 10);
 
   gtk_widget_set_size_request (dlg, 650, -1);
   gtk_window_set_position (GTK_WINDOW (header), GTK_WIN_POS_CENTER);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, BORDER);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, BORDER);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
 
   sw = gtk_scrolled_window_new (NULL, NULL);
 
@@ -1567,20 +1577,19 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 
   buttonbox = gtk_button_box_new (GTK_ORIENTATION_VERTICAL);
   gtk_button_box_set_layout (GTK_BUTTON_BOX (buttonbox), GTK_BUTTONBOX_START);
+  gtk_box_set_spacing (GTK_BOX (buttonbox), 6);
   gtk_box_pack_start (GTK_BOX (hbox), buttonbox, FALSE, FALSE, 0);
 
   button = gtk_button_new_with_label (_("Add"));
   pd->buttonadd = button;
-  gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
-  WIDGET_SPACING << 1);
+  gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
   gtk_widget_set_sensitive (button, TRUE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (add_edit_clicked),
                     pd);
 
   button = gtk_button_new_with_label (_("Edit"));
   pd->buttonedit = button;
-  gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE,
-  WIDGET_SPACING << 1);
+  gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
   gtk_widget_set_sensitive (button, FALSE);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (add_edit_clicked),
                     pd);
@@ -1639,6 +1648,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   pd->global_command_box = hbox;
   gtk_box_pack_start (GTK_BOX (hbox), gtk_label_new (_("Default command: ")),
                       FALSE, FALSE, 0);
+  gtk_widget_set_margin_start (GTK_WIDGET (hbox), 12);
   pd->glob_command_entry = (GtkWidget *) gtk_entry_new ();
   gtk_widget_set_size_request (pd->glob_command_entry, 400, -1);
   gtk_entry_set_text (GTK_ENTRY (pd->glob_command_entry), pd->global_command);
@@ -1660,6 +1670,8 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, WIDGET_SPACING);
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  gtk_widget_set_margin_start (GTK_WIDGET (hbox), 12);
+
   pd->repeat_alarm_box = hbox;
   gtk_box_pack_start (GTK_BOX (hbox),
                       gtk_label_new (_("Number of repetitions")), FALSE, FALSE,
