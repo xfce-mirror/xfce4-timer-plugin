@@ -68,24 +68,26 @@ make_menu (plugin_data *pd);
 static gboolean
 repeat_alarm (gpointer data)
 {
-	alarm_t *alrm;
-	alrm = (alarm_t *) data;
-	plugin_data *pd = alrm->pd;
+  alarm_t *alrm;
+  gchar *command;
+  plugin_data *pd;
+
+  alrm = (alarm_t *) data;
+  pd = alrm->pd;
 
   /* Don't repeat anymore */
   if (alrm->rem_repetitions == 0)
     {
-	  alrm->is_repeating=FALSE;
+      alrm->is_repeating=FALSE;
       return FALSE;
     }
 
-  gchar *command;
   if (strlen(alrm->command)>0)
-  command = g_strdup(alrm->command);
+    command = g_strdup(alrm->command);
   else if (pd->use_global_command)
-	  command = g_strdup (pd->global_command);
+    command = g_strdup (pd->global_command);
   else
-	  command = g_strdup("");
+    command = g_strdup("");
 
   g_spawn_command_line_async (command, NULL);
   alrm->rem_repetitions = alrm->rem_repetitions - 1;
@@ -185,6 +187,8 @@ update_function (gpointer data)
 		  }
 	  callAgain =  TRUE;
 	  }else{
+			  gchar *command;
+
 			  /* Countdown is over, stop timer and free resources */
 			  if (alrm->timer)
 				  g_timer_destroy(alrm->timer);
@@ -195,8 +199,6 @@ update_function (gpointer data)
 
 			  alrm->timeout = 0;
 			  alrm->timer_on = FALSE;
-
-			  gchar *command;
 
 			  /* If an alarm command is set, it overrides the default (if any) */
 			  if (strlen(alrm->command)>0)
