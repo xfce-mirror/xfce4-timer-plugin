@@ -293,9 +293,6 @@ timer_selected (GtkWidget* menuitem, gpointer data)
   GList *list = (GList *) data;
   alarm_t *alrm;
   plugin_data *pd;
-  GtkMenuItem *rmi;
-
-  rmi = (GtkMenuItem *) menuitem;
 
   alrm = (alarm_t *) list->data;
   pd = (plugin_data *) alrm->pd;
@@ -380,13 +377,6 @@ start_stop_callback (GtkWidget* menuitem, gpointer list)
 {
 	  GList *listitem = (GList *) list;
 	  plugin_data *pd;
-	  GSList *group=NULL;
-	  gchar temp[8];
-	  gint row_count,cur_h,cur_m,cur_s,time;
-	  gint timeout_period;
-	  gboolean is_cd;
-	  GTimeVal timeval;
-	  struct tm *current;
 	  alarm_t *alrm;
 
 	  alrm = (alarm_t *) listitem->data;
@@ -442,21 +432,6 @@ pause_resume_selected (GtkWidget* menuitem, gpointer data)
 
 
 
-/* Callback when "Stop the alarm" is selected in the popup menu */
-static void
-stop_repeating_alarm (GtkWidget* menuitem, gpointer data)
-{
-  plugin_data *pd = (plugin_data *) data;
-  alarm_t *alrm;
-  alrm = (alarm_t *) pd->selected->data;
-
-  g_source_remove (alrm->repeat_timeout);
-
-  alrm->is_repeating = FALSE;
-}
-
-
-
 /* Callback when clicking on pbar. Pops the menu up/down */
 static void
 pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
@@ -482,10 +457,9 @@ pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
 void
 make_menu (plugin_data *pd)
 {
-  GSList *group = NULL;
   GList *list = NULL;
   alarm_t *alrm;
-  GtkWidget *menuitem, *to_be_activated;
+  GtkWidget *menuitem;
   gchar *itemtext;
 
   /* Destroy the existing one */
