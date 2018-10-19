@@ -1,12 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 #  <abel.martin.ruiz@gmail.com>, 2009
 # Adolfo Jayme Barrientos, 2014-2015
 # Adolfo Jayme-Barrientos, 2015
 # Adolfo Jayme-Barrientos, 2014
+# Jaime Marquínez Ferrándiz, 2018
 # mc <correomc2000-ing@yahoo.es>, 2013
 # Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2018
 # Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2014
@@ -14,16 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-18 04:43+0000\n"
-"Last-Translator: Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail."
-"com>\n"
-"Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/es/)\n"
-"Language: es\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-10-19 19:19+0000\n"
+"Last-Translator: Jaime Marquínez Ferrándiz\n"
+"Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -51,9 +50,7 @@ msgstr " (Pausado)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"¡Bip! :) \n"
-"Se acabó el tiempo de la alarma %s."
+msgstr "¡Bip! :) \nSe acabó el tiempo de la alarma %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -132,12 +129,12 @@ msgstr "Orden a ejecutar:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Alarma recurrente"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Empezar automáticamente cuando se carga el plugin"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -167,9 +164,7 @@ msgstr "Nombre del temporizador"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Periodo de cuenta atrás /\n"
-"Hora de alarma"
+msgstr "Periodo de cuenta atrás /\nHora de alarma"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -227,9 +222,7 @@ msgstr "Acerca del Complemento temporizador de Xfce4"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Un complemento para definir temporizadores de cuenta regresiva o alarmas en "
-"cualquier momento."
+msgstr "Un complemento para definir temporizadores de cuenta regresiva o alarmas en cualquier momento."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -242,12 +235,3 @@ msgstr "Temporizador de Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Complemento temporizador para el panel de Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Seleccionando un temporizador se inicia este"
-
-#~ msgid "Start timer"
-#~ msgstr "Iniciar temporizador"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Parar la alarma"
