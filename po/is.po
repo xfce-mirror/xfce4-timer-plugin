@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-11-05 20:15+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/is/)\n"
-"Language: is\n"
+"Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -44,13 +43,11 @@ msgstr " (í bið)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Píííp! :) \n"
-"Tíminn er liðinn fyrir áminninguna %s."
+msgstr "Píííp! :) \nTíminn er liðinn fyrir áminninguna %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "Loka"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
@@ -134,7 +131,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
-msgstr ""
+msgstr "Hætta við"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
@@ -160,9 +157,7 @@ msgstr "Heiti niðurtalningar"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Tími niðurtalningar /\n"
-"Tími áminningar"
+msgstr "Tími niðurtalningar /\nTími áminningar"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -220,13 +215,11 @@ msgstr "Um xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Viðbót til að skilgreina niðurtalningar eða áminningar á tilteknum tíma."
+msgstr "Viðbót til að skilgreina niðurtalningar eða áminningar á tilteknum tíma."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Höfundarréttur (c) 2005-2013\n"
+msgstr "Höfundarréttur (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -235,15 +228,3 @@ msgstr "Xfce4 tímamæling"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Tímamælingarviðbót fyrir Xfce4 skjástikur"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Val á niðurtalningu ræsir hana"
-
-#~ msgid "Start timer"
-#~ msgstr "Byrja niðurtalningu"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Stöðva áminninguna"
-
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Xfce4 tímamælingarviðbót"
