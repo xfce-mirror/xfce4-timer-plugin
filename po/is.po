@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2013-2015
+# Sveinn í Felli <sv1@fellsnet.is>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-11-05 20:15+0000\n"
+"PO-Revision-Date: 2018-11-06 16:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -122,12 +123,12 @@ msgstr "Skipun sem á að keyra:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Endurtekin áminning"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Sjálfvirk gangsetning þegar viðbót er hlaðið inn"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -135,7 +136,7 @@ msgstr "Hætta við"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
-msgstr ""
+msgstr "Samþykkja"
 
 #: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
@@ -165,23 +166,23 @@ msgstr "Skipun við áminningu"
 
 #: ../panel-plugin/xfcetimer.c:1572
 msgid "Add"
-msgstr ""
+msgstr "Bæta við"
 
 #: ../panel-plugin/xfcetimer.c:1580
 msgid "Edit"
-msgstr ""
+msgstr "Breyta"
 
 #: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
-msgstr ""
+msgstr "Fjarlægja"
 
 #: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
-msgstr ""
+msgstr "Upp"
 
 #: ../panel-plugin/xfcetimer.c:1603
 msgid "Down"
-msgstr ""
+msgstr "Niður"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
