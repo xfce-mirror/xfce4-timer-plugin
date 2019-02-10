@@ -5,14 +5,14 @@
 # Translators:
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2007
-# Nuno Miguel <nunomgue@gmail.com>, 2014,2018
+# Nuno Miguel <nunomgue@gmail.com>, 2014,2018-2019
 # Sérgio Marques <smarquespt@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-09-09 12:05+0000\n"
+"PO-Revision-Date: 2019-02-10 12:55+0000\n"
 "Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -193,11 +193,11 @@ msgstr "Não mostrar o aviso se o comando de alarme estiver definido"
 #. Default alarm command config
 #: ../panel-plugin/xfcetimer.c:1631
 msgid "Use a default alarm command"
-msgstr "Utilizar o comando pré-definido"
+msgstr "Utilizar o comando por omissão"
 
 #: ../panel-plugin/xfcetimer.c:1640
 msgid "Default command: "
-msgstr "Comando pré-definido:"
+msgstr "Comando por omissão:"
 
 #. Alarm repetitions config
 #: ../panel-plugin/xfcetimer.c:1656
@@ -230,4 +230,4 @@ msgstr "Temporizador Xfce4"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "\"Plug-in\" para painel Xfce"
+msgstr "Plugin para painel Xfce"
