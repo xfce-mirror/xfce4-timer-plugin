@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # No Ne, 2018
 # Piotr Maliński <admin@rk.edu.pl>, 2006
@@ -12,18 +12,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-02 12:30+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 19:43+0000\n"
 "Last-Translator: No Ne\n"
-"Language-Team: Polish (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/pl/)\n"
-"Language: pl\n"
+"Language-Team: Polish (http://www.transifex.com/xfce/xfce-panel-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
@@ -129,19 +126,18 @@ msgstr "Polecenie:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Alarm cykliczny"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Automatyczne uruchamianie po załadowaniu wtyczki"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
 msgstr "Anuluj"
 
 #: ../panel-plugin/xfcetimer.c:914
-#, fuzzy
 msgid "Accept"
 msgstr "Akceptuj"
 
@@ -226,9 +222,8 @@ msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Odmierza czas i alarmuje po upłynięciu ustalonego czasu."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Prawa autorskie (c) 2005-2017\n"
+msgstr "Prawa autorskie (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -237,12 +232,3 @@ msgstr "Minutnik"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Odmierza ustalony czas"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Rozpoczęcie odliczania po zaznaczeniu minutnika"
-
-#~ msgid "Start timer"
-#~ msgstr "Rozpocznij odliczanie"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Zatrzymaj alarm"
