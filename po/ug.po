@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-23 19:03+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 16:32+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Uighur (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/ug/)\n"
-"Language: ug\n"
+"Language-Team: Uighur (http://www.transifex.com/xfce/xfce-panel-plugins/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ug\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -48,7 +47,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "تاقا"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
@@ -158,9 +157,7 @@ msgstr ""
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"تەتۈر ساناش ۋاقتى/\n"
-"قوڭغۇراق ۋاقتى"
+msgstr "تەتۈر ساناش ۋاقتى/\nقوڭغۇراق ۋاقتى"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -231,9 +228,3 @@ msgstr "Xfce4 ۋاقىت ئۆلچىگۈچى"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Xfce نىڭ ۋاقىت ئۆلچىگۈچ قىستۇرمىسى"
-
-#~ msgid "Start timer"
-#~ msgstr "ۋاقىت ئۆلچىگۈچنى باشلا"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "قوڭغۇراقنى توختات"
