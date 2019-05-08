@@ -1,21 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 16:32+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Urdu (Pakistan) (http://www.transifex.com/xfce/xfce-panel-"
-"plugins/language/ur_PK/)\n"
-"Language: ur_PK\n"
+"Language-Team: Urdu (Pakistan) (http://www.transifex.com/xfce/xfce-panel-plugins/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ur_PK\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -47,7 +46,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "بند کریں"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
@@ -157,9 +156,7 @@ msgstr ""
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"تنزلی مدت /\n"
-"الارم وقت"
+msgstr "تنزلی مدت /\nالارم وقت"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -230,9 +227,3 @@ msgstr "ایکسفس4 ٹائمر"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "ٹائمر پلگ ان برائے ایکسفس 4.4 پینل"
-
-#~ msgid "Start timer"
-#~ msgstr "ٹائمر شروع کریں"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "الارم بند کریں"
