@@ -1,24 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2013
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2013
+# se7entime <se7entime@openmailbox.org>, 2013
+# se7entime <se7entime@openmailbox.org>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
-"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
-"Language-Team: Indonesian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/id/)\n"
-"Language: id\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 16:32+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Indonesian (http://www.transifex.com/xfce/xfce-panel-plugins/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -46,13 +45,11 @@ msgstr "(Dijeda)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :)\n"
-"Waktunya habis untuk alarm %s."
+msgstr "Beeep! :)\nWaktunya habis untuk alarm %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "Tutup"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
@@ -162,9 +159,7 @@ msgstr "Nama Pengatur Waktu"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Waktu hitung mundur /\n"
-"Waktu alarm"
+msgstr "Waktu hitung mundur /\nWaktu alarm"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -222,14 +217,11 @@ msgstr "Tentang xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Plugin untuk menetapkan pengatur waktu atau alarm sesuai dengan waktu yang "
-"telah diatur."
+msgstr "Plugin untuk menetapkan pengatur waktu atau alarm sesuai dengan waktu yang telah diatur."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright (c) 2005-2013\n"
+msgstr ""
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -238,15 +230,3 @@ msgstr "Pengukur Waktu Xfce4"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Plugin pengukur waktu untuk panel Xfce"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Memilih pengatur waktu memulainya"
-
-#~ msgid "Start timer"
-#~ msgstr "Mulai pengukur waktu"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Stop alarm"
-
-#~ msgid "Xfce 4 Timer Plugin"
-#~ msgstr "Plugin Pengatur Waktu Xfce 4"
