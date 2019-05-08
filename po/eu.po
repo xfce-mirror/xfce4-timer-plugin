@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Piarres Beobide <pi@beobide.net>, 2006,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
-"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Basque (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/eu/)\n"
-"Language: eu\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 16:32+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Basque (http://www.transifex.com/xfce/xfce-panel-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
@@ -48,7 +47,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
-msgstr ""
+msgstr "Itxi"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
@@ -158,9 +157,7 @@ msgstr ""
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Kontatze aldia /\n"
-"Alarma ordua"
+msgstr "Kontatze aldia /\nAlarma ordua"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -221,9 +218,8 @@ msgid "A plugin to define countdown timers or alarms at given times."
 msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright-a (c) 2005-2013\n"
+msgstr ""
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -232,9 +228,3 @@ msgstr "Xfce4 kronometroa"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Xfce panelarentzat kronometro plugin-a"
-
-#~ msgid "Start timer"
-#~ msgstr "Abiarazte ordua"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Alarma gelditu"
