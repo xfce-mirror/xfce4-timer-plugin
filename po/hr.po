@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Edin Veskovic <edin.lockedin@gmail.com>, 2018
 # Edin Veskovic <edin.lockedin@gmail.com>, 2014
@@ -10,17 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-02 11:12+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 19:20+0000\n"
 "Last-Translator: Edin Veskovic <edin.lockedin@gmail.com>\n"
-"Language-Team: Croatian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/hr/)\n"
-"Language: hr\n"
+"Language-Team: Croatian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
@@ -47,9 +45,7 @@ msgstr "(Pauzirano)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Beeep! :)\n"
-"Vrijeme alarma je isteklo %s."
+msgstr "Beeep! :)\nVrijeme alarma je isteklo %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -128,19 +124,18 @@ msgstr "Pokreni naredbu:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Ponavljajući alarm"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Automatsko pokretanje prilikom starta priključka"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
 msgstr "Odustani"
 
 #: ../panel-plugin/xfcetimer.c:914
-#, fuzzy
 msgid "Accept"
 msgstr "Prihvati"
 
@@ -164,9 +159,7 @@ msgstr "Ime mjerača vremena"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Period odbrojavanja /\n"
-"Vrijeme alarma"
+msgstr "Period odbrojavanja /\nVrijeme alarma"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -224,14 +217,11 @@ msgstr "O priključku xfce4-mjerač vremena"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Priključak za definiranje odbrojavanja mjerača vremena ili alarma u dano "
-"vrijeme."
+msgstr "Priključak za definiranje odbrojavanja mjerača vremena ili alarma u dano vrijeme."
 
 #: ../panel-plugin/xfcetimer.c:1742
-#, fuzzy
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright (c) 2005-2017\n"
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -240,12 +230,3 @@ msgstr "Xfce4 Mjerač vremena"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Priključak mjerača vremena za Xfce4 ploču"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Pokreni mjerač vremena odabirom"
-
-#~ msgid "Start timer"
-#~ msgstr "Pokreni mjerač vremena"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Zaustavi alarm"
