@@ -1,24 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Moo, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:00+0300\n"
-"PO-Revision-Date: 2018-01-04 12:11+0000\n"
+"POT-Creation-Date: 2018-04-21 18:32+0200\n"
+"PO-Revision-Date: 2018-04-21 17:07+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/lt/)\n"
-"Language: lt\n"
+"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
@@ -45,9 +43,7 @@ msgstr " (Pristabdytas)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
-"Biiip! :) \n"
-"Priminimo %s laikas baigėsi."
+msgstr "Biiip! :) \nPriminimo %s laikas baigėsi."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -126,12 +122,12 @@ msgstr "Komanda, kurią vykdyti"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Pasikartojantis priminimas"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Automatiškai paleisti, kai įskiepis yra įkeliamas"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
@@ -161,9 +157,7 @@ msgstr "Laikmačio pavadinimas"
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr ""
-"Atvirkštinis periodas /\n"
-"Priminimo laikas"
+msgstr "Atvirkštinis periodas /\nPriminimo laikas"
 
 #: ../panel-plugin/xfcetimer.c:1554
 msgid "Alarm command"
@@ -221,9 +215,7 @@ msgstr "Apie xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
-"Įskiepis, skirtas apibrėžti atvirkštinius laikmačius ar priminimus duotu "
-"laiku."
+msgstr "Įskiepis, skirtas apibrėžti atvirkštinius laikmačius ar priminimus duotu laiku."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
@@ -236,12 +228,3 @@ msgstr "Xfce4 laikmatis"
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
 msgstr "Laikmačio įskiepis, skirtas Xfce skydeliui"
-
-#~ msgid "Selecting a timer starts it"
-#~ msgstr "Laikmačio pasirinkimas, jį paleidžia"
-
-#~ msgid "Start timer"
-#~ msgstr "Paleisti laikmatį"
-
-#~ msgid "Stop the alarm"
-#~ msgstr "Stabdyti priminimą"
