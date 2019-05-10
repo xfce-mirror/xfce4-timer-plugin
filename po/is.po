@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2013-2015,2018
-# Sveinn í Felli <sv1@fellsnet.is>, 2018
+# Sveinn í Felli <sv1@fellsnet.is>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-11-06 16:42+0000\n"
+"PO-Revision-Date: 2019-05-10 11:27+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -92,11 +92,11 @@ msgstr "Heiti:"
 
 #: ../panel-plugin/xfcetimer.c:821
 msgid "Enter the countdown time"
-msgstr "Sláðu inn tíma niðurtalningar"
+msgstr "Settu inn tíma niðurtalningar"
 
 #: ../panel-plugin/xfcetimer.c:826
 msgid "Enter the time of alarm (24h format)"
-msgstr "Sláðu inn tíma áminningar (24t snið)"
+msgstr "Settu inn tíma áminningar (24t snið)"
 
 #: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
