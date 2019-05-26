@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-05-22 20:14+0000\n"
+"PO-Revision-Date: 2019-05-26 13:40+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -132,7 +132,7 @@ msgstr "Gentagen alarm"
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr "Start automatisk når plugin startes"
+msgstr "Start automatisk når pluginet indlæses"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
