@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-08-05 04:48+0000\n"
+"PO-Revision-Date: 2019-08-16 06:03+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -144,7 +144,7 @@ msgstr "Engadir temporizador"
 
 #: ../panel-plugin/xfcetimer.c:966
 msgid "Edit alarm"
-msgstr "Modificar temporizador"
+msgstr "Modificar o temporizador"
 
 #: ../panel-plugin/xfcetimer.c:1506
 msgid "Xfce4 Timer Options"
