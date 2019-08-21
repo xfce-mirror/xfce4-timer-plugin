@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-08-16 06:03+0000\n"
+"PO-Revision-Date: 2019-08-21 19:54+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -186,7 +186,7 @@ msgstr "Baixar"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Non amosar unha advertencia cando se definiu unha orde a executar"
+msgstr "Non amosar un aviso cando se definiu unha orde a executar"
 
 #. Default alarm command config
 #: ../panel-plugin/xfcetimer.c:1631
