@@ -1821,6 +1821,8 @@ create_plugin_control (XfcePanelPlugin *plugin)
   g_signal_connect (plugin, "orientation-changed", G_CALLBACK (orient_change),
                     pd);
 
+  g_signal_connect (plugin, "size-changed", G_CALLBACK (gtk_true), NULL);
+
   xfce_panel_plugin_menu_show_configure (plugin);
   g_signal_connect (plugin, "configure-plugin",
                     G_CALLBACK (plugin_create_options), pd);
