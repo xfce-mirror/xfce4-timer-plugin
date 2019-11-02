@@ -36,7 +36,6 @@ typedef struct
 
 typedef struct
 {
-  GtkWidget *eventbox; /* Main container widget in ctrl->base */
   GtkWidget *box; /* v/hbox that holds pbar */
   GtkWidget *pbar; /* Progress bar */
   GtkWidget *tree; /* Treeview */

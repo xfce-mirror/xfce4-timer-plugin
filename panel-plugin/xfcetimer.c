@@ -1371,7 +1371,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
     g_list_free (pd->alarm_list);
 
   /* destroy all widgets */
-  gtk_widget_destroy (GTK_WIDGET (pd->eventbox));
+  gtk_widget_destroy (GTK_WIDGET (pd->box));
 
   /* free the plugin data structure */
   g_free (pd);
@@ -1760,7 +1760,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
                                       G_TYPE_STRING, /* Column 1: Name */
                                       G_TYPE_STRING, /* Column 2: Timer period/alarm time - info string */
                                       G_TYPE_STRING); /* Command to run */
-  pd->eventbox = gtk_event_box_new ();
   pd->box = NULL;
   pd->buttonadd = NULL;
   pd->buttonedit = NULL;
