@@ -1078,65 +1078,42 @@ down_clicked (GtkButton *button, gpointer data)
 
 
 
-/**
- * Adds the progressbar, taking into account the orientation
- * pd->pbar is not destroyed, just reparented (saves fraction setting code etc.).
- **/
 static void
-add_pbar (XfcePanelPlugin *plugin, plugin_data *pd)
+update_pbar_orientation (XfcePanelPlugin *plugin, plugin_data *pd)
 {
-
-  gdouble frac;
-
-  gtk_widget_hide (GTK_WIDGET (plugin));
-
-  /* Always true except at initialization */
-  if (pd->box)
-    {
-      frac = gtk_progress_bar_get_fraction (GTK_PROGRESS_BAR (pd->pbar));
-      gtk_widget_destroy (pd->box);
-      pd->pbar = gtk_progress_bar_new ();
-      gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (pd->pbar), frac);
-    }
-
-  /* vertical bar */
   if (xfce_panel_plugin_get_orientation (plugin) == GTK_ORIENTATION_HORIZONTAL)
     {
-
-      gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR (pd->pbar), TRUE);
-
-      pd->box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-      gtk_widget_set_halign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
-      gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), TRUE);
-      gtk_container_set_border_width (GTK_CONTAINER (pd->box), BORDER / 2);
-      gtk_container_add (GTK_CONTAINER (plugin), pd->box);
+      /* vertical bar */
+      gtk_orientable_set_orientation (GTK_ORIENTABLE (pd->box),
+                                      GTK_ORIENTATION_HORIZONTAL);
       gtk_orientable_set_orientation (GTK_ORIENTABLE (pd->pbar),
                                       GTK_ORIENTATION_VERTICAL);
-      gtk_box_pack_start (GTK_BOX (pd->box), pd->pbar, FALSE, FALSE, 0);
 
+      gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR (pd->pbar), TRUE);
+      gtk_widget_set_halign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
+      gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), TRUE);
     }
   else
-    { /* horizontal bar */
-      pd->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-      gtk_widget_set_valign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
-      gtk_widget_set_vexpand (GTK_WIDGET (pd->pbar), TRUE);
-      gtk_container_set_border_width (GTK_CONTAINER (pd->box), BORDER / 2);
-      gtk_container_add (GTK_CONTAINER (plugin), pd->box);
+    {
+      /* horizontal bar */
+      gtk_orientable_set_orientation (GTK_ORIENTABLE (pd->box),
+                                      GTK_ORIENTATION_VERTICAL);
       gtk_orientable_set_orientation (GTK_ORIENTABLE (pd->pbar),
                                       GTK_ORIENTATION_HORIZONTAL);
-      gtk_box_pack_start (GTK_BOX (pd->box), pd->pbar, FALSE, FALSE, 0);
 
+      gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR (pd->pbar), FALSE);
+      gtk_widget_set_valign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
+      gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), FALSE);
     }
-  gtk_widget_show_all (GTK_WIDGET (plugin));
 }
 
 
 
-/* Callback for orientation change of panel, just calls add_pbar */
+/* Callback for orientation change of panel */
 static void
 orient_change (XfcePanelPlugin *plugin, GtkOrientation orient, plugin_data *pd)
 {
-  add_pbar (plugin, pd);
+  update_pbar_orientation (plugin, pd);
 }
 
 
@@ -1227,7 +1204,7 @@ load_settings (plugin_data *pd)
                                                             10);
             }
 
-          add_pbar (pd->base, pd);
+          update_pbar_orientation (pd->base, pd);
 
           xfce_rc_close (rc);
         }
@@ -1745,7 +1722,6 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 static void
 create_plugin_control (XfcePanelPlugin *plugin)
 {
-
   gchar *filename, *pathname;
   plugin_data *pd = g_new0 (plugin_data, 1);
   GList *list = NULL;
@@ -1760,7 +1736,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
                                       G_TYPE_STRING, /* Column 1: Name */
                                       G_TYPE_STRING, /* Column 2: Timer period/alarm time - info string */
                                       G_TYPE_STRING); /* Command to run */
-  pd->box = NULL;
+  pd->box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   pd->buttonadd = NULL;
   pd->buttonedit = NULL;
   pd->buttonremove = NULL;
@@ -1800,13 +1776,13 @@ create_plugin_control (XfcePanelPlugin *plugin)
       list = g_list_next (list);
   }
 
+  gtk_container_set_border_width (GTK_CONTAINER (pd->box), BORDER / 2);
+  gtk_container_add (GTK_CONTAINER (plugin), pd->box);
+
   gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (pd->pbar), 0);
+  gtk_box_pack_start (GTK_BOX (pd->box), pd->pbar, FALSE, FALSE, 0);
 
-  add_pbar (pd->base, pd);
-
-  /* Trying to get a thin box, but no way */
-  gtk_widget_set_size_request (GTK_WIDGET (plugin), 10, 10);
-  xfce_panel_plugin_set_expand (plugin, FALSE);
+  update_pbar_orientation (pd->base, pd);
 
   g_signal_connect (G_OBJECT (plugin), "button_press_event",
                     G_CALLBACK (pbar_clicked), pd);
