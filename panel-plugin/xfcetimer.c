@@ -1703,7 +1703,7 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
       "program-name", PACKAGE_NAME, "comments",
       _("A plugin to define countdown timers or alarms at given times."),
       "website",
-      "http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin",
+      "https://docs.xfce.org/panel-plugins/xfce4-timer-plugin",
       "copyright", _("Copyright (c) 2005-2018\n"), "authors", author,
       "translator-credits", translators, NULL);
 
