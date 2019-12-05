@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Robert Hartl <hartl.robert@gmail.com>, 2009
-# Slavko <linux@slavino.sk>, 2015
+# Slavko <linux@slavino.sk>, 2015,2019
 # Tomáš Vadina <inactive+kyberdev@transifex.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-11-18 20:21+0000\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"PO-Revision-Date: 2019-12-05 17:19+0000\n"
+"Last-Translator: Slavko <linux@slavino.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-panel-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,20 +124,20 @@ msgstr "Spustiť príkaz:"
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Opakovaný časovač"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Automaticky spustiť pri načítaní zásuvného modulu"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
-msgstr ""
+msgstr "Prijať"
 
 #: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
@@ -167,23 +167,23 @@ msgstr "Príkaz alarmu"
 
 #: ../panel-plugin/xfcetimer.c:1572
 msgid "Add"
-msgstr ""
+msgstr "Pridať"
 
 #: ../panel-plugin/xfcetimer.c:1580
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 #: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
-msgstr ""
+msgstr "Odstrániť"
 
 #: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
-msgstr ""
+msgstr "Hore"
 
 #: ../panel-plugin/xfcetimer.c:1603
 msgid "Down"
-msgstr ""
+msgstr "Dole"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
