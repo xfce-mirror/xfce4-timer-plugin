@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Besnik <besnik@programeshqip.org>, 2007,2020
 # Besnik <besnik@programeshqip.org>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2020-01-28 20:45+0000\n"
+"PO-Revision-Date: 2020-01-29 11:05+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -21,21 +22,21 @@ msgstr ""
 #: ../panel-plugin/xfcetimer.c:167
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%do %dm %ds të mbetura"
+msgstr "Edhe %dh %dm %ds"
 
 #: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dm %ds të mbetura"
+msgstr "Edhe %dm %ds"
 
 #: ../panel-plugin/xfcetimer.c:173
 #, c-format
 msgid "%ds left"
-msgstr "%ds të mbetura"
+msgstr "Edhe %ds"
 
 #: ../panel-plugin/xfcetimer.c:177
 msgid " (Paused)"
-msgstr ""
+msgstr " (I ndalur)"
 
 #. Display the name of the alarm when the countdown ends
 #: ../panel-plugin/xfcetimer.c:213
@@ -43,7 +44,7 @@ msgstr ""
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "Beeep! :) \nErdhi koha për alarmin %s."
 
 #: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
 msgid "Close"
@@ -51,24 +52,24 @@ msgstr "Mbylle"
 
 #: ../panel-plugin/xfcetimer.c:222
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Rixhiroje kohëmatësin"
 
 #: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
-msgstr ""
+msgstr "Pushoje kohëmatësin"
 
 #: ../panel-plugin/xfcetimer.c:523
 msgid "Resume timer"
-msgstr ""
+msgstr "Rinise kohëmatësin"
 
 #: ../panel-plugin/xfcetimer.c:534
 msgid "Stop timer"
-msgstr "Ndal Kohësin"
+msgstr "Ndale kohëmatësin"
 
 #: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%do %dm %ds"
+msgstr "%dh %dm %ds"
 
 #: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
 #, c-format
@@ -99,7 +100,7 @@ msgstr "Jepni kohën e alarmit (në format 24orësh)"
 
 #: ../panel-plugin/xfcetimer.c:841
 msgid "h  "
-msgstr "o "
+msgstr "h  "
 
 #: ../panel-plugin/xfcetimer.c:848
 msgid "m  "
@@ -111,47 +112,47 @@ msgstr "s "
 
 #: ../panel-plugin/xfcetimer.c:859
 msgid "or"
-msgstr ""
+msgstr "ose"
 
 #. **************
 #: ../panel-plugin/xfcetimer.c:881
 msgid "Command to run:"
-msgstr ""
+msgstr "Urdhër për xhirim:"
 
 #. **************
 #. add recurring alarm check button
 #: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
-msgstr ""
+msgstr "Alarm që përsëritet"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:899
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Vetënisu kur ngarkohet shtojca"
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
-msgstr ""
+msgstr "Anuloje"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
-msgstr ""
+msgstr "Pranoje"
 
 #: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
-msgstr "Shto alarm të ri"
+msgstr "Shtoni alarm të ri"
 
 #: ../panel-plugin/xfcetimer.c:966
 msgid "Edit alarm"
-msgstr "Përpunoni Alarm"
+msgstr "Përpunoni alarm"
 
 #: ../panel-plugin/xfcetimer.c:1506
 msgid "Xfce4 Timer Options"
-msgstr "Mundësi Kohësi Xfce4"
+msgstr "Mundësi Kohëmatësi Xfce4"
 
 #: ../panel-plugin/xfcetimer.c:1546
 msgid "Timer name"
-msgstr ""
+msgstr "Emër kohëmatësi"
 
 #: ../panel-plugin/xfcetimer.c:1551
 msgid ""
@@ -165,41 +166,41 @@ msgstr "Urdhër alarmi"
 
 #: ../panel-plugin/xfcetimer.c:1572
 msgid "Add"
-msgstr ""
+msgstr "Shto"
 
 #: ../panel-plugin/xfcetimer.c:1580
 msgid "Edit"
-msgstr ""
+msgstr "Përpunojeni"
 
 #: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
-msgstr ""
+msgstr "Hiqe"
 
 #: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
-msgstr ""
+msgstr "Sipër"
 
 #: ../panel-plugin/xfcetimer.c:1603
 msgid "Down"
-msgstr ""
+msgstr "Poshtë"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "Mos shfaq sinjalizim, nëse është ujdisur një urdhër alarmi"
 
 #. Default alarm command config
 #: ../panel-plugin/xfcetimer.c:1631
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "Përdor një urdhër parazgjedhje alarmi"
 
 #: ../panel-plugin/xfcetimer.c:1640
 msgid "Default command: "
-msgstr ""
+msgstr "Urdhër parazgjedhje: "
 
 #. Alarm repetitions config
 #: ../panel-plugin/xfcetimer.c:1656
 msgid "Repeat the alarm command"
-msgstr ""
+msgstr "Përsërit urdhrin e alarmit"
 
 #: ../panel-plugin/xfcetimer.c:1665
 msgid "Number of repetitions"
@@ -211,15 +212,15 @@ msgstr "  Interval kohe (sec.)"
 
 #: ../panel-plugin/xfcetimer.c:1736
 msgid "About xfce4-timer-plugin"
-msgstr ""
+msgstr "Mbi xfce4-timer-plugin"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Një shtojcë për të caktuar kohëmatësa me skadim ose alarme në kohë të dhëna."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
-msgstr ""
+msgstr "Të drejta kopjimi (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
@@ -227,4 +228,4 @@ msgstr "Kohës Xfce4"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Shtojcë kohësi për panelin e Xfce"
+msgstr "Shtojcë kohëmatësi për panelin e Xfce-së"
