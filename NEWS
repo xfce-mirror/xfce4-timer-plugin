@@ -1,3 +1,25 @@
+1.7.1
+======
+- Update URLs from goodies.x.o to docs.x.o (Bug #16180)
+- Do not recreate box when orientation changes
+- Remove unused eventbox
+- Avoid square-sized plugin (Bug #16101)
+- Remove unused variables and function
+- Resolve GCC warning: ISO C90 forbids mixed declarations and code
+- Preferences: Improved spacing and layout in editor (Bug #14678)
+- Selecting a timer always starts it
+- Add Hossam Ayman's multiple timer code, some leak and g_free fixes in
+  update_function.
+- Translation Updates:
+  Albanian, Arabic, Asturian, Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), English (United Kingdom),
+  Finnish, French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, Malay,
+  Norwegian Bokmål, Occitan (post 1500), Polish, Portuguese, Portuguese
+  (Brazil), Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai,
+  Turkish, Uighur, Ukrainian, Urdu, Urdu (Pakistan)
+
 1.7.0
 ======
 - Port to GTK+3.
