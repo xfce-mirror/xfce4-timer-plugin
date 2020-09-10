@@ -1092,6 +1092,9 @@ update_pbar_orientation (XfcePanelPlugin *plugin, plugin_data *pd)
       gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR (pd->pbar), TRUE);
       gtk_widget_set_halign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
       gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), TRUE);
+
+      gtk_widget_set_size_request (GTK_WIDGET (plugin), -1,
+                                   xfce_panel_plugin_get_size (plugin));
     }
   else
     {
@@ -1104,6 +1107,9 @@ update_pbar_orientation (XfcePanelPlugin *plugin, plugin_data *pd)
       gtk_progress_bar_set_inverted (GTK_PROGRESS_BAR (pd->pbar), FALSE);
       gtk_widget_set_valign (GTK_WIDGET (pd->pbar), GTK_ALIGN_CENTER);
       gtk_widget_set_hexpand (GTK_WIDGET (pd->pbar), FALSE);
+
+      gtk_widget_set_size_request (GTK_WIDGET (plugin),
+                                   xfce_panel_plugin_get_size (plugin), -1);
     }
 }
 
@@ -1116,6 +1122,19 @@ orient_change (XfcePanelPlugin *plugin, GtkOrientation orient, plugin_data *pd)
   update_pbar_orientation (plugin, pd);
 }
 
+
+
+/* Callback for size change of panel */
+static gboolean
+size_changed (XfcePanelPlugin *plugin, gint size, plugin_data *pd)
+{
+  if (xfce_panel_plugin_get_orientation (plugin) == GTK_ORIENTATION_HORIZONTAL)
+    gtk_widget_set_size_request (GTK_WIDGET (plugin), -1, size);
+  else
+    gtk_widget_set_size_request (GTK_WIDGET (plugin), size, -1);
+
+  return TRUE;
+}
 
 
 /**
@@ -1796,7 +1815,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
   g_signal_connect (plugin, "orientation-changed", G_CALLBACK (orient_change),
                     pd);
 
-  g_signal_connect (plugin, "size-changed", G_CALLBACK (gtk_true), NULL);
+  g_signal_connect (plugin, "size-changed", G_CALLBACK (size_changed), pd);
 
   xfce_panel_plugin_menu_show_configure (plugin);
   g_signal_connect (plugin, "configure-plugin",
