@@ -1131,10 +1131,11 @@ load_settings (plugin_data *pd)
   gboolean is_cd, is_recur, autostart;
   alarm_t *alrm;
   XfceRc *rc;
+  gchar* rc_path;
 
-  if (g_file_test (pd->configfile, G_FILE_TEST_EXISTS))
+  if (rc_path = xfce_panel_plugin_lookup_rc_file (pd->base))
     {
-      rc = xfce_rc_simple_open (pd->configfile, TRUE);
+      rc = xfce_rc_simple_open (rc_path, TRUE);
 
       if (rc != NULL)
         {
@@ -1209,6 +1210,8 @@ load_settings (plugin_data *pd)
           xfce_rc_close (rc);
         }
     }
+
+  g_free (rc_path);
 }
 
 
@@ -1223,7 +1226,7 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   alarm_t *alrm;
   FILE *conffile;
   XfceRc *rc;
-  gchar *file, *contents = NULL;
+  gchar *file;
 
   if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
     return;
@@ -1284,18 +1287,7 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   xfce_rc_write_int_entry (rc, "repeat_interval", pd->repeat_interval);
   xfce_rc_close (rc);
 
-  conffile = fopen (pd->configfile, "w");
-
-  /* We backup a permanent copy, which we'll use to load settings */
-  if (conffile && g_file_get_contents (file, &contents, NULL, NULL))
-    {
-      fputs (contents, conffile);
-      fclose (conffile);
-    }
-
   g_free (file);
-  if (contents)
-    g_free (contents);
 }
 
 
@@ -1335,9 +1327,6 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
   if (pd->global_command)
     g_free (pd->global_command);
-
-  if (pd->configfile)
-    g_free (pd->configfile);
 
   if (pd->liststore)
     {
@@ -1722,7 +1711,6 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 static void
 create_plugin_control (XfcePanelPlugin *plugin)
 {
-  gchar *filename, *pathname;
   plugin_data *pd = g_new0 (plugin_data, 1);
   GList *list = NULL;
   alarm_t *alrm;
@@ -1757,12 +1745,6 @@ create_plugin_control (XfcePanelPlugin *plugin)
   gtk_widget_set_tooltip_text (GTK_WIDGET (plugin), "");
 
   g_object_ref (pd->liststore);
-
-  filename = xfce_panel_plugin_save_location (pd->base, TRUE);
-  pathname = g_path_get_dirname (filename);
-  pd->configfile = g_strconcat (pathname, "/XfceTimer.rc", NULL);
-  g_free (filename);
-  g_free (pathname);
 
   load_settings (pd);
   pd->selected = pd->alarm_list;
