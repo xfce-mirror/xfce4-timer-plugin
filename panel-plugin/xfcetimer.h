@@ -55,7 +55,6 @@ typedef struct
   gboolean repeat_alarm_command; /* Repeat alarm command*/
   gboolean use_global_command; /* Use a default alarm command if no alarm command is set */
   gchar *global_command; /* The global (default) command to be run when countdown ends */
-  gchar *configfile; /* Full address of the permanent config file -- this is not the plugin rc file. */
   GList *alarm_list; /* List of alarms */
   GList *selected; /* Selected alarm */
   guint num_active_timers;
