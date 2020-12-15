@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-08-01 09:29+0000\n"
+"PO-Revision-Date: 2020-12-15 09:05+0000\n"
 "Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce-panel-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:909
 msgid "Cancel"
-msgstr ""
+msgstr "Utzi"
 
 #: ../panel-plugin/xfcetimer.c:914
 msgid "Accept"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:1588
 msgid "Remove"
-msgstr ""
+msgstr "Kendu"
 
 #: ../panel-plugin/xfcetimer.c:1596
 msgid "Up"
