@@ -30,7 +30,7 @@ dnl ***************************
 dnl *** Initialize automake ***
 dnl ***************************
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-bzip2 tar-ustar foreign])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 AM_MAINTAINER_MODE()
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
@@ -52,7 +52,6 @@ IT_PROG_INTLTOOL([0.35.0])
 dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
-AC_HEADER_STDC()
 AC_CHECK_HEADERS([stdlib.h unistd.h locale.h stdio.h errno.h time.h string.h \
                   math.h sys/types.h sys/wait.h memory.h signal.h sys/prctl.h \
                   libintl.h])
@@ -98,7 +97,7 @@ AC_MSG_CHECKING([PLATFORM_LDFLAGS])
 AC_MSG_RESULT([$PLATFORM_LDFLAGS])
 AC_SUBST([PLATFORM_LDFLAGS])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 icons/Makefile
 icons/32x32/Makefile
@@ -107,6 +106,7 @@ icons/scalable/Makefile
 panel-plugin/Makefile
 po/Makefile.in
 ])
+AC_OUTPUT
 
 dnl ***************************
 dnl *** Print configuration ***
