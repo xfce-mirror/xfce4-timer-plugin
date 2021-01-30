@@ -1152,7 +1152,7 @@ load_settings (plugin_data *pd)
   XfceRc *rc;
   gchar* rc_path;
 
-  if (rc_path = xfce_panel_plugin_lookup_rc_file (pd->base))
+  if ((rc_path = xfce_panel_plugin_lookup_rc_file (pd->base)))
     {
       rc = xfce_rc_simple_open (rc_path, TRUE);
 
