@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2021-01-21 19:09+0000\n"
+"PO-Revision-Date: 2021-02-26 16:27+0000\n"
 "Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce-panel-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Kronometroa berrabiarazi"
 
 #: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
-msgstr "Kronometroa gelditu"
+msgstr "Kronometroa eten"
 
 #: ../panel-plugin/xfcetimer.c:523
 msgid "Resume timer"
@@ -64,7 +64,7 @@ msgstr "Kronometroa berrekin"
 
 #: ../panel-plugin/xfcetimer.c:534
 msgid "Stop timer"
-msgstr "Amaiera ordua"
+msgstr "Kronometroa gelditu"
 
 #: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
 #, c-format
