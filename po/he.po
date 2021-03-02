@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016,2018
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
 # Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2020-05-26 14:41+0000\n"
+"PO-Revision-Date: 2021-03-02 18:07+0000\n"
 "Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +28,7 @@ msgstr "%dh %dm %ds נשארו"
 #: ../panel-plugin/xfcetimer.c:170
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dדק' %dשנ' נשארו"
+msgstr "נותרו %dדק׳ %dשנ׳"
 
 #: ../panel-plugin/xfcetimer.c:173
 #, c-format
