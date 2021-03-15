@@ -470,7 +470,12 @@ make_menu (plugin_data *pd)
 
   list = pd->alarm_list;
 
-  while (list)
+  if (!list) {
+    menuitem=gtk_menu_item_new_with_label("(No alarms)");
+    gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
+    gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
+  } else {
+    while (list)
     {
       /* Run through the list, read name and timer period info */
 
@@ -480,57 +485,58 @@ make_menu (plugin_data *pd)
 
       /* The selected timer is always active */
       if(alrm->timer_on){
-		menuitem=gtk_menu_item_new_with_label(itemtext);
-		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-		gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
+        menuitem=gtk_menu_item_new_with_label(itemtext);
+        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
+        gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
 
-		gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menuitem),TRUE);
+        gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menuitem),TRUE);
 
-		/* Pause menu item */
-		if(!alrm->is_paused && alrm->is_countdown) {
-			menuitem=gtk_menu_item_new_with_label(_("Pause timer"));
+        /* Pause menu item */
+        if(!alrm->is_paused && alrm->is_countdown) {
+          menuitem=gtk_menu_item_new_with_label(_("Pause timer"));
 
-			gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menuitem);
-			g_signal_connect    (G_OBJECT(menuitem),"activate",
-					G_CALLBACK(pause_resume_selected),alrm);
-		}
-		/* If the alarm is paused, the only option is to resume or stop */
-		else if (alrm->is_paused) {
-			menuitem=gtk_menu_item_new_with_label(_("Resume timer"));
+          gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menuitem);
+          g_signal_connect    (G_OBJECT(menuitem),"activate",
+              G_CALLBACK(pause_resume_selected),alrm);
+        }
+        /* If the alarm is paused, the only option is to resume or stop */
+        else if (alrm->is_paused) {
+          menuitem=gtk_menu_item_new_with_label(_("Resume timer"));
 
-			gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-			g_signal_connect  (G_OBJECT(menuitem),"activate",
-					G_CALLBACK(pause_resume_selected),alrm);
-			gtk_widget_show(menuitem);
+          gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
+          g_signal_connect  (G_OBJECT(menuitem),"activate",
+              G_CALLBACK(pause_resume_selected),alrm);
+          gtk_widget_show(menuitem);
 
-			gtk_widget_show(menuitem);
-			gtk_widget_show(pd->menu);
-		}
+          gtk_widget_show(menuitem);
+          gtk_widget_show(pd->menu);
+        }
 
-		menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
+        menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
 
-		gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-		g_signal_connect  (G_OBJECT(menuitem),"activate",
-				G_CALLBACK(start_stop_callback),list);
+        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
+        g_signal_connect  (G_OBJECT(menuitem),"activate",
+            G_CALLBACK(start_stop_callback),list);
 
 
-	}else{
-		menuitem=gtk_menu_item_new_with_label(itemtext);
-		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-		g_signal_connect  (G_OBJECT(menuitem),"activate",
-				G_CALLBACK (timer_selected), list);
-		/* disable alarm menu entry if repeating command */
-		if(alrm->is_repeating)
-		  gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
-	}
+      }else{
+        menuitem=gtk_menu_item_new_with_label(itemtext);
+        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
+        g_signal_connect  (G_OBJECT(menuitem),"activate",
+            G_CALLBACK (timer_selected), list);
+        /* disable alarm menu entry if repeating command */
+        if(alrm->is_repeating)
+          gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
+      }
 
-    g_free (itemtext);
-    list = list->next;
-    if(list){
-	  /* Horizontal line (empty item) */
-	  menuitem=gtk_separator_menu_item_new();
-	  gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-	}
+      g_free (itemtext);
+      list = list->next;
+      if(list){
+        /* Horizontal line (empty item) */
+        menuitem=gtk_separator_menu_item_new();
+        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
+      }
+    }
   }
 
   gtk_widget_show_all (pd->menu);
