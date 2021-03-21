@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-std=c++17 \
 	-I$(top_srcdir) \
 	-DG_LOG_DOMAIN=\"xfce4-timer-plugin\" \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
