@@ -250,10 +250,9 @@ update_function (gpointer data)
 				}
 			}
 
-			//Check if alarm is recurring after it's finished and destroyed; if yes then start it again.
-			if(alrm->is_recurring){
-				start_timer(pd,alrm);
-			}
+      // Start next alarm if configured
+      if (alrm->next_alarm)
+        start_timer(pd, alrm->next_alarm);
 
 		  }
 		  //tiptext = g_strconcat("\t", tiptext, NULL);
@@ -620,7 +619,7 @@ static void
 ok_edit (GtkButton *button, gpointer data)
 {
   alarm_data *adata = (alarm_data *) data;
-  GtkTreeIter iter;
+  GtkTreeIter iter, next_alarm_iter;
   gint t1, t2, t3, t;
   gchar *timeinfo = NULL;
   GList *list;
@@ -642,8 +641,13 @@ ok_edit (GtkButton *button, gpointer data)
           gtk_entry_get_text (GTK_ENTRY (adata->command)));
       alrm->is_countdown = gtk_toggle_button_get_active (
           GTK_TOGGLE_BUTTON (adata->rb1));
-      alrm->is_recurring = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
-                                 recur_cb));
+
+      if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (adata->next_alarm), &next_alarm_iter))
+        gtk_tree_model_get (gtk_combo_box_get_model (GTK_COMBO_BOX (adata->next_alarm)),
+                            &next_alarm_iter, 0, &alrm->next_alarm);
+      else
+        alrm->next_alarm = NULL;
+
       alrm->is_auto_start = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
                                  autostart_cb));
 
@@ -750,6 +754,10 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   GtkEntry *name, *command;
   GtkSpinButton *timeh, *timem, *times, *time_h, *time_m;
   GtkRadioButton *rb1, *rb2;
+  GtkListStore *next_alarm_list;
+  GList *alarm_iter;
+  GtkWidget *next_alarm;
+  GtkCellRenderer *next_alarm_cell;
   GtkWidget *hbox, *vbox, *button;
   alarm_data *adata = g_new0 (alarm_data, 1);
   gint time;
@@ -871,15 +879,34 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (command), TRUE, TRUE, 0);
   adata->command = command;
 
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (hbox), TRUE, TRUE, 0);
+
+  label = (GtkLabel *) gtk_label_new (_("Alarm to run:"));
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (label), FALSE, FALSE, 0);
+
+  /* 'next alarm' combo box to set subsequent alarm (if any)
+   * Separate list store created to add 'empty' item for no next alarm */
+  next_alarm_list = gtk_list_store_new (2, G_TYPE_POINTER, G_TYPE_STRING);
+  gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, NULL, 1, "");
+  alarm_iter = pd->alarm_list;
+  while (alarm_iter)
+  {
+    alrm = alarm_iter->data;
+    gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, alrm, 1, alrm->name);
+    alarm_iter = alarm_iter->next;
+  }
+  next_alarm = gtk_combo_box_new_with_model (GTK_TREE_MODEL (next_alarm_list));
+  g_clear_object (&next_alarm_list);
+  next_alarm_cell = gtk_cell_renderer_text_new();
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (next_alarm), next_alarm_cell, TRUE);
+  gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (next_alarm), next_alarm_cell, "text", 1);
+  gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (next_alarm), FALSE, FALSE, 0);
+  adata->next_alarm = next_alarm;
+
   /****************/
 
   gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
-
-  //add recurring alarm check button
-  button = gtk_check_button_new_with_label(_("Recurring alarm"));
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(button), FALSE);
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
-  adata->recur_cb = button;
 
    //add alarm autostart check button
   button = gtk_check_button_new_with_label(_("Auto start when plugin loads"));
@@ -926,8 +953,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
       gtk_entry_set_text (GTK_ENTRY (name), alrm->name);
       gtk_entry_set_text (GTK_ENTRY (command), alrm->command);
 
-      //load settings
-	  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(adata->recur_cb),alrm->is_recurring);
+      gtk_combo_box_set_active (GTK_COMBO_BOX (next_alarm),
+                                g_list_index (pd->alarm_list, alrm->next_alarm) + 1);
 	  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(adata->autostart_cb),alrm->is_auto_start);
 
       time = alrm->time;
@@ -963,7 +990,8 @@ remove_clicked (GtkButton *button, gpointer data)
   GtkTreeIter iter;
   GtkTreeModel *model;
   GtkTreeSelection *select;
-  GList *list;
+  GList *list, *alarm_iter;
+  alarm_t *alrm;
 
   /* Get the selected row */
   select = gtk_tree_view_get_selection (GTK_TREE_VIEW (pd->tree));
@@ -975,6 +1003,16 @@ remove_clicked (GtkButton *button, gpointer data)
     return;
 
   gtk_tree_model_get (model, &iter, 0, &list, -1);
+
+  // If removed alarm is used as a 'next alarm' somwhere, unreference it
+  alarm_iter = pd->alarm_list;
+  while (alarm_iter)
+  {
+    alrm = alarm_iter->data;
+    if (alrm->next_alarm == list->data)
+      alrm->next_alarm = NULL;
+    alarm_iter = alarm_iter->next;
+  }
 
   if (pd->selected == list)
     {
@@ -1147,8 +1185,9 @@ load_settings (plugin_data *pd)
   gchar groupname[8];
   const gchar *timerstring;
   gint groupnum, time;
-  gboolean is_cd, is_recur, autostart;
+  gboolean is_cd, autostart;
   alarm_t *alrm;
+  GList *alarm_iter;
   XfceRc *rc;
   gchar* rc_path;
 
@@ -1182,8 +1221,13 @@ load_settings (plugin_data *pd)
               is_cd = xfce_rc_read_bool_entry (rc, "is_countdown", TRUE);
               alrm->is_countdown = is_cd;
 
-              is_recur=xfce_rc_read_bool_entry(rc,"is_recur",FALSE);
-			  alrm->is_recurring = is_recur;
+              alrm->next_alarm_groupnum = xfce_rc_read_int_entry (rc, "timernext", -1);
+              /* If 'timernext' not specified, fallback to checking previously
+               * used boolean setting 'is_recur' telling if alarm is self-recurring
+               * NOTE: remove in version ?.?? */
+              if (alrm->next_alarm_groupnum == -1)
+                alrm->next_alarm_groupnum =
+                  xfce_rc_read_bool_entry(rc, "is_recur", FALSE) ? groupnum : -1;
 
 			  autostart=xfce_rc_read_bool_entry(rc,"autostart",FALSE);
 			  alrm->is_auto_start = autostart;
@@ -1200,6 +1244,16 @@ load_settings (plugin_data *pd)
             } /* end of while loop */
 
           pd->count = groupnum;
+
+          /* Once all rc groups (i.e. alarm configs) have been read, setup
+           * references to 'next alarm's based on 'groupnum' read from rc */
+          alarm_iter = pd->alarm_list;
+          while (alarm_iter)
+          {
+            alrm = alarm_iter->data;
+            alrm->next_alarm = g_list_nth_data(pd->alarm_list, alrm->next_alarm_groupnum);
+            alarm_iter = alarm_iter->next;
+          }
 
           /* Read other options */
           if (xfce_rc_has_group (rc, "others"))
@@ -1265,6 +1319,18 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   if (!rc)
     return;
 
+  /* Assign groupnum to each alarm in the order they will be written to rc.
+   * These groupnums will be saved whenever 'next alarm' is set
+   * ('next alarm' is a pointer and saving it directly is meaningless). */
+  row_count = 0;
+  list = pd->alarm_list;
+  while (list)
+  {
+    alrm = list->data;
+    alrm->next_alarm_groupnum = row_count++;
+    list = list->next;
+  }
+
   list = pd->alarm_list;
 
   row_count = 0;
@@ -1287,7 +1353,8 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
 
       xfce_rc_write_bool_entry (rc, "is_countdown", alrm->is_countdown);
 
-      xfce_rc_write_bool_entry(rc,"is_recur",alrm->is_recurring);
+      if (alrm->next_alarm)
+        xfce_rc_write_int_entry (rc, "timernext", alrm->next_alarm->next_alarm_groupnum);
 
 	  xfce_rc_write_bool_entry(rc,"autostart",alrm->is_auto_start);
 
