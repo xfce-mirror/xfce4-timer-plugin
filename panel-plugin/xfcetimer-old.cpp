@@ -1,3 +1,4 @@
+extern "C" {
 /*
  *
  *  Copyright (C) 2005-2014 Kemal Ilgar Eroglu <ilgar_eroglu@yahoo.com>
@@ -1805,4 +1806,5 @@ create_plugin_control (XfcePanelPlugin *plugin)
 
   xfce_panel_plugin_menu_show_about (plugin);
   g_signal_connect (plugin, "about", G_CALLBACK (show_about_window), pd);
+}
 }
