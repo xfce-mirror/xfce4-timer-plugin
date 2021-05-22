@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2021-05-15 16:09+0000\n"
+"PO-Revision-Date: 2021-05-22 08:38+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgstr "Aceptar"
 
 #: ../panel-plugin/xfcetimer.c:925
 msgid "Add new alarm"
-msgstr "Añadir una nueva alarma"
+msgstr "Añadir una alarma nueva"
 
 #: ../panel-plugin/xfcetimer.c:966
 msgid "Edit alarm"
@@ -224,7 +224,7 @@ msgstr "Acerca del temporizador de Xfce4"
 
 #: ../panel-plugin/xfcetimer.c:1739
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Un complemento para definir temporizadores de cuenta atrás o alarmas en momentos determinados."
+msgstr "Un complemento para definir cuentas atrás o alarmas en momentos determinados."
 
 #: ../panel-plugin/xfcetimer.c:1742
 msgid "Copyright (c) 2005-2018\n"
