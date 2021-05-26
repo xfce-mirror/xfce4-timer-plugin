@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Arnold Marko <arnold.marko@gmail.com>, 2019
+# Arnold Marko <arnold.marko@gmail.com>, 2019,2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-11-06 12:47+0000\n"
+"PO-Revision-Date: 2021-05-26 07:47+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -227,4 +227,4 @@ msgstr "Xfce4 Časovnik"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
 msgid "Timer plugin for Xfce panel"
-msgstr "Vtičnik časovnika za Xfce pult"
+msgstr "Vtičnik časovnika za Xfce pano"
