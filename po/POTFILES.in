@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 
-panel-plugin/xfcetimer.c
+panel-plugin/xfcetimer.cpp
 
 # files added by intltool-prepare.
 panel-plugin/xfce4-timer-plugin.desktop.in
