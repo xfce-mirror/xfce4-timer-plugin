@@ -5,6 +5,7 @@
 *.tar.*
 .deps
 .libs
+.vscode
 ChangeLog
 INSTALL
 Makefile

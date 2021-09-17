@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-std=c++17 \
 	-I$(top_srcdir) \
 	-DG_LOG_DOMAIN=\"xfce4-timer-plugin\" \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
@@ -14,20 +15,24 @@ plugindir = \
 	$(libdir)/xfce4/panel/plugins
 
 libxfcetimer_la_SOURCES = \
-	xfcetimer.c \
+	xfcetimer.cpp \
 	xfcetimer.h
 
-libxfcetimer_la_CFLAGS = \
+libxfcetimer_la_CPPFLAGS = \
+	$(AM_CPPFLAGS) \
+	$(GTKMM_CFLAGS) \
 	$(LIBXFCE4UTIL_CFLAGS) \
 	$(LIBXFCE4UI_CFLAGS) \
 	$(LIBXFCE4PANEL_CFLAGS) \
-	$(PLATFORM_CFLAGS)
+	$(PLATFORM_CFLAGS) \
+	-fpermissive
 
 libxfcetimer_la_LDFLAGS = \
        -avoid-version \
        -module \
        -no-undefined \
        -export-symbols-regex '^xfce_panel_module_(preinit|init|construct)' \
+       $(GTKMM_LIBS) \
        $(PLATFORM_LDFLAGS)
 
 libxfcetimer_la_LIBADD = \
