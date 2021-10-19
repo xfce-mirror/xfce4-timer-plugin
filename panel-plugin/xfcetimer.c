@@ -213,7 +213,7 @@ update_function (gpointer data)
 
 				/* Display the name of the alarm when the countdown ends */
 				dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), alrm->name);
-				dialog_title = g_strdup_printf("Xfce4 Timer Plugin: %s", alrm->name);
+				dialog_title = g_strdup_printf(_("Xfce4 Timer Plugin: %s"), alrm->name);
 
 				dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
 						GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
