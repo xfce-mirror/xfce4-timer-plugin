@@ -62,6 +62,8 @@ XFCE_PANEL_PLUGIN_REGISTER ( create_plugin_control);
 void
 make_menu (plugin_data *pd);
 
+static void
+add_edit_clicked (GtkButton *buttonn, gpointer data);
 
 
 /* This is the timeout function that repeats the alarm */
@@ -470,6 +472,23 @@ make_menu (plugin_data *pd)
 
   list = pd->alarm_list;
 
+  GtkWidget *box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  GtkWidget *icon = gtk_image_new_from_icon_name ("xfce4-timer-plugin", GTK_ICON_SIZE_MENU);
+  GtkWidget *label = gtk_label_new (_("Add new alarm"));
+  GtkWidget *menu_item = gtk_menu_item_new ();
+
+  gtk_container_add (GTK_CONTAINER (box), icon);
+  gtk_container_add (GTK_CONTAINER (box), label);
+
+  gtk_container_add (GTK_CONTAINER (menu_item), box);
+
+  gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), menu_item);
+  gtk_widget_set_sensitive(GTK_WIDGET(menu_item), TRUE);
+  gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menu_item), TRUE);
+  gtk_widget_show_all (menu_item);
+  g_signal_connect(G_OBJECT(menu_item), "activate",
+        G_CALLBACK (add_edit_clicked), pd);
+
   while (list)
     {
       /* Run through the list, read name and timer period info */
@@ -736,7 +755,8 @@ alarmdialog_alarmtime_toggled (GtkButton *button, gpointer data)
 
 
 /**
- * Callback to the Add button in options window
+ * Callback to the Add and Edit buttons in options window
+ * Callback to the "Add new alarm" menu entry
  * Creates the Add window
  **/
 static void
@@ -899,14 +919,15 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
 
   button = gtk_button_new_with_label (_("Accept"));
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
-  if (GTK_WIDGET (buttonn) == pd->buttonadd)
+  if (GTK_WIDGET (buttonn) == pd->buttonedit)
+    g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_edit), adata);
+  else /* Add button or "Add new alarm" menu entry*/
     g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_add), adata);
-  else
-    g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_edit),
-                      adata);
 
-  /* If this is the add window, we're done */
-  if (GTK_WIDGET (buttonn) == pd->buttonadd)
+/*FIXME Better test ! */
+
+  /* If this is not edit window (add button or add menu entry) we're done */
+  if (GTK_WIDGET (buttonn) != pd->buttonedit)
     {
       gtk_window_set_title (GTK_WINDOW (dialog), _("Add new alarm"));
       gtk_widget_show_all (GTK_WIDGET (dialog));
