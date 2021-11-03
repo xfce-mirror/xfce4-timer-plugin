@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2018-05-26 10:03+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2021-11-03 00:52+0100\n"
+"PO-Revision-Date: 2021-11-02 23:52+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/xfce-panel-plugins/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,206 +19,209 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/xfcetimer.c:167
+#: ../panel-plugin/xfcetimer.c:169
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%d시 %d분 %d초 남음"
 
-#: ../panel-plugin/xfcetimer.c:170
+#: ../panel-plugin/xfcetimer.c:172
 #, c-format
 msgid "%dm %ds left"
 msgstr "%d분 %d초 남음"
 
-#: ../panel-plugin/xfcetimer.c:173
+#: ../panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%ds left"
 msgstr "%d초 남음"
 
-#: ../panel-plugin/xfcetimer.c:177
+#: ../panel-plugin/xfcetimer.c:179
 msgid " (Paused)"
 msgstr "(일시 정지)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:213
+#: ../panel-plugin/xfcetimer.c:215
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "삐! :)\n%s 알림 시간이 되었습니다."
 
-#: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
+#: ../panel-plugin/xfcetimer.c:216
+#, c-format
+msgid "Xfce4 Timer Plugin: %s"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:223 ../panel-plugin/xfcetimer.c:1479
 msgid "Close"
 msgstr "닫기"
 
-#: ../panel-plugin/xfcetimer.c:222
+#: ../panel-plugin/xfcetimer.c:224
 msgid "Rerun the timer"
 msgstr "타이머 재실행"
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:491
 msgid "Pause timer"
 msgstr "타이머 일시정지"
 
-#: ../panel-plugin/xfcetimer.c:523
+#: ../panel-plugin/xfcetimer.c:499
 msgid "Resume timer"
 msgstr "타이머 복귀"
 
-#: ../panel-plugin/xfcetimer.c:534
+#: ../panel-plugin/xfcetimer.c:510
 msgid "Stop timer"
 msgstr "타이머 멈추기"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:590 ../panel-plugin/xfcetimer.c:669
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d시 %d분 %d초"
 
-#: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
+#: ../panel-plugin/xfcetimer.c:592 ../panel-plugin/xfcetimer.c:671
 #, c-format
 msgid "%dm %ds"
 msgstr "%d분 %d초"
 
-#: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:697
+#: ../panel-plugin/xfcetimer.c:594 ../panel-plugin/xfcetimer.c:673
 #, c-format
 msgid "%ds"
 msgstr "%d초"
 
-#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:682
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:792
 msgid "Name:"
 msgstr "이름:"
 
-#: ../panel-plugin/xfcetimer.c:821
+#: ../panel-plugin/xfcetimer.c:803
 msgid "Enter the countdown time"
 msgstr "카운트다운 시간 입력"
 
-#: ../panel-plugin/xfcetimer.c:826
+#: ../panel-plugin/xfcetimer.c:808
 msgid "Enter the time of alarm (24h format)"
 msgstr "알림 시간 입력(24시간제 형식)"
 
-#: ../panel-plugin/xfcetimer.c:841
+#: ../panel-plugin/xfcetimer.c:823
 msgid "h  "
 msgstr "시"
 
-#: ../panel-plugin/xfcetimer.c:848
+#: ../panel-plugin/xfcetimer.c:830
 msgid "m  "
 msgstr "분"
 
-#: ../panel-plugin/xfcetimer.c:855
+#: ../panel-plugin/xfcetimer.c:837
 msgid "s  "
 msgstr "초"
 
-#: ../panel-plugin/xfcetimer.c:859
+#: ../panel-plugin/xfcetimer.c:840
 msgid "or"
 msgstr "또는"
 
-#. **************
-#: ../panel-plugin/xfcetimer.c:881
+#: ../panel-plugin/xfcetimer.c:867
 msgid "Command to run:"
 msgstr "실행할 명령:"
 
-#. **************
 #. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:892
+#: ../panel-plugin/xfcetimer.c:879
 msgid "Recurring alarm"
 msgstr "알림 반복"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:899
+#: ../panel-plugin/xfcetimer.c:885
 msgid "Auto start when plugin loads"
 msgstr "플러그인을 불러왔을 때 자동 시작"
 
-#: ../panel-plugin/xfcetimer.c:909
+#: ../panel-plugin/xfcetimer.c:895
 msgid "Cancel"
 msgstr "취소"
 
-#: ../panel-plugin/xfcetimer.c:914
+#: ../panel-plugin/xfcetimer.c:900
 msgid "Accept"
 msgstr "승인"
 
-#: ../panel-plugin/xfcetimer.c:925
+#: ../panel-plugin/xfcetimer.c:911
 msgid "Add new alarm"
 msgstr "새 알림 추가"
 
-#: ../panel-plugin/xfcetimer.c:966
+#: ../panel-plugin/xfcetimer.c:952
 msgid "Edit alarm"
 msgstr "알림 편집"
 
-#: ../panel-plugin/xfcetimer.c:1506
+#: ../panel-plugin/xfcetimer.c:1477
 msgid "Xfce4 Timer Options"
 msgstr "Xfce4 타이머 옵션"
 
-#: ../panel-plugin/xfcetimer.c:1546
+#: ../panel-plugin/xfcetimer.c:1517
 msgid "Timer name"
 msgstr "타이머 이름"
 
-#: ../panel-plugin/xfcetimer.c:1551
+#: ../panel-plugin/xfcetimer.c:1522
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "카운트다운 주기 /\n알림 시간"
 
-#: ../panel-plugin/xfcetimer.c:1554
+#: ../panel-plugin/xfcetimer.c:1525
 msgid "Alarm command"
 msgstr "알림 명령"
 
-#: ../panel-plugin/xfcetimer.c:1572
+#: ../panel-plugin/xfcetimer.c:1544
 msgid "Add"
 msgstr "추가"
 
-#: ../panel-plugin/xfcetimer.c:1580
+#: ../panel-plugin/xfcetimer.c:1551
 msgid "Edit"
 msgstr "편집"
 
-#: ../panel-plugin/xfcetimer.c:1588
+#: ../panel-plugin/xfcetimer.c:1558
 msgid "Remove"
 msgstr "제거"
 
-#: ../panel-plugin/xfcetimer.c:1596
+#: ../panel-plugin/xfcetimer.c:1566
 msgid "Up"
 msgstr "위"
 
-#: ../panel-plugin/xfcetimer.c:1603
+#: ../panel-plugin/xfcetimer.c:1573
 msgid "Down"
 msgstr "아래"
 
-#: ../panel-plugin/xfcetimer.c:1619
+#: ../panel-plugin/xfcetimer.c:1589
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "알람 명령을 설정했을 경우 경고를 표시하지 않음"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1631
+#: ../panel-plugin/xfcetimer.c:1601
 msgid "Use a default alarm command"
 msgstr "기본 알림 명령 사용"
 
-#: ../panel-plugin/xfcetimer.c:1640
+#: ../panel-plugin/xfcetimer.c:1610
 msgid "Default command: "
 msgstr "기본 명령:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1627
 msgid "Repeat the alarm command"
 msgstr "알림 명령 반복"
 
-#: ../panel-plugin/xfcetimer.c:1665
+#: ../panel-plugin/xfcetimer.c:1638
 msgid "Number of repetitions"
 msgstr "반복 횟수"
 
-#: ../panel-plugin/xfcetimer.c:1674
+#: ../panel-plugin/xfcetimer.c:1647
 msgid "  Time interval (sec.)"
 msgstr "  시간 간격(초)"
 
-#: ../panel-plugin/xfcetimer.c:1736
+#: ../panel-plugin/xfcetimer.c:1709
 msgid "About xfce4-timer-plugin"
 msgstr "xfce4-timer-plugin 정보"
 
-#: ../panel-plugin/xfcetimer.c:1739
+#: ../panel-plugin/xfcetimer.c:1712
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "초시계 타이머 또는 주어진 시간에 대한 알림을 정의하는 플러그인 입니다."
 
-#: ../panel-plugin/xfcetimer.c:1742
+#: ../panel-plugin/xfcetimer.c:1715
 msgid "Copyright (c) 2005-2018\n"
 msgstr "Copyright (c) 2005-2018\n"
 
