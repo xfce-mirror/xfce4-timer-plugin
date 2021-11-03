@@ -5,15 +5,15 @@
 # Translators:
 # Nikola Radovanović <cobisimo@gmail.com>, 2018
 # Саша Петровић <salepetronije@gmail.com>, 2013
-# Саша Петровић <salepetronije@gmail.com>, 2013-2014
+# Саша Петровић <salepetronije@gmail.com>, 2013-2014,2018
 # Саша Петровић <salepetronije@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-03 00:52+0100\n"
-"PO-Revision-Date: 2021-11-02 23:52+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2021-11-03 17:35+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +51,7 @@ msgstr "Туту! :)\nВреме за узбуну %s је истекло."
 #: ../panel-plugin/xfcetimer.c:216
 #, c-format
 msgid "Xfce4 Timer Plugin: %s"
-msgstr ""
+msgstr "Прикључак бројач времена ИксФЦЕ-а: %s"
 
 #: ../panel-plugin/xfcetimer.c:223 ../panel-plugin/xfcetimer.c:1479
 msgid "Close"
@@ -200,7 +200,7 @@ msgstr "Користи подразумевану наредбу за узбун
 
 #: ../panel-plugin/xfcetimer.c:1610
 msgid "Default command: "
-msgstr "Подразумевана наредба:"
+msgstr "Подразумевана наредба: "
 
 #. Alarm repetitions config
 #: ../panel-plugin/xfcetimer.c:1627
