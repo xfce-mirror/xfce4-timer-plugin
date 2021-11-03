@@ -6,16 +6,16 @@
 # Harald Servat <redcrash@gmail.com>, 2009
 # Davidmp <medipas@gmail.com>, 2016,2019
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2017-2019
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017-2019
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 # Roger Pueyo Centelles <transifex@rogerpueyo.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:32+0200\n"
-"PO-Revision-Date: 2019-01-14 20:08+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"POT-Creation-Date: 2021-11-03 00:52+0100\n"
+"PO-Revision-Date: 2021-11-02 23:52+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,206 +23,209 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/xfcetimer.c:167
+#: ../panel-plugin/xfcetimer.c:169
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%d h %d min %d s restant"
 
-#: ../panel-plugin/xfcetimer.c:170
+#: ../panel-plugin/xfcetimer.c:172
 #, c-format
 msgid "%dm %ds left"
 msgstr "%d min %d s restant"
 
-#: ../panel-plugin/xfcetimer.c:173
+#: ../panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%ds left"
 msgstr "%d s restant"
 
-#: ../panel-plugin/xfcetimer.c:177
+#: ../panel-plugin/xfcetimer.c:179
 msgid " (Paused)"
 msgstr "(en pausa)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:213
+#: ../panel-plugin/xfcetimer.c:215
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Riiiiiiiiing! :) \nJa és l'hora per a l'alarma %s."
 
-#: ../panel-plugin/xfcetimer.c:221 ../panel-plugin/xfcetimer.c:1508
+#: ../panel-plugin/xfcetimer.c:216
+#, c-format
+msgid "Xfce4 Timer Plugin: %s"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:223 ../panel-plugin/xfcetimer.c:1479
 msgid "Close"
 msgstr "Tanca"
 
-#: ../panel-plugin/xfcetimer.c:222
+#: ../panel-plugin/xfcetimer.c:224
 msgid "Rerun the timer"
 msgstr "Torna a executar el temporitzador"
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:491
 msgid "Pause timer"
 msgstr "Fes una pausa al temporitzador"
 
-#: ../panel-plugin/xfcetimer.c:523
+#: ../panel-plugin/xfcetimer.c:499
 msgid "Resume timer"
 msgstr "Reprèn el temporitzador"
 
-#: ../panel-plugin/xfcetimer.c:534
+#: ../panel-plugin/xfcetimer.c:510
 msgid "Stop timer"
 msgstr "Atura el temporitzador"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:693
+#: ../panel-plugin/xfcetimer.c:590 ../panel-plugin/xfcetimer.c:669
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d h %d min %d s"
 
-#: ../panel-plugin/xfcetimer.c:616 ../panel-plugin/xfcetimer.c:695
+#: ../panel-plugin/xfcetimer.c:592 ../panel-plugin/xfcetimer.c:671
 #, c-format
 msgid "%dm %ds"
 msgstr "%d min %d s"
 
-#: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:697
+#: ../panel-plugin/xfcetimer.c:594 ../panel-plugin/xfcetimer.c:673
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:626 ../panel-plugin/xfcetimer.c:706
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:682
 #, c-format
 msgid "At %02d:%02d"
 msgstr "A les %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:812
+#: ../panel-plugin/xfcetimer.c:792
 msgid "Name:"
 msgstr "Nom:"
 
-#: ../panel-plugin/xfcetimer.c:821
+#: ../panel-plugin/xfcetimer.c:803
 msgid "Enter the countdown time"
 msgstr "Introduïu el temps del compte enrere"
 
-#: ../panel-plugin/xfcetimer.c:826
+#: ../panel-plugin/xfcetimer.c:808
 msgid "Enter the time of alarm (24h format)"
 msgstr "Introduïu l'hora de l'alarma (format de 24h)"
 
-#: ../panel-plugin/xfcetimer.c:841
+#: ../panel-plugin/xfcetimer.c:823
 msgid "h  "
 msgstr "h  "
 
-#: ../panel-plugin/xfcetimer.c:848
+#: ../panel-plugin/xfcetimer.c:830
 msgid "m  "
 msgstr "m  "
 
-#: ../panel-plugin/xfcetimer.c:855
+#: ../panel-plugin/xfcetimer.c:837
 msgid "s  "
 msgstr "s  "
 
-#: ../panel-plugin/xfcetimer.c:859
+#: ../panel-plugin/xfcetimer.c:840
 msgid "or"
 msgstr "o"
 
-#. **************
-#: ../panel-plugin/xfcetimer.c:881
+#: ../panel-plugin/xfcetimer.c:867
 msgid "Command to run:"
 msgstr "Ordre a executar:"
 
-#. **************
 #. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:892
+#: ../panel-plugin/xfcetimer.c:879
 msgid "Recurring alarm"
 msgstr "Alarma recurrent"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:899
+#: ../panel-plugin/xfcetimer.c:885
 msgid "Auto start when plugin loads"
 msgstr "Inicia automàticament quan es carregi el connector"
 
-#: ../panel-plugin/xfcetimer.c:909
+#: ../panel-plugin/xfcetimer.c:895
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../panel-plugin/xfcetimer.c:914
+#: ../panel-plugin/xfcetimer.c:900
 msgid "Accept"
 msgstr "Accepta"
 
-#: ../panel-plugin/xfcetimer.c:925
+#: ../panel-plugin/xfcetimer.c:911
 msgid "Add new alarm"
 msgstr "Afegeix una alarma nova"
 
-#: ../panel-plugin/xfcetimer.c:966
+#: ../panel-plugin/xfcetimer.c:952
 msgid "Edit alarm"
 msgstr "Edita l'alarma"
 
-#: ../panel-plugin/xfcetimer.c:1506
+#: ../panel-plugin/xfcetimer.c:1477
 msgid "Xfce4 Timer Options"
 msgstr "Opcions del temporitzador de Xfce4"
 
-#: ../panel-plugin/xfcetimer.c:1546
+#: ../panel-plugin/xfcetimer.c:1517
 msgid "Timer name"
 msgstr "Nom del temporitzador"
 
-#: ../panel-plugin/xfcetimer.c:1551
+#: ../panel-plugin/xfcetimer.c:1522
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Període de compte enrere /\nHora de l'alarma"
 
-#: ../panel-plugin/xfcetimer.c:1554
+#: ../panel-plugin/xfcetimer.c:1525
 msgid "Alarm command"
 msgstr "Ordre de l'alarma"
 
-#: ../panel-plugin/xfcetimer.c:1572
+#: ../panel-plugin/xfcetimer.c:1544
 msgid "Add"
 msgstr "Afegeix"
 
-#: ../panel-plugin/xfcetimer.c:1580
+#: ../panel-plugin/xfcetimer.c:1551
 msgid "Edit"
 msgstr "Edita"
 
-#: ../panel-plugin/xfcetimer.c:1588
+#: ../panel-plugin/xfcetimer.c:1558
 msgid "Remove"
 msgstr "Suprimeix"
 
-#: ../panel-plugin/xfcetimer.c:1596
+#: ../panel-plugin/xfcetimer.c:1566
 msgid "Up"
 msgstr "Amunt"
 
-#: ../panel-plugin/xfcetimer.c:1603
+#: ../panel-plugin/xfcetimer.c:1573
 msgid "Down"
 msgstr "Avall"
 
-#: ../panel-plugin/xfcetimer.c:1619
+#: ../panel-plugin/xfcetimer.c:1589
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "No mostris una advertència si s'estableix una ordre d'alarma"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1631
+#: ../panel-plugin/xfcetimer.c:1601
 msgid "Use a default alarm command"
 msgstr "Utilitza una ordre d'alarma predeterminada"
 
-#: ../panel-plugin/xfcetimer.c:1640
+#: ../panel-plugin/xfcetimer.c:1610
 msgid "Default command: "
 msgstr "Ordre predeterminada:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1656
+#: ../panel-plugin/xfcetimer.c:1627
 msgid "Repeat the alarm command"
 msgstr "Repeteix l'ordre de l'alarma"
 
-#: ../panel-plugin/xfcetimer.c:1665
+#: ../panel-plugin/xfcetimer.c:1638
 msgid "Number of repetitions"
 msgstr "Nombre de repeticions"
 
-#: ../panel-plugin/xfcetimer.c:1674
+#: ../panel-plugin/xfcetimer.c:1647
 msgid "  Time interval (sec.)"
 msgstr "  Interval de temps (en segons)"
 
-#: ../panel-plugin/xfcetimer.c:1736
+#: ../panel-plugin/xfcetimer.c:1709
 msgid "About xfce4-timer-plugin"
 msgstr "Quant a xfce4-timer-plugin"
 
-#: ../panel-plugin/xfcetimer.c:1739
+#: ../panel-plugin/xfcetimer.c:1712
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Un connector per definir temporitzadors de compte enrere i alarmes en moments determinats."
 
-#: ../panel-plugin/xfcetimer.c:1742
+#: ../panel-plugin/xfcetimer.c:1715
 msgid "Copyright (c) 2005-2018\n"
 msgstr "Drets d'autor (c) 2005-2018\n"
 
