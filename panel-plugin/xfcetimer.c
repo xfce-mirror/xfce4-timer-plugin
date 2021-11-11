@@ -453,6 +453,26 @@ pbar_clicked (GtkWidget *pbar, GdkEventButton *event, gpointer data)
     gtk_menu_popdown (GTK_MENU (pd->menu));
 }
 
+/* This function help to remove left padding from menu */
+/* src:https://gist.github.com/andreldm/62ecee0d87cde8ec5f3d0e36e404511c */
+static GtkWidget*
+create_menu_item (const gchar *str, const char *icon_name)
+{
+  GtkWidget *mi, *label, *box, *image;
+
+  mi = gtk_menu_item_new ();
+  label = gtk_label_new (str);
+  image = gtk_image_new_from_icon_name (icon_name ? icon_name : "", GTK_ICON_SIZE_BUTTON);
+
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 4);
+  gtk_widget_set_halign (label, GTK_ALIGN_START);
+
+  gtk_box_pack_start (GTK_BOX (box), image, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (box), label, TRUE, TRUE, 6);
+  gtk_container_add (GTK_CONTAINER (mi), box);
+
+  return mi;
+}
 
 
 /* This function generates the popup menu */
@@ -461,7 +481,7 @@ make_menu (plugin_data *pd)
 {
   GList *list = NULL;
   alarm_t *alrm;
-  GtkWidget *menuitem;
+  GtkWidget *menu_item;
   gchar *itemtext;
 
   /* Destroy the existing one */
@@ -469,25 +489,16 @@ make_menu (plugin_data *pd)
     gtk_widget_destroy (pd->menu);
 
   pd->menu = gtk_menu_new ();
+ /* remove left padding from menu, see also create_menu_item () */
+  gtk_menu_set_reserve_toggle_size (GTK_MENU (pd->menu), FALSE);
 
   list = pd->alarm_list;
 
-  GtkWidget *box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-  GtkWidget *icon = gtk_image_new_from_icon_name ("xfce4-timer-plugin", GTK_ICON_SIZE_MENU);
-  GtkWidget *label = gtk_label_new (_("Add new alarm"));
-  GtkWidget *menu_item = gtk_menu_item_new ();
+  menu_item = create_menu_item( _("Add new alarm"), "xfce4-timer-plugin");
+  gtk_menu_shell_append (GTK_MENU_SHELL( pd->menu ), menu_item);
 
-  gtk_container_add (GTK_CONTAINER (box), icon);
-  gtk_container_add (GTK_CONTAINER (box), label);
-
-  gtk_container_add (GTK_CONTAINER (menu_item), box);
-
-  gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), menu_item);
-  gtk_widget_set_sensitive(GTK_WIDGET(menu_item), TRUE);
-  gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menu_item), TRUE);
-  gtk_widget_show_all (menu_item);
   g_signal_connect(G_OBJECT(menu_item), "activate",
-        G_CALLBACK (add_edit_clicked), pd);
+                   G_CALLBACK (add_edit_clicked), pd);
 
   while (list)
     {
@@ -499,56 +510,52 @@ make_menu (plugin_data *pd)
 
       /* The selected timer is always active */
       if(alrm->timer_on){
-		menuitem=gtk_menu_item_new_with_label(itemtext);
-		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-		gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
+		menu_item=gtk_menu_item_new_with_label(itemtext);
+		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menu_item);
+		gtk_widget_set_sensitive(GTK_WIDGET(menu_item),FALSE);
 
-		gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menuitem),TRUE);
+		gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menu_item),TRUE);
 
 		/* Pause menu item */
 		if(!alrm->is_paused && alrm->is_countdown) {
-			menuitem=gtk_menu_item_new_with_label(_("Pause timer"));
+			menu_item=gtk_menu_item_new_with_label(_("Pause timer"));
 
-			gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menuitem);
-			g_signal_connect    (G_OBJECT(menuitem),"activate",
+			gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menu_item);
+			g_signal_connect    (G_OBJECT(menu_item),"activate",
 					G_CALLBACK(pause_resume_selected),alrm);
 		}
 		/* If the alarm is paused, the only option is to resume or stop */
 		else if (alrm->is_paused) {
-			menuitem=gtk_menu_item_new_with_label(_("Resume timer"));
+			menu_item=gtk_menu_item_new_with_label(_("Resume timer"));
 
-			gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-			g_signal_connect  (G_OBJECT(menuitem),"activate",
+			gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
+			g_signal_connect  (G_OBJECT(menu_item),"activate",
 					G_CALLBACK(pause_resume_selected),alrm);
-			gtk_widget_show(menuitem);
-
-			gtk_widget_show(menuitem);
-			gtk_widget_show(pd->menu);
 		}
 
-		menuitem=gtk_menu_item_new_with_label(_("Stop timer"));
+		menu_item=gtk_menu_item_new_with_label(_("Stop timer"));
 
-		gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menuitem);
-		g_signal_connect  (G_OBJECT(menuitem),"activate",
+		gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
+		g_signal_connect  (G_OBJECT(menu_item),"activate",
 				G_CALLBACK(start_stop_callback),list);
 
 
 	}else{
-		menuitem=gtk_menu_item_new_with_label(itemtext);
-		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
-		g_signal_connect  (G_OBJECT(menuitem),"activate",
+		menu_item=gtk_menu_item_new_with_label(itemtext);
+		gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menu_item);
+		g_signal_connect  (G_OBJECT(menu_item),"activate",
 				G_CALLBACK (timer_selected), list);
 		/* disable alarm menu entry if repeating command */
 		if(alrm->is_repeating)
-		  gtk_widget_set_sensitive(GTK_WIDGET(menuitem),FALSE);
+		  gtk_widget_set_sensitive(GTK_WIDGET(menu_item),FALSE);
 	}
 
     g_free (itemtext);
     list = list->next;
     if(list){
 	  /* Horizontal line (empty item) */
-	  menuitem=gtk_separator_menu_item_new();
-	  gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menuitem);
+	  menu_item=gtk_separator_menu_item_new();
+	  gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu),menu_item);
 	}
   }
 
@@ -923,8 +930,6 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
     g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_edit), adata);
   else /* Add button or "Add new alarm" menu entry*/
     g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (ok_add), adata);
-
-/*FIXME Better test ! */
 
   /* If this is not edit window (add button or add menu entry) we're done */
   if (GTK_WIDGET (buttonn) != pd->buttonedit)
