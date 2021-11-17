@@ -494,7 +494,7 @@ make_menu (plugin_data *pd)
 
   list = pd->alarm_list;
 
-  menu_item = create_menu_item ( _("Add new alarm"), "xfce4-timer-plugin");
+  menu_item = create_menu_item (_("Add new alarm"), "xfce4-timer-plugin");
   gtk_menu_shell_append (GTK_MENU_SHELL( pd->menu ), menu_item);
 
   g_signal_connect( G_OBJECT(menu_item), "activate",
@@ -507,56 +507,48 @@ make_menu (plugin_data *pd)
       alrm = (alarm_t *) list->data;
       itemtext = g_strdup_printf ("%s (%s)", alrm->name, alrm->info);
 
-      /* The selected timer is always active */
-      if (alrm->timer_on){
-        menu_item = gtk_menu_item_new_with_label (itemtext);
-        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
-        gtk_widget_set_sensitive (GTK_WIDGET(menu_item),FALSE);
+      menu_item = create_menu_item (itemtext, NULL);
+      gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
+      g_free (itemtext);
 
-        gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(menu_item),TRUE);
+      if (alrm->timer_on) {
+        gtk_widget_set_sensitive (GTK_WIDGET(menu_item), FALSE);
+        gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM(menu_item), TRUE);
 
         /* Pause menu item */
         if (!alrm->is_paused && alrm->is_countdown) {
-            menu_item = gtk_menu_item_new_with_label (_("Pause timer"));
-
-            gtk_menu_shell_append   (GTK_MENU_SHELL(pd->menu),menu_item);
+            menu_item = create_menu_item (_("Pause timer"), "media-playback-pause");
+            gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu), menu_item);
             g_signal_connect (G_OBJECT(menu_item),"activate",
-                    G_CALLBACK(pause_resume_selected),alrm);
+                              G_CALLBACK(pause_resume_selected), alrm);
         }
         /* If the alarm is paused, the only option is to resume or stop */
         else if (alrm->is_paused) {
-            menu_item = gtk_menu_item_new_with_label(_("Resume timer"));
-
-            gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
-            g_signal_connect (G_OBJECT(menu_item),"activate",
-                    G_CALLBACK(pause_resume_selected),alrm);
+            menu_item = create_menu_item(_("Resume timer"), "media-playback-start");
+            gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu), menu_item);
+            g_signal_connect (G_OBJECT(menu_item), "activate",
+                              G_CALLBACK(pause_resume_selected), alrm);
         }
 
-        menu_item = gtk_menu_item_new_with_label(_("Stop timer"));
-
-        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
-        g_signal_connect (G_OBJECT(menu_item),"activate",
-                G_CALLBACK(start_stop_callback),list);
-
-
-    }else{
-        menu_item = gtk_menu_item_new_with_label (itemtext);
-        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
-        g_signal_connect (G_OBJECT(menu_item),"activate",
-                G_CALLBACK (timer_selected), list);
+        menu_item = create_menu_item(_("Stop timer"), "media-playback-stop");
+        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu), menu_item);
+        g_signal_connect (G_OBJECT(menu_item), "activate",
+                          G_CALLBACK(start_stop_callback), list);
+      } else {
+        g_signal_connect (G_OBJECT(menu_item), "activate",
+                          G_CALLBACK (timer_selected), list);
         /* disable alarm menu entry if repeating command */
         if (alrm->is_repeating)
           gtk_widget_set_sensitive(GTK_WIDGET(menu_item),FALSE);
-    }
+      }
 
-    g_free (itemtext);
-    list = list->next;
-    if (list){
-      /* Horizontal line (empty item) */
-      menu_item = gtk_separator_menu_item_new();
-      gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
+      list = list->next;
+      if (list) {
+        /* Horizontal line (empty item) */
+        menu_item = gtk_separator_menu_item_new();
+        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu),menu_item);
+      }
     }
-  }
 
   gtk_widget_show_all (pd->menu);
 }
