@@ -314,11 +314,9 @@ static void
 start_timer (plugin_data *pd, alarm_t* alrm)
 {
 
-  gchar temp[8];
   gint cur_h, cur_m, cur_s;
   gint timeout_period;
-  GTimeVal timeval;
-  struct tm *current;
+  GDateTime *current;
 
   /* Empty timer list-> Nothing to do. alrm=0, though */
   if (alrm == NULL)
@@ -333,14 +331,11 @@ start_timer (plugin_data *pd, alarm_t* alrm)
   if (!alrm->is_countdown)
     {
 
-      g_get_current_time (&timeval);
-      current = localtime ((time_t *) &timeval.tv_sec);
-      strftime (temp, 7, "%H", current);
-      cur_h = atoi (temp);
-      strftime (temp, 7, "%M", current);
-      cur_m = atoi (temp);
-      strftime (temp, 7, "%S", current);
-      cur_s = atoi (temp);
+      current = g_date_time_new_now_local ();
+      cur_h = g_date_time_get_hour   (current);
+      cur_m = g_date_time_get_minute (current);
+      cur_s = g_date_time_get_second (current);
+      g_date_time_unref (current);
 
       timeout_period = (alrm->time) * 60 - ((60 * cur_h + cur_m) * 60 + cur_s);
 
