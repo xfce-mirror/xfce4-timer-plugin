@@ -215,7 +215,7 @@ update_function (gpointer data)
 
                 /* Display the name of the alarm when the countdown ends */
                 dialog_message = g_strdup_printf(_("Beeep! :) \nTime is up for the alarm %s."), alrm->name);
-                dialog_title = g_strdup_printf(_("Xfce4 Timer Plugin: %s"), alrm->name);
+                dialog_title = g_strdup_printf(_("Timer %s"), alrm->name);
 
                 dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
                         GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
@@ -1486,7 +1486,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   xfce_panel_plugin_block_menu (plugin);
 
   header = xfce_titled_dialog_new_with_buttons (
-      _("Xfce4 Timer Options"),
+      _("Timer Options"),
       GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
       GTK_DIALOG_DESTROY_WITH_PARENT, _("Close"), GTK_RESPONSE_OK, NULL);
 
@@ -1718,7 +1718,7 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
   icon = xfce_panel_pixbuf_from_source ("xfce4-timer-plugin", NULL, 48);
   gtk_show_about_dialog (
-      NULL, "title", _("About xfce4-timer-plugin"), "logo", icon, "license",
+      NULL, "title", _("About Timer plugin"), "logo", icon, "license",
       xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME, "comments",
       _("A plugin to define countdown timers or alarms at given times."),
