@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 00:52+0100\n"
-"PO-Revision-Date: 2021-11-02 23:52+0000\n"
+"POT-Creation-Date: 2022-03-04 12:57+0100\n"
+"PO-Revision-Date: 2022-03-04 11:57+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Arabic (http://www.transifex.com/xfce/xfce-panel-plugins/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -22,209 +22,209 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../panel-plugin/xfcetimer.c:169
+#: ../panel-plugin/xfcetimer.c:171
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dس %dد %ds تبقت"
 
-#: ../panel-plugin/xfcetimer.c:172
+#: ../panel-plugin/xfcetimer.c:174
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dد %dث تبقت"
 
-#: ../panel-plugin/xfcetimer.c:175
+#: ../panel-plugin/xfcetimer.c:177
 #, c-format
 msgid "%ds left"
 msgstr "%dث تبقت"
 
-#: ../panel-plugin/xfcetimer.c:179
+#: ../panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
 msgstr " (مؤقتاً)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:215
+#: ../panel-plugin/xfcetimer.c:217
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "ببب! :) \nحان وقت التنبيه %s."
 
-#: ../panel-plugin/xfcetimer.c:216
+#: ../panel-plugin/xfcetimer.c:218
 #, c-format
-msgid "Xfce4 Timer Plugin: %s"
+msgid "Timer %s"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:223 ../panel-plugin/xfcetimer.c:1479
+#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
 msgstr "إغلاق"
 
-#: ../panel-plugin/xfcetimer.c:224
+#: ../panel-plugin/xfcetimer.c:226
 msgid "Rerun the timer"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:491
+#: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
+msgid "Add new alarm"
+msgstr "أضف تنبيه جديد"
+
+#: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
 msgstr "إيقاف التنبيه مؤقتاً"
 
-#: ../panel-plugin/xfcetimer.c:499
+#: ../panel-plugin/xfcetimer.c:522
 msgid "Resume timer"
 msgstr "استئناف التنبيه"
 
-#: ../panel-plugin/xfcetimer.c:510
+#: ../panel-plugin/xfcetimer.c:528
 msgid "Stop timer"
 msgstr "إيقاف التنبيه"
 
-#: ../panel-plugin/xfcetimer.c:590 ../panel-plugin/xfcetimer.c:669
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dس %dد %dث"
 
-#: ../panel-plugin/xfcetimer.c:592 ../panel-plugin/xfcetimer.c:671
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:683
 #, c-format
 msgid "%dm %ds"
 msgstr "%dد %dث"
 
-#: ../panel-plugin/xfcetimer.c:594 ../panel-plugin/xfcetimer.c:673
+#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:685
 #, c-format
 msgid "%ds"
 msgstr "%dث"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:682
+#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:694
 #, c-format
 msgid "At %02d:%02d"
 msgstr "عند %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:792
+#: ../panel-plugin/xfcetimer.c:805
 msgid "Name:"
 msgstr "الاسم:"
 
-#: ../panel-plugin/xfcetimer.c:803
+#: ../panel-plugin/xfcetimer.c:816
 msgid "Enter the countdown time"
 msgstr "أدخل وقت العد التنازلي"
 
-#: ../panel-plugin/xfcetimer.c:808
+#: ../panel-plugin/xfcetimer.c:821
 msgid "Enter the time of alarm (24h format)"
 msgstr "أدخل وقت التنبيه (تنسيق 24 ساعة)"
 
-#: ../panel-plugin/xfcetimer.c:823
+#: ../panel-plugin/xfcetimer.c:836
 msgid "h  "
 msgstr "س  "
 
-#: ../panel-plugin/xfcetimer.c:830
+#: ../panel-plugin/xfcetimer.c:843
 msgid "m  "
 msgstr "د  "
 
-#: ../panel-plugin/xfcetimer.c:837
+#: ../panel-plugin/xfcetimer.c:850
 msgid "s  "
 msgstr "ث  "
 
-#: ../panel-plugin/xfcetimer.c:840
+#: ../panel-plugin/xfcetimer.c:853
 msgid "or"
 msgstr "أو"
 
-#: ../panel-plugin/xfcetimer.c:867
+#: ../panel-plugin/xfcetimer.c:880
 msgid "Command to run:"
 msgstr "أمر لتشغيله:"
 
 #. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:879
+#: ../panel-plugin/xfcetimer.c:892
 msgid "Recurring alarm"
 msgstr ""
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:885
+#: ../panel-plugin/xfcetimer.c:898
 msgid "Auto start when plugin loads"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:895
+#: ../panel-plugin/xfcetimer.c:908
 msgid "Cancel"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:900
+#: ../panel-plugin/xfcetimer.c:913
 msgid "Accept"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:911
-msgid "Add new alarm"
-msgstr "أضف تنبيه جديد"
-
-#: ../panel-plugin/xfcetimer.c:952
+#: ../panel-plugin/xfcetimer.c:964
 msgid "Edit alarm"
 msgstr "حرّر المنبّه"
 
-#: ../panel-plugin/xfcetimer.c:1477
-msgid "Xfce4 Timer Options"
-msgstr "خيارات ضبط تنبيه اكسفس4"
+#: ../panel-plugin/xfcetimer.c:1489
+msgid "Timer Options"
+msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1517
+#: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
 msgstr "اسم المنبه"
 
-#: ../panel-plugin/xfcetimer.c:1522
+#: ../panel-plugin/xfcetimer.c:1534
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "فترة العد التنازلي /\nوقت التنبيه"
 
-#: ../panel-plugin/xfcetimer.c:1525
+#: ../panel-plugin/xfcetimer.c:1537
 msgid "Alarm command"
 msgstr "أمر التنبيه"
 
-#: ../panel-plugin/xfcetimer.c:1544
+#: ../panel-plugin/xfcetimer.c:1556
 msgid "Add"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1551
+#: ../panel-plugin/xfcetimer.c:1563
 msgid "Edit"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1558
+#: ../panel-plugin/xfcetimer.c:1570
 msgid "Remove"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1566
+#: ../panel-plugin/xfcetimer.c:1578
 msgid "Up"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1573
+#: ../panel-plugin/xfcetimer.c:1585
 msgid "Down"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1589
+#: ../panel-plugin/xfcetimer.c:1601
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "لا تعرض تحذير إذا تم تعيين أمر  تنبيه"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1601
+#: ../panel-plugin/xfcetimer.c:1613
 msgid "Use a default alarm command"
 msgstr "استخدم أمر التنبيه الافتراضي"
 
-#: ../panel-plugin/xfcetimer.c:1610
+#: ../panel-plugin/xfcetimer.c:1622
 msgid "Default command: "
 msgstr "الأمر الافتراضي: "
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1627
+#: ../panel-plugin/xfcetimer.c:1639
 msgid "Repeat the alarm command"
 msgstr "تكرار أمر التنبيه"
 
-#: ../panel-plugin/xfcetimer.c:1638
+#: ../panel-plugin/xfcetimer.c:1650
 msgid "Number of repetitions"
 msgstr "مرات التكرار"
 
-#: ../panel-plugin/xfcetimer.c:1647
+#: ../panel-plugin/xfcetimer.c:1659
 msgid "  Time interval (sec.)"
 msgstr "  الفاصل الزمني (ثانية.)"
 
-#: ../panel-plugin/xfcetimer.c:1709
-msgid "About xfce4-timer-plugin"
-msgstr "حول xfce4-منبه--الملحق"
+#: ../panel-plugin/xfcetimer.c:1721
+msgid "About Timer plugin"
+msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1712
+#: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "ملحق عداد توقيت التنازلي أو تنبيه في أوقات محددة."
 
-#: ../panel-plugin/xfcetimer.c:1715
+#: ../panel-plugin/xfcetimer.c:1727
 msgid "Copyright (c) 2005-2018\n"
 msgstr ""
 
