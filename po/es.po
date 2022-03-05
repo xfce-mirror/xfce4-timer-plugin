@@ -12,14 +12,14 @@
 # mc <correomc2000-ing@yahoo.es>, 2013
 # prflr88 <prflr88@gmail.com>, 2018
 # prflr88 <prflr88@gmail.com>, 2014
-# Toni Estévez <toni.estevez@gmail.com>, 2021
+# Toni Estévez <toni.estevez@gmail.com>, 2021-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2022-03-05 07:54+0000\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +57,7 @@ msgstr "¡Bip! :) \nSe ha acabado el tiempo de la alarma %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Temporizador %s"
 
 #: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
@@ -159,7 +159,7 @@ msgstr "Editar la alarma"
 
 #: ../panel-plugin/xfcetimer.c:1489
 msgid "Timer Options"
-msgstr ""
+msgstr "Opciones del temporizador"
 
 #: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
@@ -223,7 +223,7 @@ msgstr "  Duración (s)"
 
 #: ../panel-plugin/xfcetimer.c:1721
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Acerca del temporizador"
 
 #: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
