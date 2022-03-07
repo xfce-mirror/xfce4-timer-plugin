@@ -5,14 +5,14 @@
 # Translators:
 # 黃柏諺 <s8321414@gmail.com>, 2014,2018
 # Walter Cheuk <wwycheuk@gmail.com>, 2013-2014
-# 黃柏諺 <s8321414@gmail.com>, 2021
+# 黃柏諺 <s8321414@gmail.com>, 2021-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2022-03-07 01:31+0000\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/xfce-panel-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgstr "嗶！ :) \n鬧鈴 %s 到時了。"
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "計時器 %s"
 
 #: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
@@ -152,7 +152,7 @@ msgstr "編輯鬧鈴"
 
 #: ../panel-plugin/xfcetimer.c:1489
 msgid "Timer Options"
-msgstr ""
+msgstr "計時器選項"
 
 #: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
@@ -216,7 +216,7 @@ msgstr "  時間間隔 (秒)"
 
 #: ../panel-plugin/xfcetimer.c:1721
 msgid "About Timer plugin"
-msgstr ""
+msgstr "關於計時器外掛程式"
 
 #: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
