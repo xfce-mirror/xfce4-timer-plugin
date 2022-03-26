@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Arnold Marko <arnold.marko@gmail.com>, 2019,2021
+# Martin Srebotnjak <miles@filmsi.net>, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2022\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +49,7 @@ msgstr "Riiiing! :)\nČas je za alarm %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Časovnik %s"
 
 #: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
@@ -150,7 +151,7 @@ msgstr "Urejanje alarma"
 
 #: ../panel-plugin/xfcetimer.c:1489
 msgid "Timer Options"
-msgstr ""
+msgstr "Možnosti časovnika"
 
 #: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
@@ -214,7 +215,7 @@ msgstr "Časovni interval (sekunde)"
 
 #: ../panel-plugin/xfcetimer.c:1721
 msgid "About Timer plugin"
-msgstr ""
+msgstr "O vstavku Časovnik"
 
 #: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
