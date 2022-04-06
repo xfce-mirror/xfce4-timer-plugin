@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Andrij Mizyk <andmizyk@gmail.com>, 2022
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2008
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2013-2014,2018,2022
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: Andrij Mizyk <andmizyk@gmail.com>, 2022\n"
 "Language-Team: Ukrainian (http://www.transifex.com/xfce/xfce-panel-plugins/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "Все-е-е! :) \nЧас для будильника %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Таймер %s"
 
 #: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
@@ -151,7 +152,7 @@ msgstr "Редагувати сигнал"
 
 #: ../panel-plugin/xfcetimer.c:1489
 msgid "Timer Options"
-msgstr ""
+msgstr "Параметри таймера"
 
 #: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
@@ -215,7 +216,7 @@ msgstr "  Інтервал часу (сек.)"
 
 #: ../panel-plugin/xfcetimer.c:1721
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Про втулку таймера"
 
 #: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
