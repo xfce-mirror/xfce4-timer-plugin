@@ -144,7 +144,7 @@ msgstr "Anullar"
 
 #: ../panel-plugin/xfcetimer.c:913
 msgid "Accept"
-msgstr ""
+msgstr "Acceptar"
 
 #: ../panel-plugin/xfcetimer.c:964
 msgid "Edit alarm"
@@ -174,19 +174,19 @@ msgstr "Apondre"
 
 #: ../panel-plugin/xfcetimer.c:1563
 msgid "Edit"
-msgstr ""
+msgstr "Modificar"
 
 #: ../panel-plugin/xfcetimer.c:1570
 msgid "Remove"
-msgstr ""
+msgstr "Levar"
 
 #: ../panel-plugin/xfcetimer.c:1578
 msgid "Up"
-msgstr ""
+msgstr "Amont"
 
 #: ../panel-plugin/xfcetimer.c:1585
 msgid "Down"
-msgstr ""
+msgstr "Aval"
 
 #: ../panel-plugin/xfcetimer.c:1601
 msgid "Don't display a warning  if an alarm command is set"
@@ -224,7 +224,7 @@ msgstr "Un empeuton per definir de comptes a rebors o d'alarmas a de moments don
 
 #: ../panel-plugin/xfcetimer.c:1727
 msgid "Copyright (c) 2005-2018\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
