@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andre Miranda <andre42m@gmail.com>, 2018
+# Andre Miranda <andre42m@gmail.com>, 2018,2022
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
 # Michael Martins <michaelfm21@gmail.com>, 2014
 # Peretto <peretto@gmail.com>, 2022
@@ -14,15 +14,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2022-11-28 15:08+0100\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: Andre Miranda <andre42m@gmail.com>, 2018,2022\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../panel-plugin/xfcetimer.c:171
 #, c-format
@@ -54,7 +54,7 @@ msgstr "Biiip! :) \nAcabou o tempo do alarme %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Cronômetro %s"
 
 #: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
 msgid "Close"
@@ -62,7 +62,7 @@ msgstr "Fechar"
 
 #: ../panel-plugin/xfcetimer.c:226
 msgid "Rerun the timer"
-msgstr "Executar novamente o timer"
+msgstr "Reiniciar o cronômetro"
 
 #: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
 msgid "Add new alarm"
@@ -74,11 +74,11 @@ msgstr "Pausar cronômetro"
 
 #: ../panel-plugin/xfcetimer.c:522
 msgid "Resume timer"
-msgstr "Resumir cronômetro"
+msgstr "Retomar cronômetro"
 
 #: ../panel-plugin/xfcetimer.c:528
 msgid "Stop timer"
-msgstr "Parar o temporizador"
+msgstr "Parar cronômetro"
 
 #: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
 #, c-format
@@ -156,7 +156,7 @@ msgstr "Editar alarme"
 
 #: ../panel-plugin/xfcetimer.c:1489
 msgid "Timer Options"
-msgstr ""
+msgstr "Opções do cronômetro"
 
 #: ../panel-plugin/xfcetimer.c:1529
 msgid "Timer name"
@@ -220,7 +220,7 @@ msgstr "  Intervalo de tempo (s) "
 
 #: ../panel-plugin/xfcetimer.c:1721
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Sobre o plugin Temporizador"
 
 #: ../panel-plugin/xfcetimer.c:1724
 msgid "A plugin to define countdown timers or alarms at given times."
