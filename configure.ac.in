@@ -16,7 +16,6 @@ m4_define([xfce4_timer_version_build], [@REVISION@])
 m4_define([xfce4_timer_version_tag], [git]) # Leave empty only for releases, but use 'git' in most cases
 m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_nano(), [], [], [.xfce4_timer_version_nano()])ifelse(xfce4_timer_version_tag(), [git], [xfce4_timer_version_tag()-xfce4_timer_version_build()], [xfce4_timer_version_tag()])])
 
-AC_CONFIG_MACRO_DIRS([m4])
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
@@ -25,6 +24,7 @@ AC_COPYRIGHT([Copyright (C) 2018
 AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [https://bugzilla.xfce.org/], [xfce4-timer-plugin])
 AC_PREREQ([2.50])
 AC_REVISION([xfce4_panel_version_build])
+AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
 dnl *** Initialize automake ***
