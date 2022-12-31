@@ -1677,7 +1677,6 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 static void
 show_about_window (XfcePanelPlugin *plugin, plugin_data *pd)
 {
-  GdkPixbuf *icon;
   const gchar *author[] =
     { "Kemal Ilgar Eroğlu <ilgar_eroglu@yahoo.com>", NULL };
   const gchar *translators =
@@ -1716,9 +1715,8 @@ Muhammad Ali Makki <makki.ma@gmail.com>\n\
 Hunt Xu <huntxu@live.cn>\n\
 Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
-  icon = xfce_panel_pixbuf_from_source ("xfce4-timer-plugin", NULL, 48);
   gtk_show_about_dialog (
-      NULL, "title", _("About Timer plugin"), "logo", icon, "license",
+      NULL, "title", _("About Timer plugin"), "logo-icon-name", "xfce4-timer-plugin", "license",
       xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME, "comments",
       _("A plugin to define countdown timers or alarms at given times."),
@@ -1726,9 +1724,6 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
       "https://docs.xfce.org/panel-plugins/xfce4-timer-plugin",
       "copyright", _("Copyright (c) 2005-2018\n"), "authors", author,
       "translator-credits", translators, NULL);
-
-  if (icon)
-    g_object_unref (G_OBJECT (icon));
 }
 
 
