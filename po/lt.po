@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Moo, 2015-2018,2021-2022
+# Moo, 2015-2018,2021-2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-07 11:00+0000\n"
-"Last-Translator: Moo\n"
+"POT-Creation-Date: 2022-11-28 15:08+0100\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: Moo, 2015-2018,2021-2023\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,17 +21,17 @@ msgstr ""
 #: ../panel-plugin/xfcetimer.c:171
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "Liko %dh %dm %ds"
+msgstr "Liko %d val. %d min. %d sek."
 
 #: ../panel-plugin/xfcetimer.c:174
 #, c-format
 msgid "%dm %ds left"
-msgstr "Liko %dm %ds"
+msgstr "Liko %d min. %d sek."
 
 #: ../panel-plugin/xfcetimer.c:177
 #, c-format
 msgid "%ds left"
-msgstr "Liko %ds"
+msgstr "Liko %d sek."
 
 #: ../panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
@@ -43,7 +43,7 @@ msgstr " (Pristabdytas)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Biiip! :) \nPriminimo %s laikas baigėsi."
+msgstr "Pypt! :) \nPriminimo „%s“ laikas baigėsi."
 
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
@@ -56,7 +56,7 @@ msgstr "Užverti"
 
 #: ../panel-plugin/xfcetimer.c:226
 msgid "Rerun the timer"
-msgstr "Iš naujo paleisti laikmatį"
+msgstr "Paleisti laikmatį iš naujo"
 
 #: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
 msgid "Add new alarm"
@@ -77,17 +77,17 @@ msgstr "Sustabdyti laikmatį"
 #: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
 #, c-format
 msgid "%dh %dm %ds"
-msgstr "%dh %dm %ds"
+msgstr "%d val. %d min. %d sek."
 
 #: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:683
 #, c-format
 msgid "%dm %ds"
-msgstr "%dm %ds"
+msgstr "%d min. %d sek."
 
 #: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:685
 #, c-format
 msgid "%ds"
-msgstr "%ds"
+msgstr "%d sek."
 
 #: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:694
 #, c-format
