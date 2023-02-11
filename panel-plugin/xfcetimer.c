@@ -508,7 +508,6 @@ make_menu (plugin_data *pd)
 
       if (alrm->timer_on) {
         gtk_widget_set_sensitive (GTK_WIDGET(menu_item), FALSE);
-        gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM(menu_item), TRUE);
 
         /* Pause menu item */
         if (!alrm->is_paused && alrm->is_countdown) {
