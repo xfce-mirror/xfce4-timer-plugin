@@ -17,12 +17,14 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-typedef struct
+typedef struct alarm
 {
   gchar *name, *info;
   gchar *command; /* Command when countdown ends */
+  struct alarm *next_alarm; /* Next alarm to start when current countdown ends */
+  gint next_alarm_groupnum; /* Next alarm groupnum, used only in load_\save_settings */
   gint time;
-  gboolean is_recurring, is_auto_start, timer_on;
+  gboolean is_auto_start, timer_on;
 
   gboolean is_repeating; /* True while alarm repeats */
   gboolean is_paused; /* True if the countdown is paused */
@@ -66,7 +68,8 @@ typedef struct
   GtkSpinButton *time_h, *time_m; /* Spinbuttons for 24h format */
   GtkEntry *name, *command; /* Name, and command entries */
   GtkRadioButton *rb1; /* Radio button for the h-m-s format */
-  GtkWidget *recur_cb, *autostart_cb; /* check buttons for recurring alarm, autostart */
+  GtkWidget *next_alarm; /* Combobox for next alarm selection */
+  GtkWidget *autostart_cb; /* Check button for autostart */
   GtkWidget *dialog; /* Add/Edit dialog */
   plugin_data *pd; /* Plugin data */
 } alarm_data;
