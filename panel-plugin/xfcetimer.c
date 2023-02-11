@@ -1372,8 +1372,6 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 
   /* free the plugin data structure */
   g_free (pd);
-
-  gtk_main_quit ();
 }
 
 
