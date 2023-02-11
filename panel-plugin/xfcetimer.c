@@ -906,7 +906,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
     alarm_iter = alarm_iter->next;
   }
   next_alarm = gtk_combo_box_new_with_model (GTK_TREE_MODEL (next_alarm_list));
-  g_clear_object (&next_alarm_list);
+  g_object_unref (next_alarm_list);
   next_alarm_cell = gtk_cell_renderer_text_new();
   gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (next_alarm), next_alarm_cell, TRUE);
   gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (next_alarm), next_alarm_cell, "text", 1);
