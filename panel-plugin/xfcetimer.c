@@ -655,7 +655,7 @@ ok_edit (GtkButton *button, gpointer data)
 
       if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (adata->next_alarm), &next_alarm_iter))
         gtk_tree_model_get (gtk_combo_box_get_model (GTK_COMBO_BOX (adata->next_alarm)),
-                            &next_alarm_iter, 0, &alrm->next_alarm);
+                            &next_alarm_iter, 0, &alrm->next_alarm, -1);
       else
         alrm->next_alarm = NULL;
 
@@ -897,12 +897,12 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   /* 'next alarm' combo box to set subsequent alarm (if any)
    * Separate list store created to add 'empty' item for no next alarm */
   next_alarm_list = gtk_list_store_new (2, G_TYPE_POINTER, G_TYPE_STRING);
-  gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, NULL, 1, "");
+  gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, NULL, 1, "", -1);
   alarm_iter = pd->alarm_list;
   while (alarm_iter)
   {
     alrm = alarm_iter->data;
-    gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, alrm, 1, alrm->name);
+    gtk_list_store_insert_with_values (next_alarm_list, &iter, -1, 0, alrm, 1, alrm->name, -1);
     alarm_iter = alarm_iter->next;
   }
   next_alarm = gtk_combo_box_new_with_model (GTK_TREE_MODEL (next_alarm_list));
