@@ -787,9 +787,6 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   adata->pd = pd;
 
   /* Set title */
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  gtk_container_add (GTK_CONTAINER (dialog), vbox);
-  
   box = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
   gtk_container_set_border_width (GTK_CONTAINER (box), 2);
 
