@@ -5,13 +5,13 @@
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016,2018
 # Elishai Eliyahu <elishai@mailfence.com>, 2021-2022
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
+# עומר א״ש <omeritzicschwartz@gmail.com>, 2021
+# עומר א״ש <omeritzicschwartz@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 12:57+0100\n"
+"POT-Creation-Date: 2023-02-12 00:50+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2021-2022\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
@@ -53,7 +53,7 @@ msgstr "ביייפ! :)\nהזמן של האזעקה %s עבר."
 msgid "Timer %s"
 msgstr "טיימר %s"
 
-#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
+#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1552
 msgid "Close"
 msgstr "סגור"
 
@@ -61,169 +61,168 @@ msgstr "סגור"
 msgid "Rerun the timer"
 msgstr "הפעל מחדש את קוצב הזמן"
 
-#: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
+#: ../panel-plugin/xfcetimer.c:491 ../panel-plugin/xfcetimer.c:946
 msgid "Add new alarm"
 msgstr "הוסף אזעקה חדשה"
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:513
 msgid "Pause timer"
 msgstr "הפסק את קוצב הזמן"
 
-#: ../panel-plugin/xfcetimer.c:522
+#: ../panel-plugin/xfcetimer.c:520
 msgid "Resume timer"
 msgstr "הפעל בחזרה את קוצב הזמן"
 
-#: ../panel-plugin/xfcetimer.c:528
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Stop timer"
 msgstr "עצור את קוצב הזמן"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
+#: ../panel-plugin/xfcetimer.c:600 ../panel-plugin/xfcetimer.c:684
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:683
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:685
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:694
+#: ../panel-plugin/xfcetimer.c:612 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "At %02d:%02d"
 msgstr "ב- %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:805
+#: ../panel-plugin/xfcetimer.c:809
 msgid "Name:"
 msgstr "שם:"
 
-#: ../panel-plugin/xfcetimer.c:816
+#: ../panel-plugin/xfcetimer.c:820
 msgid "Enter the countdown time"
 msgstr "הכנס את זמן הספירה"
 
-#: ../panel-plugin/xfcetimer.c:821
+#: ../panel-plugin/xfcetimer.c:825
 msgid "Enter the time of alarm (24h format)"
 msgstr "הכנס את זמן האזעקה (פורמט 24 שעות)"
 
-#: ../panel-plugin/xfcetimer.c:836
+#: ../panel-plugin/xfcetimer.c:840
 msgid "h  "
 msgstr "שעה"
 
-#: ../panel-plugin/xfcetimer.c:843
+#: ../panel-plugin/xfcetimer.c:847
 msgid "m  "
 msgstr "דקה"
 
-#: ../panel-plugin/xfcetimer.c:850
+#: ../panel-plugin/xfcetimer.c:854
 msgid "s  "
 msgstr "שניה"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: ../panel-plugin/xfcetimer.c:857
 msgid "or"
 msgstr "או"
 
-#: ../panel-plugin/xfcetimer.c:880
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "פקודה להפעלה:"
 
-#. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:892
-msgid "Recurring alarm"
-msgstr "התראה חוזרת"
+#: ../panel-plugin/xfcetimer.c:894
+msgid "Alarm to run:"
+msgstr ""
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:898
+#: ../panel-plugin/xfcetimer.c:921
 msgid "Auto start when plugin loads"
 msgstr "התחלה אוטומטית כאשר תוסף נטען"
 
-#: ../panel-plugin/xfcetimer.c:908
+#: ../panel-plugin/xfcetimer.c:931
 msgid "Cancel"
 msgstr "ביטול"
 
-#: ../panel-plugin/xfcetimer.c:913
+#: ../panel-plugin/xfcetimer.c:936
 msgid "Accept"
 msgstr "אישור"
 
-#: ../panel-plugin/xfcetimer.c:964
+#: ../panel-plugin/xfcetimer.c:987
 msgid "Edit alarm"
 msgstr "ערוך אזעקה"
 
-#: ../panel-plugin/xfcetimer.c:1489
+#: ../panel-plugin/xfcetimer.c:1550
 msgid "Timer Options"
 msgstr "אפשרויות טיימר"
 
-#: ../panel-plugin/xfcetimer.c:1529
+#: ../panel-plugin/xfcetimer.c:1590
 msgid "Timer name"
 msgstr "שם קוצב זמן"
 
-#: ../panel-plugin/xfcetimer.c:1534
+#: ../panel-plugin/xfcetimer.c:1595
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "משך ספירה /\nזמן אזעקה"
 
-#: ../panel-plugin/xfcetimer.c:1537
+#: ../panel-plugin/xfcetimer.c:1598
 msgid "Alarm command"
 msgstr "פקודת אזעקה"
 
-#: ../panel-plugin/xfcetimer.c:1556
+#: ../panel-plugin/xfcetimer.c:1617
 msgid "Add"
 msgstr "הוספה"
 
-#: ../panel-plugin/xfcetimer.c:1563
+#: ../panel-plugin/xfcetimer.c:1624
 msgid "Edit"
 msgstr "עריכה"
 
-#: ../panel-plugin/xfcetimer.c:1570
+#: ../panel-plugin/xfcetimer.c:1631
 msgid "Remove"
 msgstr "הסרה"
 
-#: ../panel-plugin/xfcetimer.c:1578
+#: ../panel-plugin/xfcetimer.c:1639
 msgid "Up"
 msgstr "למעלה"
 
-#: ../panel-plugin/xfcetimer.c:1585
+#: ../panel-plugin/xfcetimer.c:1646
 msgid "Down"
 msgstr "למטה"
 
-#: ../panel-plugin/xfcetimer.c:1601
+#: ../panel-plugin/xfcetimer.c:1662
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "אל תציג אזהרה אם פקודת אזעקה מופעלת"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1613
+#: ../panel-plugin/xfcetimer.c:1674
 msgid "Use a default alarm command"
 msgstr "השתמש בפקודת אזעקה ברירת מחדל"
 
-#: ../panel-plugin/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1683
 msgid "Default command: "
 msgstr "פקודת ברירת מחדל:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1639
+#: ../panel-plugin/xfcetimer.c:1700
 msgid "Repeat the alarm command"
 msgstr "חזור על פקודת האזעקה"
 
-#: ../panel-plugin/xfcetimer.c:1650
+#: ../panel-plugin/xfcetimer.c:1711
 msgid "Number of repetitions"
 msgstr "מספר חזרות"
 
-#: ../panel-plugin/xfcetimer.c:1659
+#: ../panel-plugin/xfcetimer.c:1720
 msgid "  Time interval (sec.)"
 msgstr "מרווח זמן (שניה)"
 
-#: ../panel-plugin/xfcetimer.c:1721
+#: ../panel-plugin/xfcetimer.c:1780
 msgid "About Timer plugin"
 msgstr "אודות תוסף טיימר"
 
-#: ../panel-plugin/xfcetimer.c:1724
+#: ../panel-plugin/xfcetimer.c:1783
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "תוסף להגדרת קוצבי זמן ספירה או אזעקות בזמנים נתונים."
 
-#: ../panel-plugin/xfcetimer.c:1727
+#: ../panel-plugin/xfcetimer.c:1786
 msgid "Copyright (c) 2005-2018\n"
 msgstr "זכויות יוצרים (c) 2005-2018\n"
 
