@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 12:57+0100\n"
-"PO-Revision-Date: 2022-03-04 11:57+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2023-02-12 00:50+0100\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2018-2019\n"
 "Language-Team: Finnish (http://www.transifex.com/xfce/xfce-panel-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +51,7 @@ msgstr "Piiip! :)\nHälytyksen %s aika on loppunut."
 msgid "Timer %s"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
+#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1552
 msgid "Close"
 msgstr "Sulje"
 
@@ -59,169 +59,168 @@ msgstr "Sulje"
 msgid "Rerun the timer"
 msgstr "Käynnistä ajastin uudelleen"
 
-#: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
+#: ../panel-plugin/xfcetimer.c:491 ../panel-plugin/xfcetimer.c:946
 msgid "Add new alarm"
 msgstr "Lisää uusi hälytys"
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:513
 msgid "Pause timer"
 msgstr "Keskeytä ajastin"
 
-#: ../panel-plugin/xfcetimer.c:522
+#: ../panel-plugin/xfcetimer.c:520
 msgid "Resume timer"
 msgstr "Jatka ajastinta"
 
-#: ../panel-plugin/xfcetimer.c:528
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Stop timer"
 msgstr "Pysäytä ajastin"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
+#: ../panel-plugin/xfcetimer.c:600 ../panel-plugin/xfcetimer.c:684
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d t %d min %d s"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:683
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
 #, c-format
 msgid "%dm %ds"
 msgstr "%d min %d s"
 
-#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:685
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
 #, c-format
 msgid "%ds"
 msgstr "%d s"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:694
+#: ../panel-plugin/xfcetimer.c:612 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Aikaan %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:805
+#: ../panel-plugin/xfcetimer.c:809
 msgid "Name:"
 msgstr "Nimi:"
 
-#: ../panel-plugin/xfcetimer.c:816
+#: ../panel-plugin/xfcetimer.c:820
 msgid "Enter the countdown time"
 msgstr "Anna ajastinaika"
 
-#: ../panel-plugin/xfcetimer.c:821
+#: ../panel-plugin/xfcetimer.c:825
 msgid "Enter the time of alarm (24h format)"
 msgstr "Anna hälytysaika (24t-muoto)"
 
-#: ../panel-plugin/xfcetimer.c:836
+#: ../panel-plugin/xfcetimer.c:840
 msgid "h  "
 msgstr "t"
 
-#: ../panel-plugin/xfcetimer.c:843
+#: ../panel-plugin/xfcetimer.c:847
 msgid "m  "
 msgstr "min"
 
-#: ../panel-plugin/xfcetimer.c:850
+#: ../panel-plugin/xfcetimer.c:854
 msgid "s  "
 msgstr "s"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: ../panel-plugin/xfcetimer.c:857
 msgid "or"
 msgstr "tai"
 
-#: ../panel-plugin/xfcetimer.c:880
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "Suoritettava komento:"
 
-#. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:892
-msgid "Recurring alarm"
-msgstr "Toistuva hälytys"
+#: ../panel-plugin/xfcetimer.c:894
+msgid "Alarm to run:"
+msgstr ""
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:898
+#: ../panel-plugin/xfcetimer.c:921
 msgid "Auto start when plugin loads"
 msgstr "Automaattinen aloitus kun liitännäinen käynnistyy"
 
-#: ../panel-plugin/xfcetimer.c:908
+#: ../panel-plugin/xfcetimer.c:931
 msgid "Cancel"
 msgstr "Peru"
 
-#: ../panel-plugin/xfcetimer.c:913
+#: ../panel-plugin/xfcetimer.c:936
 msgid "Accept"
 msgstr "Hyväksy"
 
-#: ../panel-plugin/xfcetimer.c:964
+#: ../panel-plugin/xfcetimer.c:987
 msgid "Edit alarm"
 msgstr "Muokkaa hälytystä"
 
-#: ../panel-plugin/xfcetimer.c:1489
+#: ../panel-plugin/xfcetimer.c:1550
 msgid "Timer Options"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1529
+#: ../panel-plugin/xfcetimer.c:1590
 msgid "Timer name"
 msgstr "Ajastimen nimi"
 
-#: ../panel-plugin/xfcetimer.c:1534
+#: ../panel-plugin/xfcetimer.c:1595
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Ajastinajankohta /\nHälytysaika"
 
-#: ../panel-plugin/xfcetimer.c:1537
+#: ../panel-plugin/xfcetimer.c:1598
 msgid "Alarm command"
 msgstr "Hälytyskomento"
 
-#: ../panel-plugin/xfcetimer.c:1556
+#: ../panel-plugin/xfcetimer.c:1617
 msgid "Add"
 msgstr "Lisää"
 
-#: ../panel-plugin/xfcetimer.c:1563
+#: ../panel-plugin/xfcetimer.c:1624
 msgid "Edit"
 msgstr "Muokkaa"
 
-#: ../panel-plugin/xfcetimer.c:1570
+#: ../panel-plugin/xfcetimer.c:1631
 msgid "Remove"
 msgstr "Poista"
 
-#: ../panel-plugin/xfcetimer.c:1578
+#: ../panel-plugin/xfcetimer.c:1639
 msgid "Up"
 msgstr "Ylös"
 
-#: ../panel-plugin/xfcetimer.c:1585
+#: ../panel-plugin/xfcetimer.c:1646
 msgid "Down"
 msgstr "Alas"
 
-#: ../panel-plugin/xfcetimer.c:1601
+#: ../panel-plugin/xfcetimer.c:1662
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Älä näytä varoitusta, jos hälytyskomento on asetettu"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1613
+#: ../panel-plugin/xfcetimer.c:1674
 msgid "Use a default alarm command"
 msgstr "Käytä oletushälytyskomentoa"
 
-#: ../panel-plugin/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1683
 msgid "Default command: "
 msgstr "Oletuskomento:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1639
+#: ../panel-plugin/xfcetimer.c:1700
 msgid "Repeat the alarm command"
 msgstr "Toista hälytyskomento"
 
-#: ../panel-plugin/xfcetimer.c:1650
+#: ../panel-plugin/xfcetimer.c:1711
 msgid "Number of repetitions"
 msgstr "Toistojen määrä"
 
-#: ../panel-plugin/xfcetimer.c:1659
+#: ../panel-plugin/xfcetimer.c:1720
 msgid "  Time interval (sec.)"
 msgstr "Aikaväli (sekunti(a))"
 
-#: ../panel-plugin/xfcetimer.c:1721
+#: ../panel-plugin/xfcetimer.c:1780
 msgid "About Timer plugin"
 msgstr ""
 
-#: ../panel-plugin/xfcetimer.c:1724
+#: ../panel-plugin/xfcetimer.c:1783
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Liitännäinen ajastimien tai hälytysten määrittämiselle tiettyinä aikoina."
 
-#: ../panel-plugin/xfcetimer.c:1727
+#: ../panel-plugin/xfcetimer.c:1786
 msgid "Copyright (c) 2005-2018\n"
 msgstr "Tekijänoikeus (c) 2005-2018\n"
 
