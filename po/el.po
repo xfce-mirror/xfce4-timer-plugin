@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 15:08+0100\n"
+"POT-Creation-Date: 2023-02-12 00:50+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Ioannis LM, 2017-2018,2023\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce-panel-plugins/language/el/)\n"
@@ -55,7 +55,7 @@ msgstr "Μπιιπ :) \nΤέλος χρόνου για την ειδοποίησ
 msgid "Timer %s"
 msgstr "Χρονόμετρο %s"
 
-#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1491
+#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1552
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -63,169 +63,168 @@ msgstr "Κλείσιμο"
 msgid "Rerun the timer"
 msgstr "Επανέναρξη χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:492 ../panel-plugin/xfcetimer.c:923
+#: ../panel-plugin/xfcetimer.c:491 ../panel-plugin/xfcetimer.c:946
 msgid "Add new alarm"
 msgstr "Προσθήκη νέας ειδοποίησης  "
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:513
 msgid "Pause timer"
 msgstr "Παύση χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:522
+#: ../panel-plugin/xfcetimer.c:520
 msgid "Resume timer"
 msgstr "Συνέχιση χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:528
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Stop timer"
 msgstr "Τερματισμός χρονομέτρου "
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:681
+#: ../panel-plugin/xfcetimer.c:600 ../panel-plugin/xfcetimer.c:684
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dω %dλ %dδ"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:683
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
 #, c-format
 msgid "%dm %ds"
 msgstr "%dλ %dδ"
 
-#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:685
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
 #, c-format
 msgid "%ds"
 msgstr "%dδ"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:694
+#: ../panel-plugin/xfcetimer.c:612 ../panel-plugin/xfcetimer.c:697
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Σε %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:805
+#: ../panel-plugin/xfcetimer.c:809
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: ../panel-plugin/xfcetimer.c:816
+#: ../panel-plugin/xfcetimer.c:820
 msgid "Enter the countdown time"
 msgstr "Εισαγωγή χρόνου αντίστροφης μέτρησης"
 
-#: ../panel-plugin/xfcetimer.c:821
+#: ../panel-plugin/xfcetimer.c:825
 msgid "Enter the time of alarm (24h format)"
 msgstr "Εισαγωγή ώρας για την ειδοποίηση (σε 24ωρη μορφή)"
 
-#: ../panel-plugin/xfcetimer.c:836
+#: ../panel-plugin/xfcetimer.c:840
 msgid "h  "
 msgstr "ώρα"
 
-#: ../panel-plugin/xfcetimer.c:843
+#: ../panel-plugin/xfcetimer.c:847
 msgid "m  "
 msgstr "λεπτά"
 
-#: ../panel-plugin/xfcetimer.c:850
+#: ../panel-plugin/xfcetimer.c:854
 msgid "s  "
 msgstr "δευτ"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: ../panel-plugin/xfcetimer.c:857
 msgid "or"
 msgstr "ή"
 
-#: ../panel-plugin/xfcetimer.c:880
+#: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
 msgstr "Εντολές προς εκτέλεση:"
 
-#. add recurring alarm check button
-#: ../panel-plugin/xfcetimer.c:892
-msgid "Recurring alarm"
-msgstr "Επαναλαμβανόμενη ειδοποίηση"
+#: ../panel-plugin/xfcetimer.c:894
+msgid "Alarm to run:"
+msgstr ""
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:898
+#: ../panel-plugin/xfcetimer.c:921
 msgid "Auto start when plugin loads"
 msgstr "Αυτόματη έναρξη με την φόρτωση του πρόσθετου"
 
-#: ../panel-plugin/xfcetimer.c:908
+#: ../panel-plugin/xfcetimer.c:931
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: ../panel-plugin/xfcetimer.c:913
+#: ../panel-plugin/xfcetimer.c:936
 msgid "Accept"
 msgstr "Αποδοχή"
 
-#: ../panel-plugin/xfcetimer.c:964
+#: ../panel-plugin/xfcetimer.c:987
 msgid "Edit alarm"
 msgstr "Επεξεργασία ειδοποίησης "
 
-#: ../panel-plugin/xfcetimer.c:1489
+#: ../panel-plugin/xfcetimer.c:1550
 msgid "Timer Options"
 msgstr "Επιλογές χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:1529
+#: ../panel-plugin/xfcetimer.c:1590
 msgid "Timer name"
 msgstr "Όνομα χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:1534
+#: ../panel-plugin/xfcetimer.c:1595
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Περίοδος αντίστροφης μέτρησης /\nΧρόνος ειδοποίησης"
 
-#: ../panel-plugin/xfcetimer.c:1537
+#: ../panel-plugin/xfcetimer.c:1598
 msgid "Alarm command"
 msgstr "Εντολή ειδοποίησης "
 
-#: ../panel-plugin/xfcetimer.c:1556
+#: ../panel-plugin/xfcetimer.c:1617
 msgid "Add"
 msgstr "Νέο"
 
-#: ../panel-plugin/xfcetimer.c:1563
+#: ../panel-plugin/xfcetimer.c:1624
 msgid "Edit"
 msgstr "Αλλαγή"
 
-#: ../panel-plugin/xfcetimer.c:1570
+#: ../panel-plugin/xfcetimer.c:1631
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: ../panel-plugin/xfcetimer.c:1578
+#: ../panel-plugin/xfcetimer.c:1639
 msgid "Up"
 msgstr "Επάνω"
 
-#: ../panel-plugin/xfcetimer.c:1585
+#: ../panel-plugin/xfcetimer.c:1646
 msgid "Down"
 msgstr "Κάτω"
 
-#: ../panel-plugin/xfcetimer.c:1601
+#: ../panel-plugin/xfcetimer.c:1662
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Να μην εμφανίζεται προειδοποίηση αν έχει οριστεί εντολή ειδοποίησης"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1613
+#: ../panel-plugin/xfcetimer.c:1674
 msgid "Use a default alarm command"
 msgstr "Χρήση μιας προεπιλεγμένης εντολής ειδοποίησης"
 
-#: ../panel-plugin/xfcetimer.c:1622
+#: ../panel-plugin/xfcetimer.c:1683
 msgid "Default command: "
 msgstr "Προεπιλεγμένη εντολή:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1639
+#: ../panel-plugin/xfcetimer.c:1700
 msgid "Repeat the alarm command"
 msgstr "Επανάληψη εντολής ειδοποίησης "
 
-#: ../panel-plugin/xfcetimer.c:1650
+#: ../panel-plugin/xfcetimer.c:1711
 msgid "Number of repetitions"
 msgstr "Αριθμός επαναλήψεων"
 
-#: ../panel-plugin/xfcetimer.c:1659
+#: ../panel-plugin/xfcetimer.c:1720
 msgid "  Time interval (sec.)"
 msgstr "Διάστημα ανανέωσης (δευτ.)"
 
-#: ../panel-plugin/xfcetimer.c:1721
+#: ../panel-plugin/xfcetimer.c:1780
 msgid "About Timer plugin"
 msgstr "Σχετικά με το πρόσθετου χρονομέτρου"
 
-#: ../panel-plugin/xfcetimer.c:1724
+#: ../panel-plugin/xfcetimer.c:1783
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Πρόσθετο για τη δημιουργία χρονομέτρων αντίστροφης μέτρησης και ειδοποιήσεων."
 
-#: ../panel-plugin/xfcetimer.c:1727
+#: ../panel-plugin/xfcetimer.c:1786
 msgid "Copyright (c) 2005-2018\n"
 msgstr "Copyright (c) 2005-2018\n"
 
