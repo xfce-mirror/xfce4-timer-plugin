@@ -128,7 +128,7 @@ msgstr "Komanda, kurią vykdyti"
 
 #: ../panel-plugin/xfcetimer.c:894
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Priminimas, kurį paleisti:"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:921
