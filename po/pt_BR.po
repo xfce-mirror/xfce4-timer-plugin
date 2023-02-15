@@ -9,6 +9,7 @@
 # Peretto <peretto@gmail.com>, 2022
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2013
 # secipolla <secipolla@gmail.com>, 2011
+# The Cat, 2023
 # Vladimir Melo <vladimirmelo@foresightlinux.org>, 2007
 msgid ""
 msgstr ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-12 00:50+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Andre Miranda <andre42m@gmail.com>, 2018,2022\n"
+"Last-Translator: The Cat, 2023\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,7 +135,7 @@ msgstr "comando a ser executado:"
 
 #: ../panel-plugin/xfcetimer.c:894
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Alarme para tocar:"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:921
