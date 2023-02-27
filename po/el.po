@@ -48,7 +48,7 @@ msgstr "(Σε παύση)"
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr "Μπιιπ :) \nΤέλος χρόνου για την ειδοποίηση %s."
+msgstr "Μπιιπ... :) \nΤέλος χρόνου για την ειδοποίηση %s."
 
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
@@ -129,11 +129,11 @@ msgstr "ή"
 
 #: ../panel-plugin/xfcetimer.c:884
 msgid "Command to run:"
-msgstr "Εντολές προς εκτέλεση:"
+msgstr "Εντολή προς εκτέλεση:"
 
 #: ../panel-plugin/xfcetimer.c:894
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Ειδοποίηση προς εκτέλεση:"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:921
@@ -197,7 +197,7 @@ msgstr "Να μην εμφανίζεται προειδοποίηση αν έχ�
 #. Default alarm command config
 #: ../panel-plugin/xfcetimer.c:1674
 msgid "Use a default alarm command"
-msgstr "Χρήση μιας προεπιλεγμένης εντολής ειδοποίησης"
+msgstr "Χρήση προεπιλεγμένης εντολής ειδοποίησης"
 
 #: ../panel-plugin/xfcetimer.c:1683
 msgid "Default command: "
@@ -218,7 +218,7 @@ msgstr "Διάστημα ανανέωσης (δευτ.)"
 
 #: ../panel-plugin/xfcetimer.c:1780
 msgid "About Timer plugin"
-msgstr "Σχετικά με το πρόσθετου χρονομέτρου"
+msgstr "Σχετικά με το πρόσθετο χρονομέτρου"
 
 #: ../panel-plugin/xfcetimer.c:1783
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -226,7 +226,7 @@ msgstr "Πρόσθετο για τη δημιουργία χρονομέτρων
 
 #: ../panel-plugin/xfcetimer.c:1786
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright (c) 2005-2018\n"
+msgstr "Πνευματικά δικαιώματα (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
