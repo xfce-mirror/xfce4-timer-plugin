@@ -220,6 +220,8 @@ update_function (gpointer data)
                 dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
                         GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, "%s", dialog_message);
 
+                gtk_window_set_keep_above((GtkWindow *) dialog, TRUE);
+
                 gtk_window_set_title((GtkWindow *) dialog, dialog_title);
 
                 gtk_dialog_add_button((GtkDialog *) dialog, _("Close"), 0);
