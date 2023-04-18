@@ -19,9 +19,9 @@ m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_versio
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (C) 2018
+AC_COPYRIGHT([Copyright (C) 2005-2023
         The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [https://bugzilla.xfce.org/], [xfce4-timer-plugin])
+AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [https://gitlab.xfce.org/panel-plugins/xfce4-timer-plugin], [xfce4-timer-plugin])
 AC_PREREQ([2.50])
 AC_REVISION([xfce4_panel_version_build])
 AC_CONFIG_MACRO_DIRS([m4])
