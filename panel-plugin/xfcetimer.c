@@ -1741,10 +1741,7 @@ static void
 show_about_window (XfcePanelPlugin *plugin, plugin_data *pd)
 {
   const gchar *author[] =
-    { "Kemal Ilgar Eroğlu <ilgar_eroglu@yahoo.com>, 2005-2018",
-      "The Xfce development team, 2019-2023",
-      NULL
-    };
+    { "Kemal Ilgar Eroğlu <ilgar_eroglu@yahoo.com>", NULL };
   const gchar *translators =
       "Mohammad Alhargan <malham1@hotmail.com> \n\
 Marcos Antonio Alvarez Costales <marcoscostales@gmail.com> \n\
@@ -1788,7 +1785,7 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
       _("A plugin to define countdown timers or alarms at given times."),
       "website",
       "https://docs.xfce.org/panel-plugins/xfce4-timer-plugin",
-      "copyright", _("Copyright (c) 2005-2023\n"), "authors", author,
+      "copyright", "Copyright \302\251 2005-2023 The Xfce development team", "authors", author,
       "translator-credits", translators, NULL);
 }
 
