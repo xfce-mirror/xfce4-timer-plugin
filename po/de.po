@@ -13,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-12 00:50+0100\n"
+"POT-Creation-Date: 2023-04-19 01:18+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2021-2023\n"
-"Language-Team: German (http://www.transifex.com/xfce/xfce-panel-plugins/language/de/)\n"
+"Language-Team: German (http://app.transifex.com/xfce/xfce-panel-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,178 +55,174 @@ msgstr "Biiing! :)\nDie Zeit für %s ist abgelaufen."
 msgid "Timer %s"
 msgstr "Zeitschaltuhr %s"
 
-#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1554
 msgid "Close"
 msgstr "Schließen"
 
-#: ../panel-plugin/xfcetimer.c:226
+#: ../panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
 msgstr "Zeitschaltuhr erneut starten"
 
-#: ../panel-plugin/xfcetimer.c:491 ../panel-plugin/xfcetimer.c:946
+#: ../panel-plugin/xfcetimer.c:493 ../panel-plugin/xfcetimer.c:948
 msgid "Add new alarm"
 msgstr "Neuen Alarm erstellen"
 
-#: ../panel-plugin/xfcetimer.c:513
+#: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
 msgstr "Zeitschaltuhr anhalten"
 
-#: ../panel-plugin/xfcetimer.c:520
+#: ../panel-plugin/xfcetimer.c:522
 msgid "Resume timer"
 msgstr "Zeitschaltuhr fortsetzen"
 
-#: ../panel-plugin/xfcetimer.c:526
+#: ../panel-plugin/xfcetimer.c:528
 msgid "Stop timer"
 msgstr "Zeitschaltuhr stoppen"
 
-#: ../panel-plugin/xfcetimer.c:600 ../panel-plugin/xfcetimer.c:684
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d Stunden %d Minuten %d Sekunden"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
 #, c-format
 msgid "%dm %ds"
 msgstr "%d Minuten %d Sekunden"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
+#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:690
 #, c-format
 msgid "%ds"
 msgstr "%d Sekunden"
 
-#: ../panel-plugin/xfcetimer.c:612 ../panel-plugin/xfcetimer.c:697
+#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:699
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Bei %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:811
 msgid "Name:"
 msgstr "Bezeichnung:"
 
-#: ../panel-plugin/xfcetimer.c:820
+#: ../panel-plugin/xfcetimer.c:822
 msgid "Enter the countdown time"
 msgstr "Wartezeit eingeben"
 
-#: ../panel-plugin/xfcetimer.c:825
+#: ../panel-plugin/xfcetimer.c:827
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarmzeit eingeben (24h-Format)"
 
-#: ../panel-plugin/xfcetimer.c:840
+#: ../panel-plugin/xfcetimer.c:842
 msgid "h  "
 msgstr "Stunden  "
 
-#: ../panel-plugin/xfcetimer.c:847
+#: ../panel-plugin/xfcetimer.c:849
 msgid "m  "
 msgstr "Minuten  "
 
-#: ../panel-plugin/xfcetimer.c:854
+#: ../panel-plugin/xfcetimer.c:856
 msgid "s  "
 msgstr "Sekunden  "
 
-#: ../panel-plugin/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:859
 msgid "or"
 msgstr "oder"
 
-#: ../panel-plugin/xfcetimer.c:884
+#: ../panel-plugin/xfcetimer.c:886
 msgid "Command to run:"
 msgstr "Befehl ausführen:"
 
-#: ../panel-plugin/xfcetimer.c:894
+#: ../panel-plugin/xfcetimer.c:896
 msgid "Alarm to run:"
 msgstr "Auszulösender Alarm:"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:921
+#: ../panel-plugin/xfcetimer.c:923
 msgid "Auto start when plugin loads"
 msgstr "Automatisch starten sobald die Erweiterung lädt"
 
-#: ../panel-plugin/xfcetimer.c:931
+#: ../panel-plugin/xfcetimer.c:933
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../panel-plugin/xfcetimer.c:936
+#: ../panel-plugin/xfcetimer.c:938
 msgid "Accept"
 msgstr "Akzeptieren"
 
-#: ../panel-plugin/xfcetimer.c:987
+#: ../panel-plugin/xfcetimer.c:989
 msgid "Edit alarm"
 msgstr "Alarm bearbeiten"
 
-#: ../panel-plugin/xfcetimer.c:1550
+#: ../panel-plugin/xfcetimer.c:1552
 msgid "Timer Options"
 msgstr "Zeitschaltuhr Optionen"
 
-#: ../panel-plugin/xfcetimer.c:1590
+#: ../panel-plugin/xfcetimer.c:1592
 msgid "Timer name"
 msgstr "Bezeichnung"
 
-#: ../panel-plugin/xfcetimer.c:1595
+#: ../panel-plugin/xfcetimer.c:1597
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Wartezeit /\nAlarmzeit"
 
-#: ../panel-plugin/xfcetimer.c:1598
+#: ../panel-plugin/xfcetimer.c:1600
 msgid "Alarm command"
 msgstr "Alarmbefehl"
 
-#: ../panel-plugin/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1619
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../panel-plugin/xfcetimer.c:1624
+#: ../panel-plugin/xfcetimer.c:1626
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../panel-plugin/xfcetimer.c:1631
+#: ../panel-plugin/xfcetimer.c:1633
 msgid "Remove"
 msgstr "Entfernen"
 
-#: ../panel-plugin/xfcetimer.c:1639
+#: ../panel-plugin/xfcetimer.c:1641
 msgid "Up"
 msgstr "Hoch"
 
-#: ../panel-plugin/xfcetimer.c:1646
+#: ../panel-plugin/xfcetimer.c:1648
 msgid "Down"
 msgstr "Runter"
 
-#: ../panel-plugin/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1664
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Keine Warnung anzeigen, wenn ein Alarmbefehl eingestellt ist"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1674
+#: ../panel-plugin/xfcetimer.c:1676
 msgid "Use a default alarm command"
 msgstr "Den vorgegebenen Alarmbefehl benutzen"
 
-#: ../panel-plugin/xfcetimer.c:1683
+#: ../panel-plugin/xfcetimer.c:1685
 msgid "Default command: "
 msgstr "Standardbefehl:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1700
+#: ../panel-plugin/xfcetimer.c:1702
 msgid "Repeat the alarm command"
 msgstr "Alarmbefehl wiederholen:"
 
-#: ../panel-plugin/xfcetimer.c:1711
+#: ../panel-plugin/xfcetimer.c:1713
 msgid "Number of repetitions"
 msgstr "Anzahl der Wiederholungen"
 
-#: ../panel-plugin/xfcetimer.c:1720
+#: ../panel-plugin/xfcetimer.c:1722
 msgid "  Time interval (sec.)"
 msgstr "Zeitabstand (Sek.): "
 
-#: ../panel-plugin/xfcetimer.c:1780
+#: ../panel-plugin/xfcetimer.c:1782
 msgid "About Timer plugin"
 msgstr "Über die Zeitschalturerweiterung"
 
-#: ../panel-plugin/xfcetimer.c:1783
+#: ../panel-plugin/xfcetimer.c:1785
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Eine Erweiterung zum Konfigurieren von Zeitschaltuhren und Alarmen."
-
-#: ../panel-plugin/xfcetimer.c:1786
-msgid "Copyright (c) 2005-2018\n"
-msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
