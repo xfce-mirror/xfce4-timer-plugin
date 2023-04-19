@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-12 00:50+0100\n"
+"POT-Creation-Date: 2023-04-19 01:18+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Priit Jõerüüt <transifex@joeruut.com>, 2020-2023\n"
 "Language-Team: Estonian (http://app.transifex.com/xfce/xfce-panel-plugins/language/et/)\n"
@@ -50,178 +50,174 @@ msgstr "Tuuuuut! :)\n%s - aeg sai täis."
 msgid "Timer %s"
 msgstr "Taimer %s"
 
-#: ../panel-plugin/xfcetimer.c:225 ../panel-plugin/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1554
 msgid "Close"
 msgstr "Sulge"
 
-#: ../panel-plugin/xfcetimer.c:226
+#: ../panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
 msgstr "Käivita taimer uuesti"
 
-#: ../panel-plugin/xfcetimer.c:491 ../panel-plugin/xfcetimer.c:946
+#: ../panel-plugin/xfcetimer.c:493 ../panel-plugin/xfcetimer.c:948
 msgid "Add new alarm"
 msgstr "Lisa uus teavitus"
 
-#: ../panel-plugin/xfcetimer.c:513
+#: ../panel-plugin/xfcetimer.c:515
 msgid "Pause timer"
 msgstr "Pane taimer pausile"
 
-#: ../panel-plugin/xfcetimer.c:520
+#: ../panel-plugin/xfcetimer.c:522
 msgid "Resume timer"
 msgstr "Jätka taimeri tööd"
 
-#: ../panel-plugin/xfcetimer.c:526
+#: ../panel-plugin/xfcetimer.c:528
 msgid "Stop timer"
 msgstr "Peata taimer"
 
-#: ../panel-plugin/xfcetimer.c:600 ../panel-plugin/xfcetimer.c:684
+#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
+#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
+#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:690
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:612 ../panel-plugin/xfcetimer.c:697
+#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:699
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:809
+#: ../panel-plugin/xfcetimer.c:811
 msgid "Name:"
 msgstr "Nimi:"
 
-#: ../panel-plugin/xfcetimer.c:820
+#: ../panel-plugin/xfcetimer.c:822
 msgid "Enter the countdown time"
 msgstr "Sisesta pöördloenduse kestus"
 
-#: ../panel-plugin/xfcetimer.c:825
+#: ../panel-plugin/xfcetimer.c:827
 msgid "Enter the time of alarm (24h format)"
 msgstr "Sisesta teavituse kellaaeg (24-tunnises vormingus)"
 
-#: ../panel-plugin/xfcetimer.c:840
+#: ../panel-plugin/xfcetimer.c:842
 msgid "h  "
 msgstr "t"
 
-#: ../panel-plugin/xfcetimer.c:847
+#: ../panel-plugin/xfcetimer.c:849
 msgid "m  "
 msgstr "m"
 
-#: ../panel-plugin/xfcetimer.c:854
+#: ../panel-plugin/xfcetimer.c:856
 msgid "s  "
 msgstr "s"
 
-#: ../panel-plugin/xfcetimer.c:857
+#: ../panel-plugin/xfcetimer.c:859
 msgid "or"
 msgstr "või"
 
-#: ../panel-plugin/xfcetimer.c:884
+#: ../panel-plugin/xfcetimer.c:886
 msgid "Command to run:"
 msgstr "Käivitatav käsk:"
 
-#: ../panel-plugin/xfcetimer.c:894
+#: ../panel-plugin/xfcetimer.c:896
 msgid "Alarm to run:"
 msgstr "Käivitatav teavitus:"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:921
+#: ../panel-plugin/xfcetimer.c:923
 msgid "Auto start when plugin loads"
 msgstr "Käivita vidina laadimisel taimer automaatselt"
 
-#: ../panel-plugin/xfcetimer.c:931
+#: ../panel-plugin/xfcetimer.c:933
 msgid "Cancel"
 msgstr "Loobu"
 
-#: ../panel-plugin/xfcetimer.c:936
+#: ../panel-plugin/xfcetimer.c:938
 msgid "Accept"
 msgstr "Kinnita"
 
-#: ../panel-plugin/xfcetimer.c:987
+#: ../panel-plugin/xfcetimer.c:989
 msgid "Edit alarm"
 msgstr "Muuda teavitust"
 
-#: ../panel-plugin/xfcetimer.c:1550
+#: ../panel-plugin/xfcetimer.c:1552
 msgid "Timer Options"
 msgstr "Taimeri valikud"
 
-#: ../panel-plugin/xfcetimer.c:1590
+#: ../panel-plugin/xfcetimer.c:1592
 msgid "Timer name"
 msgstr "Taimeri nimi"
 
-#: ../panel-plugin/xfcetimer.c:1595
+#: ../panel-plugin/xfcetimer.c:1597
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Teavituse aeg\nvõi  kellaaeg"
 
-#: ../panel-plugin/xfcetimer.c:1598
+#: ../panel-plugin/xfcetimer.c:1600
 msgid "Alarm command"
 msgstr "Aja täitumisel käivitatav käsk"
 
-#: ../panel-plugin/xfcetimer.c:1617
+#: ../panel-plugin/xfcetimer.c:1619
 msgid "Add"
 msgstr "Lisa"
 
-#: ../panel-plugin/xfcetimer.c:1624
+#: ../panel-plugin/xfcetimer.c:1626
 msgid "Edit"
 msgstr "Muuda"
 
-#: ../panel-plugin/xfcetimer.c:1631
+#: ../panel-plugin/xfcetimer.c:1633
 msgid "Remove"
 msgstr "Eemalda"
 
-#: ../panel-plugin/xfcetimer.c:1639
+#: ../panel-plugin/xfcetimer.c:1641
 msgid "Up"
 msgstr "Liiguta üles"
 
-#: ../panel-plugin/xfcetimer.c:1646
+#: ../panel-plugin/xfcetimer.c:1648
 msgid "Down"
 msgstr "Liiguta alla"
 
-#: ../panel-plugin/xfcetimer.c:1662
+#: ../panel-plugin/xfcetimer.c:1664
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Kui aja täitumisel käivitatav käsk on seadistatud, siis ära kuva hoiatust"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1674
+#: ../panel-plugin/xfcetimer.c:1676
 msgid "Use a default alarm command"
 msgstr "Kasuta aja täitumisel käivitatavat vaikimisi käsku"
 
-#: ../panel-plugin/xfcetimer.c:1683
+#: ../panel-plugin/xfcetimer.c:1685
 msgid "Default command: "
 msgstr "Vaikimisi käsk:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1700
+#: ../panel-plugin/xfcetimer.c:1702
 msgid "Repeat the alarm command"
 msgstr "Korda aja täitumisel käivitatavat käsku"
 
-#: ../panel-plugin/xfcetimer.c:1711
+#: ../panel-plugin/xfcetimer.c:1713
 msgid "Number of repetitions"
 msgstr "Korduste arv"
 
-#: ../panel-plugin/xfcetimer.c:1720
+#: ../panel-plugin/xfcetimer.c:1722
 msgid "  Time interval (sec.)"
 msgstr "Intervall (sekundites)"
 
-#: ../panel-plugin/xfcetimer.c:1780
+#: ../panel-plugin/xfcetimer.c:1782
 msgid "About Timer plugin"
 msgstr "Taimeri teave"
 
-#: ../panel-plugin/xfcetimer.c:1783
+#: ../panel-plugin/xfcetimer.c:1785
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Vidin, mis võimaldab seadistada kindla agaja või kellaajaga seotud taimereid ja teavitusi"
-
-#: ../panel-plugin/xfcetimer.c:1786
-msgid "Copyright (c) 2005-2018\n"
-msgstr "Autoriõigused (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
 msgid "Xfce4 Timer"
