@@ -176,7 +176,7 @@ msgstr ""
 
 #: ../panel-plugin/xfcetimer.c:1633
 msgid "Remove"
-msgstr ""
+msgstr "Remove"
 
 #: ../panel-plugin/xfcetimer.c:1641
 msgid "Up"
