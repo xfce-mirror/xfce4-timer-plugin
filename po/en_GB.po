@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Andi Chandler <andi@gowling.com>, 2023
 # Jackson Doak <noskcaj@ubuntu.com>, 2013
 # Jeff Bailes <thepizzaking@gmail.com>, 2007
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 01:18+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Jackson Doak <noskcaj@ubuntu.com>, 2013\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2023\n"
 "Language-Team: English (United Kingdom) (http://app.transifex.com/xfce/xfce-panel-plugins/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "Beeep! :) \nTime is up for the alarm %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Timer %s"
 
 #: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1554
 msgid "Close"
@@ -57,7 +58,7 @@ msgstr "Close"
 
 #: ../panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Rerun the timer"
 
 #: ../panel-plugin/xfcetimer.c:493 ../panel-plugin/xfcetimer.c:948
 msgid "Add new alarm"
@@ -129,12 +130,12 @@ msgstr "Command to run:"
 
 #: ../panel-plugin/xfcetimer.c:896
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Alarm to run:"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:923
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Auto start when plugin loads"
 
 #: ../panel-plugin/xfcetimer.c:933
 msgid "Cancel"
@@ -142,7 +143,7 @@ msgstr "Cancel"
 
 #: ../panel-plugin/xfcetimer.c:938
 msgid "Accept"
-msgstr ""
+msgstr "Accept"
 
 #: ../panel-plugin/xfcetimer.c:989
 msgid "Edit alarm"
@@ -150,7 +151,7 @@ msgstr "Edit alarm"
 
 #: ../panel-plugin/xfcetimer.c:1552
 msgid "Timer Options"
-msgstr ""
+msgstr "Timer Options"
 
 #: ../panel-plugin/xfcetimer.c:1592
 msgid "Timer name"
@@ -168,11 +169,11 @@ msgstr "Alarm command"
 
 #: ../panel-plugin/xfcetimer.c:1619
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: ../panel-plugin/xfcetimer.c:1626
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: ../panel-plugin/xfcetimer.c:1633
 msgid "Remove"
@@ -180,11 +181,11 @@ msgstr "Remove"
 
 #: ../panel-plugin/xfcetimer.c:1641
 msgid "Up"
-msgstr ""
+msgstr "Up"
 
 #: ../panel-plugin/xfcetimer.c:1648
 msgid "Down"
-msgstr ""
+msgstr "Down"
 
 #: ../panel-plugin/xfcetimer.c:1664
 msgid "Don't display a warning  if an alarm command is set"
@@ -214,7 +215,7 @@ msgstr "  Time interval (sec.)"
 
 #: ../panel-plugin/xfcetimer.c:1782
 msgid "About Timer plugin"
-msgstr ""
+msgstr "About Timer plugin"
 
 #: ../panel-plugin/xfcetimer.c:1785
 msgid "A plugin to define countdown timers or alarms at given times."
