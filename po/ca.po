@@ -5,6 +5,7 @@
 # Translators:
 # Harald Servat <redcrash@gmail.com>, 2009
 # Davidmp <medipas@gmail.com>, 2016,2019
+# Oscar Perez <oscarpc@gmail.com>, 2023
 # Pau Ruŀlan Ferragut <paurullan@bulma.net>, 2006
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2017-2019
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:18+0200\n"
+"POT-Creation-Date: 2023-05-30 00:54+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2017-2019\n"
+"Last-Translator: Oscar Perez <oscarpc@gmail.com>, 2023\n"
 "Language-Team: Catalan (http://app.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +54,7 @@ msgstr "Riiiiiiiiing! :) \nJa és l'hora per a l'alarma %s."
 #: ../panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Temporitzador %s"
 
 #: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1554
 msgid "Close"
@@ -133,7 +134,7 @@ msgstr "Ordre a executar:"
 
 #: ../panel-plugin/xfcetimer.c:896
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Executa l'alarma:"
 
 #. add alarm autostart check button
 #: ../panel-plugin/xfcetimer.c:923
@@ -154,7 +155,7 @@ msgstr "Edita l'alarma"
 
 #: ../panel-plugin/xfcetimer.c:1552
 msgid "Timer Options"
-msgstr ""
+msgstr "Opcions del temporitzador"
 
 #: ../panel-plugin/xfcetimer.c:1592
 msgid "Timer name"
@@ -218,7 +219,7 @@ msgstr "  Interval de temps (en segons)"
 
 #: ../panel-plugin/xfcetimer.c:1782
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Sobre el connector Temporitzador"
 
 #: ../panel-plugin/xfcetimer.c:1785
 msgid "A plugin to define countdown timers or alarms at given times."
