@@ -332,7 +332,12 @@ start_timer (plugin_data *pd, alarm_t* alrm)
   if (!alrm->is_countdown)
     {
 
-      current = g_date_time_new_now_local ();
+      if (alrm->is_utc)
+       current = g_date_time_new_now_utc ();
+
+      else
+       current = g_date_time_new_now_local ();
+
       cur_h = g_date_time_get_hour   (current);
       cur_m = g_date_time_get_minute (current);
       cur_s = g_date_time_get_second (current);
@@ -688,15 +693,24 @@ ok_edit (GtkButton *button, gpointer data)
             timeinfo = g_strdup_printf (_("%dm %ds"), t2, t3);
           else
             timeinfo = g_strdup_printf (_("%ds"), t3);
+
         }
       else
         {
+
+          alrm->is_utc = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
+                                 utc_cb));
           t1 = gtk_spin_button_get_value_as_int (
               GTK_SPIN_BUTTON (adata->time_h));
           t2 = gtk_spin_button_get_value_as_int (
               GTK_SPIN_BUTTON (adata->time_m));
           t = t1 * 60 + t2;
-          timeinfo = g_strdup_printf (_("At %02d:%02d"), t1, t2);
+
+          if (alrm->is_utc)
+            timeinfo = g_strdup_printf (_("At %02d:%02dZ"), t1, t2);
+          else
+            timeinfo = g_strdup_printf (_("At %02d:%02d"), t1, t2);
+
         }
 
       alrm->time = t;
@@ -772,7 +786,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   GList *alarm_iter;
   GtkWidget *next_alarm;
   GtkCellRenderer *next_alarm_cell;
-  GtkWidget *hbox, *vbox, *button;
+  GtkWidget *hbox, *vbox, *utc_button, *button;
   alarm_data *adata = g_new0 (alarm_data, 1);
   gint time;
   GtkTreeIter iter;
@@ -875,6 +889,11 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   time_m = (GtkSpinButton *) gtk_spin_button_new_with_range (0, 59, 1);
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_m), FALSE, FALSE, 0);
   adata->time_m = time_m;
+
+  utc_button = gtk_check_button_new_with_label(_("UTC"));
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (utc_button), FALSE);
+  gtk_box_pack_start (GTK_BOX (hbox), utc_button, FALSE, FALSE, 0);
+  adata->utc_cb = utc_button;
 
   gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
 
@@ -983,6 +1002,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
           gtk_spin_button_set_value (GTK_SPIN_BUTTON (time_h), time / 60);
           gtk_spin_button_set_value (GTK_SPIN_BUTTON (time_m), time % 60);
           gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (rb2), TRUE); // active by default
+          gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(adata->utc_cb), alrm->is_utc);
         }
     }
 
@@ -1195,7 +1215,7 @@ load_settings (plugin_data *pd)
   gchar groupname[8];
   const gchar *timerstring;
   gint groupnum, time;
-  gboolean is_cd, autostart;
+  gboolean is_cd, is_utc, autostart;
   alarm_t *alrm;
   GList *alarm_iter;
   XfceRc *rc;
@@ -1230,6 +1250,9 @@ load_settings (plugin_data *pd)
 
               is_cd = xfce_rc_read_bool_entry (rc, "is_countdown", TRUE);
               alrm->is_countdown = is_cd;
+
+              is_utc = xfce_rc_read_bool_entry (rc, "is_utc", FALSE);
+              alrm->is_utc = is_utc;
 
               alrm->next_alarm_groupnum = xfce_rc_read_int_entry (rc, "timernext", -1);
               /* If 'timernext' not specified, fallback to checking previously
@@ -1362,6 +1385,8 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
       xfce_rc_write_entry (rc, "timerinfo", alrm->info);
 
       xfce_rc_write_bool_entry (rc, "is_countdown", alrm->is_countdown);
+
+      xfce_rc_write_bool_entry (rc, "is_utc", alrm->is_utc);
 
       if (alrm->next_alarm)
         xfce_rc_write_int_entry (rc, "timernext", alrm->next_alarm->next_alarm_groupnum);
