@@ -333,9 +333,9 @@ start_timer (plugin_data *pd, alarm_t* alrm)
     {
 
       if (alrm->is_utc)
-       current = g_date_time_new_now_utc ();
+        current = g_date_time_new_now_utc ();
       else
-       current = g_date_time_new_now_local ();
+        current = g_date_time_new_now_local ();
 
       cur_h = g_date_time_get_hour   (current);
       cur_m = g_date_time_get_minute (current);
