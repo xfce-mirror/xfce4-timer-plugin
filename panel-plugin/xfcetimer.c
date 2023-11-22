@@ -334,7 +334,6 @@ start_timer (plugin_data *pd, alarm_t* alrm)
 
       if (alrm->is_utc)
        current = g_date_time_new_now_utc ();
-
       else
        current = g_date_time_new_now_local ();
 
@@ -698,8 +697,7 @@ ok_edit (GtkButton *button, gpointer data)
       else
         {
 
-          alrm->is_utc = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(adata->
-                                 utc_cb));
+          alrm->is_utc = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (adata->utc_cb));
           t1 = gtk_spin_button_get_value_as_int (
               GTK_SPIN_BUTTON (adata->time_h));
           t2 = gtk_spin_button_get_value_as_int (
@@ -890,8 +888,8 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_m), FALSE, FALSE, 0);
   adata->time_m = time_m;
 
-  button = gtk_check_button_new_with_label(_("UTC"));
-  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), FALSE);
+  button = gtk_check_button_new_with_label (_("UTC"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), FALSE);
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   adata->utc_cb = button;
 
@@ -1002,7 +1000,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
           gtk_spin_button_set_value (GTK_SPIN_BUTTON (time_h), time / 60);
           gtk_spin_button_set_value (GTK_SPIN_BUTTON (time_m), time % 60);
           gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (rb2), TRUE); // active by default
-          gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(adata->utc_cb), alrm->is_utc);
+          gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (adata->utc_cb), alrm->is_utc);
         }
     }
 
