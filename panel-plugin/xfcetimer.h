@@ -28,7 +28,8 @@ typedef struct alarm
 
   gboolean is_repeating; /* True while alarm repeats */
   gboolean is_paused; /* True if the countdown is paused */
-  gboolean is_countdown; /* True if the alarm type is contdown */
+  gboolean is_countdown; /* True if the alarm type is countdown */
+  gboolean is_utc; /* True if the time of the alarm is in UTC */
   gpointer pd;
   gint timeout_period_in_sec,    /* Active countdown period */
           rem_repetitions;      /* Remaining repeats */
@@ -68,6 +69,7 @@ typedef struct
   GtkSpinButton *time_h, *time_m; /* Spinbuttons for 24h format */
   GtkEntry *name, *command; /* Name, and command entries */
   GtkRadioButton *rb1; /* Radio button for the h-m-s format */
+  GtkWidget *utc_cb; /* Check button for UTC */
   GtkWidget *next_alarm; /* Combobox for next alarm selection */
   GtkWidget *autostart_cb; /* Check button for autostart */
   GtkWidget *dialog; /* Add/Edit dialog */
