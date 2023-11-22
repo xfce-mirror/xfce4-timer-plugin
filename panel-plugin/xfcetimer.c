@@ -786,7 +786,7 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   GList *alarm_iter;
   GtkWidget *next_alarm;
   GtkCellRenderer *next_alarm_cell;
-  GtkWidget *hbox, *vbox, *utc_button, *button;
+  GtkWidget *hbox, *vbox, *button;
   alarm_data *adata = g_new0 (alarm_data, 1);
   gint time;
   GtkTreeIter iter;
@@ -890,10 +890,10 @@ add_edit_clicked (GtkButton *buttonn, gpointer data)
   gtk_box_pack_start (GTK_BOX (hbox), GTK_WIDGET (time_m), FALSE, FALSE, 0);
   adata->time_m = time_m;
 
-  utc_button = gtk_check_button_new_with_label(_("UTC"));
-  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (utc_button), FALSE);
-  gtk_box_pack_start (GTK_BOX (hbox), utc_button, FALSE, FALSE, 0);
-  adata->utc_cb = utc_button;
+  button = gtk_check_button_new_with_label(_("UTC"));
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), FALSE);
+  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  adata->utc_cb = button;
 
   gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 6);
 
