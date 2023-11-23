@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:18+0200\n"
+"POT-Creation-Date: 2023-11-23 00:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2021-2023\n"
 "Language-Team: Swedish (http://app.transifex.com/xfce/xfce-panel-plugins/language/sv/)\n"
@@ -54,7 +54,7 @@ msgstr "Beeep! :) \nTiden är ute för alarmet %s."
 msgid "Timer %s"
 msgstr "Tidtagaren %s"
 
-#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1554
+#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1577
 msgid "Close"
 msgstr "Stäng"
 
@@ -62,164 +62,173 @@ msgstr "Stäng"
 msgid "Rerun the timer"
 msgstr "Kör om tidtagaren"
 
-#: ../panel-plugin/xfcetimer.c:493 ../panel-plugin/xfcetimer.c:948
+#: ../panel-plugin/xfcetimer.c:497 ../panel-plugin/xfcetimer.c:965
 msgid "Add new alarm"
 msgstr "Lägg till nytt alarm"
 
-#: ../panel-plugin/xfcetimer.c:515
+#: ../panel-plugin/xfcetimer.c:519
 msgid "Pause timer"
 msgstr "Pausa tidtagaren"
 
-#: ../panel-plugin/xfcetimer.c:522
+#: ../panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Återstarta tidtagaren"
 
-#: ../panel-plugin/xfcetimer.c:528
+#: ../panel-plugin/xfcetimer.c:532
 msgid "Stop timer"
 msgstr "Stoppa tidtagare"
 
-#: ../panel-plugin/xfcetimer.c:602 ../panel-plugin/xfcetimer.c:686
+#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:690
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:604 ../panel-plugin/xfcetimer.c:688
+#: ../panel-plugin/xfcetimer.c:608 ../panel-plugin/xfcetimer.c:692
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:606 ../panel-plugin/xfcetimer.c:690
+#: ../panel-plugin/xfcetimer.c:610 ../panel-plugin/xfcetimer.c:694
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:614 ../panel-plugin/xfcetimer.c:699
+#: ../panel-plugin/xfcetimer.c:618 ../panel-plugin/xfcetimer.c:710
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Klockan %02d.%02d"
 
-#: ../panel-plugin/xfcetimer.c:811
+#: ../panel-plugin/xfcetimer.c:708
+#, c-format
+msgid "At %02d:%02dZ"
+msgstr ""
+
+#: ../panel-plugin/xfcetimer.c:823
 msgid "Name:"
 msgstr "Namn:"
 
-#: ../panel-plugin/xfcetimer.c:822
+#: ../panel-plugin/xfcetimer.c:834
 msgid "Enter the countdown time"
 msgstr "Ange nedräkningstid"
 
-#: ../panel-plugin/xfcetimer.c:827
+#: ../panel-plugin/xfcetimer.c:839
 msgid "Enter the time of alarm (24h format)"
 msgstr "Ange tid för alarmet (24-timmarsformat)"
 
-#: ../panel-plugin/xfcetimer.c:842
+#: ../panel-plugin/xfcetimer.c:854
 msgid "h  "
 msgstr "h  "
 
-#: ../panel-plugin/xfcetimer.c:849
+#: ../panel-plugin/xfcetimer.c:861
 msgid "m  "
 msgstr "m  "
 
-#: ../panel-plugin/xfcetimer.c:856
+#: ../panel-plugin/xfcetimer.c:868
 msgid "s  "
 msgstr "s  "
 
-#: ../panel-plugin/xfcetimer.c:859
+#: ../panel-plugin/xfcetimer.c:871
 msgid "or"
 msgstr "eller"
 
-#: ../panel-plugin/xfcetimer.c:886
+#: ../panel-plugin/xfcetimer.c:891
+msgid "UTC"
+msgstr "UTC"
+
+#: ../panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
 msgstr "Kommando att köra:"
 
-#: ../panel-plugin/xfcetimer.c:896
+#: ../panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
 msgstr "Alarm att köra:"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:923
+#: ../panel-plugin/xfcetimer.c:940
 msgid "Auto start when plugin loads"
 msgstr "Starta automatiskt när insticksprogrammet startar"
 
-#: ../panel-plugin/xfcetimer.c:933
+#: ../panel-plugin/xfcetimer.c:950
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../panel-plugin/xfcetimer.c:938
+#: ../panel-plugin/xfcetimer.c:955
 msgid "Accept"
 msgstr "Acceptera"
 
-#: ../panel-plugin/xfcetimer.c:989
+#: ../panel-plugin/xfcetimer.c:1007
 msgid "Edit alarm"
 msgstr "Redigera alarm"
 
-#: ../panel-plugin/xfcetimer.c:1552
+#: ../panel-plugin/xfcetimer.c:1575
 msgid "Timer Options"
 msgstr "Alternativ för tidtagaren"
 
-#: ../panel-plugin/xfcetimer.c:1592
+#: ../panel-plugin/xfcetimer.c:1615
 msgid "Timer name"
 msgstr "Tidtagningsnamn"
 
-#: ../panel-plugin/xfcetimer.c:1597
+#: ../panel-plugin/xfcetimer.c:1620
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Nedräkningsperiod /\nAlarmtid"
 
-#: ../panel-plugin/xfcetimer.c:1600
+#: ../panel-plugin/xfcetimer.c:1623
 msgid "Alarm command"
 msgstr "Alarmkommando"
 
-#: ../panel-plugin/xfcetimer.c:1619
+#: ../panel-plugin/xfcetimer.c:1642
 msgid "Add"
 msgstr "Lägg till"
 
-#: ../panel-plugin/xfcetimer.c:1626
+#: ../panel-plugin/xfcetimer.c:1649
 msgid "Edit"
 msgstr "Redigera"
 
-#: ../panel-plugin/xfcetimer.c:1633
+#: ../panel-plugin/xfcetimer.c:1656
 msgid "Remove"
 msgstr "Ta bort"
 
-#: ../panel-plugin/xfcetimer.c:1641
+#: ../panel-plugin/xfcetimer.c:1664
 msgid "Up"
 msgstr "Upp"
 
-#: ../panel-plugin/xfcetimer.c:1648
+#: ../panel-plugin/xfcetimer.c:1671
 msgid "Down"
 msgstr "Ner"
 
-#: ../panel-plugin/xfcetimer.c:1664
+#: ../panel-plugin/xfcetimer.c:1687
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Visa ingen varning om ett alarmkommando är inställt"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1676
+#: ../panel-plugin/xfcetimer.c:1699
 msgid "Use a default alarm command"
 msgstr "Använd ett standardalarmkommando"
 
-#: ../panel-plugin/xfcetimer.c:1685
+#: ../panel-plugin/xfcetimer.c:1708
 msgid "Default command: "
 msgstr "Standardkommando: "
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1702
+#: ../panel-plugin/xfcetimer.c:1725
 msgid "Repeat the alarm command"
 msgstr "Upprepa alarmkommandot"
 
-#: ../panel-plugin/xfcetimer.c:1713
+#: ../panel-plugin/xfcetimer.c:1736
 msgid "Number of repetitions"
 msgstr "Antal upprepningar"
 
-#: ../panel-plugin/xfcetimer.c:1722
+#: ../panel-plugin/xfcetimer.c:1745
 msgid "  Time interval (sec.)"
 msgstr "  Tidsintervall (s)"
 
-#: ../panel-plugin/xfcetimer.c:1782
+#: ../panel-plugin/xfcetimer.c:1805
 msgid "About Timer plugin"
 msgstr "Om tidtagare insticksprogram"
 
-#: ../panel-plugin/xfcetimer.c:1785
+#: ../panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Ett insticksprogram för att ställa in nedräkningstidur eller larm vid bestämda tider."
 
