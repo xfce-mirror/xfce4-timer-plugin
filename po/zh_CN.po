@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 00:51+0100\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2013,2018,2021-2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/xfce/xfce-panel-plugins/language/zh_CN/)\n"
@@ -231,11 +231,3 @@ msgstr "关于定时器插件"
 #: ../panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "在指定时间内设定倒数计时器或者闹钟的插件。"
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
-msgid "Xfce4 Timer"
-msgstr "Xfce 定时器"
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
-msgid "Timer plugin for Xfce panel"
-msgstr "Xfce 面板的定时器插件"
