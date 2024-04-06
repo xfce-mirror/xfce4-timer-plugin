@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 00:51+0100\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Marek Adamski, 2021-2023\n"
 "Language-Team: Polish (http://app.transifex.com/xfce/xfce-panel-plugins/language/pl/)\n"
@@ -232,11 +232,3 @@ msgstr "O wtyczce Minutnik"
 #: ../panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Odmierza czas i alarmuje po upłynięciu ustalonego czasu."
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
-msgid "Xfce4 Timer"
-msgstr "Minutnik"
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
-msgid "Timer plugin for Xfce panel"
-msgstr "Odmierza ustalony czas"
