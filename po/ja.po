@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 00:51+0100\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2018,2023-2024\n"
 "Language-Team: Japanese (http://app.transifex.com/xfce/xfce-panel-plugins/language/ja/)\n"
@@ -229,11 +229,3 @@ msgstr "タイマープラグインについて"
 #: ../panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "時間を秒読みまたは指定時刻になるとアラームを鳴らします。"
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:1
-msgid "Xfce4 Timer"
-msgstr "Xfce4 タイマー"
-
-#: ../panel-plugin/xfce4-timer-plugin.desktop.in.h:2
-msgid "Timer plugin for Xfce panel"
-msgstr "Xfce パネル用のタイマープラグインです。"
