@@ -44,7 +44,8 @@ desktopdir =								\
 desktop_DATA =								\
 	xfce4-timer-plugin.desktop
 
-@INTLTOOL_DESKTOP_RULE@
+xfce4-timer-plugin.desktop: xfce4-timer-plugin.desktop.in Makefile
+	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST =								\
 	xfce4-timer-plugin.desktop.in
