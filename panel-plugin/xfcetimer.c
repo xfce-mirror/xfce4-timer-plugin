@@ -248,8 +248,7 @@ update_function (gpointer data)
                         g_source_remove(alrm->repeat_timeout);
                     alrm->repeat_timeout = g_timeout_add(pd->repeat_interval * 1000, repeat_alarm, alrm);
                 } else {
-                    if (command)
-                        g_free(command);
+                    g_free(command);
                     command = NULL;
                 }
             }
