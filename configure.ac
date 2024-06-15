@@ -8,22 +8,16 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([xfce4_timer_version_major], [1])
-m4_define([xfce4_timer_version_minor], [7])
-m4_define([xfce4_timer_version_micro], [2])
-m4_define([xfce4_timer_version_nano],  []) dnl leave this empty to have no nano version
-m4_define([xfce4_timer_version_build], [@REVISION@])
-m4_define([xfce4_timer_version_tag], [git]) # Leave empty only for releases, but use 'git' in most cases
-m4_define([xfce4_timer_version], [xfce4_timer_version_major().xfce4_timer_version_minor().xfce4_timer_version_micro()ifelse(xfce4_timer_version_nano(), [], [], [.xfce4_timer_version_nano()])ifelse(xfce4_timer_version_tag(), [git], [xfce4_timer_version_tag()-xfce4_timer_version_build()], [xfce4_timer_version_tag()])])
+XDT_VERSION_INIT([1.7.2], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (C) 2005-2023
         The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-timer-plugin], [xfce4_timer_version], [https://gitlab.xfce.org/panel-plugins/xfce4-timer-plugin], [xfce4-timer-plugin])
-AC_PREREQ([2.50])
-AC_REVISION([xfce4_panel_version_build])
+AC_INIT([xfce4-timer-plugin], [xdt_version], [https://gitlab.xfce.org/panel-plugins/xfce4-timer-plugin], [xfce4-timer-plugin])
+AC_PREREQ([2.69])
+AC_REVISION([xdt_version_build])
 AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
@@ -63,11 +57,6 @@ AC_SUBST([GETTEXT_PACKAGE])
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.19.8])
 
-dnl *******************************
-dnl *** Check for X11 installed ***
-dnl *******************************
-XDT_CHECK_LIBX11_REQUIRE()
-
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
@@ -78,12 +67,10 @@ XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.12.0])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
 
-
-
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl *********************************
 dnl *** Substitute platform flags ***
