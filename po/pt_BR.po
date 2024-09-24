@@ -5,7 +5,7 @@
 # Translators:
 # Andre Miranda <andre@andreldm.com>, 2018,2022
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
-# Michael Martins <michaelfm21@gmail.com>, 2014
+# Michael Martins, 2014
 # Peretto <peretto@gmail.com>, 2022
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2013
 # secipolla <secipolla@gmail.com>, 2011
