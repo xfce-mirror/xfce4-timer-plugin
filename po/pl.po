@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
-# Marek Adamski, 2021-2023
+# Marek Adamski, 2021-2024
 # Marek Adamski, 2018
 # Piotr Maliński <admin@rk.edu.pl>, 2006
 # Piotr Sokół <piotr.sokol@10g.pl>, 2009
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-04-07 00:56+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Marek Adamski, 2021-2023\n"
+"Last-Translator: Marek Adamski, 2021-2024\n"
 "Language-Team: Polish (http://app.transifex.com/xfce/xfce-panel-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -219,7 +219,7 @@ msgstr "Powtarzanie wykonania polecenia alarmu"
 
 #: panel-plugin/xfcetimer.c:1736
 msgid "Number of repetitions"
-msgstr "Ilość powtórzeń: "
+msgstr "Liczba powtórzeń: "
 
 #: panel-plugin/xfcetimer.c:1745
 msgid "  Time interval (sec.)"
