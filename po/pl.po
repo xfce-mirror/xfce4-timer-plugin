@@ -201,7 +201,7 @@ msgstr "W dół"
 
 #: panel-plugin/xfcetimer.c:1687
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Pomijanie wyświetlania ostrzeżenia jeśli ustalono polecenie alarmu"
+msgstr "Pomijanie wyświetlania ostrzeżenia, jeśli ustalono polecenie alarmu"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1699
