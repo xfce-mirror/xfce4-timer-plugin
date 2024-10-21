@@ -48,7 +48,7 @@ msgstr "ตู๊ดด..! :) \nได้เวลาสำหรับราย
 #: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "การปลุกเตือน %s"
 
 #: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1577
 msgid "Close"
@@ -97,7 +97,7 @@ msgstr "ณ %02d:%02d"
 #: panel-plugin/xfcetimer.c:708
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "ณ %02d:%02dZ"
 
 #: panel-plugin/xfcetimer.c:823
 msgid "Name:"
@@ -129,7 +129,7 @@ msgstr "หรือ"
 
 #: panel-plugin/xfcetimer.c:891
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
@@ -137,7 +137,7 @@ msgstr "คำสั่งที่จะเรียก:"
 
 #: panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
-msgstr ""
+msgstr "การปลุกเตือนที่จะเรียก:"
 
 #. add alarm autostart check button
 #: panel-plugin/xfcetimer.c:940
@@ -158,7 +158,7 @@ msgstr "แก้ไขรายการปลุกเตือน"
 
 #: panel-plugin/xfcetimer.c:1575
 msgid "Timer Options"
-msgstr ""
+msgstr "ตัวเลือกของการปลุก"
 
 #: panel-plugin/xfcetimer.c:1615
 msgid "Timer name"
@@ -222,7 +222,7 @@ msgstr "  ระยะเวลา (วิ.)"
 
 #: panel-plugin/xfcetimer.c:1805
 msgid "About Timer plugin"
-msgstr ""
+msgstr "เกี่ยวกับปลั๊กอินนาฬิกาปลุก"
 
 #: panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
