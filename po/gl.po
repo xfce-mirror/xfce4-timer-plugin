@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Daniel Muñiz Fontoira <dani@damufo.eu>, 2018-2019
+# Daniel Muñiz Fontoira <dani@damufo.eu>, 2024
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2008-2009
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-04-07 00:56+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Daniel Muñiz Fontoira <dani@damufo.eu>, 2018-2019\n"
+"Last-Translator: Daniel Muñiz Fontoira <dani@damufo.eu>, 2024\n"
 "Language-Team: Galician (http://app.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "Biiiiiip! :) \nEsgotouse o tempo do temporizador %s."
 #: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Temporizador %s"
 
 #: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1577
 msgid "Close"
@@ -98,7 +99,7 @@ msgstr "Ás %02d:%02d"
 #: panel-plugin/xfcetimer.c:708
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "Ás %02d:%02dZ"
 
 #: panel-plugin/xfcetimer.c:823
 msgid "Name:"
@@ -130,7 +131,7 @@ msgstr "ou"
 
 #: panel-plugin/xfcetimer.c:891
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
@@ -138,7 +139,7 @@ msgstr "Orde a executar:"
 
 #: panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Alarma a executar:"
 
 #. add alarm autostart check button
 #: panel-plugin/xfcetimer.c:940
@@ -159,7 +160,7 @@ msgstr "Modificar o temporizador"
 
 #: panel-plugin/xfcetimer.c:1575
 msgid "Timer Options"
-msgstr ""
+msgstr "Opcións do temporizador"
 
 #: panel-plugin/xfcetimer.c:1615
 msgid "Timer name"
@@ -223,7 +224,7 @@ msgstr "  Intervalo de tempo (seg.)"
 
 #: panel-plugin/xfcetimer.c:1805
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Sobre o engadido Temporizador"
 
 #: panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
