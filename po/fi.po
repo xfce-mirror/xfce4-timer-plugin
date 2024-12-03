@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Ammuu5, 2017-2018
-# Jiri Grönroos <jiri.gronroos@iki.fi>, 2018-2019
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2018-2019,2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-04-07 00:56+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2018-2019\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2018-2019,2024\n"
 "Language-Team: Finnish (http://app.transifex.com/xfce/xfce-panel-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +49,7 @@ msgstr "Piiip! :)\nHälytyksen %s aika on loppunut."
 #: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Ajastin %s"
 
 #: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1577
 msgid "Close"
@@ -130,7 +130,7 @@ msgstr "tai"
 
 #: panel-plugin/xfcetimer.c:891
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
@@ -138,7 +138,7 @@ msgstr "Suoritettava komento:"
 
 #: panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Suoritettava hälytys:"
 
 #. add alarm autostart check button
 #: panel-plugin/xfcetimer.c:940
@@ -159,7 +159,7 @@ msgstr "Muokkaa hälytystä"
 
 #: panel-plugin/xfcetimer.c:1575
 msgid "Timer Options"
-msgstr ""
+msgstr "Ajastimen asetukset"
 
 #: panel-plugin/xfcetimer.c:1615
 msgid "Timer name"
@@ -223,7 +223,7 @@ msgstr "Aikaväli (sekunti(a))"
 
 #: panel-plugin/xfcetimer.c:1805
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Tietoa ajastinliitännäisestä"
 
 #: panel-plugin/xfcetimer.c:1808
 msgid "A plugin to define countdown timers or alarms at given times."
