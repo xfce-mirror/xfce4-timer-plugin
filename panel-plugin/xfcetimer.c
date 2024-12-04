@@ -1553,7 +1553,30 @@ spin2_changed (GtkSpinButton *button, gpointer data)
   pd->repeat_interval = gtk_spin_button_get_value_as_int (button);
 }
 
-
+/* call: xfce4-panel --plugin-event=xfce4-timer-plugin:trigger:string:<alarm-name> */
+static gboolean remote_trigger (XfcePanelPlugin *plugin,
+                                    const gchar *name,
+                                    const GValue *value,
+                                    plugin_data *pd)
+{
+  g_return_val_if_fail (value != NULL, FALSE);
+  if (strcmp (name, "trigger") == 0) {
+    if (value != NULL && G_VALUE_HOLDS_STRING (value)) {
+      const GList * list = NULL;
+      const gchar *alarm_to_trigger = g_value_get_string (value);
+      list = pd->alarm_list;
+      while (list) {
+        alarm_t *alarm = list->data;
+        if (strcmp (alarm->name, alarm_to_trigger) == 0) {
+          start_timer(pd, alarm);
+          return TRUE;
+        }
+        list = g_list_next (list);
+      }
+    }
+  }
+  return TRUE;
+}/* remote_trigger() */
 
 /* Options dialog */
 static void
@@ -1894,6 +1917,8 @@ create_plugin_control (XfcePanelPlugin *plugin)
   xfce_panel_plugin_menu_show_configure (plugin);
   g_signal_connect (plugin, "configure-plugin",
                     G_CALLBACK (plugin_create_options), pd);
+
+  g_signal_connect (plugin, "remote-event", G_CALLBACK (remote_trigger), pd);
 
   xfce_panel_plugin_menu_show_about (plugin);
   g_signal_connect (plugin, "about", G_CALLBACK (show_about_window), pd);
