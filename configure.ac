@@ -60,12 +60,12 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.26.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.26.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.12.0])
-XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.50.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.50.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.22.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.16.0])
+XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.16.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.16.0])
 
 dnl ***********************************
 dnl *** Check for debugging support ***

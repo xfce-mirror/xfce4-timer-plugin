@@ -1593,10 +1593,10 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
 
   xfce_panel_plugin_block_menu (plugin);
 
-  header = xfce_titled_dialog_new_with_buttons (
+  header = xfce_titled_dialog_new_with_mixed_buttons (
       _("Timer Options"),
       GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-      GTK_DIALOG_DESTROY_WITH_PARENT, _("Close"), GTK_RESPONSE_OK, NULL);
+      GTK_DIALOG_DESTROY_WITH_PARENT, "", _("Close"), GTK_RESPONSE_OK, NULL);
 
   dlg = header;
 
