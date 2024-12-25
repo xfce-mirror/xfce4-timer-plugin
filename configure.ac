@@ -13,7 +13,7 @@ XDT_VERSION_INIT([1.7.2], [git])
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (C) 2005-2023
+AC_COPYRIGHT([Copyright (C) 2005-2024
         The Xfce development team. All rights reserved.])
 AC_INIT([xfce4-timer-plugin], [xdt_version], [https://gitlab.xfce.org/panel-plugins/xfce4-timer-plugin], [xfce4-timer-plugin])
 AC_PREREQ([2.69])
