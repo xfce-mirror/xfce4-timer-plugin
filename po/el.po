@@ -102,7 +102,7 @@ msgstr "Σε %02d:%02d"
 #: panel-plugin/xfcetimer.c:708
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "Σε %02d:%02dΖ"
 
 #: panel-plugin/xfcetimer.c:823
 msgid "Name:"
