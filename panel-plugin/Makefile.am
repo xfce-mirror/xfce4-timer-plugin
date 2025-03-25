@@ -48,6 +48,7 @@ xfce4-timer-plugin.desktop: xfce4-timer-plugin.desktop.in Makefile
 	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST =								\
+	meson.build							\
 	xfce4-timer-plugin.desktop.in
 
 CLEANFILES =								\
