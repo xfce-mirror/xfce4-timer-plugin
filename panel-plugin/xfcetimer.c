@@ -30,6 +30,9 @@
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1825,7 +1828,7 @@ Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
   gtk_show_about_dialog (
       NULL, "title", _("About Timer plugin"), "logo-icon-name", "xfce4-timer-plugin", "license",
-      xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", PACKAGE_VERSION,
+      xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", VERSION_FULL,
       "program-name", PACKAGE_NAME, "comments",
       _("A plugin to define countdown timers or alarms at given times."),
       "website",
