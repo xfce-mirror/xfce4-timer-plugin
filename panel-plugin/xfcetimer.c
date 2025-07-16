@@ -1472,7 +1472,6 @@ options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
   pd->global_command = g_strdup (
       gtk_entry_get_text ((GtkEntry *) pd->glob_command_entry));
   gtk_widget_destroy (dlg);
-  xfce_panel_plugin_unblock_menu (pd->base);
   save_settings (pd->base, pd);
 }
 
@@ -1588,17 +1587,19 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   GtkWidget *dialog_vbox;
   GtkTreeSelection *select;
   GtkTreeViewColumn *column;
-  GtkWidget *dlg = NULL, *header = NULL;
+  GtkWidget *dlg = NULL;
   GtkCellRenderer *renderer;
 
-  xfce_panel_plugin_block_menu (plugin);
+  if (pd->settings_dialog != NULL) {
+    gtk_window_present (GTK_WINDOW (pd->settings_dialog));
+    return;
+  }
 
-  header = xfce_titled_dialog_new_with_mixed_buttons (
+  pd->settings_dialog = dlg = xfce_titled_dialog_new_with_mixed_buttons (
       _("Timer Options"),
       GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
       GTK_DIALOG_DESTROY_WITH_PARENT, "", _("Close"), GTK_RESPONSE_OK, NULL);
-
-  dlg = header;
+  g_object_add_weak_pointer (G_OBJECT (pd->settings_dialog), (gpointer *) &pd->settings_dialog);
 
   gtk_window_set_icon_name (GTK_WINDOW (dlg), "xfce4-timer-plugin");
 
@@ -1612,7 +1613,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 10);
 
   gtk_widget_set_size_request (dlg, 650, -1);
-  gtk_window_set_position (GTK_WINDOW (header), GTK_WIN_POS_CENTER);
+  gtk_window_set_position (GTK_WINDOW (dlg), GTK_WIN_POS_CENTER);
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
