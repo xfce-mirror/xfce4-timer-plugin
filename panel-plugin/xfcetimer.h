@@ -39,6 +39,7 @@ typedef struct alarm
 
 typedef struct
 {
+  GtkWidget *settings_dialog;
   GtkWidget *box; /* v/hbox that holds pbar */
   GtkWidget *pbar; /* Progress bar */
   GtkWidget *tree; /* Treeview */
