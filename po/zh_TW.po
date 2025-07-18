@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
 # 黃柏諺 <s8321414@gmail.com>, 2014,2018
@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:57+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2021-2023\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/xfce/xfce-panel-plugins/language/zh_TW/)\n"
@@ -20,212 +20,220 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:171
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "剩下 %d 小時 %d 分 %d 秒"
 
-#: ../panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:174
 #, c-format
 msgid "%dm %ds left"
 msgstr "剩下 %d 分 %d 秒"
 
-#: ../panel-plugin/xfcetimer.c:177
+#: panel-plugin/xfcetimer.c:177
 #, c-format
 msgid "%ds left"
 msgstr "剩下 %d 秒"
 
-#: ../panel-plugin/xfcetimer.c:181
+#: panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
 msgstr " (暫停)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:217
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "嗶！ :) \n鬧鈴 %s 到時了。"
 
-#: ../panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
 msgstr "計時器 %s"
 
-#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1601
+#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
 msgid "Close"
 msgstr "關閉"
 
-#: ../panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
 msgstr "返回計時器"
 
-#: ../panel-plugin/xfcetimer.c:496 ../panel-plugin/xfcetimer.c:964
+#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
 msgid "Add new alarm"
 msgstr "加入新鬧鈴"
 
-#: ../panel-plugin/xfcetimer.c:518
+#: panel-plugin/xfcetimer.c:518
 msgid "Pause timer"
 msgstr "暫停定時器"
 
-#: ../panel-plugin/xfcetimer.c:525
+#: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
 msgstr "繼續定時器"
 
-#: ../panel-plugin/xfcetimer.c:531
+#: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
 msgstr "停止定時器"
 
-#: ../panel-plugin/xfcetimer.c:605 ../panel-plugin/xfcetimer.c:689
+#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d 小時 %d 分 %d 秒"
 
-#: ../panel-plugin/xfcetimer.c:607 ../panel-plugin/xfcetimer.c:691
+#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
 #, c-format
 msgid "%dm %ds"
 msgstr "%d 分 %d 秒"
 
-#: ../panel-plugin/xfcetimer.c:609 ../panel-plugin/xfcetimer.c:693
+#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%ds"
 msgstr "%d 秒"
 
-#: ../panel-plugin/xfcetimer.c:617 ../panel-plugin/xfcetimer.c:709
+#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "於 %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:707
+#: panel-plugin/xfcetimer.c:707
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr "於 %02d:%02dZ"
 
-#: ../panel-plugin/xfcetimer.c:822
+#: panel-plugin/xfcetimer.c:822
 msgid "Name:"
 msgstr "名稱："
 
-#: ../panel-plugin/xfcetimer.c:833
+#: panel-plugin/xfcetimer.c:833
 msgid "Enter the countdown time"
 msgstr "請輸入倒數時間"
 
-#: ../panel-plugin/xfcetimer.c:838
+#: panel-plugin/xfcetimer.c:838
 msgid "Enter the time of alarm (24h format)"
 msgstr "請輸入鬧鈴時間 (24 小時制)"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: panel-plugin/xfcetimer.c:853
 msgid "h  "
 msgstr "點"
 
-#: ../panel-plugin/xfcetimer.c:860
+#: panel-plugin/xfcetimer.c:860
 msgid "m  "
 msgstr "分"
 
-#: ../panel-plugin/xfcetimer.c:867
+#: panel-plugin/xfcetimer.c:867
 msgid "s  "
 msgstr "秒"
 
-#: ../panel-plugin/xfcetimer.c:870
+#: panel-plugin/xfcetimer.c:870
 msgid "or"
 msgstr "或"
 
-#: ../panel-plugin/xfcetimer.c:890
+#: panel-plugin/xfcetimer.c:890
 msgid "UTC"
 msgstr "UTC"
 
-#: ../panel-plugin/xfcetimer.c:902
+#: panel-plugin/xfcetimer.c:902
 msgid "Command to run:"
 msgstr "要執行指令："
 
-#: ../panel-plugin/xfcetimer.c:912
+#: panel-plugin/xfcetimer.c:912
 msgid "Alarm to run:"
 msgstr "要執行的警報："
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:939
+#: panel-plugin/xfcetimer.c:939
 msgid "Auto start when plugin loads"
 msgstr "當外掛程式載入時自動啟動"
 
-#: ../panel-plugin/xfcetimer.c:949
+#: panel-plugin/xfcetimer.c:949
 msgid "Cancel"
 msgstr "取消"
 
-#: ../panel-plugin/xfcetimer.c:954
+#: panel-plugin/xfcetimer.c:954
 msgid "Accept"
 msgstr "接受"
 
-#: ../panel-plugin/xfcetimer.c:1006
+#: panel-plugin/xfcetimer.c:1006
 msgid "Edit alarm"
 msgstr "編輯鬧鈴"
 
-#: ../panel-plugin/xfcetimer.c:1599
+#: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
 msgstr "計時器選項"
 
-#: ../panel-plugin/xfcetimer.c:1638
+#: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
 msgstr "定時器名稱"
 
-#: ../panel-plugin/xfcetimer.c:1643
+#: panel-plugin/xfcetimer.c:1643
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "倒數期 /\n鬧鈴時間"
 
-#: ../panel-plugin/xfcetimer.c:1646
+#: panel-plugin/xfcetimer.c:1646
 msgid "Alarm command"
 msgstr "鬧鈴指令"
 
-#: ../panel-plugin/xfcetimer.c:1665
+#: panel-plugin/xfcetimer.c:1665
 msgid "Add"
 msgstr "新增"
 
-#: ../panel-plugin/xfcetimer.c:1672
+#: panel-plugin/xfcetimer.c:1672
 msgid "Edit"
 msgstr "編輯"
 
-#: ../panel-plugin/xfcetimer.c:1679
+#: panel-plugin/xfcetimer.c:1679
 msgid "Remove"
 msgstr "移除"
 
-#: ../panel-plugin/xfcetimer.c:1687
+#: panel-plugin/xfcetimer.c:1687
 msgid "Up"
 msgstr "上"
 
-#: ../panel-plugin/xfcetimer.c:1694
+#: panel-plugin/xfcetimer.c:1694
 msgid "Down"
 msgstr "下"
 
-#: ../panel-plugin/xfcetimer.c:1710
+#: panel-plugin/xfcetimer.c:1710
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "若設定鬧鈴指令不要顯示警告"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1722
+#: panel-plugin/xfcetimer.c:1722
 msgid "Use a default alarm command"
 msgstr "使用預設鬧鈴指令"
 
-#: ../panel-plugin/xfcetimer.c:1731
+#: panel-plugin/xfcetimer.c:1731
 msgid "Default command: "
 msgstr "預設指令："
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1748
+#: panel-plugin/xfcetimer.c:1748
 msgid "Repeat the alarm command"
 msgstr "重複鬧鈴指令"
 
-#: ../panel-plugin/xfcetimer.c:1759
+#: panel-plugin/xfcetimer.c:1759
 msgid "Number of repetitions"
 msgstr "重複次數"
 
-#: ../panel-plugin/xfcetimer.c:1768
+#: panel-plugin/xfcetimer.c:1768
 msgid "  Time interval (sec.)"
 msgstr "  時間間隔 (秒)"
 
-#: ../panel-plugin/xfcetimer.c:1828
+#: panel-plugin/xfcetimer.c:1828
 msgid "About Timer plugin"
 msgstr "關於計時器外掛程式"
 
-#: ../panel-plugin/xfcetimer.c:1831
+#: panel-plugin/xfcetimer.c:1831
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "在特定時間定義倒數定時器或鬧鈴的插件。"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "Xfce4 定時器"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "Xfce 面板的定時器插件"
