@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
 # beriain, 2021
@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:57+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Eder Etxebarria Rojo, 2024\n"
 "Language-Team: Basque (http://app.transifex.com/xfce/xfce-panel-plugins/language/eu/)\n"
@@ -20,212 +20,220 @@ msgstr ""
 "Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:171
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%do %dm %ds falta dira"
 
-#: ../panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:174
 #, c-format
 msgid "%dm %ds left"
 msgstr "%dm %ds falta dira"
 
-#: ../panel-plugin/xfcetimer.c:177
+#: panel-plugin/xfcetimer.c:177
 #, c-format
 msgid "%ds left"
 msgstr "%ds falta dira"
 
-#: ../panel-plugin/xfcetimer.c:181
+#: panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
 msgstr "(Geldituta)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:217
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Txirrin! :)\nDenbora amaitu da %s(e)rako."
 
-#: ../panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
 msgstr "%sTenporizadorea"
 
-#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1601
+#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
 msgid "Close"
 msgstr "Itxi"
 
-#: ../panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
 msgstr "Kronometroa berrabiarazi"
 
-#: ../panel-plugin/xfcetimer.c:496 ../panel-plugin/xfcetimer.c:964
+#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
 msgid "Add new alarm"
 msgstr "Alarma berria gehitu"
 
-#: ../panel-plugin/xfcetimer.c:518
+#: panel-plugin/xfcetimer.c:518
 msgid "Pause timer"
 msgstr "Kronometroa eten"
 
-#: ../panel-plugin/xfcetimer.c:525
+#: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
 msgstr "Kronometroa berrekin"
 
-#: ../panel-plugin/xfcetimer.c:531
+#: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
 msgstr "Kronometroa gelditu"
 
-#: ../panel-plugin/xfcetimer.c:605 ../panel-plugin/xfcetimer.c:689
+#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%do %dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:607 ../panel-plugin/xfcetimer.c:691
+#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: ../panel-plugin/xfcetimer.c:609 ../panel-plugin/xfcetimer.c:693
+#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: ../panel-plugin/xfcetimer.c:617 ../panel-plugin/xfcetimer.c:709
+#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d-etan"
 
-#: ../panel-plugin/xfcetimer.c:707
+#: panel-plugin/xfcetimer.c:707
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr "%02d:%02d-etan"
 
-#: ../panel-plugin/xfcetimer.c:822
+#: panel-plugin/xfcetimer.c:822
 msgid "Name:"
 msgstr "Izena:"
 
-#: ../panel-plugin/xfcetimer.c:833
+#: panel-plugin/xfcetimer.c:833
 msgid "Enter the countdown time"
 msgstr "Atzerako kontaketa denbora idatzi"
 
-#: ../panel-plugin/xfcetimer.c:838
+#: panel-plugin/xfcetimer.c:838
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarmaren ordua idatzi (24h formatua)"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: panel-plugin/xfcetimer.c:853
 msgid "h  "
 msgstr "o  "
 
-#: ../panel-plugin/xfcetimer.c:860
+#: panel-plugin/xfcetimer.c:860
 msgid "m  "
 msgstr "m  "
 
-#: ../panel-plugin/xfcetimer.c:867
+#: panel-plugin/xfcetimer.c:867
 msgid "s  "
 msgstr "s  "
 
-#: ../panel-plugin/xfcetimer.c:870
+#: panel-plugin/xfcetimer.c:870
 msgid "or"
 msgstr "edo"
 
-#: ../panel-plugin/xfcetimer.c:890
+#: panel-plugin/xfcetimer.c:890
 msgid "UTC"
 msgstr "UTC"
 
-#: ../panel-plugin/xfcetimer.c:902
+#: panel-plugin/xfcetimer.c:902
 msgid "Command to run:"
 msgstr "Exekutatzeko komandoa:"
 
-#: ../panel-plugin/xfcetimer.c:912
+#: panel-plugin/xfcetimer.c:912
 msgid "Alarm to run:"
 msgstr "Alarmak jo behar du:"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:939
+#: panel-plugin/xfcetimer.c:939
 msgid "Auto start when plugin loads"
 msgstr "Automatikoki hasi plugina kargatzerakoan"
 
-#: ../panel-plugin/xfcetimer.c:949
+#: panel-plugin/xfcetimer.c:949
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../panel-plugin/xfcetimer.c:954
+#: panel-plugin/xfcetimer.c:954
 msgid "Accept"
 msgstr "Onartu"
 
-#: ../panel-plugin/xfcetimer.c:1006
+#: panel-plugin/xfcetimer.c:1006
 msgid "Edit alarm"
 msgstr "Alarma editatu"
 
-#: ../panel-plugin/xfcetimer.c:1599
+#: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
 msgstr "Tenporizadorearen aukerak"
 
-#: ../panel-plugin/xfcetimer.c:1638
+#: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
 msgstr "Kronometroaren izena"
 
-#: ../panel-plugin/xfcetimer.c:1643
+#: panel-plugin/xfcetimer.c:1643
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Atzerako kontatze denbora /\nAlarma ordua"
 
-#: ../panel-plugin/xfcetimer.c:1646
+#: panel-plugin/xfcetimer.c:1646
 msgid "Alarm command"
 msgstr "Alarma komandoa"
 
-#: ../panel-plugin/xfcetimer.c:1665
+#: panel-plugin/xfcetimer.c:1665
 msgid "Add"
 msgstr "Gehitu"
 
-#: ../panel-plugin/xfcetimer.c:1672
+#: panel-plugin/xfcetimer.c:1672
 msgid "Edit"
 msgstr "Editatu"
 
-#: ../panel-plugin/xfcetimer.c:1679
+#: panel-plugin/xfcetimer.c:1679
 msgid "Remove"
 msgstr "Kendu"
 
-#: ../panel-plugin/xfcetimer.c:1687
+#: panel-plugin/xfcetimer.c:1687
 msgid "Up"
 msgstr "Gora"
 
-#: ../panel-plugin/xfcetimer.c:1694
+#: panel-plugin/xfcetimer.c:1694
 msgid "Down"
 msgstr "Behera"
 
-#: ../panel-plugin/xfcetimer.c:1710
+#: panel-plugin/xfcetimer.c:1710
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Ez erakutsi abisurik alarma komando bat ezarri bada"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1722
+#: panel-plugin/xfcetimer.c:1722
 msgid "Use a default alarm command"
 msgstr "Alarma komando lehenetsi bat erabili"
 
-#: ../panel-plugin/xfcetimer.c:1731
+#: panel-plugin/xfcetimer.c:1731
 msgid "Default command: "
 msgstr "Lehenetsitako komandoa:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1748
+#: panel-plugin/xfcetimer.c:1748
 msgid "Repeat the alarm command"
 msgstr "Errepikatu alarma komandoa"
 
-#: ../panel-plugin/xfcetimer.c:1759
+#: panel-plugin/xfcetimer.c:1759
 msgid "Number of repetitions"
 msgstr "Errepikapen kopurua"
 
-#: ../panel-plugin/xfcetimer.c:1768
+#: panel-plugin/xfcetimer.c:1768
 msgid "  Time interval (sec.)"
 msgstr "  Denbora tartea (seg.)"
 
-#: ../panel-plugin/xfcetimer.c:1828
+#: panel-plugin/xfcetimer.c:1828
 msgid "About Timer plugin"
 msgstr "Tenporizadorea hedapenari buruz"
 
-#: ../panel-plugin/xfcetimer.c:1831
+#: panel-plugin/xfcetimer.c:1831
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Atzerako kontaketak edo alarmak zehazteko plugin bat."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "Xfce4 kronometroa"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "Xfce panelarentzat kronometro plugina"
