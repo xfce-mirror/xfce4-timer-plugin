@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
 # Demiray Muhterem <mdemiray@msn.com>, 2021-2023
@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:57+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce-panel-plugins/language/tr/)\n"
@@ -24,212 +24,220 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:171
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "%dsa %ddk %dsn kaldı"
 
-#: ../panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:174
 #, c-format
 msgid "%dm %ds left"
 msgstr "%ddk %dsn kaldı"
 
-#: ../panel-plugin/xfcetimer.c:177
+#: panel-plugin/xfcetimer.c:177
 #, c-format
 msgid "%ds left"
 msgstr "%dsn kaldı"
 
-#: ../panel-plugin/xfcetimer.c:181
+#: panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
 msgstr "(Duraklatıldı)"
 
 #. Display the name of the alarm when the countdown ends
-#: ../panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:217
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Beeep! :) \n%s alarmı için zaman geldi."
 
-#: ../panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
 msgstr "Zamanlayıcı %s"
 
-#: ../panel-plugin/xfcetimer.c:227 ../panel-plugin/xfcetimer.c:1601
+#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
 msgid "Close"
 msgstr "Kapat"
 
-#: ../panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
 msgstr "Zamanlayıcıyı yeniden çalıştır"
 
-#: ../panel-plugin/xfcetimer.c:496 ../panel-plugin/xfcetimer.c:964
+#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
 msgid "Add new alarm"
 msgstr "Yeni alarm ekle"
 
-#: ../panel-plugin/xfcetimer.c:518
+#: panel-plugin/xfcetimer.c:518
 msgid "Pause timer"
 msgstr "Zamanlayıcıyı durdur"
 
-#: ../panel-plugin/xfcetimer.c:525
+#: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
 msgstr "Zamanlayıcıya devam"
 
-#: ../panel-plugin/xfcetimer.c:531
+#: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
 msgstr "Saati durdur"
 
-#: ../panel-plugin/xfcetimer.c:605 ../panel-plugin/xfcetimer.c:689
+#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dsa %ddk %dsn"
 
-#: ../panel-plugin/xfcetimer.c:607 ../panel-plugin/xfcetimer.c:691
+#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
 #, c-format
 msgid "%dm %ds"
 msgstr "%ddk %dsn"
 
-#: ../panel-plugin/xfcetimer.c:609 ../panel-plugin/xfcetimer.c:693
+#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
 #, c-format
 msgid "%ds"
 msgstr "%dsn"
 
-#: ../panel-plugin/xfcetimer.c:617 ../panel-plugin/xfcetimer.c:709
+#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
 #, c-format
 msgid "At %02d:%02d"
 msgstr "Alarm saati: %02d:%02d"
 
-#: ../panel-plugin/xfcetimer.c:707
+#: panel-plugin/xfcetimer.c:707
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr " %02d:%02dZ"
 
-#: ../panel-plugin/xfcetimer.c:822
+#: panel-plugin/xfcetimer.c:822
 msgid "Name:"
 msgstr "İsim:"
 
-#: ../panel-plugin/xfcetimer.c:833
+#: panel-plugin/xfcetimer.c:833
 msgid "Enter the countdown time"
 msgstr "Gerisayım süresini giriniz"
 
-#: ../panel-plugin/xfcetimer.c:838
+#: panel-plugin/xfcetimer.c:838
 msgid "Enter the time of alarm (24h format)"
 msgstr "Alarm satini giriniz (24 saat formatında)"
 
-#: ../panel-plugin/xfcetimer.c:853
+#: panel-plugin/xfcetimer.c:853
 msgid "h  "
 msgstr "sa  "
 
-#: ../panel-plugin/xfcetimer.c:860
+#: panel-plugin/xfcetimer.c:860
 msgid "m  "
 msgstr "dk  "
 
-#: ../panel-plugin/xfcetimer.c:867
+#: panel-plugin/xfcetimer.c:867
 msgid "s  "
 msgstr "sn  "
 
-#: ../panel-plugin/xfcetimer.c:870
+#: panel-plugin/xfcetimer.c:870
 msgid "or"
 msgstr "veya"
 
-#: ../panel-plugin/xfcetimer.c:890
+#: panel-plugin/xfcetimer.c:890
 msgid "UTC"
 msgstr "UTC"
 
-#: ../panel-plugin/xfcetimer.c:902
+#: panel-plugin/xfcetimer.c:902
 msgid "Command to run:"
 msgstr "Çalıştırılacak komut:"
 
-#: ../panel-plugin/xfcetimer.c:912
+#: panel-plugin/xfcetimer.c:912
 msgid "Alarm to run:"
 msgstr "Alarmı çalıştır:"
 
 #. add alarm autostart check button
-#: ../panel-plugin/xfcetimer.c:939
+#: panel-plugin/xfcetimer.c:939
 msgid "Auto start when plugin loads"
 msgstr "Eklenti yüklendiğinde otomatik başlat"
 
-#: ../panel-plugin/xfcetimer.c:949
+#: panel-plugin/xfcetimer.c:949
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../panel-plugin/xfcetimer.c:954
+#: panel-plugin/xfcetimer.c:954
 msgid "Accept"
 msgstr "Kabul"
 
-#: ../panel-plugin/xfcetimer.c:1006
+#: panel-plugin/xfcetimer.c:1006
 msgid "Edit alarm"
 msgstr "Alarmı düzenle"
 
-#: ../panel-plugin/xfcetimer.c:1599
+#: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
 msgstr "Zamanlayıcı Seçenekleri"
 
-#: ../panel-plugin/xfcetimer.c:1638
+#: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
 msgstr "Zamanlayıcı ismi"
 
-#: ../panel-plugin/xfcetimer.c:1643
+#: panel-plugin/xfcetimer.c:1643
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Gerisayım süresi /\nAlarm saati"
 
-#: ../panel-plugin/xfcetimer.c:1646
+#: panel-plugin/xfcetimer.c:1646
 msgid "Alarm command"
 msgstr "Alarm komutu"
 
-#: ../panel-plugin/xfcetimer.c:1665
+#: panel-plugin/xfcetimer.c:1665
 msgid "Add"
 msgstr "Ekle"
 
-#: ../panel-plugin/xfcetimer.c:1672
+#: panel-plugin/xfcetimer.c:1672
 msgid "Edit"
 msgstr "Düzenle"
 
-#: ../panel-plugin/xfcetimer.c:1679
+#: panel-plugin/xfcetimer.c:1679
 msgid "Remove"
 msgstr "Sil"
 
-#: ../panel-plugin/xfcetimer.c:1687
+#: panel-plugin/xfcetimer.c:1687
 msgid "Up"
 msgstr "Yukarı"
 
-#: ../panel-plugin/xfcetimer.c:1694
+#: panel-plugin/xfcetimer.c:1694
 msgid "Down"
 msgstr "Aşağı"
 
-#: ../panel-plugin/xfcetimer.c:1710
+#: panel-plugin/xfcetimer.c:1710
 msgid "Don't display a warning  if an alarm command is set"
 msgstr "Bir uyarı gösterme  bir alarm komutu atanmışsa"
 
 #. Default alarm command config
-#: ../panel-plugin/xfcetimer.c:1722
+#: panel-plugin/xfcetimer.c:1722
 msgid "Use a default alarm command"
 msgstr "Bir varsayılan alarm komutu kullan"
 
-#: ../panel-plugin/xfcetimer.c:1731
+#: panel-plugin/xfcetimer.c:1731
 msgid "Default command: "
 msgstr "Varsayılan komut:"
 
 #. Alarm repetitions config
-#: ../panel-plugin/xfcetimer.c:1748
+#: panel-plugin/xfcetimer.c:1748
 msgid "Repeat the alarm command"
 msgstr "Alarm komutunu tekrarla"
 
-#: ../panel-plugin/xfcetimer.c:1759
+#: panel-plugin/xfcetimer.c:1759
 msgid "Number of repetitions"
 msgstr "Yinelemelerin sayısı"
 
-#: ../panel-plugin/xfcetimer.c:1768
+#: panel-plugin/xfcetimer.c:1768
 msgid "  Time interval (sec.)"
 msgstr "  Zaman aralığı (saniye)"
 
-#: ../panel-plugin/xfcetimer.c:1828
+#: panel-plugin/xfcetimer.c:1828
 msgid "About Timer plugin"
 msgstr "Zamanlayıcı eklentisi hakkında"
 
-#: ../panel-plugin/xfcetimer.c:1831
+#: panel-plugin/xfcetimer.c:1831
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Geriye sayan zamanlayıcılar veya zamanlı alarmlar tanımlamak için bir eklenti."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "XFCE4 Alarm Eklentisi -- XFCE4 Timer"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "XFCE paneli için alarm eklentisi"
