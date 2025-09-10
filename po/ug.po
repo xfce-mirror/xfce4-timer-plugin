@@ -35,7 +35,7 @@ msgstr "%d سېكۇنت قالدى"
 
 #: panel-plugin/xfcetimer.c:181
 msgid " (Paused)"
-msgstr ""
+msgstr " (ۋاقىتلىق توختىدى)"
 
 #. Display the name of the alarm when the countdown ends
 #: panel-plugin/xfcetimer.c:217
@@ -43,20 +43,20 @@ msgstr ""
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "بــــــــــــــىــــــــــــــــــــــــــپ! :)\nقوڭغۇراق %s نىڭ ۋاقتى توشىدۇ."
 
 #: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچ %s"
 
 #: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
 msgid "Close"
-msgstr "تاقا"
+msgstr "ياپ"
 
 #: panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچنى قايتا باشلا"
 
 #: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
 msgid "Add new alarm"
@@ -64,15 +64,15 @@ msgstr "يېڭى قوڭغۇراق قوش"
 
 #: panel-plugin/xfcetimer.c:518
 msgid "Pause timer"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچنى ۋاقىتلىق توختات"
 
 #: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچنى داۋاملاشتۇر"
 
 #: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
-msgstr "ۋاقىت ئۆلچىگۈچنى توختات"
+msgstr "ۋاقىت خاتىرىلىگۈچنى توختات"
 
 #: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
 #, c-format
@@ -97,7 +97,7 @@ msgstr "%02d:%02d دە"
 #: panel-plugin/xfcetimer.c:707
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "%02d:%02d دە"
 
 #: panel-plugin/xfcetimer.c:822
 msgid "Name:"
@@ -125,24 +125,24 @@ msgstr "s  "
 
 #: panel-plugin/xfcetimer.c:870
 msgid "or"
-msgstr ""
+msgstr "ياكى"
 
 #: panel-plugin/xfcetimer.c:890
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: panel-plugin/xfcetimer.c:902
 msgid "Command to run:"
-msgstr ""
+msgstr "ئىجرا قىلىدىغان بۇيرۇق:"
 
 #: panel-plugin/xfcetimer.c:912
 msgid "Alarm to run:"
-msgstr ""
+msgstr "ئىجرا قىلىدىغان قوڭغۇراق:"
 
 #. add alarm autostart check button
 #: panel-plugin/xfcetimer.c:939
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "قىستۇرما يۈكلەنگەندە ئۆزلۈكىدىن قوزغىتىدۇ"
 
 #: panel-plugin/xfcetimer.c:949
 msgid "Cancel"
@@ -150,7 +150,7 @@ msgstr "ۋاز كەچ"
 
 #: panel-plugin/xfcetimer.c:954
 msgid "Accept"
-msgstr ""
+msgstr "قوشۇل"
 
 #: panel-plugin/xfcetimer.c:1006
 msgid "Edit alarm"
@@ -158,11 +158,11 @@ msgstr "قوڭغۇراق تەھرىرلە"
 
 #: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچ تاللانمىسى"
 
 #: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچ ئاتى"
 
 #: panel-plugin/xfcetimer.c:1643
 msgid ""
@@ -176,11 +176,11 @@ msgstr "قوڭغۇراق بۇيرۇقى"
 
 #: panel-plugin/xfcetimer.c:1665
 msgid "Add"
-msgstr ""
+msgstr "قوش"
 
 #: panel-plugin/xfcetimer.c:1672
 msgid "Edit"
-msgstr ""
+msgstr "تەھرىر"
 
 #: panel-plugin/xfcetimer.c:1679
 msgid "Remove"
@@ -188,50 +188,50 @@ msgstr "چىقىرىۋەت"
 
 #: panel-plugin/xfcetimer.c:1687
 msgid "Up"
-msgstr ""
+msgstr "ئۈستى"
 
 #: panel-plugin/xfcetimer.c:1694
 msgid "Down"
-msgstr ""
+msgstr "ئاستى"
 
 #: panel-plugin/xfcetimer.c:1710
 msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgstr "ئەگەر قوڭغۇراق بۇيرۇقى تەڭشەلگەن بولسا ئاگاھلاندۇرۇشنى كۆرسەتمەيدۇ"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1722
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "كۆڭۈلدىكى قوڭغۇراق بۇيرۇقىنى ئىشلىتىدۇ"
 
 #: panel-plugin/xfcetimer.c:1731
 msgid "Default command: "
-msgstr ""
+msgstr "كۆڭۈلدىكى بۇيرۇق: "
 
 #. Alarm repetitions config
 #: panel-plugin/xfcetimer.c:1748
 msgid "Repeat the alarm command"
-msgstr ""
+msgstr "قوڭغۇراق بۇيرۇقىنى تەكرارلايدۇ"
 
 #: panel-plugin/xfcetimer.c:1759
 msgid "Number of repetitions"
-msgstr "تەكرارلىنىش ۋاقتى"
+msgstr "تەكرارلىنىش قېتىم سانى"
 
 #: panel-plugin/xfcetimer.c:1768
 msgid "  Time interval (sec.)"
-msgstr "  ۋاقىت ئىنتېرۋالى(سېكۇنت.)"
+msgstr "  ۋاقىت ئارىلىقى(سېكۇنت)"
 
 #: panel-plugin/xfcetimer.c:1828
 msgid "About Timer plugin"
-msgstr ""
+msgstr "ۋاقىت خاتىرىلىگۈچ قىستۇرمىسى ھەققىدە"
 
 #: panel-plugin/xfcetimer.c:1831
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "بەلگىلەنگەن ۋاقىتتا تەتۈر ساناق ياكى قوڭغۇراق ئاگاھلاندۇرۇشىنى تەڭشىگىلى بولىدىغان ۋاقىت خاتىرىلىگۈچ قىستۇرمىسى."
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:5
 msgid "Xfce4 Timer"
-msgstr "Xfce4 ۋاقىت ئۆلچىگۈچى"
+msgstr "Xfce4 ۋاقىت خاتىرىلىگۈچ"
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:6
 msgid "Timer plugin for Xfce panel"
-msgstr "Xfce نىڭ ۋاقىت ئۆلچىگۈچ قىستۇرمىسى"
+msgstr "Xfce كۆزنەكچىنىڭ ۋاقىت خاتىرىلىگۈچ قىستۇرمىسى"
