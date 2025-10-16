@@ -6,6 +6,7 @@
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013,2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
 # Quentin PAGÈS, 2022
+# Quentin PAGÈS, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
@@ -70,7 +71,7 @@ msgstr "Metre en pausa lo cronomètre"
 
 #: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
-msgstr "Reprene lo cronomètre"
+msgstr "Reprendre lo cronomètre"
 
 #: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
@@ -160,7 +161,7 @@ msgstr "Editar l'alarma"
 
 #: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
-msgstr ""
+msgstr "Opcions del cronomètre"
 
 #: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
