@@ -1,4 +1,4 @@
-sizes = [32, 48]
+sizes = [16, 22, 24, 32, 48]
 
 foreach size : sizes
   install_data(
