@@ -6,14 +6,14 @@
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013,2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
 # Quentin PAGÈS, 2022
-# Quentin PAGÈS, 2022
+# Quentin PAGÈS, 2022,2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:08+0200\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Quentin PAGÈS, 2022\n"
+"Last-Translator: Quentin PAGÈS, 2022,2025\n"
 "Language-Team: Occitan (post 1500) (http://app.transifex.com/xfce/xfce-panel-plugins/language/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +51,7 @@ msgstr "Bip ! :) \nLo temps es passat per l'alarma %s."
 #: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Minutador %s"
 
 #: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
 msgid "Close"
@@ -59,23 +59,23 @@ msgstr "Tampar"
 
 #: panel-plugin/xfcetimer.c:228
 msgid "Rerun the timer"
-msgstr "Reaviar lo cronomètre"
+msgstr "Reïnicializar lo minutador"
 
 #: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
 msgid "Add new alarm"
-msgstr "Apondre una alarma"
+msgstr "Apondre una alarma novèla"
 
 #: panel-plugin/xfcetimer.c:518
 msgid "Pause timer"
-msgstr "Metre en pausa lo cronomètre"
+msgstr "Metre en pausa lo minutador"
 
 #: panel-plugin/xfcetimer.c:525
 msgid "Resume timer"
-msgstr "Reprendre lo cronomètre"
+msgstr "Reprendre lo minutador"
 
 #: panel-plugin/xfcetimer.c:531
 msgid "Stop timer"
-msgstr "Arrestar lo cronomètre"
+msgstr "Arrestar lo minutador"
 
 #: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
 #, c-format
@@ -100,7 +100,7 @@ msgstr "A %02d:%02d"
 #: panel-plugin/xfcetimer.c:707
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "A %02dh%02dZ"
 
 #: panel-plugin/xfcetimer.c:822
 msgid "Name:"
@@ -132,7 +132,7 @@ msgstr "o"
 
 #: panel-plugin/xfcetimer.c:890
 msgid "UTC"
-msgstr ""
+msgstr "TUC"
 
 #: panel-plugin/xfcetimer.c:902
 msgid "Command to run:"
@@ -140,12 +140,12 @@ msgstr "Comanda d'executar :"
 
 #: panel-plugin/xfcetimer.c:912
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Alarma de lançar :"
 
 #. add alarm autostart check button
 #: panel-plugin/xfcetimer.c:939
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Lançament auto al cargament de l’empeuton"
 
 #: panel-plugin/xfcetimer.c:949
 msgid "Cancel"
@@ -161,11 +161,11 @@ msgstr "Editar l'alarma"
 
 #: panel-plugin/xfcetimer.c:1599
 msgid "Timer Options"
-msgstr "Opcions del cronomètre"
+msgstr "Opcions del minutador"
 
 #: panel-plugin/xfcetimer.c:1638
 msgid "Timer name"
-msgstr "Nom del cronomètre"
+msgstr "Nom del minutador"
 
 #: panel-plugin/xfcetimer.c:1643
 msgid ""
@@ -199,7 +199,7 @@ msgstr "Aval"
 
 #: panel-plugin/xfcetimer.c:1710
 msgid "Don't display a warning  if an alarm command is set"
-msgstr "Afichetz  pas d'avertiment se una comanda d'alarma es programada"
+msgstr "Afichar pas l'avertiment se una comanda d'alarma es programada"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1722
@@ -213,7 +213,7 @@ msgstr "Comanda per defaut : "
 #. Alarm repetitions config
 #: panel-plugin/xfcetimer.c:1748
 msgid "Repeat the alarm command"
-msgstr "Repetissètz la comanda de l'alarma"
+msgstr "Repetir la comanda de l'alarma"
 
 #: panel-plugin/xfcetimer.c:1759
 msgid "Number of repetitions"
@@ -221,11 +221,11 @@ msgstr "Nombre de repeticions"
 
 #: panel-plugin/xfcetimer.c:1768
 msgid "  Time interval (sec.)"
-msgstr "  Interval de temps (seg.)"
+msgstr "Interval de temps (seg.)"
 
 #: panel-plugin/xfcetimer.c:1828
 msgid "About Timer plugin"
-msgstr ""
+msgstr "A prepaus de l’empeuton Minutador"
 
 #: panel-plugin/xfcetimer.c:1831
 msgid "A plugin to define countdown timers or alarms at given times."
@@ -233,8 +233,8 @@ msgstr "Un empeuton per definir de comptes a rebors o d'alarmas a de moments don
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:5
 msgid "Xfce4 Timer"
-msgstr "Cronomètre Xfce4"
+msgstr "Minutador Xfce4"
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:6
 msgid "Timer plugin for Xfce panel"
-msgstr "Empeuton del cronomètre pel panèl Xfce"
+msgstr "Empeuton minutador pel panèl Xfce"
