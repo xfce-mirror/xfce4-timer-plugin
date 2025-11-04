@@ -240,4 +240,4 @@ msgstr "Temporitzador de l'Xfce4"
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:6
 msgid "Timer plugin for Xfce panel"
-msgstr "Connector de temporitzador per al tauler de l'Xfce"
+msgstr "Connector de temporitzador per al panell de l'Xfce"
