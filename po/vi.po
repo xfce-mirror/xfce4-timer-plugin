@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Vietnamese (http://app.transifex.com/xfce/xfce-panel-plugins/language/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: panel-plugin/xfcetimer.c:171
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "%dh %dm %ds còn lại"
+
+#: panel-plugin/xfcetimer.c:174
+#, c-format
+msgid "%dm %ds left"
+msgstr "%dm %ds còn lại"
+
+#: panel-plugin/xfcetimer.c:177
+#, c-format
+msgid "%ds left"
+msgstr "%d còn lại"
+
+#: panel-plugin/xfcetimer.c:181
+msgid " (Paused)"
+msgstr " (Tạm dừng)"
+
+#. Display the name of the alarm when the countdown ends
+#: panel-plugin/xfcetimer.c:217
+#, c-format
+msgid ""
+"Beeep! :) \n"
+"Time is up for the alarm %s."
+msgstr "Bíp! :) \nĐã hết thời gian báo thức %s."
+
+#: panel-plugin/xfcetimer.c:218
+#, c-format
+msgid "Timer %s"
+msgstr "Hẹn giờ %s"
+
+#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
+msgid "Close"
+msgstr "Đóng"
+
+#: panel-plugin/xfcetimer.c:228
+msgid "Rerun the timer"
+msgstr "Chạy lại bộ đếm thời gian"
+
+#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
+msgid "Add new alarm"
+msgstr "Thêm báo thức mới"
+
+#: panel-plugin/xfcetimer.c:518
+msgid "Pause timer"
+msgstr "Tạm dừng hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:525
+msgid "Resume timer"
+msgstr "Tiếp tục hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:531
+msgid "Stop timer"
+msgstr "Dừng hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%dh %dm %ds"
+
+#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
+#, c-format
+msgid "%dm %ds"
+msgstr "%dm %ds"
+
+#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
+#, c-format
+msgid "%ds"
+msgstr "%ds"
+
+#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
+#, c-format
+msgid "At %02d:%02d"
+msgstr "Tại %02d:%02d"
+
+#: panel-plugin/xfcetimer.c:707
+#, c-format
+msgid "At %02d:%02dZ"
+msgstr "Tại %02d:%02dZ"
+
+#: panel-plugin/xfcetimer.c:822
+msgid "Name:"
+msgstr "Tên:"
+
+#: panel-plugin/xfcetimer.c:833
+msgid "Enter the countdown time"
+msgstr "Nhập thời gian đếm ngược"
+
+#: panel-plugin/xfcetimer.c:838
+msgid "Enter the time of alarm (24h format)"
+msgstr "Nhập thời gian báo thức (định dạng 24h)"
+
+#: panel-plugin/xfcetimer.c:853
+msgid "h  "
+msgstr "h  "
+
+#: panel-plugin/xfcetimer.c:860
+msgid "m  "
+msgstr "tôi  "
+
+#: panel-plugin/xfcetimer.c:867
+msgid "s  "
+msgstr "s  "
+
+#: panel-plugin/xfcetimer.c:870
+msgid "or"
+msgstr "hoặc"
+
+#: panel-plugin/xfcetimer.c:890
+msgid "UTC"
+msgstr "UTC"
+
+#: panel-plugin/xfcetimer.c:902
+msgid "Command to run:"
+msgstr "Lệnh để chạy:"
+
+#: panel-plugin/xfcetimer.c:912
+msgid "Alarm to run:"
+msgstr "Báo động để chạy:"
+
+#. add alarm autostart check button
+#: panel-plugin/xfcetimer.c:939
+msgid "Auto start when plugin loads"
+msgstr "Tự động khởi động khi tải plugin"
+
+#: panel-plugin/xfcetimer.c:949
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#: panel-plugin/xfcetimer.c:954
+msgid "Accept"
+msgstr "Chấp nhận"
+
+#: panel-plugin/xfcetimer.c:1006
+msgid "Edit alarm"
+msgstr "Chỉnh sửa báo thức"
+
+#: panel-plugin/xfcetimer.c:1599
+msgid "Timer Options"
+msgstr "Tùy chọn hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:1638
+msgid "Timer name"
+msgstr "Tên hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:1643
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr "Thời gian đếm ngược /\nThời gian báo thức"
+
+#: panel-plugin/xfcetimer.c:1646
+msgid "Alarm command"
+msgstr "Lệnh báo động"
+
+#: panel-plugin/xfcetimer.c:1665
+msgid "Add"
+msgstr "Thêm vào"
+
+#: panel-plugin/xfcetimer.c:1672
+msgid "Edit"
+msgstr "Biên tập"
+
+#: panel-plugin/xfcetimer.c:1679
+msgid "Remove"
+msgstr "Gỡ bỏ"
+
+#: panel-plugin/xfcetimer.c:1687
+msgid "Up"
+msgstr "Hướng lên"
+
+#: panel-plugin/xfcetimer.c:1694
+msgid "Down"
+msgstr "Xuống"
+
+#: panel-plugin/xfcetimer.c:1710
+msgid "Don't display a warning  if an alarm command is set"
+msgstr "Không hiển thị cảnh báo nếu lệnh báo động được đặt"
+
+#. Default alarm command config
+#: panel-plugin/xfcetimer.c:1722
+msgid "Use a default alarm command"
+msgstr "Sử dụng lệnh cảnh báo mặc định"
+
+#: panel-plugin/xfcetimer.c:1731
+msgid "Default command: "
+msgstr "Lệnh mặc định: "
+
+#. Alarm repetitions config
+#: panel-plugin/xfcetimer.c:1748
+msgid "Repeat the alarm command"
+msgstr "Lặp lại lệnh báo động"
+
+#: panel-plugin/xfcetimer.c:1759
+msgid "Number of repetitions"
+msgstr "Số lần lặp lại"
+
+#: panel-plugin/xfcetimer.c:1768
+msgid "  Time interval (sec.)"
+msgstr "  Khoảng thời gian (giây)"
+
+#: panel-plugin/xfcetimer.c:1828
+msgid "About Timer plugin"
+msgstr "Giới thiệu về plugin Hẹn giờ"
+
+#: panel-plugin/xfcetimer.c:1831
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr "Một plugin để xác định đồng hồ đếm ngược hoặc báo thức vào những thời điểm nhất định."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "Hẹn giờ Xfce4"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "Plugin hẹn giờ cho bảng Xfce"
