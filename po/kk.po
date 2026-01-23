@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Kazakh (http://app.transifex.com/xfce/xfce-panel-plugins/language/kk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: kk\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: panel-plugin/xfcetimer.c:171
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "%d сағ %d мин %d сек қалды"
+
+#: panel-plugin/xfcetimer.c:174
+#, c-format
+msgid "%dm %ds left"
+msgstr "%d мин %d сек қалды"
+
+#: panel-plugin/xfcetimer.c:177
+#, c-format
+msgid "%ds left"
+msgstr "%d сек қалды"
+
+#: panel-plugin/xfcetimer.c:181
+msgid " (Paused)"
+msgstr " (Кідіртілді)"
+
+#. Display the name of the alarm when the countdown ends
+#: panel-plugin/xfcetimer.c:217
+#, c-format
+msgid ""
+"Beeep! :) \n"
+"Time is up for the alarm %s."
+msgstr "Бип! :) \n%s дабылының уақыты аяқталды."
+
+#: panel-plugin/xfcetimer.c:218
+#, c-format
+msgid "Timer %s"
+msgstr "%s таймері"
+
+#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
+msgid "Close"
+msgstr "Жабу"
+
+#: panel-plugin/xfcetimer.c:228
+msgid "Rerun the timer"
+msgstr "Таймерді қайта іске қосу"
+
+#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
+msgid "Add new alarm"
+msgstr "Жаңа дабылды қосу"
+
+#: panel-plugin/xfcetimer.c:518
+msgid "Pause timer"
+msgstr "Таймерді кідірту"
+
+#: panel-plugin/xfcetimer.c:525
+msgid "Resume timer"
+msgstr "Таймерді жалғастыру"
+
+#: panel-plugin/xfcetimer.c:531
+msgid "Stop timer"
+msgstr "Таймерді тоқтату"
+
+#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%d сағ %d мин %d сек"
+
+#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
+#, c-format
+msgid "%dm %ds"
+msgstr "%d мин %d сек"
+
+#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
+#, c-format
+msgid "%ds"
+msgstr "%d сек"
+
+#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
+#, c-format
+msgid "At %02d:%02d"
+msgstr "%02d:%02d уақытында"
+
+#: panel-plugin/xfcetimer.c:707
+#, c-format
+msgid "At %02d:%02dZ"
+msgstr "%02d:%02dZ уақытында"
+
+#: panel-plugin/xfcetimer.c:822
+msgid "Name:"
+msgstr "Аты:"
+
+#: panel-plugin/xfcetimer.c:833
+msgid "Enter the countdown time"
+msgstr "Кері санау уақытын енгізіңіз"
+
+#: panel-plugin/xfcetimer.c:838
+msgid "Enter the time of alarm (24h format)"
+msgstr "Дабыл уақытын енгізіңіз (24 сағат пішімі)"
+
+#: panel-plugin/xfcetimer.c:853
+msgid "h  "
+msgstr "сағ "
+
+#: panel-plugin/xfcetimer.c:860
+msgid "m  "
+msgstr "мин "
+
+#: panel-plugin/xfcetimer.c:867
+msgid "s  "
+msgstr "сек "
+
+#: panel-plugin/xfcetimer.c:870
+msgid "or"
+msgstr "немесе"
+
+#: panel-plugin/xfcetimer.c:890
+msgid "UTC"
+msgstr "UTC"
+
+#: panel-plugin/xfcetimer.c:902
+msgid "Command to run:"
+msgstr "Орындалатын команда:"
+
+#: panel-plugin/xfcetimer.c:912
+msgid "Alarm to run:"
+msgstr "Орындалатын дабыл:"
+
+#. add alarm autostart check button
+#: panel-plugin/xfcetimer.c:939
+msgid "Auto start when plugin loads"
+msgstr "Плагин жүктелгенде автоматты түрде іске қосу"
+
+#: panel-plugin/xfcetimer.c:949
+msgid "Cancel"
+msgstr "Бас тарту"
+
+#: panel-plugin/xfcetimer.c:954
+msgid "Accept"
+msgstr "Қабылдау"
+
+#: panel-plugin/xfcetimer.c:1006
+msgid "Edit alarm"
+msgstr "Дабылды түзету"
+
+#: panel-plugin/xfcetimer.c:1599
+msgid "Timer Options"
+msgstr "Таймер опциялары"
+
+#: panel-plugin/xfcetimer.c:1638
+msgid "Timer name"
+msgstr "Таймер аты"
+
+#: panel-plugin/xfcetimer.c:1643
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr "Кері санау кезеңі /\nДабыл уақыты"
+
+#: panel-plugin/xfcetimer.c:1646
+msgid "Alarm command"
+msgstr "Дабыл командасы"
+
+#: panel-plugin/xfcetimer.c:1665
+msgid "Add"
+msgstr "Қосу"
+
+#: panel-plugin/xfcetimer.c:1672
+msgid "Edit"
+msgstr "Түзету"
+
+#: panel-plugin/xfcetimer.c:1679
+msgid "Remove"
+msgstr "Өшіру"
+
+#: panel-plugin/xfcetimer.c:1687
+msgid "Up"
+msgstr "Жоғары"
+
+#: panel-plugin/xfcetimer.c:1694
+msgid "Down"
+msgstr "Төмен"
+
+#: panel-plugin/xfcetimer.c:1710
+msgid "Don't display a warning  if an alarm command is set"
+msgstr "Дабыл командасы орнатылса, ескертуді көрсетпеу"
+
+#. Default alarm command config
+#: panel-plugin/xfcetimer.c:1722
+msgid "Use a default alarm command"
+msgstr "Әдепкі дабыл командасын қолдану"
+
+#: panel-plugin/xfcetimer.c:1731
+msgid "Default command: "
+msgstr "Әдепкі команда: "
+
+#. Alarm repetitions config
+#: panel-plugin/xfcetimer.c:1748
+msgid "Repeat the alarm command"
+msgstr "Дабыл командасын қайталау"
+
+#: panel-plugin/xfcetimer.c:1759
+msgid "Number of repetitions"
+msgstr "Қайталау саны"
+
+#: panel-plugin/xfcetimer.c:1768
+msgid "  Time interval (sec.)"
+msgstr " Уақыт аралығы (сек.)"
+
+#: panel-plugin/xfcetimer.c:1828
+msgid "About Timer plugin"
+msgstr "Таймер плагині туралы"
+
+#: panel-plugin/xfcetimer.c:1831
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr "Кері санау таймерлерін немесе белгіленген уақыттағы дабылдарды анықтауға арналған плагин."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "Xfce4 таймері"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "Xfce панеліне арналған таймер плагині"
