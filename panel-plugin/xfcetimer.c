@@ -1707,7 +1707,7 @@ plugin_create_options (XfcePanelPlugin *plugin, plugin_data *pd)
                       BORDER);
 
   button = gtk_check_button_new_with_label (
-      _("Don't display a warning  if an alarm command is set"));
+      _("Don't display a warning if an alarm command is set"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), pd->nowin_if_alarm);
   g_signal_connect (G_OBJECT (button), "toggled",
                     G_CALLBACK (toggle_nowin_if_alarm), pd);
