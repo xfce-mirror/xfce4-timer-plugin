@@ -92,6 +92,7 @@ repeat_alarm (gpointer data)
     command = g_strdup("");
 
   g_spawn_command_line_async (command, NULL);
+  g_free (command);
   alrm->rem_repetitions = alrm->rem_repetitions - 1;
   return TRUE;
 }
