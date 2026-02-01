@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-07-18 11:08+0200\n"
+"POT-Creation-Date: 2026-02-01 01:00+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Gordon Freeman, 2023\n"
 "Language-Team: Ukrainian (http://app.transifex.com/xfce/xfce-panel-plugins/language/uk/)\n"
@@ -21,213 +21,213 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:172
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "залишилось %dг %dх %dс"
 
-#: panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%dm %ds left"
 msgstr "залишилось %dх %dс"
 
-#: panel-plugin/xfcetimer.c:177
+#: panel-plugin/xfcetimer.c:178
 #, c-format
 msgid "%ds left"
 msgstr "залишилось %dс"
 
-#: panel-plugin/xfcetimer.c:181
+#: panel-plugin/xfcetimer.c:182
 msgid " (Paused)"
 msgstr "(Призупинено)"
 
 #. Display the name of the alarm when the countdown ends
-#: panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Все-е-е! :) \nЧас для будильника %s."
 
-#: panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:219
 #, c-format
 msgid "Timer %s"
 msgstr "Таймер %s"
 
-#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
+#: panel-plugin/xfcetimer.c:228 panel-plugin/xfcetimer.c:1602
 msgid "Close"
 msgstr "Закрити"
 
-#: panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:229
 msgid "Rerun the timer"
 msgstr "Перезапустити таймер"
 
-#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
+#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
 msgid "Add new alarm"
 msgstr "Додати новий сигнал"
 
-#: panel-plugin/xfcetimer.c:518
+#: panel-plugin/xfcetimer.c:519
 msgid "Pause timer"
 msgstr "Призупинити таймер"
 
-#: panel-plugin/xfcetimer.c:525
+#: panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Відновити таймер"
 
-#: panel-plugin/xfcetimer.c:531
+#: panel-plugin/xfcetimer.c:532
 msgid "Stop timer"
 msgstr "Зупинити таймер"
 
-#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
+#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dг %dх %dс"
 
-#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
+#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
 #, c-format
 msgid "%dm %ds"
 msgstr "%dх %dс"
 
-#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
+#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
 #, c-format
 msgid "%ds"
 msgstr "%dс"
 
-#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
+#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
 #, c-format
 msgid "At %02d:%02d"
 msgstr "В %02d:%02d"
 
-#: panel-plugin/xfcetimer.c:707
+#: panel-plugin/xfcetimer.c:708
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr "В %02d:%02dZ"
 
-#: panel-plugin/xfcetimer.c:822
+#: panel-plugin/xfcetimer.c:823
 msgid "Name:"
 msgstr "Назва:"
 
-#: panel-plugin/xfcetimer.c:833
+#: panel-plugin/xfcetimer.c:834
 msgid "Enter the countdown time"
 msgstr "Введіть час зворотного відліку"
 
-#: panel-plugin/xfcetimer.c:838
+#: panel-plugin/xfcetimer.c:839
 msgid "Enter the time of alarm (24h format)"
 msgstr "Введіть час спрацьовування сигналу (в форматі 24 годин)"
 
-#: panel-plugin/xfcetimer.c:853
+#: panel-plugin/xfcetimer.c:854
 msgid "h  "
 msgstr "г  "
 
-#: panel-plugin/xfcetimer.c:860
+#: panel-plugin/xfcetimer.c:861
 msgid "m  "
 msgstr "х  "
 
-#: panel-plugin/xfcetimer.c:867
+#: panel-plugin/xfcetimer.c:868
 msgid "s  "
 msgstr "с  "
 
-#: panel-plugin/xfcetimer.c:870
+#: panel-plugin/xfcetimer.c:871
 msgid "or"
 msgstr "або"
 
-#: panel-plugin/xfcetimer.c:890
+#: panel-plugin/xfcetimer.c:891
 msgid "UTC"
 msgstr "UTC"
 
-#: panel-plugin/xfcetimer.c:902
+#: panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
 msgstr "Команда для запуску:"
 
-#: panel-plugin/xfcetimer.c:912
+#: panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
 msgstr "Сигнал для запуску:"
 
 #. add alarm autostart check button
-#: panel-plugin/xfcetimer.c:939
+#: panel-plugin/xfcetimer.c:940
 msgid "Auto start when plugin loads"
 msgstr "Автозапуск при завантаженні додатку"
 
-#: panel-plugin/xfcetimer.c:949
+#: panel-plugin/xfcetimer.c:950
 msgid "Cancel"
 msgstr "Відмінити"
 
-#: panel-plugin/xfcetimer.c:954
+#: panel-plugin/xfcetimer.c:955
 msgid "Accept"
 msgstr "Прийняти"
 
-#: panel-plugin/xfcetimer.c:1006
+#: panel-plugin/xfcetimer.c:1007
 msgid "Edit alarm"
 msgstr "Редагувати сигнал"
 
-#: panel-plugin/xfcetimer.c:1599
+#: panel-plugin/xfcetimer.c:1600
 msgid "Timer Options"
 msgstr "Параметри таймера"
 
-#: panel-plugin/xfcetimer.c:1638
+#: panel-plugin/xfcetimer.c:1639
 msgid "Timer name"
 msgstr "Назва таймера"
 
-#: panel-plugin/xfcetimer.c:1643
+#: panel-plugin/xfcetimer.c:1644
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Період зворотного відліку /\nЧас сигналу"
 
-#: panel-plugin/xfcetimer.c:1646
+#: panel-plugin/xfcetimer.c:1647
 msgid "Alarm command"
 msgstr "Команда сигналу"
 
-#: panel-plugin/xfcetimer.c:1665
+#: panel-plugin/xfcetimer.c:1666
 msgid "Add"
 msgstr "Додати"
 
-#: panel-plugin/xfcetimer.c:1672
+#: panel-plugin/xfcetimer.c:1673
 msgid "Edit"
 msgstr "Змінити"
 
-#: panel-plugin/xfcetimer.c:1679
+#: panel-plugin/xfcetimer.c:1680
 msgid "Remove"
 msgstr "Вилучити"
 
-#: panel-plugin/xfcetimer.c:1687
+#: panel-plugin/xfcetimer.c:1688
 msgid "Up"
 msgstr "Вгору"
 
-#: panel-plugin/xfcetimer.c:1694
+#: panel-plugin/xfcetimer.c:1695
 msgid "Down"
 msgstr "Вниз"
 
-#: panel-plugin/xfcetimer.c:1710
-msgid "Don't display a warning  if an alarm command is set"
-msgstr "Не показувати попередження, якщо встановлено команду будильника"
+#: panel-plugin/xfcetimer.c:1711
+msgid "Don't display a warning if an alarm command is set"
+msgstr ""
 
 #. Default alarm command config
-#: panel-plugin/xfcetimer.c:1722
+#: panel-plugin/xfcetimer.c:1723
 msgid "Use a default alarm command"
 msgstr "Використання типової команди будильника"
 
-#: panel-plugin/xfcetimer.c:1731
+#: panel-plugin/xfcetimer.c:1732
 msgid "Default command: "
 msgstr "Типова команда:"
 
 #. Alarm repetitions config
-#: panel-plugin/xfcetimer.c:1748
+#: panel-plugin/xfcetimer.c:1749
 msgid "Repeat the alarm command"
 msgstr "Повторення команди будильника"
 
-#: panel-plugin/xfcetimer.c:1759
+#: panel-plugin/xfcetimer.c:1760
 msgid "Number of repetitions"
 msgstr "Кількість повторів"
 
-#: panel-plugin/xfcetimer.c:1768
+#: panel-plugin/xfcetimer.c:1769
 msgid "  Time interval (sec.)"
 msgstr "  Інтервал часу (сек.)"
 
-#: panel-plugin/xfcetimer.c:1828
+#: panel-plugin/xfcetimer.c:1829
 msgid "About Timer plugin"
 msgstr "Про плагін таймера"
 
-#: panel-plugin/xfcetimer.c:1831
+#: panel-plugin/xfcetimer.c:1832
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Додаток, що визначає таймер зворотного відліку або будильник в заданий час."
 
