@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-07-18 11:08+0200\n"
+"POT-Creation-Date: 2026-02-01 01:00+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
 "Language-Team: Romanian (http://app.transifex.com/xfce/xfce-panel-plugins/language/ro/)\n"
@@ -18,213 +18,213 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:172
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "Timp rămas: %dh %dm %ds"
 
-#: panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%dm %ds left"
 msgstr "Timp rămas: %dm %ds"
 
-#: panel-plugin/xfcetimer.c:177
+#: panel-plugin/xfcetimer.c:178
 #, c-format
 msgid "%ds left"
 msgstr "Timp rămas: %ds"
 
-#: panel-plugin/xfcetimer.c:181
+#: panel-plugin/xfcetimer.c:182
 msgid " (Paused)"
 msgstr " (pus în pauză)"
 
 #. Display the name of the alarm when the countdown ends
-#: panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:218
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "Biiip! :) \nA expirat timpul pentru alarma %s."
 
-#: panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:219
 #, c-format
 msgid "Timer %s"
 msgstr "Temporizator %s"
 
-#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1601
+#: panel-plugin/xfcetimer.c:228 panel-plugin/xfcetimer.c:1602
 msgid "Close"
 msgstr "Închide"
 
-#: panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:229
 msgid "Rerun the timer"
 msgstr "Rulați din nou temporizatorul"
 
-#: panel-plugin/xfcetimer.c:496 panel-plugin/xfcetimer.c:964
+#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
 msgid "Add new alarm"
 msgstr "Adaugă o nouă alarmă"
 
-#: panel-plugin/xfcetimer.c:518
+#: panel-plugin/xfcetimer.c:519
 msgid "Pause timer"
 msgstr "Pune în pauză temporizatorul"
 
-#: panel-plugin/xfcetimer.c:525
+#: panel-plugin/xfcetimer.c:526
 msgid "Resume timer"
 msgstr "Reluați temporizarea"
 
-#: panel-plugin/xfcetimer.c:531
+#: panel-plugin/xfcetimer.c:532
 msgid "Stop timer"
 msgstr "Oprire cronometru"
 
-#: panel-plugin/xfcetimer.c:605 panel-plugin/xfcetimer.c:689
+#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: panel-plugin/xfcetimer.c:607 panel-plugin/xfcetimer.c:691
+#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: panel-plugin/xfcetimer.c:609 panel-plugin/xfcetimer.c:693
+#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: panel-plugin/xfcetimer.c:617 panel-plugin/xfcetimer.c:709
+#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
 #, c-format
 msgid "At %02d:%02d"
 msgstr "La %02d:%02d"
 
-#: panel-plugin/xfcetimer.c:707
+#: panel-plugin/xfcetimer.c:708
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr "La %02d:%02dZ"
 
-#: panel-plugin/xfcetimer.c:822
+#: panel-plugin/xfcetimer.c:823
 msgid "Name:"
 msgstr "Nume:"
 
-#: panel-plugin/xfcetimer.c:833
+#: panel-plugin/xfcetimer.c:834
 msgid "Enter the countdown time"
 msgstr "Introduceți timpul numărătorii inverse"
 
-#: panel-plugin/xfcetimer.c:838
+#: panel-plugin/xfcetimer.c:839
 msgid "Enter the time of alarm (24h format)"
 msgstr "Introduceți ora alarmei (format 24 ore)"
 
-#: panel-plugin/xfcetimer.c:853
+#: panel-plugin/xfcetimer.c:854
 msgid "h  "
 msgstr "h  "
 
-#: panel-plugin/xfcetimer.c:860
+#: panel-plugin/xfcetimer.c:861
 msgid "m  "
 msgstr "m  "
 
-#: panel-plugin/xfcetimer.c:867
+#: panel-plugin/xfcetimer.c:868
 msgid "s  "
 msgstr "s  "
 
-#: panel-plugin/xfcetimer.c:870
+#: panel-plugin/xfcetimer.c:871
 msgid "or"
 msgstr "sau"
 
-#: panel-plugin/xfcetimer.c:890
+#: panel-plugin/xfcetimer.c:891
 msgid "UTC"
 msgstr "UTC"
 
-#: panel-plugin/xfcetimer.c:902
+#: panel-plugin/xfcetimer.c:903
 msgid "Command to run:"
 msgstr "Comanda de executat:"
 
-#: panel-plugin/xfcetimer.c:912
+#: panel-plugin/xfcetimer.c:913
 msgid "Alarm to run:"
 msgstr "Alarma de rulat:"
 
 #. add alarm autostart check button
-#: panel-plugin/xfcetimer.c:939
+#: panel-plugin/xfcetimer.c:940
 msgid "Auto start when plugin loads"
 msgstr "Pornire automată la încărcarea modulului"
 
-#: panel-plugin/xfcetimer.c:949
+#: panel-plugin/xfcetimer.c:950
 msgid "Cancel"
 msgstr "Anulează"
 
-#: panel-plugin/xfcetimer.c:954
+#: panel-plugin/xfcetimer.c:955
 msgid "Accept"
 msgstr "Acceptă"
 
-#: panel-plugin/xfcetimer.c:1006
+#: panel-plugin/xfcetimer.c:1007
 msgid "Edit alarm"
 msgstr "Editare alarmă"
 
-#: panel-plugin/xfcetimer.c:1599
+#: panel-plugin/xfcetimer.c:1600
 msgid "Timer Options"
 msgstr "Opțiuni temporizator"
 
-#: panel-plugin/xfcetimer.c:1638
+#: panel-plugin/xfcetimer.c:1639
 msgid "Timer name"
 msgstr "Numele temporizatorului"
 
-#: panel-plugin/xfcetimer.c:1643
+#: panel-plugin/xfcetimer.c:1644
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "Perioada de numărătoare inversă /\nOra alarmei"
 
-#: panel-plugin/xfcetimer.c:1646
+#: panel-plugin/xfcetimer.c:1647
 msgid "Alarm command"
 msgstr "Comanda de alarmă"
 
-#: panel-plugin/xfcetimer.c:1665
+#: panel-plugin/xfcetimer.c:1666
 msgid "Add"
 msgstr "Adaugă"
 
-#: panel-plugin/xfcetimer.c:1672
+#: panel-plugin/xfcetimer.c:1673
 msgid "Edit"
 msgstr "Editare"
 
-#: panel-plugin/xfcetimer.c:1679
+#: panel-plugin/xfcetimer.c:1680
 msgid "Remove"
 msgstr "Elimină"
 
-#: panel-plugin/xfcetimer.c:1687
+#: panel-plugin/xfcetimer.c:1688
 msgid "Up"
 msgstr "Sus"
 
-#: panel-plugin/xfcetimer.c:1694
+#: panel-plugin/xfcetimer.c:1695
 msgid "Down"
 msgstr "Jos"
 
-#: panel-plugin/xfcetimer.c:1710
-msgid "Don't display a warning  if an alarm command is set"
+#: panel-plugin/xfcetimer.c:1711
+msgid "Don't display a warning if an alarm command is set"
 msgstr "Nu afișează un avertisment dacă este definită o comandă de alarmă"
 
 #. Default alarm command config
-#: panel-plugin/xfcetimer.c:1722
+#: panel-plugin/xfcetimer.c:1723
 msgid "Use a default alarm command"
 msgstr "Utilizează o comandă de alarmă implicită"
 
-#: panel-plugin/xfcetimer.c:1731
+#: panel-plugin/xfcetimer.c:1732
 msgid "Default command: "
 msgstr "Comanda implicită: "
 
 #. Alarm repetitions config
-#: panel-plugin/xfcetimer.c:1748
+#: panel-plugin/xfcetimer.c:1749
 msgid "Repeat the alarm command"
 msgstr "Se repetă comanda de alarmă"
 
-#: panel-plugin/xfcetimer.c:1759
+#: panel-plugin/xfcetimer.c:1760
 msgid "Number of repetitions"
 msgstr "Numărul de repetiții"
 
-#: panel-plugin/xfcetimer.c:1768
+#: panel-plugin/xfcetimer.c:1769
 msgid "  Time interval (sec.)"
 msgstr "  Intervalul de timp (sec.)"
 
-#: panel-plugin/xfcetimer.c:1828
+#: panel-plugin/xfcetimer.c:1829
 msgid "About Timer plugin"
 msgstr "Despre modulul temporizator"
 
-#: panel-plugin/xfcetimer.c:1831
+#: panel-plugin/xfcetimer.c:1832
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "Un modul pentru a defini temporizatoare de numărătoare inversă sau alarme la momente date."
 
