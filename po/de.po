@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
-# Andreas Eitel <github-aneitel@online.de>, 2021-2023
+# Andreas Eitel <github-aneitel@online.de>, 2021-2023,2026
 # Georg Eckert <eckert.georg@gmx.de>, 2013
 # Harald Judt <h.judt@gmx.at>, 2013
 # Simon Schneider <simon@schneiderimtal.de>, 2009
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-02-01 01:00+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2021-2023\n"
+"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2021-2023,2026\n"
 "Language-Team: German (http://app.transifex.com/xfce/xfce-panel-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -201,7 +201,7 @@ msgstr "Runter"
 
 #: panel-plugin/xfcetimer.c:1711
 msgid "Don't display a warning if an alarm command is set"
-msgstr ""
+msgstr "Keine Warnung anzeigen, wenn ein Alarmsignal eingestellt ist"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1723
