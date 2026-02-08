@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2023-2024
+# Andi Chandler <andi@gowling.com>, 2023-2024,2026
 # Jackson Doak <noskcaj@ubuntu.com>, 2013
 # Jeff Bailes <thepizzaking@gmail.com>, 2007
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-02-01 01:00+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2023-2024\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2023-2024,2026\n"
 "Language-Team: English (United Kingdom) (http://app.transifex.com/xfce/xfce-panel-plugins/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -198,7 +198,7 @@ msgstr "Down"
 
 #: panel-plugin/xfcetimer.c:1711
 msgid "Don't display a warning if an alarm command is set"
-msgstr ""
+msgstr "Don't display a warning if an alarm command is set"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1723
