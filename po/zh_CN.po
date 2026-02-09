@@ -7,14 +7,14 @@
 # Hunt Xu <huntxu@live.cn>, 2008,2012
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # 玉堂白鹤 <yjwork@qq.com>, 2013-2014
-# 玉堂白鹤 <yjwork@qq.com>, 2013,2018,2021-2023
+# 玉堂白鹤 <yjwork@qq.com>, 2013,2018,2021-2023,2026
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-02-01 01:00+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2013,2018,2021-2023\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2013,2018,2021-2023,2026\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/xfce/xfce-panel-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,7 +200,7 @@ msgstr "向下"
 
 #: panel-plugin/xfcetimer.c:1711
 msgid "Don't display a warning if an alarm command is set"
-msgstr ""
+msgstr "如果已设置闹钟命令则不显示警告"
 
 #. Default alarm command config
 #: panel-plugin/xfcetimer.c:1723
