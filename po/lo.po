@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-02-01 01:00+0100\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Lao (http://app.transifex.com/xfce/xfce-panel-plugins/language/lo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: panel-plugin/xfcetimer.c:172
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "ຍັງອີກ %dຊ %dນ %dວ"
+
+#: panel-plugin/xfcetimer.c:175
+#, c-format
+msgid "%dm %ds left"
+msgstr "ຍັງອີກ %dນ %dວ"
+
+#: panel-plugin/xfcetimer.c:178
+#, c-format
+msgid "%ds left"
+msgstr "ຍັງອີກ %dວ"
+
+#: panel-plugin/xfcetimer.c:182
+msgid " (Paused)"
+msgstr " (ຢຸດຊົ່ວຄາວ)"
+
+#. Display the name of the alarm when the countdown ends
+#: panel-plugin/xfcetimer.c:218
+#, c-format
+msgid ""
+"Beeep! :) \n"
+"Time is up for the alarm %s."
+msgstr "ບີບໆ! :) \nໝົດເວລາແລ້ວສຳລັບການແຈ້ງເຕືອນ %s."
+
+#: panel-plugin/xfcetimer.c:219
+#, c-format
+msgid "Timer %s"
+msgstr "ຕົວຈັບເວລາ %s"
+
+#: panel-plugin/xfcetimer.c:228 panel-plugin/xfcetimer.c:1602
+msgid "Close"
+msgstr "ປິດ"
+
+#: panel-plugin/xfcetimer.c:229
+msgid "Rerun the timer"
+msgstr "ເລີ່ມຈັບເວລາຄືນໃໝ່"
+
+#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
+msgid "Add new alarm"
+msgstr "ເພີ່ມການແຈ້ງເຕືອນໃໝ່"
+
+#: panel-plugin/xfcetimer.c:519
+msgid "Pause timer"
+msgstr "ຢຸດຈັບເວລາຊົ່ວຄາວ"
+
+#: panel-plugin/xfcetimer.c:526
+msgid "Resume timer"
+msgstr "ຈັບເວລາຕໍ່"
+
+#: panel-plugin/xfcetimer.c:532
+msgid "Stop timer"
+msgstr "ຢຸດຈັບເວລາ"
+
+#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%dຊ %dນ %dວ"
+
+#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
+#, c-format
+msgid "%dm %ds"
+msgstr "%dນ %dວ"
+
+#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
+#, c-format
+msgid "%ds"
+msgstr "%dວ"
+
+#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
+#, c-format
+msgid "At %02d:%02d"
+msgstr "ໃນເວລາ %02d:%02d"
+
+#: panel-plugin/xfcetimer.c:708
+#, c-format
+msgid "At %02d:%02dZ"
+msgstr "ໃນເວລາ %02d:%02dZ"
+
+#: panel-plugin/xfcetimer.c:823
+msgid "Name:"
+msgstr "ຊື່:"
+
+#: panel-plugin/xfcetimer.c:834
+msgid "Enter the countdown time"
+msgstr "ປ້ອນເວລາຖອຍຫຼັງ"
+
+#: panel-plugin/xfcetimer.c:839
+msgid "Enter the time of alarm (24h format)"
+msgstr "ປ້ອນເວລາແຈ້ງເຕືອນ (ຮູບແບບ 24 ຊົ່ວໂມງ)"
+
+#: panel-plugin/xfcetimer.c:854
+msgid "h  "
+msgstr "ຊ  "
+
+#: panel-plugin/xfcetimer.c:861
+msgid "m  "
+msgstr "ນ  "
+
+#: panel-plugin/xfcetimer.c:868
+msgid "s  "
+msgstr "ວ  "
+
+#: panel-plugin/xfcetimer.c:871
+msgid "or"
+msgstr "ຫຼື"
+
+#: panel-plugin/xfcetimer.c:891
+msgid "UTC"
+msgstr "UTC"
+
+#: panel-plugin/xfcetimer.c:903
+msgid "Command to run:"
+msgstr "ຄຳສັ່ງທີ່ຈະເຮັດວຽກ:"
+
+#: panel-plugin/xfcetimer.c:913
+msgid "Alarm to run:"
+msgstr "ການແຈ້ງເຕືອນທີ່ຈະເຮັດວຽກ:"
+
+#. add alarm autostart check button
+#: panel-plugin/xfcetimer.c:940
+msgid "Auto start when plugin loads"
+msgstr "ເລີ່ມອັດຕະໂນມັດເມື່ອໂຫຼດປລັກອິນ"
+
+#: panel-plugin/xfcetimer.c:950
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#: panel-plugin/xfcetimer.c:955
+msgid "Accept"
+msgstr "ຕົກລົງ"
+
+#: panel-plugin/xfcetimer.c:1007
+msgid "Edit alarm"
+msgstr "ແກ້ໄຂການແຈ້ງເຕືອນ"
+
+#: panel-plugin/xfcetimer.c:1600
+msgid "Timer Options"
+msgstr "ຕົວເລືອກການຈັບເວລາ"
+
+#: panel-plugin/xfcetimer.c:1639
+msgid "Timer name"
+msgstr "ຊື່ຕົວຈັບເວລາ"
+
+#: panel-plugin/xfcetimer.c:1644
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr "ໄລຍະເວລາຖອຍຫຼັງ /\nເວລາແຈ້ງເຕືອນ"
+
+#: panel-plugin/xfcetimer.c:1647
+msgid "Alarm command"
+msgstr "ຄຳສັ່ງແຈ້ງເຕືອນ"
+
+#: panel-plugin/xfcetimer.c:1666
+msgid "Add"
+msgstr "ເພີ່ມ"
+
+#: panel-plugin/xfcetimer.c:1673
+msgid "Edit"
+msgstr "ແກ້ໄຂ"
+
+#: panel-plugin/xfcetimer.c:1680
+msgid "Remove"
+msgstr "ລຶບ"
+
+#: panel-plugin/xfcetimer.c:1688
+msgid "Up"
+msgstr "ຂຶ້ນ"
+
+#: panel-plugin/xfcetimer.c:1695
+msgid "Down"
+msgstr "ລົງ"
+
+#: panel-plugin/xfcetimer.c:1711
+msgid "Don't display a warning if an alarm command is set"
+msgstr "ບໍ່ຕ້ອງສະແດງຄຳເຕືອນຖ້າມີການຕັ້ງຄຳສັ່ງແຈ້ງເຕືອນແລ້ວ"
+
+#. Default alarm command config
+#: panel-plugin/xfcetimer.c:1723
+msgid "Use a default alarm command"
+msgstr "ໃຊ້ຄຳສັ່ງແຈ້ງເຕືອນມາດຕະຖານ"
+
+#: panel-plugin/xfcetimer.c:1732
+msgid "Default command: "
+msgstr "ຄຳສັ່ງມາດຕະຖານ: "
+
+#. Alarm repetitions config
+#: panel-plugin/xfcetimer.c:1749
+msgid "Repeat the alarm command"
+msgstr "ເຮັດຊ້ຳຄຳສັ່ງແຈ້ງເຕືອນ"
+
+#: panel-plugin/xfcetimer.c:1760
+msgid "Number of repetitions"
+msgstr "ຈຳນວນຄັ້ງທີ່ເຮັດຊ້ຳ"
+
+#: panel-plugin/xfcetimer.c:1769
+msgid "  Time interval (sec.)"
+msgstr "  ໄລຍະຫ່າງເວລາ (ວິນາທີ)"
+
+#: panel-plugin/xfcetimer.c:1829
+msgid "About Timer plugin"
+msgstr "ກ່ຽວກັບປລັກອິນຈັບເວລາ"
+
+#: panel-plugin/xfcetimer.c:1832
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr "ປລັກອິນສຳລັບຕັ້ງເວລາຖອຍຫຼັງ ຫຼື ແຈ້ງເຕືອນຕາມເວລາທີ່ກຳນົດ."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "ຕົວຈັບເວລາ Xfce4"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "ປລັກອິນຈັບເວລາສຳລັບແຜງ Xfce"
