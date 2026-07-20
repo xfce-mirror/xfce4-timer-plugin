@@ -1902,7 +1902,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
 
   update_pbar_orientation (pd->base, pd);
 
-  g_signal_connect (G_OBJECT (plugin), "button_press_event",
+  g_signal_connect (G_OBJECT (plugin), "button-press-event",
                     G_CALLBACK (pbar_clicked), pd);
 
   gtk_widget_show_all (GTK_WIDGET (plugin));
