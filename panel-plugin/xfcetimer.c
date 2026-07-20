@@ -1296,8 +1296,7 @@ load_settings (plugin_data *pd)
               pd->use_global_command = xfce_rc_read_bool_entry (
                   rc, "use_global_command", FALSE);
 
-              if (pd->global_command)
-                g_free (pd->global_command);
+              g_free (pd->global_command);
               pd->global_command = g_strdup (
                   (gchar *) xfce_rc_read_entry (rc, "global_command", ""));
 
@@ -1444,8 +1443,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
     list = g_list_next (list);
   }
 
-  if (pd->global_command)
-    g_free (pd->global_command);
+  g_free (pd->global_command);
 
   if (pd->liststore)
     {
@@ -1468,8 +1466,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 static void
 options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
 {
-  if (pd->global_command)
-    g_free (pd->global_command);
+  g_free (pd->global_command);
   pd->global_command = g_strdup (
       gtk_entry_get_text ((GtkEntry *) pd->glob_command_entry));
   gtk_widget_destroy (dlg);
