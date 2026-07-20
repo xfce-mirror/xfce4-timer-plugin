@@ -249,8 +249,7 @@ update_function (gpointer data)
                         g_source_remove(alrm->repeat_timeout);
                     alrm->repeat_timeout = g_timeout_add(pd->repeat_interval * 1000, repeat_alarm, alrm);
                 } else {
-                    g_free(command);
-                    command = NULL;
+                    g_clear_pointer (&command, g_free);
                 }
             }
 
@@ -1296,8 +1295,7 @@ load_settings (plugin_data *pd)
               pd->use_global_command = xfce_rc_read_bool_entry (
                   rc, "use_global_command", FALSE);
 
-              if (pd->global_command)
-                g_free (pd->global_command);
+              g_free (pd->global_command);
               pd->global_command = g_strdup (
                   (gchar *) xfce_rc_read_entry (rc, "global_command", ""));
 
@@ -1444,8 +1442,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
     list = g_list_next (list);
   }
 
-  if (pd->global_command)
-    g_free (pd->global_command);
+  g_free (pd->global_command);
 
   if (pd->liststore)
     {
@@ -1468,8 +1465,7 @@ plugin_free (XfcePanelPlugin *plugin, plugin_data *pd)
 static void
 options_dialog_response (GtkWidget *dlg, int reponse, plugin_data *pd)
 {
-  if (pd->global_command)
-    g_free (pd->global_command);
+  g_free (pd->global_command);
   pd->global_command = g_strdup (
       gtk_entry_get_text ((GtkEntry *) pd->glob_command_entry));
   gtk_widget_destroy (dlg);
@@ -1902,7 +1898,7 @@ create_plugin_control (XfcePanelPlugin *plugin)
 
   update_pbar_orientation (pd->base, pd);
 
-  g_signal_connect (G_OBJECT (plugin), "button_press_event",
+  g_signal_connect (G_OBJECT (plugin), "button-press-event",
                     G_CALLBACK (pbar_clicked), pd);
 
   gtk_widget_show_all (GTK_WIDGET (plugin));
