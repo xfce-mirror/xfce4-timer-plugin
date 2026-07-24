@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-02-01 01:00+0100\n"
+"PO-Revision-Date: 2013-07-03 19:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Georgian (http://app.transifex.com/xfce/xfce-panel-plugins/language/ka/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: panel-plugin/xfcetimer.c:172
+#, c-format
+msgid "%dh %dm %ds left"
+msgstr "დარჩა %dსთ %dწთ %dწმ"
+
+#: panel-plugin/xfcetimer.c:175
+#, c-format
+msgid "%dm %ds left"
+msgstr "დარჩა %dწთ %dწმ"
+
+#: panel-plugin/xfcetimer.c:178
+#, c-format
+msgid "%ds left"
+msgstr "%ds დარჩა"
+
+#: panel-plugin/xfcetimer.c:182
+msgid " (Paused)"
+msgstr " (შეჩერებულია)"
+
+#. Display the name of the alarm when the countdown ends
+#: panel-plugin/xfcetimer.c:218
+#, c-format
+msgid ""
+"Beeep! :) \n"
+"Time is up for the alarm %s."
+msgstr "პიპიიიიიიიიიიპ! :)\nგანგაშის %s ვადა ამოიწურა."
+
+#: panel-plugin/xfcetimer.c:219
+#, c-format
+msgid "Timer %s"
+msgstr "წამზომი %s"
+
+#: panel-plugin/xfcetimer.c:228 panel-plugin/xfcetimer.c:1602
+msgid "Close"
+msgstr "დახურვა"
+
+#: panel-plugin/xfcetimer.c:229
+msgid "Rerun the timer"
+msgstr "ტაიმერის თავიდან გაშვება"
+
+#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
+msgid "Add new alarm"
+msgstr "ახალი განგაშის დამატება"
+
+#: panel-plugin/xfcetimer.c:519
+msgid "Pause timer"
+msgstr "წამმზომის პაუზა"
+
+#: panel-plugin/xfcetimer.c:526
+msgid "Resume timer"
+msgstr "ტაიმერის გაგრძელება"
+
+#: panel-plugin/xfcetimer.c:532
+msgid "Stop timer"
+msgstr "ტაიმერის გაჩერება"
+
+#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
+#, c-format
+msgid "%dh %dm %ds"
+msgstr "%dსთ %dწთ %dწმ"
+
+#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
+#, c-format
+msgid "%dm %ds"
+msgstr "%dწთ %dწმ"
+
+#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
+#, c-format
+msgid "%ds"
+msgstr "%dწმ"
+
+#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
+#, c-format
+msgid "At %02d:%02d"
+msgstr "%02d:%02d-ზე"
+
+#: panel-plugin/xfcetimer.c:708
+#, c-format
+msgid "At %02d:%02dZ"
+msgstr "%02d:%02dZ-ზე"
+
+#: panel-plugin/xfcetimer.c:823
+msgid "Name:"
+msgstr "სახელი:"
+
+#: panel-plugin/xfcetimer.c:834
+msgid "Enter the countdown time"
+msgstr "შეიყვანეთ ათვლის დრო"
+
+#: panel-plugin/xfcetimer.c:839
+msgid "Enter the time of alarm (24h format)"
+msgstr "შეიყვანეთ განგაშის დრო (24სთ-იან ფორმატში)"
+
+#: panel-plugin/xfcetimer.c:854
+msgid "h  "
+msgstr "სთ  "
+
+#: panel-plugin/xfcetimer.c:861
+msgid "m  "
+msgstr "წთ  "
+
+#: panel-plugin/xfcetimer.c:868
+msgid "s  "
+msgstr "წმ  "
+
+#: panel-plugin/xfcetimer.c:871
+msgid "or"
+msgstr "ან"
+
+#: panel-plugin/xfcetimer.c:891
+msgid "UTC"
+msgstr "UTC"
+
+#: panel-plugin/xfcetimer.c:903
+msgid "Command to run:"
+msgstr "გასაშვები ბრძანება:"
+
+#: panel-plugin/xfcetimer.c:913
+msgid "Alarm to run:"
+msgstr "გასაშვები განგაში:"
+
+#. add alarm autostart check button
+#: panel-plugin/xfcetimer.c:940
+msgid "Auto start when plugin loads"
+msgstr "ავტოდაწყება დამატების ჩატვირთვისას"
+
+#: panel-plugin/xfcetimer.c:950
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: panel-plugin/xfcetimer.c:955
+msgid "Accept"
+msgstr "დასტური"
+
+#: panel-plugin/xfcetimer.c:1007
+msgid "Edit alarm"
+msgstr "განგაშის ჩასწორება"
+
+#: panel-plugin/xfcetimer.c:1600
+msgid "Timer Options"
+msgstr "წამზომის მორგება"
+
+#: panel-plugin/xfcetimer.c:1639
+msgid "Timer name"
+msgstr "წამზომის სახელი"
+
+#: panel-plugin/xfcetimer.c:1644
+msgid ""
+"Countdown period /\n"
+"Alarm time"
+msgstr "ათვლის პერიოდი /\nგანგაშის დრო"
+
+#: panel-plugin/xfcetimer.c:1647
+msgid "Alarm command"
+msgstr "განგაშის ბრძანება"
+
+#: panel-plugin/xfcetimer.c:1666
+msgid "Add"
+msgstr "დამატება"
+
+#: panel-plugin/xfcetimer.c:1673
+msgid "Edit"
+msgstr "ჩასწორება"
+
+#: panel-plugin/xfcetimer.c:1680
+msgid "Remove"
+msgstr "წაშლა"
+
+#: panel-plugin/xfcetimer.c:1688
+msgid "Up"
+msgstr "მაღლა"
+
+#: panel-plugin/xfcetimer.c:1695
+msgid "Down"
+msgstr "გამორთულია"
+
+#: panel-plugin/xfcetimer.c:1711
+msgid "Don't display a warning if an alarm command is set"
+msgstr "გაფრთხილების არჩვენება, თუ განგაშის ბრძანება დაყენებულია"
+
+#. Default alarm command config
+#: panel-plugin/xfcetimer.c:1723
+msgid "Use a default alarm command"
+msgstr "ნაგულისხმევი განგაშის ბრძანების გამოყენება"
+
+#: panel-plugin/xfcetimer.c:1732
+msgid "Default command: "
+msgstr "ნაგულისხმევი ბრძანება: "
+
+#. Alarm repetitions config
+#: panel-plugin/xfcetimer.c:1749
+msgid "Repeat the alarm command"
+msgstr "განგაშის ბრძანების გამეორება"
+
+#: panel-plugin/xfcetimer.c:1760
+msgid "Number of repetitions"
+msgstr "გამეორებების რაოდენობა"
+
+#: panel-plugin/xfcetimer.c:1769
+msgid "  Time interval (sec.)"
+msgstr "  დროის ინტერვალი (წმ)"
+
+#: panel-plugin/xfcetimer.c:1829
+msgid "About Timer plugin"
+msgstr "წამზომის დამატების შესახებ"
+
+#: panel-plugin/xfcetimer.c:1832
+msgid "A plugin to define countdown timers or alarms at given times."
+msgstr "დამატება ათვლის წამზომების, ან მითითებულ დროზე განგაშების აღწერისთვის."
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:5
+msgid "Xfce4 Timer"
+msgstr "Xfce4-ის წამზომი"
+
+#: panel-plugin/xfce4-timer-plugin.desktop.in:6
+msgid "Timer plugin for Xfce panel"
+msgstr "წამზომის დამატება Xfce-ის პანელისთვის"
