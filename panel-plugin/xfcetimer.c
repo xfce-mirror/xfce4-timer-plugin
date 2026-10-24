@@ -1326,27 +1326,22 @@ save_settings (XfcePanelPlugin *plugin, plugin_data *pd)
   gint row_count;
   GList *list;
   alarm_t *alrm;
-  FILE *conffile;
   XfceRc *rc;
   gchar *file;
 
   if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
     return;
 
-  /**
-   * We do this to start a fresh config file, otherwise if the old config file
-   * is longer,   the tail will not get truncated
-   * See http://bugzilla.xfce.org/show_bug.cgi?id=2647
-   * for a related bug report
-   **/
-  conffile = fopen (file, "w");
-  if (conffile)
-    fclose (conffile);
-
   rc = xfce_rc_simple_open (file, FALSE);
 
   if (!rc)
     return;
+
+  /* clear old config (necessary to remove old timers) */
+  gchar **groups = xfce_rc_get_groups (rc);
+  for (gint n = 0; groups[n] != NULL; n++)
+    xfce_rc_delete_group (rc, groups[n], TRUE);
+  g_strfreev (groups);
 
   /* Assign groupnum to each alarm in the order they will be written to rc.
    * These groupnums will be saved whenever 'next alarm' is set
