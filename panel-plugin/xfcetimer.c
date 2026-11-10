@@ -1816,8 +1816,12 @@ Muhammad Ali Makki <makki.ma@gmail.com>\n\
 Hunt Xu <huntxu@live.cn>\n\
 Cheng-Chia Tseng <pswo10680@gmail.com>\n";
 
-  gtk_show_about_dialog (
-      NULL, "title", _("About Timer plugin"), "logo-icon-name", "xfce4-timer-plugin", "license",
+#if LIBXFCE4PANEL_CHECK_VERSION(4, 21, 4)
+  xfce_panel_gtk_show_about_dialog (
+#else
+  gtk_show_about_dialog (NULL,
+#endif
+      "title", _("About Timer plugin"), "logo-icon-name", "xfce4-timer-plugin", "license",
       xfce_get_license_text (XFCE_LICENSE_TEXT_GPL), "version", VERSION_FULL,
       "program-name", PACKAGE_NAME, "comments",
       _("A plugin to define countdown timers or alarms at given times."),
