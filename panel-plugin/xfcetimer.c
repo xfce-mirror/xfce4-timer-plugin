@@ -422,33 +422,8 @@ start_stop_callback (GtkWidget* menuitem, gpointer list)
 static void
 restart_timer_callback (GtkWidget* menuitem, gpointer list)
 {
-      GList *listitem = (GList *) list;
-      plugin_data *pd;
-      alarm_t *alrm;
-
-      alrm = (alarm_t *) listitem->data;
-      pd = (plugin_data *) alrm->pd;
-
-  /* Stop the timer first */
-  if (alrm->timer_on)
-    {
-      if(alrm->timer)
-         g_timer_destroy(alrm->timer);
-      if(alrm->timeout)
-         g_source_remove(alrm->timeout);
-
-        alrm->timer = NULL;
-        alrm->timeout = 0;
-        alrm->is_paused = FALSE;
-        alrm->timer_on = FALSE;
-
-      /* Disable tooltips, reset pbar */
-      gtk_widget_set_tooltip_text (GTK_WIDGET (pd->base), "");
-      gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (pd->pbar), 0);
-    }
-
-  /* Start the timer again */
-  start_timer (pd, alrm);
+  start_stop_callback (menuitem, list);
+  start_stop_callback (menuitem, list);
 }
 
 
