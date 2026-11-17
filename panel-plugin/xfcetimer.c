@@ -57,6 +57,9 @@ dialog_response (GtkWidget *dlg, int response, alarm_t* alrm);
 
 static void
 start_stop_callback (GtkWidget* menuitem, gpointer data);
+
+static void
+restart_timer_callback (GtkWidget* menuitem, gpointer data);
 XFCE_PANEL_PLUGIN_REGISTER ( create_plugin_control);
 
 void
@@ -411,6 +414,20 @@ start_stop_callback (GtkWidget* menuitem, gpointer list)
 
 
 
+/**
+ * This is the callback function called when the
+ * restart item is selected in the popup menu.
+ * It stops the timer and starts it again.
+ **/
+static void
+restart_timer_callback (GtkWidget* menuitem, gpointer list)
+{
+  start_stop_callback (menuitem, list);
+  start_stop_callback (menuitem, list);
+}
+
+
+
 static void
 pause_resume_selected (GtkWidget* menuitem, gpointer data)
 {
@@ -527,6 +544,12 @@ make_menu (plugin_data *pd)
             g_signal_connect (G_OBJECT(menu_item), "activate",
                               G_CALLBACK(pause_resume_selected), alrm);
         }
+
+        /* Restart menu item - only for active timers */
+        menu_item = create_menu_item(_("Restart timer"), "media-seek-backward");
+        gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu), menu_item);
+        g_signal_connect (G_OBJECT(menu_item), "activate",
+                          G_CALLBACK(restart_timer_callback), list);
 
         menu_item = create_menu_item(_("Stop timer"), "media-playback-stop");
         gtk_menu_shell_append (GTK_MENU_SHELL(pd->menu), menu_item);
