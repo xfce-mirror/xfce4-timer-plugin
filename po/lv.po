@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-timer-plugin package.
 # 
 # Translators:
+# Rihards Priedītis <rprieditis@gmail.com>, 2007,2026
 # rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-07 00:56+0200\n"
+"POT-Creation-Date: 2026-11-18 13:03+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: rihards Prieditis <rprieditis@inbox.lv>, 2007\n"
 "Language-Team: Latvian (http://app.transifex.com/xfce/xfce-panel-plugins/language/lv/)\n"
@@ -18,219 +19,224 @@ msgstr ""
 "Language: lv\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
-#: panel-plugin/xfcetimer.c:171
+#: panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%dh %dm %ds left"
-msgstr "%dh %dm %ds palicis"
+msgstr "Atlicis: %dh %dm %ds"
 
-#: panel-plugin/xfcetimer.c:174
+#: panel-plugin/xfcetimer.c:178
 #, c-format
 msgid "%dm %ds left"
-msgstr "%dm %ds palicis"
-
-#: panel-plugin/xfcetimer.c:177
-#, c-format
-msgid "%ds left"
-msgstr "%ds palicis"
+msgstr "Atlicis: %dm %ds"
 
 #: panel-plugin/xfcetimer.c:181
+#, c-format
+msgid "%ds left"
+msgstr "Atlicis: %ds"
+
+#: panel-plugin/xfcetimer.c:185
 msgid " (Paused)"
-msgstr ""
+msgstr " (pauzēts)"
 
 #. Display the name of the alarm when the countdown ends
-#: panel-plugin/xfcetimer.c:217
+#: panel-plugin/xfcetimer.c:221
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
-msgstr ""
+msgstr "Pīīīp! :) \nModinātāja „%s” laiks ir pienācis."
 
-#: panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:222
 #, c-format
 msgid "Timer %s"
-msgstr ""
+msgstr "Taimeris %s"
 
-#: panel-plugin/xfcetimer.c:227 panel-plugin/xfcetimer.c:1577
+#: panel-plugin/xfcetimer.c:231 panel-plugin/xfcetimer.c:1616
 msgid "Close"
 msgstr "Aizvērt"
 
-#: panel-plugin/xfcetimer.c:228
+#: panel-plugin/xfcetimer.c:232
 msgid "Rerun the timer"
-msgstr ""
+msgstr "Palaist taimeri vēlreiz"
 
-#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
+#: panel-plugin/xfcetimer.c:513 panel-plugin/xfcetimer.c:987
 msgid "Add new alarm"
-msgstr "Pievienot jaunu trauksmi"
+msgstr "Pievienot jaunu modinātāju"
 
-#: panel-plugin/xfcetimer.c:519
+#: panel-plugin/xfcetimer.c:535
 msgid "Pause timer"
-msgstr ""
+msgstr "Pauzēt taimeri"
 
-#: panel-plugin/xfcetimer.c:526
+#: panel-plugin/xfcetimer.c:542
 msgid "Resume timer"
-msgstr ""
+msgstr "Atsākt taimeri"
 
-#: panel-plugin/xfcetimer.c:532
+#. Restart menu item - only for active timers
+#: panel-plugin/xfcetimer.c:549
+msgid "Restart timer"
+msgstr "Sākt taimeri no jauna"
+
+#: panel-plugin/xfcetimer.c:554
 msgid "Stop timer"
 msgstr "Apturēt taimeri"
 
-#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
+#: panel-plugin/xfcetimer.c:628 panel-plugin/xfcetimer.c:712
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%dh %dm %ds"
 
-#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
+#: panel-plugin/xfcetimer.c:630 panel-plugin/xfcetimer.c:714
 #, c-format
 msgid "%dm %ds"
 msgstr "%dm %ds"
 
-#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
+#: panel-plugin/xfcetimer.c:632 panel-plugin/xfcetimer.c:716
 #, c-format
 msgid "%ds"
 msgstr "%ds"
 
-#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
+#: panel-plugin/xfcetimer.c:640 panel-plugin/xfcetimer.c:732
 #, c-format
 msgid "At %02d:%02d"
-msgstr "Pie %02d:%02d"
+msgstr "Plkst. %02d:%02d"
 
-#: panel-plugin/xfcetimer.c:708
+#: panel-plugin/xfcetimer.c:730
 #, c-format
 msgid "At %02d:%02dZ"
-msgstr ""
+msgstr "Plkst. %02d:%02dZ"
 
-#: panel-plugin/xfcetimer.c:823
+#: panel-plugin/xfcetimer.c:845
 msgid "Name:"
 msgstr "Nosaukums:"
 
-#: panel-plugin/xfcetimer.c:834
+#: panel-plugin/xfcetimer.c:856
 msgid "Enter the countdown time"
-msgstr "Ievadiet atskaites punkta laiku"
-
-#: panel-plugin/xfcetimer.c:839
-msgid "Enter the time of alarm (24h format)"
-msgstr "Ievadiet trauksmes laiku (24st formāts)"
-
-#: panel-plugin/xfcetimer.c:854
-msgid "h  "
-msgstr "st  "
+msgstr "Ievadiet atpakaļskaitīšanas laiku"
 
 #: panel-plugin/xfcetimer.c:861
+msgid "Enter the time of alarm (24h format)"
+msgstr "Ievadiet modinātāja laiku (24 stundu formātā)"
+
+#: panel-plugin/xfcetimer.c:876
+msgid "h  "
+msgstr "h  "
+
+#: panel-plugin/xfcetimer.c:883
 msgid "m  "
 msgstr "m  "
 
-#: panel-plugin/xfcetimer.c:868
+#: panel-plugin/xfcetimer.c:890
 msgid "s  "
 msgstr "s  "
 
-#: panel-plugin/xfcetimer.c:871
+#: panel-plugin/xfcetimer.c:893
 msgid "or"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:891
-msgid "UTC"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:903
-msgid "Command to run:"
-msgstr ""
+msgstr "vai"
 
 #: panel-plugin/xfcetimer.c:913
+msgid "UTC"
+msgstr "UTC"
+
+#: panel-plugin/xfcetimer.c:925
+msgid "Command to run:"
+msgstr "Izpildāmā komanda:"
+
+#: panel-plugin/xfcetimer.c:935
 msgid "Alarm to run:"
-msgstr ""
+msgstr "Palaižamais modinātājs:"
 
 #. add alarm autostart check button
-#: panel-plugin/xfcetimer.c:940
+#: panel-plugin/xfcetimer.c:962
 msgid "Auto start when plugin loads"
-msgstr ""
+msgstr "Startēt automātiski, kad ielādēts spraudnis"
 
-#: panel-plugin/xfcetimer.c:950
+#: panel-plugin/xfcetimer.c:972
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
-#: panel-plugin/xfcetimer.c:955
+#: panel-plugin/xfcetimer.c:977
 msgid "Accept"
-msgstr ""
+msgstr "Pieņemt"
 
-#: panel-plugin/xfcetimer.c:1007
+#: panel-plugin/xfcetimer.c:1029
 msgid "Edit alarm"
-msgstr "Rediģēt trauksmi"
+msgstr "Rediģēt modinātāju"
 
-#: panel-plugin/xfcetimer.c:1575
+#: panel-plugin/xfcetimer.c:1614
 msgid "Timer Options"
-msgstr ""
+msgstr "Taimera opcijas"
 
-#: panel-plugin/xfcetimer.c:1615
+#: panel-plugin/xfcetimer.c:1653
 msgid "Timer name"
-msgstr ""
+msgstr "Taimera nosaukums"
 
-#: panel-plugin/xfcetimer.c:1620
+#: panel-plugin/xfcetimer.c:1658
 msgid ""
 "Countdown period /\n"
 "Alarm time"
-msgstr "Atskaites periods /\nTrauksmes laiks"
+msgstr "Atpakaļskaitīšanas periods /\nmodinātāja laiks"
 
-#: panel-plugin/xfcetimer.c:1623
+#: panel-plugin/xfcetimer.c:1661
 msgid "Alarm command"
-msgstr "Trauksmes komanda"
+msgstr "Modinātāja komanda"
 
-#: panel-plugin/xfcetimer.c:1642
+#: panel-plugin/xfcetimer.c:1680
 msgid "Add"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:1649
-msgid "Edit"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:1656
-msgid "Remove"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:1664
-msgid "Up"
-msgstr ""
-
-#: panel-plugin/xfcetimer.c:1671
-msgid "Down"
-msgstr ""
+msgstr "Pievienot"
 
 #: panel-plugin/xfcetimer.c:1687
-msgid "Don't display a warning  if an alarm command is set"
-msgstr ""
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: panel-plugin/xfcetimer.c:1694
+msgid "Remove"
+msgstr "Noņemt"
+
+#: panel-plugin/xfcetimer.c:1702
+msgid "Up"
+msgstr "Augšup"
+
+#: panel-plugin/xfcetimer.c:1709
+msgid "Down"
+msgstr "Lejup"
+
+#: panel-plugin/xfcetimer.c:1725
+msgid "Don't display a warning if an alarm command is set"
+msgstr "Nerādīt brīdinājumu, ja iestatīta modinātāja komanda"
 
 #. Default alarm command config
-#: panel-plugin/xfcetimer.c:1699
+#: panel-plugin/xfcetimer.c:1737
 msgid "Use a default alarm command"
-msgstr ""
+msgstr "Izmantot noklusējuma modinātāja komandu"
 
-#: panel-plugin/xfcetimer.c:1708
+#: panel-plugin/xfcetimer.c:1746
 msgid "Default command: "
-msgstr ""
+msgstr "Noklusējuma komanda: "
 
 #. Alarm repetitions config
-#: panel-plugin/xfcetimer.c:1725
+#: panel-plugin/xfcetimer.c:1763
 msgid "Repeat the alarm command"
-msgstr ""
+msgstr "Atkārtot modinātāja komandu"
 
-#: panel-plugin/xfcetimer.c:1736
+#: panel-plugin/xfcetimer.c:1774
 msgid "Number of repetitions"
-msgstr "Mēģinājumu skaits"
+msgstr "Atkārtojumu skaits"
 
-#: panel-plugin/xfcetimer.c:1745
+#: panel-plugin/xfcetimer.c:1783
 msgid "  Time interval (sec.)"
-msgstr "  Laika intervāls (sek.)"
+msgstr "  Laika intervāls (s)"
 
-#: panel-plugin/xfcetimer.c:1805
+#: panel-plugin/xfcetimer.c:1847
 msgid "About Timer plugin"
-msgstr ""
+msgstr "Par taimera spraudni"
 
-#: panel-plugin/xfcetimer.c:1808
+#: panel-plugin/xfcetimer.c:1850
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr ""
+msgstr "Spraudnis atpakaļskaitīšanas taimeru vai modinātāju iestatīšanai noteiktos laikos."
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:5
 msgid "Xfce4 Timer"
-msgstr "Xfce4 Taimeris"
+msgstr "Xfce4 taimeris"
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:6
 msgid "Timer plugin for Xfce panel"
