@@ -231,12 +231,12 @@ msgstr "Over Aftelklok-invoegsel"
 
 #: panel-plugin/xfcetimer.c:1850
 msgid "A plugin to define countdown timers or alarms at given times."
-msgstr "Een invoegsel om aftelklokken te bepalen of wekkers, op bepaalde tijdstippen."
+msgstr "Een invoegsel om aftelklokken of wekkers in te stellen op bepaalde tijdstippen."
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:5
 msgid "Xfce4 Timer"
-msgstr "Xfce4-Tijdmeter"
+msgstr "Xfce4-Aftelklok"
 
 #: panel-plugin/xfce4-timer-plugin.desktop.in:6
 msgid "Timer plugin for Xfce panel"
-msgstr "Tijdmeter-invoegsel voor Xfce-werkbalk"
+msgstr "Aftelklok-invoegsel voor Xfce-werkbalk"
