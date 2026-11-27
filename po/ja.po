@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2026-02-01 01:00+0100\n"
+"POT-Creation-Date: 2026-11-18 13:03+0100\n"
 "PO-Revision-Date: 2013-07-03 19:24+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021-2023,2026\n"
 "Language-Team: Japanese (http://app.transifex.com/xfce/xfce-panel-plugins/language/ja/)\n"
@@ -20,213 +20,218 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: panel-plugin/xfcetimer.c:172
+#: panel-plugin/xfcetimer.c:175
 #, c-format
 msgid "%dh %dm %ds left"
 msgstr "残り %d 時間 %d 分 %d 秒"
 
-#: panel-plugin/xfcetimer.c:175
+#: panel-plugin/xfcetimer.c:178
 #, c-format
 msgid "%dm %ds left"
 msgstr "残り %d 分 %d 秒"
 
-#: panel-plugin/xfcetimer.c:178
+#: panel-plugin/xfcetimer.c:181
 #, c-format
 msgid "%ds left"
 msgstr "残り %d 秒"
 
-#: panel-plugin/xfcetimer.c:182
+#: panel-plugin/xfcetimer.c:185
 msgid " (Paused)"
 msgstr " (停止)"
 
 #. Display the name of the alarm when the countdown ends
-#: panel-plugin/xfcetimer.c:218
+#: panel-plugin/xfcetimer.c:221
 #, c-format
 msgid ""
 "Beeep! :) \n"
 "Time is up for the alarm %s."
 msgstr "ビーー! :) \n%s の時間になりました。"
 
-#: panel-plugin/xfcetimer.c:219
+#: panel-plugin/xfcetimer.c:222
 #, c-format
 msgid "Timer %s"
 msgstr "タイマー %s"
 
-#: panel-plugin/xfcetimer.c:228 panel-plugin/xfcetimer.c:1602
+#: panel-plugin/xfcetimer.c:231 panel-plugin/xfcetimer.c:1616
 msgid "Close"
 msgstr "閉じる"
 
-#: panel-plugin/xfcetimer.c:229
+#: panel-plugin/xfcetimer.c:232
 msgid "Rerun the timer"
 msgstr "タイマーの再実行"
 
-#: panel-plugin/xfcetimer.c:497 panel-plugin/xfcetimer.c:965
+#: panel-plugin/xfcetimer.c:513 panel-plugin/xfcetimer.c:987
 msgid "Add new alarm"
 msgstr "新規アラームの追加"
 
-#: panel-plugin/xfcetimer.c:519
+#: panel-plugin/xfcetimer.c:535
 msgid "Pause timer"
 msgstr "タイマーの一時停止"
 
-#: panel-plugin/xfcetimer.c:526
+#: panel-plugin/xfcetimer.c:542
 msgid "Resume timer"
 msgstr "タイマーの再開"
 
-#: panel-plugin/xfcetimer.c:532
+#. Restart menu item - only for active timers
+#: panel-plugin/xfcetimer.c:549
+msgid "Restart timer"
+msgstr "タイマーを再起動"
+
+#: panel-plugin/xfcetimer.c:554
 msgid "Stop timer"
 msgstr "タイマーの停止"
 
-#: panel-plugin/xfcetimer.c:606 panel-plugin/xfcetimer.c:690
+#: panel-plugin/xfcetimer.c:628 panel-plugin/xfcetimer.c:712
 #, c-format
 msgid "%dh %dm %ds"
 msgstr "%d 時間 %d 分 %d 秒"
 
-#: panel-plugin/xfcetimer.c:608 panel-plugin/xfcetimer.c:692
+#: panel-plugin/xfcetimer.c:630 panel-plugin/xfcetimer.c:714
 #, c-format
 msgid "%dm %ds"
 msgstr "% d分 %d 秒"
 
-#: panel-plugin/xfcetimer.c:610 panel-plugin/xfcetimer.c:694
+#: panel-plugin/xfcetimer.c:632 panel-plugin/xfcetimer.c:716
 #, c-format
 msgid "%ds"
 msgstr "%d 秒"
 
-#: panel-plugin/xfcetimer.c:618 panel-plugin/xfcetimer.c:710
+#: panel-plugin/xfcetimer.c:640 panel-plugin/xfcetimer.c:732
 #, c-format
 msgid "At %02d:%02d"
 msgstr "%02d:%02d"
 
-#: panel-plugin/xfcetimer.c:708
+#: panel-plugin/xfcetimer.c:730
 #, c-format
 msgid "At %02d:%02dZ"
 msgstr "%02d:%02dZ に"
 
-#: panel-plugin/xfcetimer.c:823
+#: panel-plugin/xfcetimer.c:845
 msgid "Name:"
 msgstr "名前:"
 
-#: panel-plugin/xfcetimer.c:834
+#: panel-plugin/xfcetimer.c:856
 msgid "Enter the countdown time"
 msgstr "秒読みする時間を指定してください"
 
-#: panel-plugin/xfcetimer.c:839
+#: panel-plugin/xfcetimer.c:861
 msgid "Enter the time of alarm (24h format)"
 msgstr "アラームを鳴らす時刻を指定してください (24時間制)"
 
-#: panel-plugin/xfcetimer.c:854
+#: panel-plugin/xfcetimer.c:876
 msgid "h  "
 msgstr "時間  "
 
-#: panel-plugin/xfcetimer.c:861
+#: panel-plugin/xfcetimer.c:883
 msgid "m  "
 msgstr "分  "
 
-#: panel-plugin/xfcetimer.c:868
+#: panel-plugin/xfcetimer.c:890
 msgid "s  "
 msgstr "秒  "
 
-#: panel-plugin/xfcetimer.c:871
+#: panel-plugin/xfcetimer.c:893
 msgid "or"
 msgstr "または"
 
-#: panel-plugin/xfcetimer.c:891
+#: panel-plugin/xfcetimer.c:913
 msgid "UTC"
 msgstr "UTC"
 
-#: panel-plugin/xfcetimer.c:903
+#: panel-plugin/xfcetimer.c:925
 msgid "Command to run:"
 msgstr "実行するコマンド:"
 
-#: panel-plugin/xfcetimer.c:913
+#: panel-plugin/xfcetimer.c:935
 msgid "Alarm to run:"
 msgstr "実行するアラーム:"
 
 #. add alarm autostart check button
-#: panel-plugin/xfcetimer.c:940
+#: panel-plugin/xfcetimer.c:962
 msgid "Auto start when plugin loads"
 msgstr "プラグインロード時に自動起動"
 
-#: panel-plugin/xfcetimer.c:950
+#: panel-plugin/xfcetimer.c:972
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: panel-plugin/xfcetimer.c:955
+#: panel-plugin/xfcetimer.c:977
 msgid "Accept"
 msgstr "承認"
 
-#: panel-plugin/xfcetimer.c:1007
+#: panel-plugin/xfcetimer.c:1029
 msgid "Edit alarm"
 msgstr "アラームの編集"
 
-#: panel-plugin/xfcetimer.c:1600
+#: panel-plugin/xfcetimer.c:1614
 msgid "Timer Options"
 msgstr "タイマーのオプション"
 
-#: panel-plugin/xfcetimer.c:1639
+#: panel-plugin/xfcetimer.c:1653
 msgid "Timer name"
 msgstr "タイマー名"
 
-#: panel-plugin/xfcetimer.c:1644
+#: panel-plugin/xfcetimer.c:1658
 msgid ""
 "Countdown period /\n"
 "Alarm time"
 msgstr "秒読み時間 /\nアラーム時刻"
 
-#: panel-plugin/xfcetimer.c:1647
+#: panel-plugin/xfcetimer.c:1661
 msgid "Alarm command"
 msgstr "アラームコマンド"
 
-#: panel-plugin/xfcetimer.c:1666
+#: panel-plugin/xfcetimer.c:1680
 msgid "Add"
 msgstr "追加"
 
-#: panel-plugin/xfcetimer.c:1673
+#: panel-plugin/xfcetimer.c:1687
 msgid "Edit"
 msgstr "編集"
 
-#: panel-plugin/xfcetimer.c:1680
+#: panel-plugin/xfcetimer.c:1694
 msgid "Remove"
 msgstr "削除"
 
-#: panel-plugin/xfcetimer.c:1688
+#: panel-plugin/xfcetimer.c:1702
 msgid "Up"
 msgstr "上へ"
 
-#: panel-plugin/xfcetimer.c:1695
+#: panel-plugin/xfcetimer.c:1709
 msgid "Down"
 msgstr "下へ"
 
-#: panel-plugin/xfcetimer.c:1711
+#: panel-plugin/xfcetimer.c:1725
 msgid "Don't display a warning if an alarm command is set"
 msgstr "アラームコマンドが設定されている場合は警告を表示しない"
 
 #. Default alarm command config
-#: panel-plugin/xfcetimer.c:1723
+#: panel-plugin/xfcetimer.c:1737
 msgid "Use a default alarm command"
 msgstr "デフォルトのアラームコマンドを使用する"
 
-#: panel-plugin/xfcetimer.c:1732
+#: panel-plugin/xfcetimer.c:1746
 msgid "Default command: "
 msgstr "デフォルトコマンド:"
 
 #. Alarm repetitions config
-#: panel-plugin/xfcetimer.c:1749
+#: panel-plugin/xfcetimer.c:1763
 msgid "Repeat the alarm command"
 msgstr "アラームコマンドを繰り返す"
 
-#: panel-plugin/xfcetimer.c:1760
+#: panel-plugin/xfcetimer.c:1774
 msgid "Number of repetitions"
 msgstr "繰り返し回数"
 
-#: panel-plugin/xfcetimer.c:1769
+#: panel-plugin/xfcetimer.c:1783
 msgid "  Time interval (sec.)"
 msgstr "  時間間隔 (秒)"
 
-#: panel-plugin/xfcetimer.c:1829
+#: panel-plugin/xfcetimer.c:1847
 msgid "About Timer plugin"
 msgstr "タイマープラグインについて"
 
-#: panel-plugin/xfcetimer.c:1832
+#: panel-plugin/xfcetimer.c:1850
 msgid "A plugin to define countdown timers or alarms at given times."
 msgstr "時間を秒読みまたは指定時刻になるとアラームを鳴らします。"
 
